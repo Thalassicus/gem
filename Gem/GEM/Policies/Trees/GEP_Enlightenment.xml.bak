@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/9/2012 4:04:53 PM -->
+<GameData>
+	<Policy_Flavors>
+
+	</Policy_Flavors>
+	<Policies>
+		<Update>
+			<Where Type="POLICY_RATIONALISM" />
+			<Set MedianTechPercentChange="0"
+				 OneShot="true"
+				 IncludesOneShotFreeUnits="true"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_FREE_THOUGHT" />
+			<Set GridX="1" GridY="1" />
+		</Update>
+		<Update>
+			<Where Type="POLICY_SECULARISM" />
+			<Set GridX="5" GridY="1"  />
+		</Update>
+		<Update>
+			<Where Type="POLICY_SOVEREIGNTY" />
+			<Set GridX="3" GridY="1"
+				 HappinessToScience="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_SCIENTIFIC_REVOLUTION" />
+			<Set GridX="3" GridY="2"
+				 NumFreeTechs="0"
+				 HappinessToScience="15"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_HUMANISM" />
+			<Set GridX="3" GridY="3"  />
+		</Update>
+		<Update>
+			<Where Type="POLICY_RATIONALISM_FINISHER" />
+			<Set OneShot="true"
+				 NumFreeTechs="2"
+				 />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_FREE_THOUGHT" />
+		<Delete PolicyType="POLICY_HUMANISM" />
+		<Delete PolicyType="POLICY_SOVEREIGNTY" />
+		<Delete PolicyType="POLICY_SECULARISM" />
+		<Delete PolicyType="POLICY_SCIENTIFIC_REVOLUTION" />
+
+		<Row>
+			<PolicyType>POLICY_SCIENTIFIC_REVOLUTION</PolicyType>
+			<PrereqPolicy>POLICY_SOVEREIGNTY</PrereqPolicy>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HUMANISM</PolicyType>
+			<PrereqPolicy>POLICY_SCIENTIFIC_REVOLUTION</PrereqPolicy>
+		</Row>
+	</Policy_PrereqPolicies>
+	<Policy_SpecialistYieldChanges>
+		<Row>
+			<PolicyType>POLICY_SECULARISM</PolicyType>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Policy_SpecialistYieldChanges>
+	<Policy_SpecialistExtraYields>
+		<Delete PolicyType="POLICY_SECULARISM" />
+	</Policy_SpecialistExtraYields>
+	<Policy_ImprovementYieldChanges>
+		<Row>
+			<PolicyType>POLICY_SECULARISM</PolicyType>
+			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Policy_ImprovementYieldChanges>
+	<Policy_FreeUnitClasses>
+		<Row>
+			<PolicyType>POLICY_RATIONALISM</PolicyType>
+			<UnitClassType>UNITCLASS_SCIENTIST</UnitClassType>
+			<Count>1</Count>
+		</Row>
+	</Policy_FreeUnitClasses>
+	<Policy_BuildingClassHappiness>
+		<Row>
+			<PolicyType>POLICY_HUMANISM</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HUMANISM</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+	</Policy_BuildingClassHappiness>
+	<Policy_BuildingClassYieldChanges>
+		<Update>
+			<Where PolicyType="POLICY_RATIONALISM_FINISHER" />
+			<Set PolicyType="POLICY_SOVEREIGNTY" />
+		</Update>
+	</Policy_BuildingClassYieldChanges>
+</GameData>

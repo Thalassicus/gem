@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<!--
+			Naval
+	-->
+	<UnitClasses>
+		<Row>
+			<Type>UNITCLASS_SHIP_OF_THE_LINE</Type>
+			<Description>TXT_KEY_UNIT_ENGLISH_SHIPOFTHELINE</Description>
+			<DefaultUnit>UNIT_SHIP_OF_THE_LINE</DefaultUnit>
+		</Row>
+	</UnitClasses>
+	<Units>
+		<Update>
+			<Where Class="UNITCLASS_TRIREME" />
+			<Set Cost="40"
+				 />
+			<!-- 5 3 56 -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_CARAVEL" />
+			<Set PrereqTech="TECH_COMPASS"
+				 />
+		</Update>
+		<Update>
+			<Where Type="UNIT_CARAVEL" />
+			<Set Combat="10"
+				 RangedCombat="10"
+				 Moves="5"
+				 />
+			<!-- 15 7 6 -->
+		</Update>
+		<Update>
+			<Where Type="UNIT_FRIGATE" />
+			<Set Combat="15" RangedCombat="15" Moves="5" />
+			<!-- 30 17 5 -->
+		</Update>
+		<Row>
+			<Class>UNITCLASS_SHIP_OF_THE_LINE</Class>
+			<Type>UNIT_SHIP_OF_THE_LINE</Type>
+			<PrereqTech>TECH_NAVIGATION</PrereqTech>
+			<Combat>25</Combat>
+			<RangedCombat>25</RangedCombat>
+			<Cost>220</Cost>
+			<Moves>4</Moves>
+			<Range>1</Range>
+			<CombatClass>UNITCOMBAT_NAVAL</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_ENGLISH_SHIPOFTHELINE</Description>
+			<Help>TXT_KEY_UNIT_SHIP_OF_THE_LINE_HELP</Help>
+			<Strategy>TXT_KEY_UNIT_SHIP_OF_THE_LINE_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_RENAISSANCE_SHIPOFTHELINE_TEXT</Civilopedia>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<Mechanized>true</Mechanized>
+			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
+			<AdvancedStartCost>50</AdvancedStartCost>
+			<MinAreaSize>20</MinAreaSize>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_U_ENGLISH_SHIPOFTHELINE</UnitArtInfo>
+			<UnitFlagIconOffset>52</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
+			<PortraitIndex>9</PortraitIndex>
+			<MoveRate>WOODEN_BOAT</MoveRate>
+		</Row>
+		<Update>
+			<Where Class="UNITCLASS_IRONCLAD" />
+			<Set Combat="40" RangedCombat="30" Moves="5" />
+			<!-- 4 -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_DESTROYER" />
+			<Set PrereqTech="TECH_TELEGRAPH" Combat="40" RangedCombat="30" Moves="7" />
+			<!-- 8 -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_BATTLESHIP" />
+			<Set PrereqTech="TECH_COMBUSTION" Combat="80" RangedCombat="40" Moves="6" />
+			<!-- 60, 4 -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_MISSILE_CRUISER" />
+			<Set Combat="80" RangedCombat="50" Moves="6" Cost="500" />
+			<!-- 60, 25, 520, -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_SUBMARINE" />
+			<Set RangedCombat="60" />
+			<!-- 60 -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_NUCLEAR_SUBMARINE" />
+			<Set RangedCombat="70" />
+			<!-- 70 -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_CARRIER" />
+			<Set Combat="70" />
+			<!-- 30 -->
+		</Update>
+	</Units>
+	<Unit_ResourceQuantityRequirements>
+		<Delete UnitType="UNIT_FRIGATE" />
+		<Row>
+			<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Delete UnitType="UNIT_IRONCLAD" />
+		<Row>
+			<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+	</Unit_ResourceQuantityRequirements>
+	<Unit_AITypes>
+		<Row>
+			<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
+			<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
+			<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
+			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
+		</Row>
+	</Unit_AITypes>
+	<UnitGameplay2DScripts>
+		<Row UnitType="UNIT_SHIP_OF_THE_LINE">
+			<SelectionSound>AS2D_SELECT_FRIGATE</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_FRIGATE</FirstSelectionSound>
+		</Row>
+	</UnitGameplay2DScripts>	
+</GameData>

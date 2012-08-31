@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<UnitPromotions>
+		<Row>
+			<Type>PROMOTION_DOUBLE_WORK_SPEED</Type>
+			<Description>TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED</Description>
+			<PediaEntry>TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED</PediaEntry>
+			<Help>TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_PHALANX</Type>
+			<Description>TXT_KEY_PROMOTION_PHALANX</Description>
+			<PediaEntry>TXT_KEY_PROMOTION_PHALANX</PediaEntry>
+			<Help>TXT_KEY_PROMOTION_PHALANX_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_GOLDEN</Type>
+			<Description>TXT_KEY_PROMOTION_GOLDEN</Description>
+			<PediaEntry>TXT_KEY_PROMOTION_GOLDEN</PediaEntry>
+			<Help>TXT_KEY_PROMOTION_GOLDEN_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<GoldenPoints>100</GoldenPoints>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Update>
+			<Where Type="PROMOTION_PARADROP" />
+			<Set DropRange="10" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_CITY_ASSAULT" />
+			<Set CityAttack="50"
+				 CityDefense="50"
+				 AttackFortifiedMod="30"
+				 PediaEntry="TXT_KEY_PROMOTION_CITY_ASSUALT"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_DEFENSE_PENALTY" />
+			<Set DefenseMod="-25" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_NAVAL_PENALTY" />
+			<Set CannotBeChosen="true" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_SUPPLY"/>
+			<Set PediaType="NULL"
+				 CannotBeChosen="true" />
+		</Update>
+		<Row>
+			<Type>PROMOTION_ANTI_CAVALRY</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_CAVALRY_HELP</Description>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_CAVALRY</PediaEntry>
+			<Help>TXT_KEY_PROMOTION_ANTI_CAVALRY_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Update>
+			<Where Type="PROMOTION_ANTI_MOUNTED_I" />
+			<Set Description="TXT_KEY_PROMOTION_ANTI_MOUNTED_I_HELP" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_ANTI_MOUNTED_II" />
+			<Set Description="TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_ANTI_AIR" />
+			<Set Description="TXT_KEY_PROMOTION_ANTI_AIR_HELP" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_ANTI_HELICOPTER" />
+			<Set Description="TXT_KEY_PROMOTION_ANTI_HELICOPTER_HELP" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_ANTI_TANK" />
+			<Set Description="TXT_KEY_PROMOTION_ANTI_TANK_HELP" />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_ANTI_TANK" />
+			<Set PediaType="PEDIA_SHARED" />
+		</Update>
+		<Row>
+			<Type>PROMOTION_ANTI_MOUNTED_NOUPGRADE_I</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_MOUNTED_I_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_MOUNTED_I_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_MOUNTED_I</PediaEntry>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ANTI_MOUNTED_NOUPGRADE_II</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_MOUNTED_II</PediaEntry>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ATTACK_BONUS_NOUPGRADE_I</Type>
+			<Description>TXT_KEY_PROMOTION_ATTACK_BONUS_I_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_ATTACK_BONUS</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<AttackMod>25</AttackMod>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ATTACK_BONUS</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ATTACK_BONUS_NOUPGRADE_II</Type>
+			<Description>TXT_KEY_PROMOTION_ATTACK_BONUS_II_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_ATTACK_BONUS_II</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<AttackMod>50</AttackMod>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ATTACK_BONUS_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_NAVAL_DEMOLISH</Type>
+			<Description>TXT_KEY_PROMOTION_NAVAL_DEMOLISH</Description>
+			<Help>TXT_KEY_PROMOTION_NAVAL_DEMOLISH_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_DEMOLISH</PediaEntry>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<CityAttack>30</CityAttack>
+			<AttackFortifiedMod>30</AttackFortifiedMod>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_CAPITAL_SHIP_BONUS</Type>
+			<Description>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS_HELP</Description>
+			<PediaEntry>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS</PediaEntry>
+			<Help>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_EXTRA_SIGHT_NOUPGRADE_I</Type>
+			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_I_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_XTRA_SIGHT_I_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<VisibilityChange>1</VisibilityChange>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_XTRA_SIGHT_I</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_EXTRA_SIGHT_NOUPGRADE_II</Type>
+			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_II_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_XTRA_SIGHT_II_HELP</Help>
+			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_XTRA_SIGHT_II</PediaEntry>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<VisibilityChange>2</VisibilityChange>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_DEFENSE_1</Type>
+			<Description>TXT_KEY_PROMOTION_DEFENSE_1_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_DEFENSE_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_DEFENSE_1</PediaEntry>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<OrderPriority>2</OrderPriority>
+			<DefenseMod>25</DefenseMod>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_DEFENSE_2</Type>
+			<Description>TXT_KEY_PROMOTION_DEFENSE_2_HELP</Description>
+			<Help>TXT_KEY_PROMOTION_DEFENSE_2_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_DEFENSE_2</PediaEntry>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<OrderPriority>2</OrderPriority>
+			<DefenseMod>50</DefenseMod>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_CAMARADERIE</Type>
+			<Description>TXT_KEY_PROMOTION_CAMARADERIE</Description>
+			<Help>TXT_KEY_PROMOTION_CAMARADERIE_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<CannotBeChosen>true</CannotBeChosen>
+			<AdjacentMod>20</AdjacentMod>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CAMARADERIE</PediaEntry>
+		</Row>
+	</UnitPromotions>
+	<UnitPromotions_UnitClasses>
+		<Row>
+			<PromotionType>PROMOTION_ANTI_CAVALRY</PromotionType>
+			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_CAPITAL_SHIP_BONUS</PromotionType>
+			<UnitClassType>UNITCLASS_BATTLESHIP</UnitClassType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_CAPITAL_SHIP_BONUS</PromotionType>
+			<UnitClassType>UNITCLASS_CARRIER</UnitClassType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_CAPITAL_SHIP_BONUS</PromotionType>
+			<UnitClassType>UNITCLASS_MISSILE_CRUISER</UnitClassType>
+			<Modifier>50</Modifier>
+		</Row>
+	</UnitPromotions_UnitClasses>
+	<UnitPromotions_Domains>
+		<Row>
+			<PromotionType>PROMOTION_CITY_ASSAULT</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Modifier>-50</Modifier>
+		</Row>
+	</UnitPromotions_Domains>
+	<UnitPromotions_UnitCombatMods>
+		<Row>
+			<PromotionType>PROMOTION_PHALANX</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_PHALANX</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ANTI_MOUNTED_NOUPGRADE_I</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+			<Modifier>25</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ANTI_MOUNTED_NOUPGRADE_II</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Update>
+			<Where PromotionType="PROMOTION_ANTI_MOUNTED_I" UnitCombatType="UNITCOMBAT_MOUNTED" />
+			<Set Modifier="25" />
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ANTI_MOUNTED_II" UnitCombatType="UNITCOMBAT_MOUNTED" />
+			<Set Modifier="50" />
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ANTI_AIR" UnitCombatType="UNITCOMBAT_FIGHTER" />
+			<Set Modifier="100" />
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ANTI_AIR" UnitCombatType="UNITCOMBAT_BOMBER" />
+			<Set Modifier="100" />
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ANTI_HELICOPTER" UnitCombatType="UNITCOMBAT_HELICOPTER" />
+			<Set Modifier="100" />
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ANTI_TANK" UnitCombatType="UNITCOMBAT_ARMOR" />
+			<Set Modifier="50" />
+		</Update>
+	</UnitPromotions_UnitCombatMods>	
+</GameData>

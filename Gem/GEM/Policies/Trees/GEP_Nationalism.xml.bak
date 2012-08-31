@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/9/2012 4:05:11 PM -->
+<GameData>
+	<Policy_Flavors>
+		<Row>
+			<PolicyType>POLICY_AUTOCRACY</PolicyType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_POPULISM</PolicyType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FASCISM</PolicyType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+	</Policy_Flavors>
+	<Policies>
+		<Update>
+			<Where Type="POLICY_AUTOCRACY" />
+			<Set UnitGoldMaintenanceMod="0"
+				 ExtraHappinessPerCity="1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_AUTOCRACY_FINISHER" />
+			<Set FreeExperience="30"
+				 AttackBonusTurns="0"
+				 OneShot="0"
+				 IncludesOneShotFreeUnits="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_POPULISM" />
+			<Set GridX="1"
+				 PortraitIndex="4"
+				 WoundedUnitDamageMod="0"
+				 MilitaryProductionModifier="0"
+				 UnitPurchaseCostModifier="0"
+				 HalfSpecialistUnhappiness="true"
+				 Description="TXT_KEY_POLICY_NATIONALISM"
+				 Civilopedia="TXT_KEY_POLICY_NATIONALISM_TEXT"
+				 Help="TXT_KEY_POLICY_NATIONALISM_HELP"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_FASCISM" />
+			<Set GridX="1"
+				 StrategicResourceMod="0"
+				 UnitGoldMaintenanceMod="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_MILITARISM" />
+			<Set GridX="4"
+				 CityCaptureCulture="200"
+				 CityCaptureCulturePerPop="20"
+				 CityCaptureCulturePerEra="200"
+				 FreeExperience="0"
+				 GlobalExperience="0"
+				 UnitGoldMaintenanceMod="0"
+				 UnitPurchaseCostModifier="0"
+				 StrategicResourceMod="0"
+				 PortraitIndex="5"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_TOTAL_WAR" />
+			<Set GridX="3"
+				 GridY="2"
+				 PortraitIndex="2"
+				 UnitGoldMaintenanceMod="-33"
+				 MilitaryProductionModifier="0"
+				 FreeExperience="0"				 
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_POLICE_STATE" />
+			<Set GridX="5"
+				 PortraitIndex="1"
+				 UnitGoldMaintenanceMod="0"	
+				 StealTechSlowerModifier="0"
+				 CatchSpiesModifier="0"
+				 />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_FASCISM" PrereqPolicy="POLICY_MILITARISM" />
+		<Delete PolicyType="POLICY_TOTAL_WAR" />
+		<Row>
+			<PolicyType>POLICY_TOTAL_WAR</PolicyType>
+			<PrereqPolicy>POLICY_MILITARISM</PrereqPolicy>
+		</Row>
+	</Policy_PrereqPolicies>
+	<Policy_BuildingClassProductionModifiers>
+		<Update>
+			<Where PolicyType="POLICY_POLICE_STATE" />
+			<Set PolicyType="POLICY_FASCISM" />
+		</Update>
+	</Policy_BuildingClassProductionModifiers>
+	<Policy_BuildingClassHappiness>
+		<Update>
+			<Where PolicyType="POLICY_POLICE_STATE" />
+			<Set PolicyType="POLICY_FASCISM" />
+		</Update>
+	</Policy_BuildingClassHappiness>
+	<UnitPromotions>
+		<Row>
+			<Type>PROMOTION_SUPPLY_LINES</Type>
+			<Description>TXT_KEY_PROMOTION_SUPPLY_LINES</Description>
+			<PediaEntry>TXT_KEY_PROMOTION_SUPPLY_LINES</PediaEntry>
+			<Help>TXT_KEY_PROMOTION_SUPPLY_LINES_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<EnemyHealChange>10</EnemyHealChange>
+			<NeutralHealChange>10</NeutralHealChange>
+			<FriendlyHealChange>10</FriendlyHealChange>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+		</Row>
+	</UnitPromotions>
+	<Policy_FreePromotions>
+		<Row>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+		</Row>
+	</Policy_FreePromotions>
+	<UnitPromotions_UnitCombats>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED_ARCHER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SUPPLY_LINES</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+	</UnitPromotions_UnitCombats>
+</GameData>

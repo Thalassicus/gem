@@ -1,0 +1,315 @@
+--
+-- Building Cost
+--
+
+UPDATE Buildings
+SET Cost = ROUND(Cost * 1.8 / 10, 0) * 10
+WHERE Cost > 0 AND NOT BuildingClass IN (
+	SELECT Type FROM BuildingClasses
+	WHERE (
+		MaxGlobalInstances = 1
+		OR MaxTeamInstances = 1
+		OR MaxPlayerInstances = 1
+	)
+);
+
+UPDATE Buildings
+SET Cost = ROUND(Cost * 1.2 / 10, 0) * 10
+WHERE Cost > 0 AND BuildingClass IN (
+	SELECT Type FROM BuildingClasses
+	WHERE (
+		MaxGlobalInstances = 1
+		OR MaxTeamInstances = 1
+		OR MaxPlayerInstances = 1
+	)
+);
+
+UPDATE Projects
+SET Cost = ROUND(Cost * 1.2 / 10, 0) * 10
+WHERE Cost > 0;
+
+UPDATE Buildings
+SET Cost = 100, NumCityCostMod = 25
+WHERE NumCityCostMod > 0;
+
+UPDATE Buildings
+SET HurryCostModifier = 0
+WHERE HurryCostModifier > 0;
+
+UPDATE Buildings
+SET HurryCostModifier = 25
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_WALLS',
+	'BUILDINGCLASS_CASTLE',
+	'BUILDINGCLASS_ARSENAL',
+	'BUILDINGCLASS_MILITARY_BASE'
+);
+
+--
+-- Specific Buildings
+--
+
+/*
+-- todo: finish this conversion
+INSERT OR REPLACE INTO	Building_YieldChanges
+						(BuildingType, YieldType, Yield)
+SELECT DISTINCT			Type, 'YIELD_HAPPINESS', Happiness + UnmoddedHappiness
+FROM Buildings			WHERE (Happiness + UnmoddedHappiness) <> 0;
+*/
+UPDATE Buildings SET Happiness = Happiness + UnmoddedHappiness;
+UPDATE Buildings SET UnmoddedHappiness = 0;
+
+UPDATE Building_YieldChanges
+SET Yield = Yield * 2
+WHERE YieldType = 'YIELD_CULTURE';
+
+UPDATE Belief_ResourceYieldChanges
+SET Yield = Yield * 2
+WHERE YieldType = 'YIELD_CULTURE' OR YieldType = 'YIELD_SCIENCE';
+
+UPDATE Belief_BuildingClassYieldChanges
+SET YieldChange = YieldChange * 2
+WHERE YieldType = 'YIELD_CULTURE' OR YieldType = 'YIELD_SCIENCE';
+
+UPDATE Belief_FeatureYieldChanges
+SET Yield = Yield * 2
+WHERE YieldType = 'YIELD_CULTURE' OR YieldType = 'YIELD_SCIENCE';
+
+UPDATE Belief_ImprovementYieldChanges
+SET Yield = Yield * 2
+WHERE YieldType = 'YIELD_CULTURE' OR YieldType = 'YIELD_SCIENCE';
+
+UPDATE Belief_YieldChangePerXForeignFollowers
+SET ForeignFollowers = ROUND(ForeignFollowers * 0.4, 0)
+WHERE YieldType = 'YIELD_CULTURE' OR YieldType = 'YIELD_SCIENCE';
+
+
+UPDATE Buildings
+SET Defense = Defense - 300
+WHERE Defense > 0;
+
+UPDATE Buildings
+SET Cost = 100
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_GRANARY',
+	'BUILDINGCLASS_BARRACKS',
+	'BUILDINGCLASS_WALLS',
+	'BUILDINGCLASS_STABLE',
+	'BUILDINGCLASS_SHRINE'
+);
+
+UPDATE Buildings
+SET Cost = ROUND(Cost * 1.25/10, 0) * 10
+WHERE Type IN (
+	'BUILDING_GREAT_LIBRARY'
+);
+
+UPDATE Buildings
+SET Cost = ROUND(Cost * 0.75/10, 0) * 10
+WHERE Type IN (
+	'BUILDING_MAUSOLEUM_HALICARNASSUS',
+	'BUILDING_STONEHENGE',
+	'BUILDING_STATUE_ZEUS',
+	'BUILDING_ANGKOR_WAT',
+	'BUILDING_MACHU_PICCHU',
+	'BUILDING_TEMPLE_ARTEMIS',
+	'BUILDING_TERRACOTTA_ARMY',
+	'BUILDING_PENTAGON',
+	'BUILDING_LOUVRE'
+);
+
+UPDATE Buildings
+SET Cost = ROUND(Cost * 0.50/10, 0) * 10
+WHERE Type IN (
+	'BUILDING_GREAT_WALL',
+	'BUILDING_HIMEJI_CASTLE'
+);
+
+DELETE FROM Project_Flavors WHERE ProjectType = 'PROJECT_UTOPIA_PROJECT';
+INSERT INTO Project_Flavors (ProjectType, FlavorType, Flavor)
+SELECT 'PROJECT_UTOPIA_PROJECT', Type, 1000 FROM Flavors;
+
+
+INSERT OR REPLACE INTO	Building_YieldModifiers
+						(BuildingType, YieldType, Yield)
+SELECT DISTINCT			Type, 'YIELD_CULTURE', 50
+FROM Buildings			WHERE BuildingClass = 'BUILDINGCLASS_OPERA_HOUSE';
+
+DELETE FROM				Building_YieldChanges
+WHERE BuildingType IN	(SELECT Type FROM Buildings
+						WHERE YieldType = 'YIELD_CULTURE'
+						AND BuildingClass = 'BUILDINGCLASS_OPERA_HOUSE');
+
+
+INSERT OR REPLACE INTO	Building_YieldChangesPerPop
+						(BuildingType, YieldType, Yield)
+SELECT DISTINCT			Type, 'YIELD_CULTURE', 100
+FROM Buildings			WHERE BuildingClass = 'BUILDINGCLASS_MUSEUM';
+
+DELETE FROM				Building_YieldChanges
+WHERE BuildingType IN	(SELECT Type FROM Buildings
+						WHERE YieldType = 'YIELD_CULTURE'
+						AND BuildingClass = 'BUILDINGCLASS_MUSEUM');
+
+
+UPDATE Buildings
+SET GoldMaintenance = GoldMaintenance * 2
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_LIBRARY',
+	'BUILDINGCLASS_UNIVERSITY',
+	'BUILDINGCLASS_PUBLIC_SCHOOL',
+	'BUILDINGCLASS_LABORATORY'
+);
+
+/*
+INSERT OR REPLACE INTO Building_PrereqBuildingClassesPercentage
+	(BuildingType, BuildingClassType, PercentBuildingNeeded)
+SELECT
+	BuildingType, BuildingClassType, '75'
+FROM Building_PrereqBuildingClasses
+WHERE NumBuildingNeeded = -1;
+*/
+
+UPDATE Building_PrereqBuildingClasses
+SET BuildingClassType = 'BUILDINGCLASS_AMPHITHEATER'
+WHERE BuildingType = 'BUILDING_NATIONAL_EPIC';
+
+/*
+DELETE
+FROM Building_PrereqBuildingClasses
+WHERE NumBuildingNeeded = -1;
+*/
+
+UPDATE Buildings
+SET Happiness = Happiness + 1
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_COLOSSEUM',
+	'BUILDINGCLASS_THEATRE',
+	'BUILDINGCLASS_STADIUM'
+);
+
+/*
+UPDATE Building_YieldChanges
+SET Yield = Yield + 1
+WHERE YieldType = 'YIELD_HAPPINESS'
+AND BuildingClass IN (
+	'BUILDINGCLASS_COLOSSEUM',
+	'BUILDINGCLASS_THEATRE',
+	'BUILDINGCLASS_STADIUM'
+);
+*/
+
+DELETE FROM Building_UnitCombatProductionModifiers
+WHERE BuildingType = 'BUILDING_TEMPLE_ARTEMIS';
+
+/*
+INSERT INTO Building_UnitCombatProductionModifiers
+	(BuildingType, UnitCombatType, Modifier)
+SELECT
+	'BUILDING_TEMPLE_ARTEMIS', 'UNITCOMBAT_MOUNTED_ARCHER', '15'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_TEMPLE_ARTEMIS' );
+*/
+
+INSERT INTO Building_UnitCombatFreeExperiences
+	(BuildingType, UnitCombatType, Experience)
+SELECT 'BUILDING_TEMPLE_ARTEMIS', 'UNITCOMBAT_ARCHER', '20'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_TEMPLE_ARTEMIS' );
+
+INSERT INTO Building_UnitCombatFreeExperiences
+	(BuildingType, UnitCombatType, Experience)
+SELECT 'BUILDING_TEMPLE_ARTEMIS', 'UNITCOMBAT_MOUNTED_ARCHER', '20'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_TEMPLE_ARTEMIS' );
+
+INSERT INTO Building_FreeUnits
+	(BuildingType, UnitType, NumUnits)
+SELECT 'BUILDING_MAUSOLEUM_HALICARNASSUS', 'UNIT_MERCHANT', '1'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_MAUSOLEUM_HALICARNASSUS' );
+
+
+--
+-- Resources
+--
+
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield) 
+SELECT					building.Type, res.Type, 'YIELD_FAITH', 1
+FROM					Buildings building, Resources res
+WHERE					building.BuildingClass = 'BUILDINGCLASS_TEMPLE'
+						AND res.Type IN (
+							'RESOURCE_WINE',
+							'RESOURCE_INCENSE'
+						);
+
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield) 
+SELECT					building.Type, res.Type, 'YIELD_FOOD', 1
+FROM					Buildings building, Resources res
+WHERE					building.BuildingClass = 'BUILDINGCLASS_GRANARY'
+						AND res.Type IN (
+							'RESOURCE_SPICES',
+							'RESOURCE_SUGAR',
+							'RESOURCE_SALT'
+						);
+
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield) 
+SELECT					building.Type, res.Type, 'YIELD_FOOD', 1
+FROM					Buildings building, Resources res
+WHERE					building.BuildingClass = 'BUILDINGCLASS_AQUEDUCT'
+						AND res.Type IN (
+							'RESOURCE_CITRUS',
+							'RESOURCE_TRUFFLES',
+							'RESOURCE_BANANA'
+						);
+
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield) 
+SELECT					building.Type, res.Type, 'YIELD_CULTURE', 1
+FROM					Buildings building, Resources res
+WHERE					building.BuildingClass = 'BUILDINGCLASS_AMPHITHEATER'
+						AND res.Type IN (
+							'RESOURCE_SILK',
+							'RESOURCE_COTTON',
+							'RESOURCE_FUR',
+							'RESOURCE_DYE'
+						);
+
+/*
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield)
+SELECT					'BUILDING_MARKET', Type, 'YIELD_GOLD', 1
+FROM					Resources
+WHERE					Happiness > 0;
+
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield)
+SELECT					'BUILDING_BAZAAR', Type, 'YIELD_GOLD', 1
+FROM					Resources
+WHERE					Happiness > 0;
+
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield)
+SELECT					'BUILDING_SATRAPS_COURT', Type, 'YIELD_GOLD', 1
+FROM					Resources
+WHERE					Happiness > 0;
+*/
+
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges(BuildingType, ResourceType, YieldType, Yield) 
+SELECT					building.Type, res.Type, 'YIELD_GOLD', 1
+FROM					Buildings building, Resources res
+WHERE					building.BuildingClass = 'BUILDINGCLASS_MARKET'
+AND						res.Happiness > 0;
+
+/*
+INSERT OR REPLACE INTO	Building_ResourceYieldChanges
+						(BuildingType, ResourceType, YieldType, Yield) 
+SELECT					building.Type, res.Type, 'YIELD_GOLD', 1
+FROM					Buildings building, Resources res
+WHERE					building.BuildingClass = 'BUILDINGCLASS_MARKET'
+						AND res.Type IN (
+							'RESOURCE_SALT',
+							'RESOURCE_CITRUS',
+							'RESOURCE_TRUFFLES',
+							'RESOURCE_BANANA'
+						);
+*/

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Units>
+		<Update>
+			<Where Class="UNITCLASS_WARRIOR" />
+			<Set GoodyHutUpgradeUnitClass="NULL" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_PIKEMAN" />
+			<Set GoodyHutUpgradeUnitClass="UNITCLASS_MUSKETMAN" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_ARCHER" />
+			<Set GoodyHutUpgradeUnitClass="NULL" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_GUIDED_MISSILE" />
+			<Set Range="6" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_GATLINGGUN" />
+			<Set CombatClass="UNITCOMBAT_GUN" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_MACHINE_GUN" />
+			<Set CombatClass="UNITCOMBAT_GUN" />
+		</Update>
+	</Units>
+	<UnitCombatInfosEx>
+		
+	</UnitCombatInfosEx>
+
+
+
+
+
+
+	<!--
+			Vanguard
+	-->
+	<UnitClasses>
+		<Row>
+			<Type>UNITCLASS_SENTINEL</Type>
+			<Description>TXT_KEY_UNIT_SENTINEL</Description>
+			<DefaultUnit>UNIT_SENTINEL</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_LEVY</Type>
+			<Description>TXT_KEY_UNIT_LEVY</Description>
+			<DefaultUnit>UNIT_LEVY</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_SKIRMISHER</Type>
+			<Description>TXT_KEY_UNIT_SKIRMISHER</Description>
+			<DefaultUnit>UNIT_SKIRMISHER</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_CONSCRIPT</Type>
+			<Description>TXT_KEY_UNIT_CONSCRIPT</Description>
+			<DefaultUnit>UNIT_CONSCRIPT</DefaultUnit>
+		</Row>
+	</UnitClasses>
+	<Units>
+		<Update>
+			<Where Class="UNITCLASS_SCOUT" />
+			<Set HurryCostModifier="0"
+				 GoodyHutUpgradeUnitClass="NULL"
+				 />
+		</Update>
+		<Row>
+			<Class>UNITCLASS_SENTINEL</Class>
+			<Type>UNIT_SENTINEL</Type>
+			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
+			<Cost>100</Cost>
+			<FaithCost>112</FaithCost>
+			<Combat>9</Combat>
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SENTINEL</Description>
+			<Civilopedia>TXT_KEY_UNIT_SENTINEL_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_SENTINEL_HELP</Help>
+			<Strategy>TXT_KEY_UNIT_SENTINEL_STRATEGY</Strategy>
+			<Pillage>true</Pillage>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_SKIRMISHER</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>20</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_U_PERSIAN_IMMORTAL</UnitArtInfo>
+			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<IconAtlas>GEM_NEW_UNITS_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+		</Row>
+		<Row>
+			<Class>UNITCLASS_LEVY</Class>
+			<Type>UNIT_LEVY</Type>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+			<ObsoleteTech>TECH_BANKING</ObsoleteTech>
+			<Cost>150</Cost>
+			<FaithCost>180</FaithCost>
+			<Combat>14</Combat>
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_LEVY</Description>
+			<Civilopedia>TXT_KEY_UNIT_LEVY_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_LEVY_HELP</Help>
+			<Strategy>TXT_KEY_UNIT_LEVY_STRATEGY</Strategy>
+			<Pillage>true</Pillage>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_SKIRMISHER</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>20</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_U_ROMAN_LEGION</UnitArtInfo>
+			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>1</UnitFlagIconOffset>
+			<IconAtlas>EXPANSION_SCEN_UNIT_ATLAS</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
+		</Row>
+		<Row>
+			<Class>UNITCLASS_SKIRMISHER</Class>
+			<Type>UNIT_SKIRMISHER</Type>
+			<PrereqTech>TECH_BANKING</PrereqTech>
+			<ObsoleteTech>TECH_ELECTRICITY</ObsoleteTech>
+			<Cost>180</Cost>
+			<FaithCost>300</FaithCost>
+			<Combat>17</Combat>
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SKIRMISHER</Description>
+			<Civilopedia>TXT_KEY_UNIT_SKIRMISHER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_SKIRMISHER_HELP</Help>
+			<Strategy>TXT_KEY_UNIT_SKIRMISHER_STRATEGY</Strategy>
+			<Pillage>true</Pillage>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_CONSCRIPT</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>25</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_U_AMERICAN_MINUTEMAN</UnitArtInfo>
+			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>2</UnitFlagIconOffset>
+			<IconAtlas>GEM_NEW_UNITS_ATLAS</IconAtlas>
+			<PortraitIndex>1</PortraitIndex>
+		</Row>
+		<Row>
+			<Class>UNITCLASS_CONSCRIPT</Class>
+			<Type>UNIT_CONSCRIPT</Type>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
+			<Cost>300</Cost>
+			<Combat>28</Combat>
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CONSCRIPT</Description>
+			<Civilopedia>TXT_KEY_UNIT_CONSCRIPT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_CONSCRIPT_HELP</Help>
+			<Strategy>TXT_KEY_UNIT_CONSCRIPT_STRATEGY</Strategy>
+			<Pillage>true</Pillage>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_PARATROOPER</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>30</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_INFANTRY</UnitArtInfo>
+			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>2</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
+			<PortraitIndex>11</PortraitIndex>
+		</Row>
+		<Update>
+			<Where Class="UNITCLASS_PARATROOPER" />
+			<Set CombatClass="UNITCOMBAT_RECON"
+				 Moves="3"
+				 />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_GREAT_WAR_INFANTRY" />
+			<Set Moves="2"
+				 />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_INFANTRY" />
+			<Set Moves="3"
+				 IconAtlas="GEM_NEW_UNITS_ATLAS"
+				 PortraitIndex="2"
+				 />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_MECHANIZED_INFANTRY" />
+			<Set Moves="4"
+				 />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_WWI_TANK" />
+			<Set Moves="4"
+				 />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_ATOMIC_BOMB" />
+			<Set HurryCostModifier="-1" />
+			<!-- 0 -->
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_NUCLEAR_MISSILE" />
+			<Set HurryCostModifier="-1" />
+			<!-- 0 -->
+		</Update>
+		<Update>
+			<Where Class="UNIT_HELICOPTER_GUNSHIP" />
+			<Set CombatClass="UNITCOMBAT_MELEE" />
+		</Update>
+	</Units>
+	<Unit_ClassUpgrades>
+		<Row>
+			<UnitType>UNIT_SCOUT</UnitType>
+			<UnitClassType>UNITCLASS_SENTINEL</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SENTINEL</UnitType>
+			<UnitClassType>UNITCLASS_LEVY</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_LEVY</UnitType>
+			<UnitClassType>UNITCLASS_SKIRMISHER</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SKIRMISHER</UnitType>
+			<UnitClassType>UNITCLASS_CONSCRIPT</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CONSCRIPT</UnitType>
+			<UnitClassType>UNITCLASS_PARATROOPER</UnitClassType>
+		</Row>
+	</Unit_ClassUpgrades>
+	<Unit_AITypes>
+		<Row>
+			<UnitType>UNIT_SENTINEL</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SENTINEL</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_LEVY</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_LEVY</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SKIRMISHER</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SKIRMISHER</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CONSCRIPT</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CONSCRIPT</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+	</Unit_AITypes>
+	<UnitGameplay2DScripts>
+		<Row UnitType="UNIT_SENTINEL">
+			<SelectionSound>AS2D_SELECT_SCOUT</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_SCOUT</FirstSelectionSound>
+		</Row>
+		<Row UnitType="UNIT_LEVY">
+			<SelectionSound>AS2D_SELECT_SCOUT</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_SCOUT</FirstSelectionSound>
+		</Row>
+		<Row UnitType="UNIT_SKIRMISHER">
+			<SelectionSound>AS2D_SELECT_SCOUT</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_SCOUT</FirstSelectionSound>
+		</Row>
+		<Row UnitType="UNIT_CONSCRIPT">
+			<SelectionSound>AS2D_SELECT_SCOUT</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_SCOUT</FirstSelectionSound>
+		</Row>
+	</UnitGameplay2DScripts>
+	<!--
+	<Unit_TechTypes>
+		<Row>
+			<UnitType>UNIT_PARATROOPER</UnitType>
+			<TechType>TECH_FLIGHT</TechType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_INFANTRY</UnitType>
+			<TechType>TECH_RIFLING</TechType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FRENCH_FOREIGNLEGION</UnitType>
+			<TechType>TECH_RIFLING</TechType>
+		</Row>
+	</Unit_TechTypes>
+	-->
+
+
+
+	<!--
+			Other
+	-->
+
+
+
+	<!--
+			Dummy Coal-User
+	-->
+	<Units>
+		<Row>
+			<Class>UNITCLASS_ARTIST</Class>
+			<Type>UNIT_COAL_DUMMY</Type>
+			<Cost>-1</Cost>
+			<Moves>1</Moves>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ARTIST</DefaultUnitAI>
+			<Description>TXT_KEY_DUMMY_COAL</Description>
+			<Help>TXT_KEY_DUMMY_COAL_HELP</Help>
+			<ShowInPedia>false</ShowInPedia>
+			<AdvancedStartCost>-1</AdvancedStartCost>
+			<WorkRate>1</WorkRate>
+			<CombatLimit>0</CombatLimit>
+			<UnitArtInfo>ART_DEF_UNIT_ARTIST</UnitArtInfo>
+			<UnitArtInfoEraVariation>true</UnitArtInfoEraVariation>
+			<UnitFlagIconOffset>88</UnitFlagIconOffset>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>RESOURCE_ATLAS</IconAtlas>
+			<MoveRate>GREAT_PERSON</MoveRate>
+		</Row>
+	</Units>
+	<Unit_AITypes>
+		<Row>
+			<UnitType>UNIT_COAL_DUMMY</UnitType>
+			<UnitAIType>UNITAI_ARTIST</UnitAIType>
+		</Row>
+	</Unit_AITypes>
+	<Unit_Flavors>
+		<Row>
+			<UnitType>UNIT_COAL_DUMMY</UnitType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+	</Unit_Flavors>
+	<Unit_ResourceQuantityRequirements>
+		<Row>
+			<UnitType>UNIT_COAL_DUMMY</UnitType>
+			<ResourceType>RESOURCE_COAL</ResourceType>
+		</Row>
+	</Unit_ResourceQuantityRequirements>
+</GameData>

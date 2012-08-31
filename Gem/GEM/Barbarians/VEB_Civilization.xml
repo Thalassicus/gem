@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on a good day -->
+<GameData>
+	<Civilization_UnitClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_PIKEMAN</UnitType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_LONGSWORDSMAN</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_LONGSWORDSMAN</UnitType>
+		</Row>
+		<!--
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_CROSSBOWMAN</UnitType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_MUSKETMAN</UnitType>
+		</Row>
+		-->
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_LEVY</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_RIFLEMAN</UnitType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_INFANTRY</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_INFANTRY</UnitType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_PARATROOPER</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_PARATROOPER</UnitType>
+		</Row>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BARBARIAN" UnitClassType="UNITCLASS_MECHANIZED_INFANTRY"/>
+			<Set UnitType="UNIT_BARBARIAN_MECHANIZED_INFANTRY"/>
+		</Update>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_MECH</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_MECH</UnitType>
+		</Row>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BARBARIAN" UnitClassType="UNITCLASS_CHARIOT_ARCHER"/>
+			<Set UnitType="UNIT_BARBARIAN_CHARIOT_ARCHER"/>
+		</Update>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
+		</Row>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BARBARIAN" UnitClassType="UNITCLASS_KNIGHT"/>
+			<Set UnitType="UNIT_BARBARIAN_KNIGHT"/>
+		</Update>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BARBARIAN" UnitClassType="UNITCLASS_LANCER"/>
+			<Set UnitType="UNIT_BARBARIAN_LANCER"/>
+		</Update>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BARBARIAN" UnitClassType="UNITCLASS_CAVALRY"/>
+			<Set UnitType="UNIT_BARBARIAN_CAVALRY"/>
+		</Update>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_TRIREME</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_TRIREME</UnitType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_CARAVEL</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_CARAVEL</UnitType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_FRIGATE</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_FRIGATE</UnitType>
+		</Row>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BARBARIAN" UnitClassType="UNITCLASS_IRONCLAD"/>
+			<Set UnitType="UNIT_BARBARIAN_IRONCLAD"/>
+		</Update>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_DESTROYER</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BARBARIAN" UnitClassType="UNITCLASS_SUBMARINE"/>
+			<Set UnitType="UNIT_BARBARIAN_SUBMARINE"/>
+		</Update>
+	</Civilization_UnitClassOverrides>
+</GameData>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/9/2012 4:03:39 PM -->
+<GameData>
+	<Policies>
+		<Update>
+			<Where Type="POLICY_HONOR" />
+			<Set BarbarianCombatBonus="10"
+				 CultureFromBarbarianKills="500"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_HONOR_FINISHER" />
+			<Set GoldFromKills="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_WARRIOR_CODE" />
+			<Set GridX="1"
+				 GridY="1"
+				 PortraitIndex="19"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_MILITARY_TRADITION" />
+			<Set GridX="3"
+				 GridY="1"
+				 PortraitIndex="4"
+				 ExpModifier="0"
+				 MilitaryProductionModifier="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_DISCIPLINE" />
+			<Set GridX="5"
+				 GridY="1"
+				 PortraitIndex="33"				 
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_MILITARY_CASTE" />
+			<Set GridX="2"
+				 GridY="2"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_PROFESSIONAL_ARMY" />
+			<Set GridX="4"
+				 GridY="2"
+				 GoldFromKills="200"
+				 />
+		</Update>
+		<!--
+				 GoldFromKillsCostBased="0.10"
+		-->
+		<!--
+		<Update>
+			<Where Type="POLICY_MILITARY_CASTE" />
+			<Set GridX="3"
+				 GridY="3"
+				 HappinessPerGarrisonedUnit="0"
+				 GoldFromKills="0.25"
+				 CityCaptureCulture="50"
+				 CityCaptureCulturePerPop="10"
+				 CityCaptureCulturePerEra="50"
+				 PortraitIndex="21"
+				 />
+		</Update>
+		-->
+	</Policies>
+	<Policy_UnitCombatProductionModifiers>
+		<Delete PolicyType="POLICY_WARRIOR_CODE" />
+	</Policy_UnitCombatProductionModifiers>
+	<UnitPromotions>
+		<Update>
+			<Where Type="PROMOTION_ADJACENT_BONUS" />
+			<Set AdjacentMod="20" />
+		</Update>
+	</UnitPromotions>
+	<Policy_PrereqPolicies>
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<PrereqPolicy>POLICY_MILITARY_TRADITION</PrereqPolicy>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>
+			<PrereqPolicy>POLICY_MILITARY_TRADITION</PrereqPolicy>
+		</Row>
+	</Policy_PrereqPolicies>
+	<Policy_FreeUnitFlavor>
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Count>2</Count>
+		</Row>
+	</Policy_FreeUnitFlavor>
+	<Policy_SpecialistYieldChanges>
+		<!--
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		-->
+	</Policy_SpecialistYieldChanges>
+	<Policy_ImprovementYieldChanges>
+		<!--
+		<Row>
+			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
+			<ImprovementType>IMPROVEMENT_MANUFACTORY</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_WARRIOR_CODE</PolicyType>
+			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_WARRIOR_CODE</PolicyType>
+			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		-->
+	</Policy_ImprovementYieldChanges>
+	<Policy_FreePromotionUnitClasses>
+		<Row>
+			<PolicyType>POLICY_WARRIOR_CODE</PolicyType>
+			<UnitClass>UNITCLASS_GREAT_GENERAL</UnitClass>
+			<PromotionType>PROMOTION_MOBILITY_1</PromotionType>
+		</Row>
+	</Policy_FreePromotionUnitClasses>
+	<Policy_BuildingClassHappiness>
+		<Delete PolicyType="POLICY_PROFESSIONAL_ARMY" />
+		<Delete PolicyType="POLICY_HONOR_FINISHER" />
+		<!--
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_VICEROY</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		-->
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+	</Policy_BuildingClassHappiness>
+	<Policy_BuildingClassYieldChanges>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+	</Policy_BuildingClassYieldChanges>
+</GameData>

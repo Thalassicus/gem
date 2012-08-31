@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_PALACE" />
+			<Set Text="Palace - GEM v1.6.12b" />
+		</Update>
+	</Language_en_US>
+	<Defines>
+		<Row Name="LOADED_GEM">
+			<Value>1</Value>
+		</Row>
+	</Defines>
+</GameData>

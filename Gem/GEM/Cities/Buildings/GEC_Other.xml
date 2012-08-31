@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Building_YieldChanges>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		-->
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_PRODUCTION" />
+			<Set Yield="1" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_CULTURE" />
+			<Set Yield="2" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_GOLD" />
+			<Set Yield="0" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_SCIENCE" />
+			<Set Yield="0" />
+		</Update>
+	</Building_YieldChanges>
+	<Buildings>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_MILITARY_BASE" />
+			<Set AirModifier="-25"
+				 NukeModifier="-50"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_BOMB_SHELTER" />
+			<Set Cost="-1"
+				 PrereqTech="NULL"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_WALLS" />
+			<Set ExtraCityHitPoints="100"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_CASTLE" />
+			<Set ExtraCityHitPoints="150"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_ARSENAL" />
+			<Set ExtraCityHitPoints="200"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_MILITARY_BASE" />
+			<Set ExtraCityHitPoints="250"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_PALACE" />
+			<Set Defense="400"
+				 ExtraCityHitPoints="100"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_GARDEN" />
+			<Set Cost="220"
+				 GoldMaintenance="1"
+				 GreatPeopleRateModifier="50"
+				 FreshWater="false"
+				 />
+		</Update>
+	</Buildings>
+	<Building_Flavors>
+		<Update>
+			<Where BuildingType="BUILDING_ARSENAL" FlavorType="FLAVOR_CITY_DEFENSE" />
+			<Set Flavor="28" />
+		</Update>
+	</Building_Flavors>
+	
+	<!--
+			Puppet State
+	-->
+	<AICityStrategy_Flavors>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_IS_PUPPET</AICityStrategyType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>-10</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_IS_PUPPET</AICityStrategyType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>-10</Flavor>
+		</Row>
+	</AICityStrategy_Flavors>
+	<!-- Firaxis included this in G&K -->
+	<!--
+	<Buildings>
+		<Update>
+			<Where Type="BUILDING_PUPPET_MODIFIER" />
+			<Set UnmoddedHappiness="1" />
+		</Update>
+	</Buildings>
+	<Building_YieldChangesPerPop>
+		<Row>
+			<BuildingType>BUILDING_VICEROY</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>-100</Yield>
+		</Row>
+	</Building_YieldChangesPerPop>
+	<Building_YieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_VICEROY</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VICEROY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VICEROY</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+	</Building_YieldModifiers>
+	<Building_YieldSurplusModifiers>
+		<Row>
+			<BuildingType>BUILDING_VICEROY</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+	</Building_YieldSurplusModifiers>
+	-->
+</GameData>

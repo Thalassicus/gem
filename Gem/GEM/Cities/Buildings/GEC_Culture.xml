@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Buildings>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_MONUMENT" />
+			<Set HurryCostModifier="0" />
+		</Update>
+	</Buildings>
+	<Building_Flavors>
+		<Update>
+			<Where BuildingType="BUILDING_MONASTERY" FlavorType="FLAVOR_CULTURE" />
+			<Set Flavor="9" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_WAT" FlavorType="FLAVOR_CULTURE" />
+			<Set Flavor="30" />
+		</Update>
+	</Building_Flavors>
+	<Building_YieldChangesPerPop>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_MUSEUM</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>100</Yield>
+		</Row>
+		-->
+	</Building_YieldChangesPerPop>
+	<Building_YieldChanges>
+		<!--
+		<Delete YieldType="YIELD_CULTURE" BuildingType="BUILDING_MUSEUM" />
+		<Delete YieldType="YIELD_CULTURE" BuildingType="BUILDING_OPERA_HOUSE" />
+		<Delete YieldType="YIELD_CULTURE" BuildingType="BUILDING_CEILIDH_HALL" />
+		<Update>
+			<Where BuildingType="BUILDING_MONUMENT" YieldType="YIELD_CULTURE" />
+			<Set Yield="5" />
+		</Update>
+		-->
+	</Building_YieldChanges>
+	<Building_YieldModifiers>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		-->
+	</Building_YieldModifiers>
+	<Building_ResourceYieldChanges>
+		<Delete BuildingType="BUILDING_MONASTERY" />
+		<Row>
+			<BuildingType>BUILDING_MONASTERY</BuildingType>
+			<ResourceType>RESOURCE_INCENSE</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MONASTERY</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>		
+	</Building_ResourceYieldChanges>
+	<Building_ResourceCultureChanges>
+		<Delete BuildingType="BUILDING_MONASTERY" />
+	</Building_ResourceCultureChanges>
+	<Building_LocalResourceOrs>
+		<Delete BuildingType="BUILDING_MONASTERY" />
+	</Building_LocalResourceOrs>
+</GameData>

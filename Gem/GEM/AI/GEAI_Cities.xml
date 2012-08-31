@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Defines>
+		<Update>
+			<Where name="SETTLER_EVALUATION_DISTANCE" />
+			<Set Value="40" />
+			<!-- 20 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_DISTANCE_DROPOFF_MODIFIER" />
+			<Set Value="50" />
+			<!-- 75 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_BUILD_ON_COAST_PERCENT" />
+			<Set Value="50" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where name="BUILD_ON_RESOURCE_PERCENT" />
+			<Set Value="0" />
+			<!-- -50 -->
+		</Update>
+		<Update>
+			<Where name="BUILD_ON_RIVER_PERCENT" />
+			<Set Value="100" />
+			<!-- 50 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_FOOD_MULTIPLIER" />
+			<Set Value="10" />
+			<!-- 15 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_HAPPINESS_MULTIPLIER" />
+			<Set Value="10" />
+			<!-- 8 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_PRODUCTION_MULTIPLIER" />
+			<Set Value="5" />
+			<!-- 3 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_GOLD_MULTIPLIER" />
+			<Set Value="5" />
+			<!-- 2 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_SCIENCE_MULTIPLIER" />
+			<Set Value="10" />
+			<!-- 1 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_RESOURCE_MULTIPLIER" />
+			<Set Value="10" />
+			<!-- 3 -->
+		</Update>
+		<Update>
+			<Where name="SETTLER_STRATEGIC_MULTIPLIER" />
+			<Set Value="5" />
+			<!-- 1 -->
+		</Update>
+	</Defines>
+	
+	<!--
+			Buildings
+	-->
+	<Building_Flavors>
+		<Delete FlavorType="FLAVOR_MILITARY_TRAINING" BuildingType="BUILDING_LIBRARY" />
+		<Delete FlavorType="FLAVOR_MILITARY_TRAINING" BuildingType="BUILDING_PAPER_MAKER" />
+		<Delete FlavorType="FLAVOR_MILITARY_TRAINING" BuildingType="BUILDING_PUBLIC_SCHOOL" />
+		<Row>
+			<BuildingType>BUILDING_MENTORS_HALL</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MENTORS_HALL</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Update>
+			<Where BuildingType="BUILDING_LIBRARY" FlavorType="FLAVOR_SCIENCE" />
+			<Set Flavor="25" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_UNIVERSITY" FlavorType="FLAVOR_SCIENCE" />
+			<Set Flavor="30" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_OBSERVATORY" FlavorType="FLAVOR_SCIENCE" />
+			<Set Flavor="35" />
+		</Update>
+		<Delete FlavorType="FLAVOR_SCIENCE" BuildingType="BUILDING_AQUEDUCT" />
+		
+		<Row>
+			<BuildingType>BUILDING_MONUMENT</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MONUMENT</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BURIAL_TOMB</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BURIAL_TOMB</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MUD_PYRAMID_MOSQUE</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MUD_PYRAMID_MOSQUE</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_WATERMILL" />
+		<Row>
+			<BuildingType>BUILDING_WATERMILL</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WATERMILL</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BARRACKS</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HARBOR</BuildingType>
+			<FlavorType>FLAVOR_NAVAL_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		
+		
+		
+		<!--
+				Wonders
+		-->
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_GREAT_WALL</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		-->
+		<Row>
+			<BuildingType>BUILDING_GREAT_WALL</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Update>
+			<Where BuildingType="BUILDING_TEMPLE_ARTEMIS" FlavorType="FLAVOR_GROWTH" />
+			<Set Flavor="5" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_TEMPLE_ARTEMIS" FlavorType="FLAVOR_RANGED" />
+			<Set Flavor="15" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_TEMPLE_ARTEMIS" FlavorType="FLAVOR_WONDER" />
+			<Set Flavor="5" />
+		</Update>
+		<Delete BuildingType="BUILDING_STATUE_ZEUS" FlavorType="FLAVOR_DEFENSE" />
+		<Update>
+			<Where BuildingType="BUILDING_STATUE_ZEUS" FlavorType="FLAVOR_OFFENSE" />
+			<Set Flavor="30" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_STATUE_ZEUS" FlavorType="FLAVOR_WONDER" />
+			<Set Flavor="5" />
+		</Update>
+		<Delete BuildingType="BUILDING_GREAT_LIBRARY" />
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_PYRAMID" />
+		<Row>
+			<BuildingType>BUILDING_PYRAMID</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PYRAMID</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PYRAMID</BuildingType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PYRAMID</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_STONEHENGE" />
+		<Row>
+			<BuildingType>BUILDING_STONEHENGE</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STONEHENGE</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_HANGING_GARDEN" />
+		<Row>
+			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_ANGKOR_WAT" />
+		<Row>
+			<BuildingType>BUILDING_ANGKOR_WAT</BuildingType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ANGKOR_WAT</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_CHICHEN_ITZA" />
+		<Row>
+			<BuildingType>BUILDING_CHICHEN_ITZA</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHICHEN_ITZA</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHICHEN_ITZA</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHICHEN_ITZA</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHICHEN_ITZA</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHICHEN_ITZA</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHICHEN_ITZA</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_FORBIDDEN_PALACE" />
+		<Row>
+			<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_NOTRE_DAME" />
+		<Row>
+			<BuildingType>BUILDING_NOTRE_DAME</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NOTRE_DAME</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NOTRE_DAME</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NOTRE_DAME</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NOTRE_DAME</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_KREMLIN" />
+		<Row>
+			<BuildingType>BUILDING_KREMLIN</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_KREMLIN</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_KREMLIN</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_EIFFEL_TOWER" />
+		<Row>
+			<BuildingType>BUILDING_EIFFEL_TOWER</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_EIFFEL_TOWER</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_EIFFEL_TOWER</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_EIFFEL_TOWER</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_CRISTO_REDENTOR" />
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_STATUE_OF_LIBERTY" />
+		<Row>
+			<BuildingType>BUILDING_STATUE_OF_LIBERTY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STATUE_OF_LIBERTY</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STATUE_OF_LIBERTY</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Delete BuildingType="BUILDING_PENTAGON" />
+		<Row>
+			<BuildingType>BUILDING_PENTAGON</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PENTAGON</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PENTAGON</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Project_Flavors>
+		<Delete ProjectType="PROJECT_UTOPIA_PROJECT" />
+		<Row>
+			<ProjectType>PROJECT_UTOPIA_PROJECT</ProjectType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>1000</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_UTOPIA_PROJECT</ProjectType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>1000</Flavor>
+		</Row>
+	</Project_Flavors>
+	
+	
+	<!--
+			City Strategies
+	-->
+	<AICityStrategy_Flavors>
+		<Delete AICityStrategyType="AICITYSTRATEGY_RIVER_CITY" />
+		<!--
+		All improvements get bonuses near rivers in VEM.
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_RIVER_CITY"  FlavorType="FLAVOR_GROWTH" />
+			<Set Flavor="3" />
+			 5 
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_RIVER_CITY"  FlavorType="FLAVOR_GOLD" />
+			<Set Flavor="3" />
+			 5 
+		</Update>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_RIVER_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>3</Flavor>
+		</Row>
+		-->
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_MOUNTAIN_CITY"  FlavorType="FLAVOR_SCIENCE" />
+			<Set Flavor="5" />
+			<!-- 10 -->
+		</Update>
+
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_OFFENSE" />
+			<Set Flavor="2" />
+			<!-- 6 -->
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_DEFENSE" />
+			<Set Flavor="2" />
+			<!-- 6 -->
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_RANGED" />
+			<Set Flavor="2" />
+			<!-- 2 -->
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_RECON" />
+			<Set Flavor="2" />
+			<!-- -6 -->
+		</Update>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HAVE_TRAINING_FACILITY</AICityStrategyType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>2</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HAVE_TRAINING_FACILITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>2</Flavor>
+		</Row>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_TILE_IMPROVEMENT" />
+			<Set Flavor="0" />
+			<!-- -3 -->
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_EXPANSION" />
+			<Set Flavor="0" />
+			<!-- -3 -->
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_GROWTH" />
+			<Set Flavor="0" />
+			<!-- -3 -->
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HAVE_TRAINING_FACILITY"  FlavorType="FLAVOR_HAPPINESS" />
+			<Set Flavor="0" />
+			<!-- -3 -->
+		</Update>
+		
+		
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_FOREST_CITY"  FlavorType="FLAVOR_PRODUCTION" />
+			<Set Flavor="5" />
+			<!-- 10 -->
+		</Update>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>3</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_RECON</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_FOREST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>-1</Flavor>
+		</Row>
+
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_HILL_CITY"  FlavorType="FLAVOR_PRODUCTION" />
+			<Set Flavor="5" />
+			<!-- 10 -->
+		</Update>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>3</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_RECON</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_HILL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>-1</Flavor>
+		</Row>
+		
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_JUNGLE_CITY"  FlavorType="FLAVOR_SCIENCE" />
+			<Set Flavor="2" />
+			<!-- 10 -->
+		</Update>
+		<Update>
+			<Where AICityStrategyType="AICITYSTRATEGY_COAST_CITY"  FlavorType="FLAVOR_GOLD" />
+			<Set Flavor="2" />
+			<!-- 10 -->
+		</Update>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_COAST_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>2</Flavor>
+		</Row>
+	</AICityStrategy_Flavors>
+	<AICityStrategy_Flavors>
+		<Delete AICityStrategyType="AICITYSTRATEGY_TINY_CITY" />
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>50</Flavor>
+			<!-- 10 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>-2</Flavor>
+			<!-- -2 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>-4</Flavor>
+			<!-- -4 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
+			<Flavor>-4</Flavor>
+			<!-- -4 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>-5</Flavor>
+			<!-- -10 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>-5</Flavor>
+			<!-- -100 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>-3</Flavor>
+			<!-- -3 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>-6</Flavor>
+			<!-- -6 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>-5</Flavor>
+			<!-- -5 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NUKE</FlavorType>
+			<Flavor>-300</Flavor>
+			<!-- -300 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>-300</Flavor>
+			<!-- -300 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_TINY_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>-300</Flavor>
+			<!-- -300 -->
+		</Row>
+		<Delete AICityStrategyType="AICITYSTRATEGY_SMALL_CITY" />
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_SMALL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NUKE</FlavorType>
+			<Flavor>-300</Flavor>
+			<!-- -300 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_SMALL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>-300</Flavor>
+			<!-- -300 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_SMALL_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>-300</Flavor>
+			<!-- -300 -->
+		</Row>
+		<Delete AICityStrategyType="AICITYSTRATEGY_MEDIUM_CITY" />
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_MEDIUM_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>5</Flavor>
+			<!-- 10 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_MEDIUM_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_NUKE</FlavorType>
+			<Flavor>-100</Flavor>
+			<!-- -100 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_MEDIUM_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>-200</Flavor>
+			<!-- -200 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_MEDIUM_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>-50</Flavor>
+			<!-- -50 -->
+		</Row>
+		<Delete AICityStrategyType="AICITYSTRATEGY_LARGE_CITY" />
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_LARGE_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+			<!-- 15 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_LARGE_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>5</Flavor>
+			<!-- 0 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_LARGE_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>5</Flavor>
+			<!-- 25 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_LARGE_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>5</Flavor>
+			<!-- 25 -->
+		</Row>
+		<Row>
+			<AICityStrategyType>AICITYSTRATEGY_LARGE_CITY</AICityStrategyType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>5</Flavor>
+			<!-- 15 -->
+		</Row>
+	</AICityStrategy_Flavors>
+</GameData>

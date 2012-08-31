@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<Update>
+			<Where Tag="TXT_KEY_RESOURCE_COAL_HELP" />
+			<Set Text="Used by Factories." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNITCOMBAT_RECON" />
+			<Set Text="Vanguard Units" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTIONS_SECTION_5" />
+			<Set Text="Vanguard Promotions" />
+		</Update>
+		<Row Tag="TXT_KEY_DUMMY_COAL">
+			<Text>_</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DUMMY_COAL_HELP">
+			<Text>Ignore this. It simply works around a bug with strategic resources in the game (if no unit uses a resource, it cannot be traded).</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_GAME_OPTION_PROMOTION_SAVING" />
+			<Set Text="No Promotion Saving" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_GAME_OPTION_PROMOTION_SAVING_HELP" />
+			<Set Text="Players must pick Promotions immediately when available." />
+		</Update>
+		<Row Tag="TXT_KEY_CNOTIFICATION_REFUGEES_OPTION">
+			<Text>[ICON_CITIZEN] War Refugees</Text>
+		</Row
+		<Row Tag="TXT_KEY_CNOTIFICATION_CAPTURED_MARITIME_OPTION">
+			<Text>[ICON_WAR] Captured Maritime Citystate</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CNOTIFICATION_CAPTURED_CULTURAL_OPTION">
+			<Text>[ICON_WAR] Captured Cultural Citystate</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CNOTIFICATION_CAPTURED_MILITARISTIC_OPTION">
+			<Text>[ICON_WAR] Captured Militaristic Citystate</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CNOTIFICATION_CAPTURED_OTHER_OPTION">
+			<Text>[ICON_WAR] Captured Other Citystate</Text>
+		</Row>
+
+
+
+		<!--
+		
+		===========================
+		======= Promotions ========
+		===========================
+		
+-->
+
+
+		<!-- 
+				Soldiers
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_SWORDSMAN" />
+			<Set Text="Classical Era soldier with a bonus against Cities." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_LONGSWORDSMAN" />
+			<Set Text="Medieval soldier with a bonus against Cities." />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_SUPPRESSION">
+			<Text>Suppression</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SUPPRESSION_HELP">
+			<Text>+35% vs [COLOR_POSITIVE_TEXT]Vanguard[ENDCOLOR] units</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_FORMATION_1" />
+			<Set Text="Formation" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_FORMATION_1_HELP" />
+			<Set Text="+35% vs [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SIEGE_HELP" />
+			<Set Text="+50% vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].[NEWLINE]+30% vs [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_AMBUSH_1_HELP" />
+			<Set Text="+25% [ICON_STRENGTH] Strength vs [COLOR_POSITIVE_TEXT]Vanguard[ENDCOLOR], [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR], [COLOR_POSITIVE_TEXT]Armor[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_AMBUSH_2_HELP" />
+			<Set Text="+25% [ICON_STRENGTH] Strength vs [COLOR_POSITIVE_TEXT]Vanguard[ENDCOLOR], [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR], [COLOR_POSITIVE_TEXT]Armor[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_CAN_MOVE_AFTER_ATTACKING" />
+			<Set Text="Attacks Use 1 [ICON_MOVES] Move." />
+		</Update>
+
+
+		<!-- 
+				Mobile
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_CHARGE_HELP" />
+			<Set Text="+1 [ICON_MOVES] Movement.[NEWLINE]+20% vs [COLOR_POSITIVE_TEXT]Wounded[ENDCOLOR] units." />
+		</Update>
+
+
+		<!-- 
+				Ranged
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_CITY_ASSUALT" />
+			<Set Text="Demolish" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_CITY_ASSUALT_HELP" />
+			<Set Text="+50% vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].[NEWLINE]+30% vs [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR].[NEWLINE]-50% vs [COLOR_NEGATIVE_TEXT]Land Units[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_CITY_SIEGE" />
+			<Set Text="Bonus vs Cities (10)" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_CITY_SIEGE_HELP" />
+			<Set Text="+10% vs Cities." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_GATLINGGUN" />
+			<Set Text="Defensive soldier of the Industrial Era." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_GATLINGGUN_STRATEGY" />
+			<Set Text="The Gatling Gun is a mid-game non-siege ranged unit. It is much more powerful than earlier ranged units like the Crossbowman. It has only a one-hex range, but still can deal significant damage to other units without being hurt itself. Put Gatling Guns in your cities for defense." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_MACHINE_GUN" />
+			<Set Text="Defensive soldier of the Modern Era." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_MACHINE_GUN_STRATEGY" />
+			<Set Text="The Machine Gun is the last ranged land non-siege unit. It is more powerful than earlier ranged units. Like the Gatling Gun it has only a one-hex range, but still can deal significant damage to other units without being hurt itself. It is vulnerable to melee attack. Put Machine Guns in your cities for defense." />
+		</Update>
+
+
+		<!-- 
+				Ships
+		-->
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_SUBMARINE_HELP">
+			<Text>Ignores cultural borders.[NEWLINE]Can only be seen by Destroyers or units 1 tile away.</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_TARGETING_1_HELP" />
+			<Set Text="+1 Sight.[NEWLINE]+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Naval[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_TARGETING_2_HELP" />
+			<Set Text="+1 [ICON_MOVES] Movement.[NEWLINE]+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Naval[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_TARGETING_3_HELP" />
+			<Set Text="+1 Sight.[NEWLINE]+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Naval[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_BOMBARDMENT_1_HELP" />
+			<Set Text="+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_BOMBARDMENT_2_HELP" />
+			<Set Text="+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_BOMBARDMENT_3_HELP" />
+			<Set Text="+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] units." />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RECON_1">
+			<Text>Naval Recon I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RECON_1_HELP">
+			<Text>+1 Sight.[NEWLINE]Can [COLOR_POSITIVE_TEXT]heal[ENDCOLOR] outside friendly territory.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RECON_2">
+			<Text>Naval Recon II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RECON_2_HELP">
+			<Text>+1 [ICON_MOVES]Movement.[NEWLINE]+10 [COLOR_POSITIVE_TEXT]heal rate[ENDCOLOR] outside friendly territory.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEMOLISH">
+			<Text>Naval Demolish</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEMOLISH_HELP">
+			<Text>+30% vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].[NEWLINE]+30% vs [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR]</Text>
+		</Row>
+
+
+		<!-- 
+				Vanguard
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SCOUTING_1" />
+			<Set Text="Recon I" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SCOUTING_2" />
+			<Set Text="Recon II" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SCOUTING_3" />
+			<Set Text="Recon III" />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_TRENCHES_1">
+			<Text>Trenches I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TRENCHES_2">
+			<Text>Trenches II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TRENCHES_3">
+			<Text>Trenches III</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TRENCHES_1_HELP">
+			<Text>+15% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] on Open Terrain.[NEWLINE]+1 Sight</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TRENCHES_2_HELP">
+			<Text>+15% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] on Open Terrain.[NEWLINE]+1 [ICON_MOVES] Movement</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TRENCHES_3_HELP">
+			<Text>+20% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] on Open Terrain.[NEWLINE]+1 Sight</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUERRILLA_1">
+			<Text>Guerrilla I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUERRILLA_2">
+			<Text>Guerrilla II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUERRILLA_3">
+			<Text>Guerrilla III</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUERRILLA_1_HELP">
+			<Text>+15% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] on Rough Terrain.[NEWLINE]+1 Sight</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUERRILLA_2_HELP">
+			<Text>+15% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] on Rough Terrain.[NEWLINE]+1 [ICON_MOVES] Movement</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUERRILLA_3_HELP">
+			<Text>+20% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] on Rough Terrain.[NEWLINE]+1 Sight</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SCOUTING_1_HELP" />
+			<Set Text="+1 Sight.[NEWLINE]Ignores terrain cost." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SCOUTING_2_HELP" />
+			<Set Text="+1 [ICON_MOVES] Movement.[NEWLINE]Attempts to [COLOR_POSITIVE_TEXT]withdraw[ENDCOLOR] from melee or embarked combat." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SURVIVALISM_1" />
+			<Set Text="Survivalist" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SURVIVALISM_1_HELP" />
+			<Set Text="+20 [COLOR_POSITIVE_TEXT]healing[ENDCOLOR] outside friendly territory.[NEWLINE]No Movement Cost to Pillage." />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_SKIRMISH">
+			<Text>Skirmish</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SKIRMISH_HELP">
+			<Text>Attempts to withdraw from melee or embarked combat</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_VOLLEY_HELP" />
+			<Set Text="+30% vs [COLOR_POSITIVE_TEXT]Fortified[ENDCOLOR] units." />
+		</Update>
+
+
+		<!-- 
+				Other
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_BLITZ_HELP" />
+			<Set Text="Can attack twice." />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_RANGED_BLITZ_HELP">
+			<Text>Can attack twice at 75% ranged damage.</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_MARCH_HELP" />
+			<Set Text="Attacking and moving do not prevent healing." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_COVER_1_HELP" />
+			<Set Text="+25% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] against [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_COVER_2_HELP" />
+			<Set Text="+50% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR] against [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_MORALE_HELP" />
+			<Set Text="+20% [ICON_STRENGTH] Strength." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_MEDIC_HELP" />
+			<Set Text="[COLOR_POSITIVE_TEXT]+10 Healing[ENDCOLOR] for units within 1 tile." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_PARTIAL_HEAL_IF_DESTROY_ENEMY" />
+			<Set Text="Heals 25 Damage If Kills a Unit." />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING">
+			<Text>Defense vs Ranged (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING_HELP">
+			<Text>+50% Defense vs [COLOR_POSITIVE_TEXT]Ranged Damage[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING">
+			<Text>Tactical Bombing</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING_HELP">
+			<Text>+50% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Sea[ENDCOLOR] units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1">
+			<Text>Bombardment I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1_HELP">
+			<Text>+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Sea[ENDCOLOR] units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_2">
+			<Text>Bombardment II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_2_HELP">
+			<Text>+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Sea[ENDCOLOR] units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_3">
+			<Text>Bombardment III</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_3_HELP">
+			<Text>+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Sea[ENDCOLOR] units.</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_AIR_SIEGE_1_HELP" />
+			<Set Text="+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_AIR_SIEGE_2_HELP" />
+			<Set Text="+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_AIR_SIEGE_3_HELP" />
+			<Set Text="+15% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR]." />
+		</Update>
+		
+
+
+
+		<!-- 
+				Attributes
+		-->
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_CAVALRY">
+			<Text>Bonus vs Dragoons (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_CAVALRY_HELP">
+			<Text>+50% vs [COLOR_POSITIVE_TEXT]Dragoons[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CAMARADERIE">
+			<Text>Camaraderie</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CAMARADERIE_HELP">
+			<Text>+20% [ICON_STRENGTH] Combat Strength when adjacent to a friendly Unit</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_GAIN_EXPERIENCE_HELP" />
+			<Set Text="Earns experience 50% faster." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_I" />
+			<Set Text="Bonus vs Mounted (25)" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_I_HELP" />
+			<Set Text="+25% vs [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_II" />
+			<Set Text="Bonus vs Mounted (50)" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP" />
+			<Set Text="+50% vs [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_AIR" />
+			<Set Text="Bonus vs Air (50)" />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_HELP">
+			<Text>+50% vs [COLOR_POSITIVE_TEXT]Air[ENDCOLOR].</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_HELICOPTER" />
+			<Set Text="Bonus vs Helicopters (50)" />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_HELICOPTER_HELP">
+			<Text>+50% vs [COLOR_POSITIVE_TEXT]Helicopters[ENDCOLOR].</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_TANK" />
+			<Set Text="Bonus vs Tanks (50)" />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_TANK_HELP">
+			<Text>+50% vs [COLOR_POSITIVE_TEXT]Tanks[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS">
+			<Text>Bonus vs Capital Ships (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS_HELP">
+			<Text>+50% vs [COLOR_POSITIVE_TEXT]Battleships[ENDCOLOR].[NEWLINE]+50% vs [COLOR_POSITIVE_TEXT]Missile Cruisers[ENDCOLOR].[NEWLINE]+50% vs [COLOR_POSITIVE_TEXT]Carriers[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COVER_PENALTY">
+			<Text>Penalty vs Ranged (10)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COVER_PENALTY_HELP">
+			<Text>-10% [COLOR_NEGATIVE_TEXT]Defense[ENDCOLOR] against all [COLOR_NEGATIVE_TEXT]Ranged Attacks[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COVER_PENALTY_PEDIA">
+			<Text>-10% vs [COLOR_NEGATIVE_TEXT]Ranged[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DEFENSE_1">
+			<Text>Bonus on Defense (25)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DEFENSE_1_HELP">
+			<Text>+25% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DEFENSE_2">
+			<Text>Bonus on Defense (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DEFENSE_2_HELP">
+			<Text>+50% [COLOR_POSITIVE_TEXT]Defense[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ATTACK_BONUS_I_HELP">
+			<Text>+25% [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ATTACK_BONUS_II">
+			<Text>Bonus on Attack (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ATTACK_BONUS_II_HELP">
+			<Text>+50% [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR].</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_DEFENSE_PENALTY" />
+			<Set Text="-25% [COLOR_NEGATIVE_TEXT]Defense[ENDCOLOR]" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_HOVERING_UNIT" />
+			<Set Text="All Terrain" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_HOVERING_UNIT_HELP" />
+			<Set Text="Can traverse [COLOR_POSITIVE_TEXT]Mountains[ENDCOLOR]." />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_ASTRONOMY">
+			<Text>Astronomy</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ASTRONOMY_HELP">
+			<Text>Can traverse [COLOR_POSITIVE_TEXT]Ice[ENDCOLOR].</Text>
+		</Row>
+		
+		<Row
+			Tag="TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED"
+			Text="Double work speed"
+		/>
+		<Row
+			Tag="TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED_HELP"
+			Text="Builds improvements +100% faster"
+		/>
+		<Row Tag="TXT_KEY_PROMOTION_PHALANX">
+			<Text>Phalanx</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_PHALANX_HELP">
+			<Text>+50% vs [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Soldier[ENDCOLOR] units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN">
+			<Text>Golden</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_HELP">
+			<Text>[ICON_GOLDEN_AGE] Golden Age points from combat</Text>
+		</Row>
+		
+
+
+
+
+
+
+
+
+
+
+
+		<!--
+		
+		===========================
+		========== Units ==========
+		===========================
+		
+-->
+		
+		<!--
+				Footsoldiers
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_HOPLITE" />
+			<Set Text="Soldier unique to the Greeks. Hoplites start with the Phalanx promotion, unlike the Spearmen they replace." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_IMMORTAL" />
+			<Set Text="Soldier unique to the Persians, with bonuses on defense and against mounted units. Winning battles with Immortals hastens the next [ICON_GOLDEN_AGE] Goldenage, unlike the Spearman it replaces." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_SPEARMAN" />
+			<Set Text="Ancient Era soldier with bonuses on defense and against mounted units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_PIKEMAN" />
+			<Set Text="Specialized in defeating Knights and other mounted units, with a bonus on defense." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CIV5_SPAIN_TERCIO_HELP" />
+			<Set Text="Dominant military Unit of the Renaissance Era, unique to Spain. The Tercio has a higher [ICON_STRENGTH] Combat Strength than the Musketman it replaces, and has a bonus against Mounted units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_SCOUT" />
+			<Set Text="Scouts excel at exploring, and are useful as cheap city garrisons. Scouts are stronger next to friendly military units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_SCOUT_STRATEGY" />
+			<Set Text="In friendly territory Vanguard Units are cheap garrisons for cities. In military campaigns, send them to your front lines to detect threats, heal units, and absorb damage from cities and armies." />
+		</Update>
+		<Row Tag="TXT_KEY_UNIT_SENTINEL">
+			<Text>Sentinel</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SENTINEL_HELP">
+			<Text>Ancient era Vanguard Unit useful as city garrisons, scouts, medics, and absorbing damage on the front lines. Sentinels are stronger next to friendly military units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SENTINEL_STRATEGY">
+			<Text>In friendly territory Vanguard Units are cheap garrisons for cities. In military campaigns, send them to your front lines to detect threats, heal units, and absorb damage from cities and armies.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SENTINEL_PEDIA">
+			<Text>The vanguard is the leading part of an advancing military formation. It has a number of functions, including seeking out the enemy and securing ground. The word Vanguard originates with the medieval French avant-garde, 'ward in front.' The vanguard derives from the division of a Medieval European army into three wards: Van, Main, and Rear. The vanguard leads the line of march and deploys first on the field of battle.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_LEVY">
+			<Text>Levy</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_LEVY_HELP">
+			<Text>Medieval era Vanguard Unit useful as city garrisons, scouts, medics, and absorbing damage on the front lines. Levies are stronger next to friendly military units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_LEVY_STRATEGY">
+			<Text>In friendly territory Vanguard Units are cheap garrisons for cities. In military campaigns, send them to your front lines to detect threats, heal units, and absorb damage from cities and armies.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_LEVY_PEDIA">
+			<Text>The vanguard is the leading part of an advancing military formation. It has a number of functions, including seeking out the enemy and securing ground. The word Vanguard originates with the medieval French avant-garde, 'ward in front.' The vanguard derives from the division of a Medieval European army into three wards: Van, Main, and Rear. The vanguard leads the line of march and deploys first on the field of battle.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SKIRMISHER">
+			<Text>Skirmisher</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SKIRMISHER_HELP">
+			<Text>Renaissance era Vanguard Unit useful as city garrisons, scouts, medics, and absorbing damage on the front lines. Skirmishers are stronger next to friendly military units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SKIRMISHER_STRATEGY">
+			<Text>In friendly territory Vanguard Units are cheap garrisons for cities. In military campaigns, send them to your front lines to detect threats, heal units, and absorb damage from cities and armies.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SKIRMISHER_PEDIA">
+			<Text>The vanguard is the leading part of an advancing military formation. It has a number of functions, including seeking out the enemy and securing ground. The word Vanguard originates with the medieval French avant-garde, 'ward in front.' The vanguard derives from the division of a Medieval European army into three wards: Van, Main, and Rear. The vanguard leads the line of march and deploys first on the field of battle.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_CONSCRIPT">
+			<Text>Conscript</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_CONSCRIPT_HELP">
+			<Text>Industrial era Vanguard Unit useful as pillagers, scouts and medics. Conscripts are stronger next to friendly military units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_CONSCRIPT_STRATEGY">
+			<Text>In friendly territory Vanguard Units are cheap garrisons for cities. In military campaigns, send them to your front lines to detect threats, heal units, and absorb damage from cities and armies.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_CONSCRIPT_PEDIA">
+			<Text>The vanguard is the leading part of an advancing military formation. It has a number of functions, including seeking out the enemy and securing ground. The word Vanguard originates with the medieval French avant-garde, 'ward in front.' The vanguard derives from the division of a Medieval European army into three wards: Van, Main, and Rear. The vanguard leads the line of march and deploys first on the field of battle.</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_MECHANIZED_INFANTRY" />
+			<Set Text="Powerful soldier of the modern era." />
+		</Update>
+		<!--
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_MECHANIZED_INFANTRY_STRATEGY" />
+			<Set Text="In friendly territory Vanguard Units are cheap garrisons for cities. In military campaigns, send them to your front lines to detect threats, heal units, and absorb damage from cities and armies." />
+		</Update>
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_PARATROOPER" />
+			<Set Text="Airborne" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_PARATROOPER" />
+			<Set Text="Modern Vanguard Unit useful as pillagers, scouts, and medics. Airborne are stronger next to friendly military units, and can paradrop up to 10 tiles from friendly territory." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_PARATROOPER_STRATEGY" />
+			<Set Text="Send Airborne to your front lines to detect threats, heal units, and pillage enemy improvements.[NEWLINE]Airborne can parachute up to 10 tiles from friendly territory. This allows Airborne to literally jump over enemy positions and destroy road networks, pillage vital resources and so forth, wrecking havoc behind enemy lines. Airborne are at great risk when on such missions, so make sure the target is worth it!" />
+		</Update>
+
+
+
+		<!--
+				Mobile
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_COMPANION_CAVALRY" />
+			<Set Text="Fast and powerful early game Mounted Unit. Weak to Spearmen. Only the Greeks may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength and helps produce Great Generals more quickly than the Horseman it replaces." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_CAVALRY" />
+			<Set Text="Dragoon" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_CAVALRY" />
+			<Set Text="Mounted Unit of the Renaissance Era, capable of fighting toe-to-toe with contemporary infantry units. Weak against Lancers and Sipahi." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_LANCER" />
+			<Set Text="Mounted Unit faster and more powerful than the Knight, with bonuses against Dragoons and on the attack." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_SIPAHI" />
+			<Set Text="Mounted Unit unique to the Ottomans, faster and more powerful than the Knight, with bonuses on the attack and against Dragoons. Sipahi have higher speed and sight range than the Lancer it replaces." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_ANTI_TANK_GUN" />
+			<Set Text="Anti-Tank Guns are specialized at defeating Tanks." />
+		</Update>
+
+
+
+		<!--
+				Ships
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_TRIREME" />
+			<Set Text="Light Ship useful for early exploration and naval warfare." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_CARAVEL" />
+			<Set Text="Light Ship with the Recon 1 promotion.[NEWLINE]Can enter oceans after Astronomy." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_FRIGATE" />
+			<Set Text="Light Ship with the Recon 1 promotion." />
+		</Update>
+		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE_HELP">
+			<Text>The first Capital Ship in the game, with a bonus against Cities.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE_STRATEGY">
+			<Text>Ships of the Line are more powerful than Frigates, but slower and more expensive.</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_IRONCLAD" />
+			<Set Text="Powerful Capital Ship armored by iron plating, with a bonus against Cities." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_IRONCLAD_STRATEGY" />
+			<Set Text="Ironclads are the first steam-powered warships available. They are harder to kill than any sailing vessel, and their Ranged Combat strength is higher." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CIVILOPEDIA_UNITS_RENAISSANCE_IRONCLAD_TEXT" />
+			<Set Text="An ironclad was a steam-propelled warship in the mid-1800s, protected by iron or steel armor plates. The ironclad was developed as a result of the vulnerability of wooden warships to explosive or incendiary shells. The first ironclad battleship, La Gloire, was launched by the French Navy in November 1859.[NEWLINE][NEWLINE]Ironclads were designed for several roles, including as high seas battleships, coastal defense ships, and long-range cruisers. The rapid evolution of warship design in the late 19th century transformed the ironclad from a wooden-hulled vessel that carried sails to supplement its steam engines into the steel-built, turreted battleships and cruisers familiar in the 20th century. This change was pushed forward by the development of heavier naval guns (the ironclads of the 1880s carried some of the heaviest guns ever mounted at sea), more sophisticated steam engines, and advances in metallurgy which made steel shipbuilding possible.[NEWLINE][NEWLINE]The rapid pace of change in the ironclad period meant that many ships were obsolete as soon as they were complete, and that naval tactics were in a state of flux. Many ironclads were built to make use of the ram or the torpedo, which a number of naval designers considered the crucial weapons of naval combat. There is no clear end to the ironclad period, but towards the end of the 1890s the term ironclad dropped out of use. New ships were increasingly constructed to a standard pattern and designated battleships or armored cruisers." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_DESTROYER" />
+			<Set Text="Industrial-era Light Ship with extra sight range, and capable of spotting Submarines." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_BATTLESHIP" />
+			<Set Text="Industrial-era Capital Ship with a bonus against Cities." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_SUBMARINE" />
+			<Set Text="Submarines are specialized in defeating Capital Ships, and invisible to everything but Destroyers, Submarines, and units within 1 tile range. " />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_NUCLEAR_SUBMARINE" />
+			<Set Text="Specialized in defeating Capital Ships and regular Submarines. Can carry 2 Missiles. Missile Subs are only visible to Destroyers, Submarines, and units within 1 tile range." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_MISSILE_CRUISER" />
+			<Set Text="Modern Capital Ship with bonuses against Air Units and Cities. Can also hold 3 missiles." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_CARRIER" />
+			<Set Text="Capital Ship capable of carrying 3 aircraft, but unable to attack on its own." />
+		</Update>
+
+
+
+		<!--
+				Other
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_TRIPLANE" />
+			<Set Text="Early Air Unit with a huge sight range, designed to detect and intercept incoming enemy aircraft." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_FIGHTER" />
+			<Set Text="Air Unit with a huge sight range, designed to detect and intercept incoming enemy aircraft." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_JET_FIGHTER" />
+			<Set Text="Air Unit with a huge sight range, designed to detect and intercept incoming enemy aircraft." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_WWI_BOMBER" />
+			<Set Text="Early tactical bomber strong against ground units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_BOMBER" />
+			<Set Text="Tactical bomber strong against ground units." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_STEALTH_BOMBER" />
+			<Set Text="A long-range aircraft strong against ground units." />
+		</Update>
+	</Language_en_US>
+</GameData>

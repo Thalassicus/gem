@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Leaders>
+		<Update>
+			<Where Type="LEADER_ALEXANDER" />
+			<Set
+				Personality="PERSONALITY_COALITION"
+				VictoryCompetitiveness="6"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="10"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-10"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="4"
+				Forgiveness="5"
+				Chattiness="7"
+				Meanness="6"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_ASKIA" />
+			<Set
+				Personality="PERSONALITY_CONQUEROR"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="0"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="4"
+				Forgiveness="9"
+				Chattiness="5"
+				Meanness="0"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_AUGUSTUS" />
+			<Set
+				Personality="PERSONALITY_CONQUEROR"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="7"
+				Forgiveness="0"
+				Chattiness="4"
+				Meanness="8"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_BISMARCK" />
+			<Set
+				Personality="PERSONALITY_COALITION"
+				VictoryCompetitiveness="6"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="8"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-10"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="7"
+				Forgiveness="5"
+				Chattiness="5"
+				Meanness="6"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_CATHERINE" />
+			<Set
+				Personality="PERSONALITY_COALITION"
+				VictoryCompetitiveness="6"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="8"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-10"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="6"
+				Forgiveness="5"
+				Chattiness="7"
+				Meanness="6"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_DARIUS" />
+			<Set
+				Personality="PERSONALITY_EXPANSIONIST"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="8"
+				MinorCivCompetitiveness="0"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="6"
+				Forgiveness="3"
+				Chattiness="4"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_ELIZABETH" />
+			<Set
+				Personality="PERSONALITY_COALITION"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="7"
+				Forgiveness="0"
+				Chattiness="5"
+				Meanness="8"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_GANDHI" />
+			<Set
+				Personality="PERSONALITY_DIPLOMAT"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="5"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="10"
+				DenounceWillingness="0"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="7"
+				Forgiveness="0"
+				Chattiness="6"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_GENGHIS_KHAN" />
+			<Set
+				Personality="PERSONALITY_CONQUEROR"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="5"
+				Forgiveness="0"
+				Chattiness="5"
+				Meanness="8"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_HARALD" />
+			<Set
+				Personality="PERSONALITY_CONQUEROR"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="4"
+				Forgiveness="0"
+				Chattiness="4"
+				Meanness="8"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_HARUN_AL_RASHID" />
+			<Set
+				Personality="PERSONALITY_EXPANSIONIST"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="0"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="6"
+				Forgiveness="3"
+				Chattiness="5"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_HIAWATHA" />
+			<Set
+				Personality="PERSONALITY_EXPANSIONIST"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="0"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="7"
+				Forgiveness="5"
+				Chattiness="3"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_ISABELLA" />
+			<Set
+				Personality="PERSONALITY_CONQUEROR"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="8"
+				DoFWillingness="4"
+				Loyalty="0"
+				Neediness="7"
+				Forgiveness="0"
+				Chattiness="5"
+				Meanness="8"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_KAMEHAMEHA" />
+			<Set
+				Personality="PERSONALITY_DIPLOMAT"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="5"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="4"
+				Forgiveness="5"
+				Chattiness="6"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_MONTEZUMA" />
+			<Set
+				Personality="PERSONALITY_COALITION"
+				VictoryCompetitiveness="15"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="15"
+				Boldness="10"
+				DiploBalance="6"
+				WarmongerHate="-10"
+				DenounceWillingness="10"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="4"
+				Forgiveness="9"
+				Chattiness="4"
+				Meanness="0"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_NAPOLEON" />
+			<Set
+				Personality="PERSONALITY_CONQUEROR"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="4"
+				Forgiveness="0"
+				Chattiness="6"
+				Meanness="9"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_NEBUCHADNEZZAR" />
+			<Set
+				Personality="PERSONALITY_EXPANSIONIST"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="0"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="3"
+				Forgiveness="3"
+				Chattiness="6"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_ODA_NOBUNAGA" />
+			<Set
+				Personality="PERSONALITY_CONQUEROR"
+				VictoryCompetitiveness="9"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="0"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-20"
+				DenounceWillingness="4"
+				DoFWillingness="4"
+				Loyalty="0"
+				Neediness="6"
+				Forgiveness="5"
+				Chattiness="3"
+				Meanness="0"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_PACHACUTI" />
+			<Set
+				Personality="PERSONALITY_DIPLOMAT"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="5"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="6"
+				Forgiveness="5"
+				Chattiness="7"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_RAMESSES" />
+			<Set
+				Personality="PERSONALITY_DIPLOMAT"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="10"
+				MinorCivCompetitiveness="5"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="10"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="5"
+				Forgiveness="5"
+				Chattiness="4"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_RAMKHAMHAENG" />
+			<Set
+				Personality="PERSONALITY_DIPLOMAT"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="5"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="10"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="7"
+				Forgiveness="5"
+				Chattiness="6"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_SEJONG" />
+			<Set
+				Personality="PERSONALITY_DIPLOMAT"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="5"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="10"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="6"
+				Forgiveness="5"
+				Chattiness="5"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_SULEIMAN" />
+			<Set
+				Personality="PERSONALITY_EXPANSIONIST"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="0"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="3"
+				Forgiveness="3"
+				Chattiness="6"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_WASHINGTON" />
+			<Set
+				Personality="PERSONALITY_EXPANSIONIST"
+				VictoryCompetitiveness="5"
+				WonderCompetitiveness="5"
+				MinorCivCompetitiveness="0"
+				Boldness="0"
+				DiploBalance="4"
+				WarmongerHate="3"
+				DenounceWillingness="3"
+				DoFWillingness="7"
+				Loyalty="8"
+				Neediness="7"
+				Forgiveness="3"
+				Chattiness="5"
+				Meanness="3"
+				/>
+		</Update>
+		<Update>
+			<Where Type="LEADER_WU_ZETIAN" />
+			<Set
+				Personality="PERSONALITY_COALITION"
+				VictoryCompetitiveness="6"
+				WonderCompetitiveness="0"
+				MinorCivCompetitiveness="8"
+				Boldness="9"
+				DiploBalance="6"
+				WarmongerHate="-10"
+				DenounceWillingness="7"
+				DoFWillingness="7"
+				Loyalty="0"
+				Neediness="6"
+				Forgiveness="5"
+				Chattiness="6"
+				Meanness="6"
+				/>
+		</Update>
+	</Leaders>
+
+	<Leader_MajorCivApproachBiases>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias= "10" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "2" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias= "10" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "2" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-99" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias= "10" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "2" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias= "10" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "2" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "7" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias= "25" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "2" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias= "10" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "2" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias= "10" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "8" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "3" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias="-75" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "0" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "6" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"         /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MajorCivApproachType="MAJOR_CIV_APPROACH_HOSTILE"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"   /> <Set Bias=  "1" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MajorCivApproachType="MAJOR_CIV_APPROACH_GUARDED"     /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MajorCivApproachType="MAJOR_CIV_APPROACH_AFRAID"      /> <Set Bias=  "5" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MajorCivApproachType="MAJOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=  "4" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"     /> <Set Bias=  "4" /></Update>
+	</Leader_MajorCivApproachBiases>	
+	<Leader_MinorCivApproachBiases>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_ALEXANDER"          MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_ASKIA"              MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias= "150" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_AUGUSTUS"           MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias= "150" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_BISMARCK"           MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_CATHERINE"          MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_DARIUS"             MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_ELIZABETH"          MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_GANDHI"             MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias="-100" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias="-100" /></Update>
+		<Update><Where LeaderType="LEADER_GENGHIS_KHAN"       MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias= "150" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_HARALD"             MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias= "150" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_HARUN_AL_RASHID"    MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_HIAWATHA"           MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_ISABELLA"           MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias= "150" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_KAMEHAMEHA"         MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_MONTEZUMA"          MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_NAPOLEON"           MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias= "150" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_NEBUCHADNEZZAR"     MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_ODA_NOBUNAGA"       MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias= "150" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_PACHACUTI"          MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_RAMESSES"           MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_RAMKHAMHAENG"       MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_SEJONG"             MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_SULEIMAN"           MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "10" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias= "-50" /></Update>
+		<Update><Where LeaderType="LEADER_WASHINGTON"         MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MinorCivApproachType="MINOR_CIV_APPROACH_IGNORE"      /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MinorCivApproachType="MINOR_CIV_APPROACH_FRIENDLY"    /> <Set Bias=   "0" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MinorCivApproachType="MINOR_CIV_APPROACH_PROTECTIVE"  /> <Set Bias=  "50" /></Update>
+		<Update><Where LeaderType="LEADER_WU_ZETIAN"          MinorCivApproachType="MINOR_CIV_APPROACH_CONQUEST"    /> <Set Bias="-500" /></Update>
+	</Leader_MinorCivApproachBiases>
+</GameData>

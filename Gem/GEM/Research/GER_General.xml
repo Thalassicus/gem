@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Defines>
+		<Update>
+			<Where Type="TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER" />
+			<Set Value="120" />
+			<!-- 30 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_GATHERING_INTEL_COST_PERCENT" />
+			<Set Value="45" />
+			<!-- 125 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_GATHERING_INTEL_RATE_BY_SPY_RANK_PERCENT" />
+			<Set Value="25" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_GATHERING_INTEL_RATE_BASE_PERCENT" />
+			<Set Value="100" />
+			<!-- 100 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_TURNS_BETWEEN_CITY_STATE_ELECTIONS" />
+			<Set Value="15" />
+			<!-- 15 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_INFLUENCE_GAINED_FOR_RIGGED_ELECTION" />
+			<Set Value="20" />
+			<!-- 20 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_INFLUENCE_LOST_FOR_RIGGED_ELECTION" />
+			<Set Value="5" />
+			<!-- 5 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_SURVEILLANCE_SIGHT_RANGE" />
+			<Set Value="1" />
+			<!-- 1 -->
+		</Update>
+	</Defines>
+	<Civup>
+		<Update>
+			<Where Type="PERCENT_SCIENCE_FOR_1_SURPLUS_HAPPINESS" />
+			<Set Value="0" />
+		</Update>
+	</Civup>
+	<Buildings>
+		<!--
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_PALACE" />
+			<Set MedianTechPercentChange="-1000" />
+		</Update>
+		-->
+	</Buildings>
+	<GameSpeeds>
+		<Update>
+			<Where Type="GAMESPEED_MARATHON" />
+			<Set ResearchPercent="500" />
+		</Update>
+	</GameSpeeds>
+	<Eras>
+		<Update>
+			<Where Type="ERA_ANCIENT"/>
+			<Set>
+				<ResearchAgreementCost>200</ResearchAgreementCost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="ERA_CLASSICAL"/>
+			<Set>
+				<ResearchAgreementCost>300</ResearchAgreementCost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="ERA_MEDIEVAL"/>
+			<Set>
+				<ResearchAgreementCost>400</ResearchAgreementCost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="ERA_RENAISSANCE"/>
+			<Set>
+				<ResearchAgreementCost>500</ResearchAgreementCost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="ERA_INDUSTRIAL"/>
+			<Set>
+				<ResearchAgreementCost>700</ResearchAgreementCost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="ERA_MODERN"/>
+			<Set>
+				<ResearchAgreementCost>1000</ResearchAgreementCost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="ERA_POSTMODERN"/>
+			<Set>
+				<ResearchAgreementCost>1500</ResearchAgreementCost>
+			</Set>
+		</Update>		
+		<Update>
+			<Where Type="ERA_FUTURE"/>
+			<Set>
+				<ResearchAgreementCost>2000</ResearchAgreementCost>
+			</Set>
+		</Update>
+	</Eras>
+	<Buildings>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_MARKET" />
+			<Set PrereqTech="TECH_TRAPPING" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_CIRCUS" />
+			<Set PrereqTech="TECH_HORSEBACK_RIDING" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_CIRCUS_MAXIMUS" />
+			<Set PrereqTech="TECH_HORSEBACK_RIDING" />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_IRONWORKS" />
+			<Set PrereqTech="TECH_METAL_CASTING" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_AQUEDUCT" />
+			<Set PrereqTech="TECH_CONSTRUCTION" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_STABLE" />
+			<Set PrereqTech="TECH_THE_WHEEL" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_COLOSSUS" />
+			<Set PrereqTech="TECH_TRAPPING" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_ORACLE" />
+			<Set PrereqTech="TECH_DRAMA" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_CHICHEN_ITZA" />
+			<Set PrereqTech="TECH_GUILDS" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_FORBIDDEN_PALACE" />
+			<Set PrereqTech="TECH_GUNPOWDER" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_STOCK_EXCHANGE" />
+			<Set PrereqTech="TECH_ELECTRONICS" />
+		</Update>
+	</Buildings>
+	<Builds>
+		<Update>
+			<Where Type="BUILD_TRADING_POST"/>
+			<Set PrereqTech="TECH_POTTERY"/>
+		</Update>
+		<Update>
+			<Where Type="BUILD_CAMP"/>
+			<Set PrereqTech="TECH_ANIMAL_HUSBANDRY"/>
+		</Update>
+		<Update>
+			<Where Type="BUILD_LUMBERMILL"/>
+			<Set PrereqTech="TECH_IRON_WORKING"/>
+		</Update>
+		<Update>
+			<Where Type="BUILD_ROAD"/>
+			<Set PrereqTech="TECH_TRAPPING"/>
+		</Update>
+		<Update>
+			<Where Type="BUILD_WELL" />
+			<Set PrereqTech="TECH_DYNAMITE" />
+		</Update>
+		<Update>
+			<Where Type="BUILD_OFFSHORE_PLATFORM" />
+			<Set PrereqTech="TECH_DYNAMITE" />
+		</Update>
+	</Builds>
+	<Resources>
+		<Update>
+			<Where Type="RESOURCE_IRON" />
+			<Set TechReveal="TECH_BRONZE_WORKING" TechCityTrade="TECH_BRONZE_WORKING" />
+		</Update>
+		<Update>
+			<Where Type="RESOURCE_COAL" />
+			<Set TechReveal="TECH_METAL_CASTING" TechCityTrade="TECH_INDUSTRIALIZATION" />
+		</Update>
+		<Update>
+			<Where Type="RESOURCE_OIL" />
+			<Set TechReveal="TECH_CHEMISTRY" TechCityTrade="TECH_RAILROAD" />
+		</Update>
+		<Update>
+			<Where Type="RESOURCE_ALUMINUM" />
+			<Set TechReveal="TECH_METALLURGY" TechCityTrade="TECH_FLIGHT" />
+		</Update>
+	</Resources>
+	<Technologies>
+		<!--
+		<Update>
+			<Where Type="TECH_THEOLOGY" />
+			<Set IconAtlas="BW_ATLAS_1"
+				 PortraitIndex="38"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_ARCHAEOLOGY" />
+			<Set Era="ERA_INDUSTRIAL" />
+		</Update>
+		-->
+		<Update>
+			<Where Type="TECH_WRITING" />
+			<Set AllowEmbassyTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_TRAPPING" />
+			<Set AllowEmbassyTradingAllowed="true"
+				 Description="TXT_KEY_TECH_TRADE_TITLE"
+				 Civilopedia="TXT_KEY_TECH_TRADE_DESC"
+				 Quote="TXT_KEY_TECH_TRADE_QUOTE"
+				 IconAtlas="BW_ATLAS_1"
+				 PortraitIndex="17"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_STEAM_POWER" />
+			<Set Description="TXT_KEY_TECH_INDUSTRIALIZATION_TITLE"
+				 Civilopedia="TXT_KEY_TECH_INDUSTRIALIZATION_DESC"
+				 Quote="TXT_KEY_TECH_INDUSTRIALIZATION_QUOTE"
+				 AudioIntro="AS2D_TECH_INDUSTRIALIZATION"
+				 AudioIntroHeader="AS2D_HEADING_TECH_INDUSTRIALIZATION"
+				 PortraitIndex="5"
+				 IconAtlas="EXPANSION_TECH_ATLAS_1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_INDUSTRIALIZATION" />
+			<Set Description="TXT_KEY_TECH_STEAM_POWER_TITLE"
+				 Civilopedia="TXT_KEY_TECH_STEAM_POWER_DESC"
+				 Quote="TXT_KEY_TECH_STEAM_POWER_QUOTE"
+				 AudioIntro="AS2D_TECH_STEAM_POWER"
+				 AudioIntroHeader="AS2D_HEADING_TECH_STEAM_POWER"
+				 PortraitIndex="42"
+				 IconAtlas="TECH_ATLAS_1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_CURRENCY" />
+			<Set OpenBordersTradingAllowed="1"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_CIVIL_SERVICE" />
+			<Set OpenBordersTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_PHILOSOPHY" />
+			<Set ResearchAgreementTradingAllowed="1"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_EDUCATION" />
+			<Set ResearchAgreementTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_GUILDS" />
+			<Set DefensivePactTradingAllowed="1"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_CHIVALRY" />
+			<Set DefensivePactTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_METAL_CASTING" />
+			<Set IconAtlas="GEM_TECH_ATLAS"
+				 PortraitIndex="0"
+				 />
+		</Update>		
+	</Technologies>
+	<Technology_PrereqTechs>
+		<!--
+		<Row>
+			<TechType>TECH_METAL_CASTING</TechType>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CURRENCY</TechType>
+			<PrereqTech>TECH_TRAPPING</PrereqTech>
+		</Row>
+		-->
+		<Delete TechType="TECH_THE_WHEEL" PrereqTech="TECH_ARCHERY" />
+		<Delete TechType="TECH_HORSEBACK_RIDING" PrereqTech="TECH_TRAPPING" />
+		<Row>
+			<TechType>TECH_MATHEMATICS</TechType>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MATHEMATICS</TechType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CURRENCY</TechType>
+			<PrereqTech>TECH_TRAPPING</PrereqTech>
+		</Row>
+		<Delete TechType="TECH_ENGINEERING" PrereqTech="TECH_CONSTRUCTION" />
+		<Delete TechType="TECH_CONSTRUCTION" PrereqTech="TECH_THE_WHEEL" />
+		<Row>
+			<TechType>TECH_METAL_CASTING</TechType>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+		</Row>
+		<Delete TechType="TECH_COMPASS" PrereqTech="TECH_THEOLOGY" />
+		<Row>
+			<TechType>TECH_COMPASS</TechType>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+		</Row>
+		<Delete TechType="TECH_BANKING" PrereqTech="TECH_EDUCATION" />
+		<Row>
+			<TechType>TECH_INDUSTRIALIZATION</TechType>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
+		</Row>
+		<Delete TechType="TECH_RIFLING" PrereqTech="TECH_ECONOMICS" />
+		<Row>
+			<TechType>TECH_DYNAMITE</TechType>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
+		</Row>
+		<!--
+		<Update>
+			<Where TechType="TECH_STEAM_POWER" PrereqTech="TECH_MILITARY_SCIENCE" />
+			<Set PrereqTech="TECH_FERTILIZER"/>
+		</Update>
+		<Update>
+			<Where TechType="TECH_MILITARY_SCIENCE" PrereqTech="TECH_ECONOMICS" />
+			<Set TechType="TECH_FERTILIZER"/>
+		</Update>
+		<Row>
+			<TechType>TECH_BANKING</TechType>
+			<PrereqTech>TECH_CURRENCY</PrereqTech>
+		</Row>
+		<Update>
+			<Where TechType="TECH_BIOLOGY" PrereqTech="TECH_ARCHAEOLOGY" />
+			<Set TechType="TECH_ELECTRICITY"/>
+		</Update>
+		<Delete TechType="TECH_COMPUTERS" PrereqTech="TECH_RADAR" />
+		<Delete TechType="TECH_ECOLOGY" PrereqTech="TECH_PLASTIC" />
+		<Row>
+			<TechType>TECH_ROBOTICS</TechType>
+			<PrereqTech>TECH_PLASTIC</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_GLOBALIZATION</TechType>
+			<PrereqTech>TECH_PLASTIC</PrereqTech>
+		</Row>
+		-->
+	</Technology_PrereqTechs>
+</GameData>

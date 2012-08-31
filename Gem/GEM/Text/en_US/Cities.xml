@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<!--
+				General
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_MISSION_START_GOLDENAGE_HELP" />
+			<Set Text="This order will consume the Great Person and initiate a [ICON_GOLDEN_AGE] Golden Age (+20% yields in all cities) for {1_Num} turns. Each time a Great Person starts a Golden Age, the length of the next will shorten (to a minimum of 3 turns)." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_TRADE_ROUTE_INCOME_INFO"/>
+			<Set Text="{1_Num} base [ICON_GOLD] Gold per route[NEWLINE]{2_Num} [ICON_GOLD] Gold per [ICON_CITIZEN] Citizen in capital[NEWLINE]{3_Num} [ICON_GOLD] Gold per [ICON_CITIZEN] Citizen"/>
+		</Update>
+		<!--
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_MONASTERY" />
+			<Set Text="Monastic School" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_MONASTERY_DESC" />
+			<Set Text="Monastic School" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_MONASTERY_DESC" />
+			<Set Text="Monastic School" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_MONASTERY_STRATEGY" />
+			<Set Text="Monastic Schools increase a city's science and culture output." />
+		</Update>
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_IMPROVEMENT_TRADING_POST" />
+			<Set Text="Village" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CIV5_IMPROVEMENTS_TRADING_POST_TEXT" />
+			<Set Text="A village is a clustered human settlement or community with a population ranging from a few hundred to a few thousands. These small settlements add to your society's economy." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CIV5_IMPROVEMENTS_TRADINGPOST" />
+			<Set Text="Village" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_GOLD_TRADINGPOST_ADV_QUEST" />
+			<Set Text="Does the village provide gold?" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_GOLD_TRADINGPOST_HEADING3_BODY" />
+			<Set Text="Construct a village improvement in a tile to increase its gold output." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_GOLD_TRADINGPOST_HEADING3_TITLE" />
+			<Set Text="The Village" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_WORKERS_TRADINGPOST_HEADING3_BODY" />
+			<Set Text="The Village increases output of a tile by 1 gold. It doesn't access a resource.[NEWLINE]Technology Required: Trapping[NEWLINE]Construction Time: 5 Turns[NEWLINE]May Be Constructed On: Any land tile but ice" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILD_TRADING_POST" />
+			<Set Text="Construct a [LINK=IMPROVEMENT_TRADING_POST]Village[\LINK]" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILD_GOLD_REC" />
+			<Set Text="It will increase the amount of [ICON_GOLD] Gold provided by this tile, boosting the amount of money we will have to spend!" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_TP_GOLDEN_AGE_EFFECT" />
+			<Set Text="Cities produce +20% yields during [ICON_GOLDEN_AGE] Golden Ages.[NEWLINE][ICON_FOOD] +20% Surplus Food[NEWLINE][ICON_PRODUCTION] +20% Production[NEWLINE][ICON_GOLD] +20% Gold[NEWLINE][ICON_RESEARCH] +20% Science[NEWLINE][ICON_CULTURE] +20% Culture[NEWLINE][ICON_PEACE] +20% Faith[NEWLINE][NEWLINE]Surplus happiness continues to add to the Golden Age counter while in a Golden Age." />
+		</Update>
+		<Row Tag="TXT_KEY_BUILDING_MACHU_PICHU_HELP">
+			<Text>A mountain near the city gains:[NEWLINE][ICON_FOOD] Food: 5[NEWLINE][ICON_GOLD] Gold: 5[NEWLINE][ICON_CULTURE] Culture: 5[NEWLINE][ICON_PEACE] Faith: 5</Text>
+		</Row>
+
+
+
+		<!--
+				Food
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_FLOATING_GARDENS_DESC" />
+			<Set Text="Chinampa" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_FOATING_GARDENS_STRATEGY" />
+			<Set Text="The Chinampa is the Aztec unique building, replacing the Watermill. It increases the city's food output, and should be built if the city is near a lake or river." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_FLOATING_GARDENS_PEDIA" />
+			<Set Text="A Chinampa is a small artificial island constructed on a freshwater lake in order to increase the land available for agriculture. The lake irrigates the island and provides it with fresh organic material, resulting in an incredibly fertile growing environment. The Aztecs were masters of this form of agriculture, and the 'Floating Gardens of Xochimilco' remain famous today." />
+		</Update>
+		<!-- Granary
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_GRANARY" />
+			<Set Text="Smokehouse" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_GRANARY_STRATEGY" />
+			<Set Text="The Smokehouse increases the food intake of a city, speeding up the city's growth. This is useful when you want to create a large city, fast." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CIV5_BUILDINGS_GRANARY_TEXT" />
+			<Set Text="A smokehouse is a building where meat or fish is cured with smoke, often for groups or communities of people. Food preservation occurs by salt curing and extended cold smoking for two weeks or longer. The use of slightly warmed, dry air from a very slow hardwood fire ensures the proper drying of meats. The finished product might be stored in the building, sometimes for a year or more. [NEWLINE][NEWLINE]Smokehouses are often secured to prevent animals and thieves from accessing the food. Traditionally, a smokehouse is a small enclosed outbuilding often with a vent, a single entrance, no windows, and frequently has a gabled or pyramid style roof. Communal and commercial smokehouses are larger than those that serve a single residence or estate." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_TECH_POTTERY_HELP" />
+			<Set Text="Allows your cities to build the [COLOR_POSITIVE_TEXT]Smokehouse[ENDCOLOR], which provides [ICON_FOOD] Food, helping your cities grow larger." />
+		</Update>
+		-->
+		<!-- Aqueduct 
+		<Row Tag="TXT_KEY_BUILDING_AQUEDUCT">
+			<Text>Aqueduct</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AQUEDUCT_HELP">
+			<Text></Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AQUEDUCT_STRATEGY">
+			<Text>The Aqueduct is a Classical-era building. It reduces the amount of food the city needs to grow by 40% (160% faster growth.)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AQUEDUCT_PEDIA">
+			<Text>An aqueduct is a water supply or navigable channel constructed to convey water. Although particularly associated with the Romans, aqueducts were devised much earlier in Greece, Arabia and India. The Egyptians and Harappans built sophisticated irrigation systems. In the Americas, the Aztec capital of Tenochtitlán was watered by two aqueducts: water ran down to the city from the mountains through one while the other was cleaned and maintained.</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_HOSPITAL_STRATEGY" />
+			<Set Text="The Hospital is an Industrial-era building. It increases food in a city." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_MEDICAL_LAB_STRATEGY" />
+			<Set Text="The Medical Lab is a Modern-era building. It decreases the amount of food a city needs to grow by 65%. It requires a Hospital to be built. (170% faster growth than an Aqueduct alone, for a total of 300% faster growth.)" />
+		</Update>
+		-->
+
+
+
+		<!--
+				Production
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_WORKSHOP_STRATEGY" />
+			<Set Text="The Workshop increases production when constructing buildings. Cities on hills may not build Workshops." />
+		</Update>
+		<Update>
+			<Set Text='The Stable increases the speed of production of mounted units and adds production on certain resources.'/>
+			<Where Tag="TXT_KEY_BUILDING_STABLE_STRATEGY"/>
+		</Update>
+
+
+		
+		<!--
+				Gold
+		-->
+		<Update>
+			<Set Text='The Mint increases the [ICON_GOLD] Gold output of the city and gold output from certain resources.'/>
+			<Where Tag="TXT_KEY_BUILDING_MINT_STRATEGY"/>
+		</Update>
+		<Row Tag="TXT_KEY_BUILDING_WAREHOUSE">
+			<Text>Warehouse</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_WAREHOUSE_PEDIA">
+			<Text>A warehouse is a commercial building for storage of goods. Warehouses are used by manufacturers, importers, exporters, wholesalers, transport businesses, customs, etc. Stored goods can include any raw materials, packing materials, spare parts, components, or finished goods associated with agriculture, manufacturing, or commerce.</Text>
+		</Row>
+		
+
+
+
+		<!--
+				Science
+		-->
+		<Row Tag="TXT_KEY_BUILDING_MENTOR">
+			<Text>Mentors Hall</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MENTOR_PEDIA">
+			<Text>Mentoring is an organized process for the transmission of knowledge, social capital, and the psychosocial support perceived by the recipient as relevant to work, career, or professional development. Mentoring entails informal communication, usually face-to-face and during a sustained period of time, between a person who is perceived to have greater relevant knowledge, wisdom, or experience (the mentor) and a person who is perceived to have less (the protégé).</Text>
+		</Row>
+
+
+
+		<!--
+				Culture
+		-->
+		
+		
+		
+		<!--
+				Happiness
+		-->
+		<Update>
+			<Set Text='Stone Works can only be constructed in a city near an improved [ICON_RES_STONE] Stone or [ICON_RES_MARBLE] Marble resource. Stone Works increase a citys [ICON_PRODUCTION] production.'/>
+			<Where Tag="TXT_KEY_BUILDING_STONE_WORKS_STRATEGY"/>
+		</Update>
+		
+		
+		
+		<!--
+				Other
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_POPUP_CITY_CAPTURE_INFO"/>
+			<Set Text="What would you like to do with this City?"/>
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_POPUP_ANNEX_PUPPET"/>
+			<Set Text="[ICON_OCCUPIED] [COLOR_POSITIVE_TEXT]Occupy[ENDCOLOR]: Better for large cities. Building a Courthouse converts this into a normal city.[NEWLINE][NEWLINE][ICON_PUPPET] [COLOR_POSITIVE_TEXT]Puppet[ENDCOLOR]: Better for small cities. Puppets have 3 basic [ICON_HAPPINESS_4] Unhappiness per-city (instead of 4) and do not increase Policy costs.[NEWLINE][NEWLINE]Occupied cities and Puppets produce lower yields than normal cities."/>
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_POPUP_ANNEX_CITY"/>
+			<Set Text="Occupy the City"/>
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_POPUP_CITY_CAPTURE_INFO_PUPPET"/>
+			<Set Text="You may later [ICON_OCCUPIED] Occupy a puppeted city at any time."/>
+		</Update>
+		<Update>
+			<Set Text='The Walls of Babylon are a Babylonian Unique Building, replacing the standard city Walls. The Walls of Babylon increases a citys Defense Strength and Hit Points (both significantly more than standard Walls.'/>
+			<Where Tag="TXT_KEY_CIV5_BABYLON_WALLS_STRATEGY"/>
+		</Update>
+		<Update>
+			<Set Text='Walls increase a citys Defense Strength and Hit Points, making the city more difficult to capture. Walls are quite useful for cities located along a civilizations frontier.'/>
+			<Where Tag="TXT_KEY_BUILDING_WALLS_STRATEGY"/>
+		</Update>
+		<Update>
+			<Set Text='The Military Base is a mid-game building which increases the citys Defensive Strength and Hit Points. The city must possess an Arsenal before a Military Base may be constructed.'/>
+			<Where Tag="TXT_KEY_BUILDING_MILITARY_BASE_STRATEGY"/>
+		</Update>
+		<Update>
+			<Set Text='The Castle is a Medieval-era building which increases the citys Defensive Strength and Hit Points. The city must possess Walls before the Castle can be constructed.'/>
+			<Where Tag="TXT_KEY_BUILDING_CASTLE_STRATEGY"/>
+		</Update>
+		<Update>
+			<Set Text='The Arsenal is a mid-game military building that increases a citys Defense Strength and Hit Points, making the city more difficult to capture. The city must possess a Castle before it can construct an Arsenal.'/>
+			<Where Tag="TXT_KEY_BUILDING_ARSENAL_STRATEGY"/>
+		</Update>
+		<Update>
+			<Set Text='The Mughal Fort is a Medieval-era building that increases the citys Defense Strength, Hit Points, and provides some [ICON_CULTURE] Culture every turn. It is the Indian unique building, replacing the Castle. After Flight is learned, it provides a [ICON_GOLD] Gold bonus to the city as well. Building Walls is a prerequisite for building the Mughal Fort.'/>
+			<Where Tag="TXT_KEY_BUILDING_MUGHAL_FORT_STRATEGY"/>
+		</Update>
+		<Update>
+			<Set Text='The Garden increases the speed at which [ICON_GREAT_PEOPLE] Great People are generated in the city.'/>
+			<Where Tag="TXT_KEY_BUILDING_GARDEN_STRATEGY"/>
+		</Update>
+		
+		
+		
+		<!--
+				National Wonders
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP" />
+			<Set Text="All newly-trained Units in this City receive the [COLOR_POSITIVE_TEXT]Morale[ENDCOLOR] Promotion, improving [ICON_STRENGTH] combat strength by 15%." />
+		</Update>
+		<!--
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS" />
+			<Set Text="Baths of Trajan" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_STRATEGY" />
+			<Set Text="The Baths of Trajan provide happiness and culture." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_PEDIA" />
+			<Set Text="The Baths of Trajan were a massive bathing and leisure complex built in Rome from 104-109 CE, commissioned by Emperor Trajan. The architect of the complex is said to be Apollodorus of Damascus.[NEWLINE][NEWLINE]The baths were utilized for at least three centuries, mainly as a recreational and social center by both male and female Roman citizens." />
+		</Update>
+		-->
+		<Row Tag="TXT_KEY_BUILDING_AGRA_FORT">
+			<Text>Agra Fort</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AGRA_FORT_STRATEGY">
+			<Text>The Agra Fort provides defense, Merchant slots, and culture.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AGRA_FORT_PEDIA">
+			<Text>Agra Fort can be more accurately described as a walled city. It is the most important fort in India.[NEWLINE][NEWLINE]The great Mugals, Humayun, Akbar, Jehangir, Shah Jahan and Aurangzeb lived here, and the country was governed from here. It was visited by foreign ambassadors, travelers and dignitaries. It contained a massive state treasury and mint.</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_BUILDING_MEDICI_BANK">
+			<Text>Medici Bank</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MEDICI_BANK_STRATEGY">
+			<Text>The Medici Bank provides gold, Merchant slots, and culture.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MEDICI_BANK_PEDIA">
+			<Text>The Medici Bank (1397-1494 CE) was one of the early European banks, created by the Medici family in Italy.  It was the largest and most respected bank in Europe during its prime.  A notable contribution to the profession of accounting was the development of the double entry system of tracking credits and debits separately on ledgers.</Text>
+		</Row>-->
+		
+		
+		
+		<!--
+				Wonders
+		-->
+		<Update>
+			<Where Tag="TXT_KEY_WONDER_PENTAGON_HELP" />
+			<Set Text="All units heal every turn." />
+		</Update>
+	</Language_en_US>
+</GameData>

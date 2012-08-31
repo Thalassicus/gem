@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Buildings>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_COURTHOUSE" />
+			<Set Cost="140"
+				 GoldMaintenance="0"
+				 HurryCostModifier="75"
+				 PopCostMod="10"
+				 />
+			<!-- 100, 4, 50 -->
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_COLOSSEUM" />
+			<Set Cost="220"
+				 GoldMaintenance="2"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_CIRCUS" />
+			<Set Cost="140"
+				 GoldMaintenance="2"
+				 />
+			<!-- 75, 0 -->
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_STONE_WORKS" />
+			<Set ProhibitedCityTerrain="NULL" />
+		</Update>
+	</Buildings>
+	<Building_ResourceYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CIRCUS</BuildingType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CIRCUS</BuildingType>
+			<ResourceType>RESOURCE_IVORY</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_ResourceYieldChanges>
+</GameData>

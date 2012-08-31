@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<Update>
+			<Where Tag="TXT_KEY_MISSION_CULTURE_BOMB_DISABLED_COOLDOWN"/>
+			<Set Text="You have created a Great Work recently, and may not do so again for another {1_Num} turns."/>
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_SPECIALISTSANDGP_CULTUREBOMB_ADV_QUEST"/>
+			<Set Text="What does the great work special ability do?"/>
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_SPECIALISTSANDGP_CULTUREBOMB_HEADING4_BODY"/>
+			<Set Text="A Great Artist can create a Great Work in any city you own. Great Works give the city a large amount of [ICON_CULTURE] Culture."/>
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_SPECIALISTSANDGP_CULTUREBOMB_HEADING4_TITLE"/>
+			<Set Text="Special Ability: Create Great Work"/>
+		</Update>
+		<Row Tag="TXT_KEY_MISSION_GREAT_WORK">
+			<Text>Create Great Work</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MISSION_GREAT_WORK_HELP">
+			<Text>A Great Work gives a city a large amount of [ICON_CULTURE] Culture.[NEWLINE][NEWLINE]Creating a Great Work consumes the Great Person.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MISSION_GREAT_WORK_ALERT">
+			<Text>{1_greatperson} created {2_work}. You gained {3_culture} [ICON_CULTURE] Culture in {4_city}!</Text>
+		</Row>
+	</Language_en_US>
+	<Language_en_US>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_DEFAULT</Tag>
+			<Text>a magnus opus</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_HOMER</Tag>
+			<Text>the Iliad</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_THESPIS</Tag>
+			<Text>the first tragedy performance</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_LING_LUN</Tag>
+			<Text>the five-tone music scale</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_WANG_XIZH</Tag>
+			<Text>the Preface to the Poems Composed at the Orchid Pavilion</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_VALMIKI</Tag>
+			<Text>the Ramayana</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_VIRGIL</Tag>
+			<Text>the Aeneid</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_KALIDAS</Tag>
+			<Text>Of Shakuntala recognised by a token</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_LI_PO</Tag>
+			<Text>Waking From Drunkenness on a Spring Day</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_DU_FU</Tag>
+			<Text>The Song of the Wagons</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_JALAL_ALDIN_RUMI</Tag>
+			<Text>his Spiritual Couplets</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_DANTE_ALIGHIERI</Tag>
+			<Text>the Divine Comedy</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_YUNUS_EMRE</Tag>
+			<Text>his poems of Sultan Yunu Emre</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_AMIR_KHUSRO</Tag>
+			<Text>The Tale of the Four Dervishes</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_IBN_MUQLAH</Tag>
+			<Text>the thuluth script</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_MICHAELANGELO</Tag>
+			<Text>the Statue of David</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_RAPHAEL</Tag>
+			<Text>the Stanza della Segnatura</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_WILLIAM_SHAKESPEARE</Tag>
+			<Text>Hamlet</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_MIGUEL_DE_CERVANTES</Tag>
+			<Text>Don Quixote</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_REMBRANDT</Tag>
+			<Text>The Night Watch</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_JOHANNES_VERMEER</Tag>
+			<Text>Girl With a Pearl Earring</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_JS_BACH</Tag>
+			<Text>the Brandenburg Concertos</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_WOLFGANG_MOZART</Tag>
+			<Text>The Magic Flute</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_JOHANN_GOETHE</Tag>
+			<Text>Faust</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_LUDWIG_VAN_BEETHOVEN</Tag>
+			<Text>his Fifth Symphony</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_VICTOR_HUGO</Tag>
+			<Text>Les Misérables</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_VINCENT_VAN_GOGH</Tag>
+			<Text>Café Terrace at Night</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_JOHANNES_BRAHMS</Tag>
+			<Text>the Hungarian Dances</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_DVORAK</Tag>
+			<Text>his Symphony From the New World</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_MARK_TWAIN</Tag>
+			<Text>The Adventures of Tom Sawyer</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_CLAUDE_MONET</Tag>
+			<Text>Impression, Sunrise</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_JOSEPH_CONRAD</Tag>
+			<Text>Victory</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_FRANK_KAFKA</Tag>
+			<Text>The Trial</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_LOUIS_ARMSTRONG</Tag>
+			<Text>What a Wonderful World</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_DUKE_ELLINGTON</Tag>
+			<Text>Take the 'A' Train</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_PABLO_PICASSO</Tag>
+			<Text>Guernica</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_MILES_DAVIS</Tag>
+			<Text>Kind of Blue</Text>
+		</Row>
+		
+		<!-- new -->
+		<Row>
+			<Tag>TXT_KEY_GREAT_PERSON_TOLSTOY</Tag>
+			<Text>Leo Tolstoy</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_TOLSTOY</Tag>
+			<Text>War and Peace</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_PERSON_DOSTOEVSKY</Tag>
+			<Text>Fyodor Dostoevsky</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_GREAT_WORK_DOSTOEVSKY</Tag>
+			<Text>Crime and Punishment</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

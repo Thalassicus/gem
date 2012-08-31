@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<UnitPromotions>
+		<Update>
+			<Where Type="PROMOTION_CHARGE" />
+			<Set AttackWoundedMod="20"
+				 MovesChange="1"
+				 PromotionPrereqOr1="PROMOTION_SHOCK_3"
+				 PromotionPrereqOr2="PROMOTION_DRILL_3"
+				 />
+		</Update>
+		<!--
+		<Update>
+			<Where Type="PROMOTION_REPAIR" />
+			<Set PromotionPrereqOr1="PROMOTION_SHOCK_3"
+				 PromotionPrereqOr2="PROMOTION_DRILL_3"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_HELI_REPAIR" />
+			<Set PromotionPrereqOr1="PROMOTION_AMBUSH_2"
+				 />
+		</Update>
+		-->
+		<Update>
+			<Where Type="PROMOTION_AIR_REPAIR" />
+			<Set PromotionPrereqOr3="PROMOTION_AIR_SIEGE_3"
+				 PromotionPrereqOr4="PROMOTION_BOMBARDMENT_3"
+				 />
+		</Update>
+	</UnitPromotions>
+	<UnitPromotions_UnitCombats>
+		<Delete PromotionType="PROMOTION_AMPHIBIOUS" />
+		<Row>
+			<PromotionType>PROMOTION_AMBUSH_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AMBUSH_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+	</UnitPromotions_UnitCombats>
+	<Unit_FreePromotions>
+		<Delete UnitType="UNIT_CAVALRY" PromotionType="PROMOTION_MOUNTED_PENALTY" />
+		<Delete UnitType="UNIT_RUSSIAN_COSSACK" PromotionType="PROMOTION_MOUNTED_PENALTY" />
+	</Unit_FreePromotions>
+</GameData>

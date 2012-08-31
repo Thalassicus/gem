@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/9/2012 4:04:09 PM -->
+<GameData>
+	<Policy_Flavors>
+
+	</Policy_Flavors>
+	<Policies>
+		<Update>
+			<Where Type="POLICY_PATRONAGE" />
+			<Set MinorGoldFriendshipMod="20"
+				 MinorFriendshipDecayMod="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_PHILANTHROPY" />
+			<Set MinorFriendshipDecayMod="-25"
+				 MinorGoldFriendshipMod="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_AESTHETICS" />
+			<Set MinorFriendshipMinimum="20"
+				 MinorInfluence="20"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_EDUCATED_ELITE" />
+			<Set GridX="2"
+				 PortraitIndex="17"
+				 MinorGreatPeopleAllies="false"
+				 Description="TXT_KEY_POLICY_FREE_TRADE"
+				 Civilopedia="TXT_KEY_POLICY_FREE_TRADE_TEXT"
+				 Help="TXT_KEY_POLICY_FREE_TRADE_HELP"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_CULTURAL_DIPLOMACY" />
+			<Set GridX="4"
+				 MinorResourceBonus="false"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_PATRONAGE_FINISHER" />
+			<Set OtherPlayersMinorFriendshipDecayMod="10"
+				 />
+		</Update>
+	</Policies>
+	<Policy_PrereqPolicies>
+		<Delete PolicyType="POLICY_EDUCATED_ELITE" />
+		<Delete PolicyType="POLICY_CULTURAL_DIPLOMACY" />
+		<Row>
+			<PolicyType>POLICY_EDUCATED_ELITE</PolicyType>
+			<PrereqPolicy>POLICY_SCHOLASTICISM</PrereqPolicy>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
+			<PrereqPolicy>POLICY_SCHOLASTICISM</PrereqPolicy>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
+			<PrereqPolicy>POLICY_AESTHETICS</PrereqPolicy>
+		</Row>
+	</Policy_PrereqPolicies>
+	<Policy_UnitCombatProductionModifiers>
+		<Row>
+			<PolicyType>POLICY_PATRONAGE</PolicyType>
+			<UnitCombatType>UNITCOMBAT_DIPLOMACY</UnitCombatType>
+			<ProductionModifier>100</ProductionModifier>
+		</Row>
+	</Policy_UnitCombatProductionModifiers>
+	<Policy_MinorCivBonuses>
+		<Row>
+			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
+			<FriendLevel>1</FriendLevel>
+			<YieldType>YIELD_HAPPINESS</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
+			<FriendLevel>2</FriendLevel>
+			<YieldType>YIELD_HAPPINESS</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_EDUCATED_ELITE</PolicyType>
+			<FriendLevel>1</FriendLevel>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_EDUCATED_ELITE</PolicyType>
+			<FriendLevel>2</FriendLevel>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Policy_MinorCivBonuses>
+</GameData>

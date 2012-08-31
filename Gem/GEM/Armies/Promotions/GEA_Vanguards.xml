@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<UnitPromotions>
+		<Update>
+			<Where Type="PROMOTION_MEDIC" />
+			<Set AdjacentTileHealChange="5"
+				 SameTileHealChange="5"
+				 PromotionPrereqOr1="PROMOTION_SCOUTING_1"
+				 PromotionPrereqOr3="PROMOTION_TRENCHES_1"
+				 PromotionPrereqOr2="PROMOTION_GUERRILLA_1"
+				 PromotionPrereqOr4="NULL"
+				 PediaType="PEDIA_SCOUTING"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_MEDIC" />
+			<Set AdjacentTileHealChange="5"
+				 SameTileHealChange="5"
+				 EnemyHealChange="0"
+				 NeutralHealChange="0"
+				 PediaType="PEDIA_SCOUTING"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_SCOUTING_1" />
+			<Set IgnoreTerrainCost="true"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_SCOUTING_2" />
+			<Set ExtraWithdrawal="80"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_SCOUTING_3" />
+			<Set CannotBeChosen="true"
+				 PediaType="NONE"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_SURVIVALISM_1" />
+			<Set PromotionPrereqOr3="PROMOTION_SCOUTING_1"
+				 PromotionPrereqOr2="PROMOTION_TRENCHES_1"
+				 PromotionPrereqOr1="PROMOTION_GUERRILLA_1"
+				 FreePillageMoves="true"
+				 EnemyHealChange="10"
+				 NeutralHealChange="10"
+				 PediaType="PEDIA_SCOUTING"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_SURVIVALISM_2" />
+			<Set CannotBeChosen="true"
+				 PediaType="NULL"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_SURVIVALISM_3" />
+			<Set CannotBeChosen="true"
+				 PediaType="NULL"
+				 />
+		</Update>
+		<Row>
+			<Type>PROMOTION_COVER_VANGUARD_1</Type>
+			<Description>TXT_KEY_PROMOTION_COVER_1</Description>
+			<Help>TXT_KEY_PROMOTION_COVER_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_GUERRILLA_1</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_TRENCHES_1</PromotionPrereqOr2>
+			<PromotionPrereqOr3>PROMOTION_SCOUTING_1</PromotionPrereqOr3>
+			<OrderPriority>4</OrderPriority>
+			<RangedDefenseMod>25</RangedDefenseMod>
+			<PortraitIndex>14</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COVER_1</PediaEntry>
+		</Row>
+		<!--
+		<Row>
+			<Type>PROMOTION_COVER_VANGUARD_2</Type>
+			<Description>TXT_KEY_PROMOTION_COVER_2</Description>
+			<Help>TXT_KEY_PROMOTION_COVER_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_COVER_VANGUARD_1</PromotionPrereqOr1>
+			<OrderPriority>4</OrderPriority>
+			<RangedDefenseMod>50</RangedDefenseMod>
+			<PortraitIndex>15</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COVER_2</PediaEntry>
+		</Row>
+		-->
+		<Row>
+			<Type>PROMOTION_MERCENARY</Type>
+			<Description>TXT_KEY_PROMOTION_MERCENARY</Description>
+			<PediaEntry>TXT_KEY_PROMOTION_MERCENARY</PediaEntry>
+			<Help>TXT_KEY_PROMOTION_MERCENARY_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<UpgradeDiscount>50</UpgradeDiscount>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		</Row>
+		<Row>
+			<Type>PROMOTION_TRENCHES_1</Type>
+			<Description>TXT_KEY_PROMOTION_TRENCHES_1</Description>
+			<Help>TXT_KEY_PROMOTION_TRENCHES_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>2</OrderPriority>
+			<VisibilityChange>1</VisibilityChange>
+			<OpenDefense>15</OpenDefense>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_TRENCHES_1</PediaEntry>
+			<HealOutsideFriendly>true</HealOutsideFriendly>
+		</Row>
+		<Row>
+			<Type>PROMOTION_TRENCHES_2</Type>
+			<Description>TXT_KEY_PROMOTION_TRENCHES_2</Description>
+			<Help>TXT_KEY_PROMOTION_TRENCHES_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_TRENCHES_1</PromotionPrereqOr1>
+			<MovesChange>1</MovesChange>
+			<OrderPriority>2</OrderPriority>
+			<OpenDefense>15</OpenDefense>
+			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_TRENCHES_2</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_TRENCHES_3</Type>
+			<Description>TXT_KEY_PROMOTION_TRENCHES_3</Description>
+			<Help>TXT_KEY_PROMOTION_TRENCHES_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_TRENCHES_2</PromotionPrereqOr1>
+			<OrderPriority>2</OrderPriority>
+			<VisibilityChange>1</VisibilityChange>
+			<OpenDefense>20</OpenDefense>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_TRENCHES_3</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_GUERRILLA_1</Type>
+			<Description>TXT_KEY_PROMOTION_GUERRILLA_1</Description>
+			<Help>TXT_KEY_PROMOTION_GUERRILLA_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>1</OrderPriority>
+			<VisibilityChange>1</VisibilityChange>
+			<RoughDefense>15</RoughDefense>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GUERRILLA_1</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_GUERRILLA_2</Type>
+			<Description>TXT_KEY_PROMOTION_GUERRILLA_2</Description>
+			<Help>TXT_KEY_PROMOTION_GUERRILLA_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_GUERRILLA_1</PromotionPrereqOr1>
+			<MovesChange>1</MovesChange>
+			<OrderPriority>1</OrderPriority>
+			<RoughDefense>15</RoughDefense>
+			<PortraitIndex>5</PortraitIndex>
+			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GUERRILLA_2</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_GUERRILLA_3</Type>
+			<Description>TXT_KEY_PROMOTION_GUERRILLA_3</Description>
+			<Help>TXT_KEY_PROMOTION_GUERRILLA_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_GUERRILLA_2</PromotionPrereqOr1>
+			<OrderPriority>1</OrderPriority>
+			<VisibilityChange>1</VisibilityChange>
+			<RoughDefense>20</RoughDefense>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GUERRILLA_3</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_SKIRMISH</Type>
+			<Description>TXT_KEY_PROMOTION_SKIRMISH</Description>
+			<Help>TXT_KEY_PROMOTION_SKIRMISH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_GUERRILLA_1</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_TRENCHES_1</PromotionPrereqOr2>
+			<PromotionPrereqOr3>PROMOTION_SCOUTING_1</PromotionPrereqOr3>
+			<OrderPriority>1</OrderPriority>
+			<ExtraWithdrawal>80</ExtraWithdrawal>
+			<PortraitIndex>35</PortraitIndex>
+			<CannotBeChosen>true</CannotBeChosen>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>NULL</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SKIRMISH</PediaEntry>
+		</Row>
+	</UnitPromotions>
+	<UnitPromotions_UnitCombatMods>
+
+	</UnitPromotions_UnitCombatMods>
+	<UnitPromotions_UnitCombats>
+		<Delete PromotionType="PROMOTION_SURVIVALISM_2" />
+		<Delete PromotionType="PROMOTION_SURVIVALISM_3" />
+		<Delete PromotionType="PROMOTION_SCOUTING_3" />
+		<Row>
+			<PromotionType>PROMOTION_TRENCHES_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_TRENCHES_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_TRENCHES_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_GUERRILLA_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_GUERRILLA_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_GUERRILLA_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SKIRMISH</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_MARCH_IV</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_COVER_VANGUARD_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<!--
+		<Row>
+			<PromotionType>PROMOTION_COVER_VANGUARD_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		-->
+	</UnitPromotions_UnitCombats>
+	<Unit_FreePromotions>
+		<Update>
+			<Where UnitType="UNIT_SCOUT" PromotionType="PROMOTION_IGNORE_TERRAIN_COST" />
+			<Set PromotionType="PROMOTION_IGNORE_TERRAIN_COST_NOUPGRADE" />
+		</Update>
+	</Unit_FreePromotions>
+</GameData>

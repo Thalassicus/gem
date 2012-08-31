@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Defines>
+		<Update>
+			<Where Name="BASE_POLICY_COST" />
+			<Set Value="200" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where Name="POLICY_COST_INCREASE_TO_BE_EXPONENTED" />
+			<Set Value="2.78" />
+			<!-- 3 -->
+		</Update>
+		<Update>
+			<Where Name="POLICY_COST_EXPONENT" />
+			<Set Value="2.4" />
+			<!-- 2.01 -->
+		</Update>
+		<Update>
+			<Where Name="POLICY_COST_VISIBLE_DIVISOR" />
+			<Set Value="50" />
+			<!-- 5 -->
+		</Update>
+	</Defines>
+	<GameOptions>
+		<Update>
+			<Where Type="GAMEOPTION_POLICY_SAVING" />
+			<Set Reverse="true" />
+		</Update>
+	</GameOptions>
+	<Projects>
+		<Update>
+			<Where Type="PROJECT_UTOPIA_PROJECT" />
+			<Set CultureBranchesRequired="6" />
+		</Update>
+	</Projects>
+	<PolicyBranchTypes>
+		<Update>
+			<Where Type="POLICY_BRANCH_AUTOCRACY" />
+			<Set EraPrereq="ERA_INDUSTRIAL" />
+		</Update>
+		<Update>
+			<Where Type="POLICY_BRANCH_FREEDOM" />
+			<Set EraPrereq="ERA_INDUSTRIAL" />
+		</Update>
+		<Update>
+			<Where Type="POLICY_BRANCH_ORDER" />
+			<Set EraPrereq="ERA_INDUSTRIAL" />
+		</Update>
+	</PolicyBranchTypes>
+	<PolicyBranch_Disables>
+		<Delete />
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_FREEDOM</PolicyBranchType>
+			<PolicyBranchDisable>POLICY_BRANCH_AUTOCRACY</PolicyBranchDisable>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_AUTOCRACY</PolicyBranchType>
+			<PolicyBranchDisable>POLICY_BRANCH_FREEDOM</PolicyBranchDisable>
+		</Row>
+	</PolicyBranch_Disables>
+	<Policy_PrereqPolicies>
+		<Delete />
+	</Policy_PrereqPolicies>
+</GameData>

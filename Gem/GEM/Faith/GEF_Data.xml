@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Belief_ResourceYieldChanges>
+		<Update>
+			<Set Yield="2"/>
+			<Where BeliefType="BELIEF_FORMAL_LITURGY" ResourceType="RESOURCE_GOLD" YieldType="YIELD_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Yield="2"/>
+			<Where BeliefType="BELIEF_FORMAL_LITURGY" ResourceType="RESOURCE_SILVER" YieldType="YIELD_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Yield="2"/>
+			<Where BeliefType="BELIEF_GOD_FESTIVALS" ResourceType="RESOURCE_WINE" YieldType="YIELD_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Yield="2"/>
+			<Where BeliefType="BELIEF_GOD_FESTIVALS" ResourceType="RESOURCE_INCENSE" YieldType="YIELD_CULTURE"/>
+		</Update>
+	</Belief_ResourceYieldChanges>
+	<Belief_BuildingClassYieldChanges>
+		<Update>
+			<Set YieldChange="2"/>
+			<Where BeliefType="BELIEF_ANCESTOR_WORSHIP" BuildingClassType="BUILDINGCLASS_SHRINE" YieldType="YIELD_CULTURE"/>
+		</Update>
+		<Update>
+			<Set YieldChange="4"/>
+			<Where BeliefType="BELIEF_CHORAL_MUSIC" BuildingClassType="BUILDINGCLASS_TEMPLE" YieldType="YIELD_CULTURE"/>
+		</Update>
+		<Update>
+			<Set YieldChange="16"/>
+			<Where BeliefType="BELIEF_RELIGIOUS_ART" BuildingClassType="BUILDINGCLASS_HERMITAGE" YieldType="YIELD_CULTURE"/>
+		</Update>
+	</Belief_BuildingClassYieldChanges>
+	<Belief_FeatureYieldChanges>
+		<Update>
+			<Set Yield="2"/>
+			<Where BeliefType="BELIEF_SACRED_PATH" FeatureType="FEATURE_JUNGLE" YieldType="YIELD_CULTURE"/>
+		</Update>
+	</Belief_FeatureYieldChanges>
+	<Belief_YieldChangePerXForeignFollowers>
+		<Update>
+			<Set ForeignFollowers="3"/>
+			<Where BeliefType="BELIEF_WORLD_CHURCH" YieldType="YIELD_CULTURE"/>
+		</Update>
+	</Belief_YieldChangePerXForeignFollowers>
+	<Belief_ImprovementYieldChanges>
+		<Update>
+			<Set Yield="2"/>
+			<Where BeliefType="BELIEF_ORAL_TRADITION" ImprovementType="IMPROVEMENT_PLANTATION" YieldType="YIELD_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Yield="2"/>
+			<Where BeliefType="BELIEF_OPEN_SKY" ImprovementType="IMPROVEMENT_PASTURE" YieldType="YIELD_CULTURE"/>
+		</Update>
+	</Belief_ImprovementYieldChanges>
+	<Language_en_US>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Gold and Silver"/>
+			<Where Tag="TXT_KEY_BELIEF_FORMAL_LITURGY"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Wine and Incense"/>
+			<Where Tag="TXT_KEY_BELIEF_GOD_FESTIVALS"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Shrines"/>
+			<Where Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP"/>
+		</Update>
+		<Update>
+			<Set Text="Temples provide +4 [ICON_CULTURE] Culture in cities with 5 followers"/>
+			<Where Tag="TXT_KEY_BELIEF_CHORAL_MUSIC"/>
+		</Update>
+		<Update>
+			<Set Text="Hermitage provides +16 [ICON_CULTURE] Culture in city"/>
+			<Where Tag="TXT_KEY_BELIEF_RELIGIOUS_ART"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Jungle tiles"/>
+			<Where Tag="TXT_KEY_BELIEF_SACRED_PATH"/>
+		</Update>
+		<Update>
+			<Set Text="+1 [ICON_CULTURE] Culture for every 3 followers of this religion in other civilizations"/>
+			<Where Tag="TXT_KEY_BELIEF_WORLD_CHURCH"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Plantations"/>
+			<Where Tag="TXT_KEY_BELIEF_ORAL_TRADITION"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Pastures"/>
+			<Where Tag="TXT_KEY_BELIEF_OPEN_SKY"/>
+		</Update>
+	</Language_en_US>
+</GameData>

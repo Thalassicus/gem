@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<Update>
+			<Where Tag="TXT_KEY_BELIEF_CATHEDRALS" />
+			<Set Text="Use [ICON_PEACE] Faith to purchase Cathedrals (1 [ICON_PEACE] Faith per 5 [ICON_CITIZEN] Citizens, +6 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness, 1 Artist Specialist slot)" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BELIEF_MOSQUES" />
+			<Set Text="Use [ICON_PEACE] Faith to purchase Mosques (2 [ICON_PEACE] Faith per 5 [ICON_CITIZEN] Citizens, +2 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness)" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BELIEF_PAGODAS" />
+			<Set Text="Use [ICON_PEACE] Faith to purchase Pagodas (+2 [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture, +2 [ICON_HAPPINESS_1] Happiness)" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_BELIEF_MONASTERIES" />
+			<Set Text="Use [ICON_PEACE] Faith to purchase Monasteries (+50% [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture)" />
+		</Update>
+		<!--
+		<Update>
+			<Where Tag="TXT_KEY_BELIEF_INITIATION_RITES" />
+			<Set Text="+200 [ICON_GOLD] Gold when each city first converts to this religion" />
+		</Update>
+		-->
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Gold and Silver"/>
+			<Where Tag="TXT_KEY_BELIEF_FORMAL_LITURGY"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Wine and Incense"/>
+			<Where Tag="TXT_KEY_BELIEF_GOD_FESTIVALS"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Shrines"/>
+			<Where Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP"/>
+		</Update>
+		<Update>
+			<Set Text="Temples provide +4 [ICON_CULTURE] Culture in cities with 5 followers"/>
+			<Where Tag="TXT_KEY_BELIEF_CHORAL_MUSIC"/>
+		</Update>
+		<Update>
+			<Set Text="Hermitage provides +16 [ICON_CULTURE] Culture in city"/>
+			<Where Tag="TXT_KEY_BELIEF_RELIGIOUS_ART"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Jungle tiles"/>
+			<Where Tag="TXT_KEY_BELIEF_SACRED_PATH"/>
+		</Update>
+		<Update>
+			<Set Text="+1 [ICON_CULTURE] Culture for every 3 followers of this religion in other civilizations"/>
+			<Where Tag="TXT_KEY_BELIEF_WORLD_CHURCH"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Plantations"/>
+			<Where Tag="TXT_KEY_BELIEF_ORAL_TRADITION"/>
+		</Update>
+		<Update>
+			<Set Text="+2 [ICON_CULTURE] Culture from Pastures"/>
+			<Where Tag="TXT_KEY_BELIEF_OPEN_SKY"/>
+		</Update>
+	</Language_en_US>
+</GameData>

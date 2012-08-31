@@ -1,0 +1,233 @@
+DELETE FROM Project_Flavors WHERE ProjectType = 'PROJECT_UTOPIA_PROJECT';
+INSERT INTO Project_Flavors (ProjectType, FlavorType, Flavor)
+SELECT 'PROJECT_UTOPIA_PROJECT', Type, 1000 FROM Flavors;
+
+UPDATE Building_YieldChanges
+SET Yield = Yield * 2
+WHERE YieldType = 'YIELD_CULTURE';
+
+INSERT OR REPLACE INTO Building_ResourceYieldChanges(BuildingType, ResourceType, YieldType, Yield) 
+SELECT building.Type, res.Type, 'YIELD_CULTURE', 1
+FROM Buildings building, Resources res
+WHERE building.BuildingClass = 'BUILDINGCLASS_AMPHITHEATER'
+AND res.Type IN (
+	'RESOURCE_SILK',
+	'RESOURCE_COTTON',
+	'RESOURCE_FUR',
+	'RESOURCE_DYE',
+	'RESOURCE_JEWELRY'
+);
+
+UPDATE Buildings
+SET Culture = 2
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_OPERA_HOUSE',
+	'BUILDINGCLASS_MUSEUM',
+	'BUILDINGCLASS_STADIUM'
+);
+
+INSERT OR REPLACE INTO Building_ResourceYieldChanges(BuildingType, ResourceType, YieldType, Yield) 
+SELECT building.Type, res.Type, 'YIELD_GOLD', 1
+FROM Buildings building, Resources res
+WHERE building.BuildingClass = 'BUILDINGCLASS_MARKET'
+AND res.Type IN (
+	'RESOURCE_PORCELAIN',
+	'RESOURCE_SALT',
+	'RESOURCE_CITRUS',
+	'RESOURCE_TRUFFLES',
+	'RESOURCE_BANANA'
+);
+
+INSERT OR REPLACE INTO Building_ResourceYieldChanges(BuildingType, ResourceType, YieldType, Yield) 
+SELECT building.Type, res.Type, 'YIELD_FAITH', 1
+FROM Buildings building, Resources res
+WHERE building.BuildingClass = 'BUILDINGCLASS_TEMPLE'
+AND res.Type IN (
+	'RESOURCE_WINE',
+	'RESOURCE_INCENSE',
+);
+
+UPDATE Buildings
+SET GoldMaintenance = GoldMaintenance * 2
+WHERE Type = 'BUILDING_LIBRARY' OR BuildingClass IN (
+	'BUILDINGCLASS_UNIVERSITY',
+	'BUILDINGCLASS_PUBLIC_SCHOOL',
+	'BUILDINGCLASS_LABORATORY'
+);
+
+UPDATE Buildings
+SET Defense = Defense + 100
+WHERE Defense > 0;
+
+UPDATE Buildings
+SET Cost = ROUND(Cost * 0.075) * 10
+WHERE Type IN (
+	'BUILDING_MAUSOLEUM_HALICARNASSUS',
+	'BUILDING_STONEHENGE',
+	'BUILDING_STATUE_ZEUS',
+	'BUILDING_ANGKOR_WAT',
+	'BUILDING_MACHU_PICCHU',
+	'BUILDING_TEMPLE_ARTEMIS',
+	'BUILDING_LOUVRE'
+);
+
+UPDATE Buildings
+SET Cost = ROUND(Cost * 0.050) * 10
+WHERE Type IN (
+	'BUILDING_GREAT_WALL',
+	'BUILDING_HIMEJI_CASTLE'
+);
+
+UPDATE Building_Flavors
+SET Flavor = Flavor * 0.5
+WHERE FlavorType = 'FLAVOR_WONDER' AND BuildingType IN (
+	'BUILDING_GREAT_LIGHTHOUSE',
+	'BUILDING_COLOSSUS',
+	'BUILDING_STONEHENGE',
+	'BUILDING_STATUE_ZEUS',
+	'BUILDING_ANGKOR_WAT',
+	'BUILDING_HIMEJI_CASTLE',
+	'BUILDING_MACHU_PICCHU',
+	'BUILDING_TEMPLE_ARTEMIS',
+	'BUILDING_LOUVRE',
+	'BUILDING_MAUSOLEUM_HALICARNASSUS'
+);
+
+UPDATE Building_Flavors
+SET Flavor = Flavor * 2
+WHERE FlavorType = 'FLAVOR_WONDER' AND BuildingType IN (
+	'BUILDING_GREAT_LIBRARY',
+	'BUILDING_HAGIA_SOPHIA',
+	'BUILDING_NOTRE_DAME',
+	'BUILDING_HANGING_GARDEN',
+	'BUILDING_ORACLE'
+);
+
+INSERT OR REPLACE INTO Building_PrereqBuildingClassesPercentage
+	(BuildingType, BuildingClassType, PercentBuildingNeeded)
+SELECT
+	BuildingType, BuildingClassType, '75'
+FROM Building_PrereqBuildingClasses
+WHERE NumBuildingNeeded = -1;
+
+UPDATE Building_PrereqBuildingClassesPercentage
+SET BuildingClassType = 'BUILDINGCLASS_TEMPLE' WHERE BuildingType = 'BUILDING_NATIONAL_EPIC';
+
+DELETE
+FROM Building_PrereqBuildingClasses
+WHERE NumBuildingNeeded = -1;
+
+UPDATE Buildings
+SET Happiness = Happiness + 1
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_COLOSSEUM',
+	'BUILDINGCLASS_THEATRE',
+	'BUILDINGCLASS_STADIUM'
+);
+
+UPDATE Buildings
+SET HurryCostModifier = 0
+WHERE HurryCostModifier > 0;
+
+UPDATE Specialists
+SET GreatPeopleRateChange = 2
+WHERE GreatPeopleRateChange > 0;
+
+DELETE FROM Building_UnitCombatProductionModifiers
+WHERE BuildingType = 'BUILDING_TEMPLE_ARTEMIS';
+
+/*
+INSERT INTO Building_ResourceYieldChanges
+	(BuildingType, ResourceType, YieldType, Yield)
+SELECT 'BUILDING_MARKET', Type, 'YIELD_GOLD', 1
+FROM Resources WHERE Happiness > 0;
+
+INSERT INTO Building_ResourceYieldChanges
+	(BuildingType, ResourceType, YieldType, Yield)
+SELECT 'BUILDING_BAZAAR', Type, 'YIELD_GOLD', 1
+FROM Resources WHERE Happiness > 0;
+
+INSERT INTO Building_ResourceYieldChanges
+	(BuildingType, ResourceType, YieldType, Yield)
+SELECT 'BUILDING_SATRAPS_COURT', Type, 'YIELD_GOLD', 1
+FROM Resources WHERE Happiness > 0;
+*/
+
+/*
+INSERT INTO Building_UnitCombatProductionModifiers
+	(BuildingType, UnitCombatType, Modifier)
+SELECT
+	'BUILDING_TEMPLE_ARTEMIS', 'UNITCOMBAT_MOUNTED_ARCHER', '15'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_TEMPLE_ARTEMIS' );
+*/
+
+INSERT INTO Building_UnitCombatFreeExperiences
+	(BuildingType, UnitCombatType, Experience)
+SELECT 'BUILDING_TEMPLE_ARTEMIS', 'UNITCOMBAT_ARCHER', '20'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_TEMPLE_ARTEMIS' );
+
+INSERT INTO Building_UnitCombatFreeExperiences
+	(BuildingType, UnitCombatType, Experience)
+SELECT 'BUILDING_TEMPLE_ARTEMIS', 'UNITCOMBAT_MOUNTED_ARCHER', '20'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_TEMPLE_ARTEMIS' );
+
+INSERT INTO Building_FreeUnits
+	(BuildingType, UnitType, NumUnits)
+SELECT 'BUILDING_MAUSOLEUM_HALICARNASSUS', 'UNIT_MERCHANT', '1'
+WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_MAUSOLEUM_HALICARNASSUS' );
+
+UPDATE Buildings
+SET SpecialistType = 'SPECIALIST_ENGINEER', SpecialistCount = 1
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_BARRACKS',
+	'BUILDINGCLASS_ARMORY',
+	'BUILDINGCLASS_MILITARY_ACADEMY',
+	'BUILDINGCLASS_FORGE',
+	'BUILDINGCLASS_WORKSHOP',
+	'BUILDINGCLASS_FACTORY',
+	'BUILDINGCLASS_IRONWORKS',
+	'BUILDINGCLASS_HEROIC_EPIC'
+);
+
+UPDATE Buildings
+SET SpecialistType = 'SPECIALIST_MERCHANT', SpecialistCount = 1
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_MARKET',
+	'BUILDINGCLASS_MINT',
+	'BUILDINGCLASS_BANK',
+	'BUILDINGCLASS_STOCK_EXCHANGE',
+	'BUILDINGCLASS_LIGHTHOUSE',
+	'BUILDINGCLASS_CIRCUS_MAXIMUS',
+	'BUILDINGCLASS_NATIONAL_TREASURY'
+);
+
+UPDATE Buildings
+SET SpecialistType = 'SPECIALIST_SCIENTIST', SpecialistCount = 1
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_LIBRARY',
+	'BUILDINGCLASS_UNIVERSITY',
+	'BUILDINGCLASS_PUBLIC_SCHOOL',
+	'BUILDINGCLASS_LABORATORY',
+	'BUILDINGCLASS_OBSERVATORY',
+	'BUILDINGCLASS_NATIONAL_COLLEGE',
+	'BUILDINGCLASS_OXFORD_UNIVERSITY'
+);
+
+
+UPDATE Buildings
+SET SpecialistType = 'SPECIALIST_ARTIST', SpecialistCount = 1
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_TEMPLE',
+	'BUILDINGCLASS_MONASTERY',
+	'BUILDINGCLASS_OPERA_HOUSE',
+	'BUILDINGCLASS_MUSEUM',
+	'BUILDINGCLASS_BROADCAST_TOWER',
+	'BUILDINGCLASS_NATIONAL_EPIC',
+	'BUILDINGCLASS_HERMITAGE'
+);
+
+UPDATE Buildings
+SET SpecialistType = NULL, SpecialistCount = 0
+WHERE BuildingClass IN (
+	'BUILDINGCLASS_WINDMILL'
+);

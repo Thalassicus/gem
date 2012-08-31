@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Defines>
+		<Update>
+			<Where Name="BUILDING_SALE_DIVISOR" />
+			<Set Value="2" />
+			<!-- 4 -->
+		</Update>		
+	</Defines>
+	<Buildings>
+		<Update>
+			<Where Type="BUILDING_ANGKOR_WAT" />
+			<Set MinorFriendshipFlatChange="40"
+				 GlobalPlotCultureCostModifier="0"
+				 GlobalPlotBuyCostModifier="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_BRANDENBURG_GATE" />
+			<Set FreeBuildingThisCity="BUILDINGCLASS_MILITARY_ACADEMY"
+				 GlobalExperience="20"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_CHICHEN_ITZA" />
+			<Set GoldenAgeModifier="50" Happiness="0" />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_COLOSSUS" />
+			<Set PrereqTech="TECH_TRAPPING" />
+		</Update>		
+		<Update>
+			<Where Type="BUILDING_CRISTO_REDENTOR" />
+			<Set PolicyCostModifier="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_FORBIDDEN_PALACE" />
+			<Set UnhappinessModifier="-10"
+				 UnmoddedHappiness="5"
+				 />
+		</Update>		
+		<Update>
+			<Where Type="BUILDING_GREAT_LIBRARY" />
+			<Set Cost="250" />
+		</Update>
+		<!--
+		<Update>
+			<Where Type="BUILDING_GREAT_LIBRARY" />
+			<Set FreeTechs="0" GreatPeopleRateChange="4" />
+		</Update>
+		-->
+		<Update>
+			<Where Type="BUILDING_GREAT_WALL" />
+			<Set GreatGeneralRateChange="1"
+				 GreatPeopleRateChange="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_HAGIA_SOPHIA" />
+			<Set Cost="500" />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_HANGING_GARDEN" />
+			<Set UnmoddedHappiness="3" />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_KREMLIN" />
+			<Set GlobalInstantBorderRadius="2"
+				 GlobalPlotCultureCostModifier="-25"
+				 GlobalPlotBuyCostModifier="-25"
+				 Defense="0"
+				 GlobalDefenseMod="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_LOUVRE" />
+			<Set FreeBuildingThisCity="BUILDINGCLASS_MUSEUM" />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_MACHU_PICHU" />
+			<Set TradeRouteModifier="0"
+				 Help="TXT_KEY_BUILDING_MACHU_PICHU_HELP"
+				 AlwaysShowHelp="true"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_PENTAGON" />
+			<Set Cost="1060"
+				 FreePromotionAllCombatUnits="PROMOTION_MARCH" />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_PORCELAIN_TOWER" />
+			<Set MedianTechPercentChange="0"
+				 TradeDealModifier="25"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_STATUE_ZEUS" />
+			<Set GreatGeneralRateChange="1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_STONEHENGE" />
+			<Set GreatPeopleRateChange="1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_SYDNEY_OPERA_HOUSE" />
+			<Set FreePolicies="2"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_TAJ_MAHAL" />
+			<Set Happiness="0"
+				 GoldenAgePoints="4"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_TERRACOTTA_ARMY" />
+			<Set InstantBorderRadius="3"
+				 GreatPeopleRateChange="1"
+				 />
+		</Update>		
+	</Buildings>
+	<Building_FreeUnits>
+		<Delete BuildingType="BUILDING_PYRAMID" />
+		<Delete BuildingType="BUILDING_BRANDENBURG_GATE" />
+		<Row>
+			<BuildingType>BUILDING_PYRAMID</BuildingType>
+			<UnitType>UNIT_SETTLER</UnitType>
+			<NumUnits>1</NumUnits>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STATUE_ZEUS</BuildingType>
+			<UnitType>UNIT_GREAT_GENERAL</UnitType>
+			<NumUnits>1</NumUnits>
+		</Row>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_COLOSSUS</BuildingType>
+			<UnitType>UNIT_MERCHANT</UnitType>
+			<NumUnits>1</NumUnits>
+		</Row>
+		-->
+	</Building_FreeUnits>
+	<Building_NearestPlotYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_MACHU_PICHU</BuildingType>
+			<PlotType>PLOT_MOUNTAIN</PlotType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MACHU_PICHU</BuildingType>
+			<PlotType>PLOT_MOUNTAIN</PlotType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MACHU_PICHU</BuildingType>
+			<PlotType>PLOT_MOUNTAIN</PlotType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MACHU_PICHU</BuildingType>
+			<PlotType>PLOT_MOUNTAIN</PlotType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Building_NearestPlotYieldChanges>
+	<Building_YieldChanges>
+		<Delete BuildingType="BUILDING_GREAT_LIBRARY" />
+		<!--
+		<Update>
+			<Where BuildingType="BUILDING_GREAT_LIBRARY" />
+			<Set Yield="6" />
+		</Update>
+		-->
+		<Update>
+			<Where BuildingType="BUILDING_HANGING_GARDEN" />
+			<Set Yield="6" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_COLOSSUS" />
+			<Set Yield="10" />
+		</Update>
+		<!--
+		<Delete BuildingType="BUILDING_COLOSSUS" />
+		-->
+		<Delete BuildingType="BUILDING_MACHU_PICHU" />
+		<Update>
+			<Where BuildingType="BUILDING_BRANDENBURG_GATE" YieldType="YIELD_CULTURE" />
+			<Set Yield="2" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_CRISTO_REDENTOR" YieldType="YIELD_CULTURE" />
+			<Set Yield="2" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_GREAT_WALL" YieldType="YIELD_CULTURE" />
+			<Set Yield="2" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_NOTRE_DAME" YieldType="YIELD_CULTURE" />
+			<Set Yield="2" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_ORACLE" YieldType="YIELD_CULTURE" />
+			<Set Yield="10" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_STATUE_ZEUS" YieldType="YIELD_CULTURE" />
+			<Set Yield="2" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_TERRACOTTA_ARMY" YieldType="YIELD_CULTURE" />
+			<Set Yield="10" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_SYDNEY_OPERA_HOUSE" YieldType="YIELD_CULTURE" />
+			<Set Yield="2" />
+		</Update>
+	</Building_YieldChanges>
+	<Building_YieldChangesPerPop>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		-->
+	</Building_YieldChangesPerPop>
+	<Building_SpecialistYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CRISTO_REDENTOR</BuildingType>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_SpecialistYieldChanges>
+	<Building_DomainFreeExperiences>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIGHTHOUSE</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Experience>20</Experience>
+		</Row>
+		<Delete BuildingType="BUILDING_BRANDENBURG_GATE" />
+	</Building_DomainFreeExperiences>
+</GameData>

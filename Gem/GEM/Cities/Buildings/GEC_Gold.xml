@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_WAREHOUSE</Type>
+			<DefaultBuilding>BUILDING_WAREHOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WAREHOUSE</Description>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_WAREHOUSE</Type>
+			<BuildingClass>BUILDINGCLASS_WAREHOUSE</BuildingClass>
+			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<Cost>220</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<Description>TXT_KEY_BUILDING_WAREHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>0</ConquestProb>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
+			<PortraitIndex>6</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Buildings>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_HARBOR" />
+			<Set Cost="120"
+				 GoldMaintenance="1"
+				 PrereqTech="TECH_OPTICS"
+				 />
+			<!-- 180 -->
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_MARKET" />
+			<Set Cost="120" />
+			<!-- 100 -->
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_MINT" />
+			<Set Cost="180" />
+			<!-- 100 -->
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_BANK" />
+			<Set Cost="360" />
+			<!-- 200 -->
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_STOCK_EXCHANGE" />
+			<Set Cost="500" />
+			<!-- 360 -->
+		</Update>
+	</Buildings>
+	<Building_ClassesNeededInCity>
+		<Delete BuildingType="BUILDING_BANK" />
+		<Row>
+			<BuildingType>BUILDING_BANK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MINT</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MINT</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCity>
+	<Building_YieldChanges>
+		<Delete BuildingType="BUILDING_MARKET" />
+		<Delete BuildingType="BUILDING_BAZAAR" />
+		<Delete BuildingType="BUILDING_SATRAPS_COURT" />
+		<Row>
+			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_YieldChangesPerPop>
+		<Row>
+			<BuildingType>BUILDING_MINT</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STOCK_EXCHANGE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>100</Yield>
+		</Row>
+	</Building_YieldChangesPerPop>
+	<Building_YieldModifiers>
+		<Update>
+			<Where BuildingType="BUILDING_MARKET" />
+			<Set Yield="20" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_BAZAAR" />
+			<Set Yield="20" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_SATRAPS_COURT" />
+			<Set Yield="20" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_BANK" />
+			<Set Yield="30" />
+		</Update>
+		<Delete BuildingType="BUILDING_STOCK_EXCHANGE" />
+	</Building_YieldModifiers>
+	<Building_SeaPlotYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_SeaPlotYieldChanges>
+	<Building_ResourceYieldChanges>
+		<Update>
+			<Where BuildingType="BUILDING_MINT" />
+			<Set Yield="1" />
+		</Update>
+		<Row>
+			<BuildingType>BUILDING_MINT</BuildingType>
+			<ResourceType>RESOURCE_GEMS</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MINT</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_ResourceYieldChanges>
+	<Building_LocalResourceOrs>
+		<Delete BuildingType="BUILDING_MINT" />
+	</Building_LocalResourceOrs>
+	<Building_Flavors>
+		<Delete BuildingType="BUILDING_MINT" />
+		<Row>
+			<BuildingType>BUILDING_MINT</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
+			<FlavorType>FLAVOR_NAVAL_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Building_ClassesNeededInCity>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_SEAPORT</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WAREHOUSE</BuildingClassType>
+		</Row>
+		-->
+	</Building_ClassesNeededInCity>
+</GameData>
