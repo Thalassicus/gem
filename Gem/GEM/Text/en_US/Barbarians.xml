@@ -58,7 +58,7 @@
 		<Row Tag="TXT_KEY_UNIT_BARBARIAN_TRIREME">
 			<Text>Pirate</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_BARBARIAN_CARAVEL">
+		<Row Tag="TXT_KEY_UNIT_BARBARIAN_GALLEASS">
 			<Text>Corsair</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_BARBARIAN_FRIGATE">

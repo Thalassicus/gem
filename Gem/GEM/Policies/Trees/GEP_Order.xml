@@ -166,13 +166,13 @@
 			<PolicyType>POLICY_UNITED_FRONT</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CONSTABLE</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>3</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_UNITED_FRONT</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_POLICE_STATION</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>3</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 	</Policy_BuildingClassYieldChanges>
 	<Policy_BuildingClassYieldModifiers>

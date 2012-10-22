@@ -36,7 +36,7 @@
 		-->
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP" />
-			<Set Text="[COLOR_POSITIVE_TEXT]Liberty[ENDCOLOR] focuses on settling many cities.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Opener[ENDCOLOR][NEWLINE]+2 [ICON_CULTURE] Culture in every city.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Finisher[ENDCOLOR] [COLOR_GREY](finish all policies in this tree)[ENDCOLOR][NEWLINE]+1 [ICON_TEAM_2] Great Person of choice.[NEWLINE]+3 [ICON_PRODUCTION] Production in cities with a Specialist." />
+			<Set Text="[COLOR_POSITIVE_TEXT]Liberty[ENDCOLOR] focuses on settling many cities.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Opener[ENDCOLOR][NEWLINE]+2 [ICON_CULTURE] Culture in every city.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Finisher[ENDCOLOR] [COLOR_GREY](finish all policies in this tree)[ENDCOLOR][NEWLINE]+1 [ICON_TEAM_2] Great Person of choice.[NEWLINE]+2 [ICON_PRODUCTION] Production from Specialists." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_COLLECTIVE_RULE_HELP" />
@@ -44,7 +44,7 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_MERITOCRACY_HELP" />
-			<Set Text="[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR][NEWLINE]+5 [ICON_HAPPINESS_1] Happiness[NEWLINE]Gives a lump sum of [ICON_GOLD] Gold.[NEWLINE][NEWLINE]Reduces policy costs in large empires:[NEWLINE]cities producing approximately 15[ICON_CULTURE] Culture are revenue-neutral for policy rate." />
+			<Set Text="[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR][NEWLINE]+5 [ICON_HAPPINESS_1] Happiness.[NEWLINE]Gives a lump sum of [ICON_GOLD] Gold.[NEWLINE][NEWLINE]Reduces policy costs in large empires:[NEWLINE]cities producing approximately 15[ICON_CULTURE] Culture are revenue-neutral for policy rate." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_CITIZENSHIP_HELP" />
@@ -108,7 +108,7 @@
 		-->
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP" />
-			<Set Text="[COLOR_POSITIVE_TEXT]Honor[ENDCOLOR] focuses on defending and conquering cities.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Opener[ENDCOLOR][NEWLINE]Reveals Barbarian camps.[NEWLINE]+10% Strength against Barbarians.[NEWLINE]Killing barbarians gives 5 [ICON_CULTURE] Culture per 1[ICON_STRENGTH] Strength.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Finisher[ENDCOLOR] [COLOR_GREY](finish all policies in this tree)[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Happiness and +4 [ICON_CULTURE] Culture for Colosseums and Ampitheaters." />
+			<Set Text="[COLOR_POSITIVE_TEXT]Honor[ENDCOLOR] focuses on defending and conquering cities.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Opener[ENDCOLOR][NEWLINE]Reveals Barbarian camps.[NEWLINE]+10% Strength against Barbarians.[NEWLINE]Killing barbarians gives 10 [ICON_CULTURE] Culture per 1[ICON_STRENGTH] Strength.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Finisher[ENDCOLOR] [COLOR_GREY](finish all policies in this tree)[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Happiness and +4 [ICON_CULTURE] Culture for Colosseums and Ampitheaters." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP" />
@@ -124,7 +124,7 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP" />
-			<Set Text="[COLOR_POSITIVE_TEXT]Professional Army[ENDCOLOR][NEWLINE]-33% [ICON_GOLD] Upgrade cost for units.[NEWLINE]You salvage [ICON_GOLD] Gold from the equipment of defeated enemies." />
+			<Set Text="[COLOR_POSITIVE_TEXT]Professional Army[ENDCOLOR][NEWLINE]-50% [ICON_GOLD] Upgrade cost for units.[NEWLINE]You salvage [ICON_GOLD] Gold from the equipment of defeated enemies." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" />
@@ -416,7 +416,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP" />
-			<Set Text="[COLOR_POSITIVE_TEXT]Knowledge[ENDCOLOR] focuses on researching new things to build.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Opener[ENDCOLOR][NEWLINE]+20% [ICON_RESEARCH] Science when [ICON_HAPPINESS_1] Happy.[NEWLINE]Can purchase Great Scientists with [ICON_PEACE] Faith once you enter the Industrial era.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Finisher[ENDCOLOR] [COLOR_GREY](finish all policies in this tree)[ENDCOLOR][NEWLINE]+2 instant [ICON_TEAM_5] Technologies." />
+			<Set Text="[COLOR_POSITIVE_TEXT]Knowledge[ENDCOLOR] focuses on researching new things to build.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Opener[ENDCOLOR][NEWLINE]+1 [ICON_TEAM_7] Great Scientist at the Capital.[NEWLINE]+1 [ICON_RESEARCH] Science on Science buildings.[NEWLINE]Can purchase Great Scientists with [ICON_PEACE] Faith once you enter the Industrial era.[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]Finisher[ENDCOLOR] [COLOR_GREY](finish all policies in this tree)[ENDCOLOR][NEWLINE]+2 instant [ICON_TEAM_5] Technologies." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION_HELP" />
@@ -424,7 +424,7 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_SOVEREIGNTY_HELP" />
-			<Set Text="[COLOR_POSITIVE_TEXT]Sovereignty[ENDCOLOR][NEWLINE]+1 [ICON_TEAM_7] Great Scientist at the Capital." />
+			<Set Text="[COLOR_POSITIVE_TEXT]Sovereignty[ENDCOLOR][NEWLINE]+20% [ICON_RESEARCH] Science when [ICON_HAPPINESS_1] Happy." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_POLICY_HUMANISM_HELP" />

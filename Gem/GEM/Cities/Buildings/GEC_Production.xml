@@ -20,15 +20,19 @@
 	</BuildingClasses>
 	<Buildings>
 		<Update>
-			<Where Type="BUILDING_STABLE" />
+			<Where BuildingClass="BUILDINGCLASS_STABLE" />
 			<Set GoldMaintenance="2"
 				 />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_WINDMILL" />
+			<Where BuildingClass="BUILDINGCLASS_WINDMILL" />
 			<Set Cost="220"
 				 GoldMaintenance="1"
-				 BuildingProductionModifier="15"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_WINDMILL" />
+			<Set BuildingProductionModifier="15"
 				 Description="TXT_KEY_BUILDING_WORKSHOP"
 				 Strategy="TXT_KEY_BUILDING_WORKSHOP_STRATEGY"
 				 Civilopedia="TXT_KEY_CIV5_BUILDINGS_WORKSHOP_TEXT"
@@ -36,7 +40,7 @@
 				 />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_FORGE" />
+			<Where BuildingClass="BUILDINGCLASS_FORGE" />
 			<Set Cost="180"
 				 Description="TXT_KEY_BUILDING_BLAST_FURNACE"
 				 Strategy="TXT_KEY_BUILDING_BLAST_FURNACE_STRATEGY"
@@ -59,7 +63,7 @@
 				 />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_IRONWORKS" />
+			<Where BuildingClass="BUILDINGCLASS_IRONWORKS" />
 			<Set Description="TXT_KEY_BUILDING_FOUNDRY"
 				 Strategy="TXT_KEY_BUILDING_FOUNDRY_STRATEGY"
 				 Civilopedia="TXT_KEY_BUILDING_FOUNDRY_PEDIA"
@@ -76,19 +80,19 @@
 		</Update>
 		-->
 		<Update>
-			<Where Type="BUILDING_BARRACKS" />
+			<Where BuildingClass="BUILDINGCLASS_BARRACKS" />
 			<Set Experience="10" />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_KREPOST" />
+			<Where BuildingClass="BUILDINGCLASS_KREPOST" />
 			<Set Experience="10" />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_ARMORY" />
+			<Where BuildingClass="BUILDINGCLASS_ARMORY" />
 			<Set Experience="20" />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_MILITARY_ACADEMY" />
+			<Where BuildingClass="BUILDINGCLASS_MILITARY_ACADEMY" />
 			<Set Experience="30" />
 		</Update>
 	</Buildings>
@@ -127,6 +131,10 @@
 	<Building_YieldModifiers>
 		<Update>
 			<Where BuildingType="BUILDING_FACTORY" YieldType="YIELD_PRODUCTION" />
+			<Set Yield="15" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_COFFEE_HOUSE" YieldType="YIELD_PRODUCTION" />
 			<Set Yield="15" />
 		</Update>
 	</Building_YieldModifiers>
@@ -190,14 +198,6 @@
 		</Update>
 		-->
 	</Building_DomainFreeExperiences>
-	<Building_DomainProductionModifiers>
-		<Delete BuildingType="BUILDING_SEAPORT" />
-		<Row>
-			<BuildingType>BUILDING_SEAPORT</BuildingType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>50</Modifier>
-		</Row>
-	</Building_DomainProductionModifiers>
 	<Building_UnitCombatProductionModifiers>
 		<Update>
 			<Where BuildingType="BUILDING_STABLE" />

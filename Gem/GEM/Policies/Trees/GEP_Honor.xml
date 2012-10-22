@@ -5,7 +5,7 @@
 		<Update>
 			<Where Type="POLICY_HONOR" />
 			<Set BarbarianCombatBonus="10"
-				 CultureFromBarbarianKills="500"
+				 CultureFromBarbarianKills="1000"
 				 />
 		</Update>
 		<Update>
@@ -14,15 +14,8 @@
 				 />
 		</Update>
 		<Update>
-			<Where Type="POLICY_WARRIOR_CODE" />
-			<Set GridX="1"
-				 GridY="1"
-				 PortraitIndex="19"
-				 />
-		</Update>
-		<Update>
 			<Where Type="POLICY_MILITARY_TRADITION" />
-			<Set GridX="3"
+			<Set GridX="1"
 				 GridY="1"
 				 PortraitIndex="4"
 				 ExpModifier="0"
@@ -30,23 +23,31 @@
 				 />
 		</Update>
 		<Update>
-			<Where Type="POLICY_DISCIPLINE" />
-			<Set GridX="5"
-				 GridY="1"
-				 PortraitIndex="33"				 
-				 />
-		</Update>
-		<Update>
 			<Where Type="POLICY_MILITARY_CASTE" />
-			<Set GridX="2"
-				 GridY="2"
+			<Set GridX="3"
+				 GridY="1"
 				 />
 		</Update>
 		<Update>
 			<Where Type="POLICY_PROFESSIONAL_ARMY" />
+			<Set GridX="5"
+				 GridY="1"
+				 GoldFromKills="200"
+				 UnitUpgradeCostMod="-50"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_WARRIOR_CODE" />
+			<Set GridX="2"
+				 GridY="2"
+				 PortraitIndex="19"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_DISCIPLINE" />
 			<Set GridX="4"
 				 GridY="2"
-				 GoldFromKills="200"
+				 PortraitIndex="33"
 				 />
 		</Update>
 		<!--
@@ -77,6 +78,7 @@
 		</Update>
 	</UnitPromotions>
 	<Policy_PrereqPolicies>
+		<!--
 		<Row>
 			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
 			<PrereqPolicy>POLICY_MILITARY_TRADITION</PrereqPolicy>
@@ -85,6 +87,7 @@
 			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>
 			<PrereqPolicy>POLICY_MILITARY_TRADITION</PrereqPolicy>
 		</Row>
+		-->
 	</Policy_PrereqPolicies>
 	<Policy_FreeUnitFlavor>
 		<Row>

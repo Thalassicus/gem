@@ -12,7 +12,6 @@
 	</UnitCombatInfosEx>
 	<UnitPromotions_Grid>
 
-		<Row><GridY>  0</GridY><GridX>  4</GridX><PromotionType>PROMOTION_ARCTIC_POWER</PromotionType>             <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType></Row>
 		<Row><GridY>  1</GridY><GridX>  4</GridX><PromotionType>PROMOTION_DESERT_POWER</PromotionType>             <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType></Row>
 		<Row><GridY>  2</GridY><GridX>  1</GridX><PromotionType>PROMOTION_SHOCK_1</PromotionType>                  <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType></Row>
 		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_SHOCK_2</PromotionType>                  <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType></Row>
@@ -115,15 +114,23 @@
 		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_MOBILITY_1</PromotionType>               <UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType></Row>
 		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_MOBILITY_2</PromotionType>               <UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType></Row>
 		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_MARCH_III</PromotionType>                <UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType></Row>
+		<Row><GridY>  1</GridY><GridX>  2</GridX><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType>  <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
 		<Row><GridY>  2</GridY><GridX>  1</GridX><PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
 		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_BOARDING_PARTY_1</PromotionType>         <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_BOARDING_PARTY_2</PromotionType>         <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_BOARDING_PARTY_3</PromotionType>         <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_TARGETING_1</PromotionType>              <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_TARGETING_2</PromotionType>              <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_TARGETING_3</PromotionType>              <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
 		<Row><GridY>  3</GridY><GridX>  4</GridX><PromotionType>PROMOTION_LOGISTICS</PromotionType>                <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
-		<Row><GridY>  4</GridY><GridX>  1</GridX><PromotionType>PROMOTION_COASTAL_RAIDER_1</PromotionType>         <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
-		<Row><GridY>  4</GridY><GridX>  2</GridX><PromotionType>PROMOTION_COASTAL_RAIDER_2</PromotionType>         <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
-		<Row><GridY>  4</GridY><GridX>  3</GridX><PromotionType>PROMOTION_COASTAL_RAIDER_3</PromotionType>         <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  2</GridX><PromotionType>PROMOTION_COASTAL_RAIDER_1</PromotionType>         <UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><GridY>  1</GridY><GridX>  2</GridX><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType>  <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  2</GridY><GridX>  1</GridX><PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>            <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>            <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_TARGETING_1</PromotionType>              <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_TARGETING_2</PromotionType>              <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_TARGETING_3</PromotionType>              <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  4</GridX><PromotionType>PROMOTION_LOGISTICS</PromotionType>                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  2</GridX><PromotionType>PROMOTION_COASTAL_RAIDER_1</PromotionType>         <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  0</GridY><GridX>  2</GridX><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType>  <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
 		<Row><GridY>  1</GridY><GridX>  1</GridX><PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
 		<Row><GridY>  1</GridY><GridX>  2</GridX><PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
 		<Row><GridY>  2</GridY><GridX>  1</GridX><PromotionType>PROMOTION_TARGETING_1</PromotionType>              <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
@@ -134,35 +141,31 @@
 		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_BOMBARDMENT_2</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
 		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_BOMBARDMENT_3</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
 		<Row><GridY>  3</GridY><GridX>  4</GridX><PromotionType>PROMOTION_LOGISTICS</PromotionType>                <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
-		<Row><GridY>  4</GridY><GridX>  2</GridX><PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
-		<Row><GridY>  5</GridY><GridX>  2</GridX><PromotionType>PROMOTION_NAVAL_SIEGE</PromotionType>              <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  1</GridX><PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>            <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>            <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_TARGETING_1</PromotionType>              <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_TARGETING_2</PromotionType>              <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_TARGETING_3</PromotionType>              <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  4</GridX><PromotionType>PROMOTION_LOGISTICS</PromotionType>                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  2</GridX><PromotionType>PROMOTION_NAVAL_SIEGE</PromotionType>              <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
+		<Row><GridY>  5</GridY><GridX>  2</GridX><PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>            <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
+		<Row><GridY>  6</GridY><GridX>  2</GridX><PromotionType>PROMOTION_INTERCEPTION</PromotionType>             <UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
 		<Row><GridY>  0</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_RANGE</PromotionType>                <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
 		<Row><GridY>  1</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_AMBUSH_1</PromotionType>             <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  1</GridX><PromotionType>PROMOTION_INTERCEPTION_1</PromotionType>           <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_INTERCEPTION_2</PromotionType>           <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  3</GridX><PromotionType>PROMOTION_INTERCEPTION_3</PromotionType>           <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_DOGFIGHTING_1</PromotionType>            <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_DOGFIGHTING_2</PromotionType>            <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_DOGFIGHTING_3</PromotionType>            <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  4</GridY><GridX>  3</GridX><PromotionType>PROMOTION_SORTIE</PromotionType>                   <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  5</GridY><GridX>  3</GridX><PromotionType>PROMOTION_MARCH_III</PromotionType>                <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
-		<Row><GridY>  0</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_RANGE</PromotionType>                <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  1</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_AMBUSH_1</PromotionType>             <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  1</GridX><PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>              <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_SIEGE_2</PromotionType>              <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  3</GridX><PromotionType>PROMOTION_AIR_SIEGE_3</PromotionType>              <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  2</GridY><GridX>  4</GridX><PromotionType>PROMOTION_MARCH_III</PromotionType>                <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_AIR_BOMBARDMENT_1</PromotionType>        <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_BOMBARDMENT_2</PromotionType>        <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_AIR_BOMBARDMENT_3</PromotionType>        <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  4</GridY><GridX>  3</GridX><PromotionType>PROMOTION_AIR_LOGISTICS</PromotionType>            <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
-		<Row><GridY>  5</GridY><GridX>  3</GridX><PromotionType>PROMOTION_EVASION</PromotionType>                  <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType>  <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_INTERCEPTION_1</PromotionType>           <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_INTERCEPTION_2</PromotionType>           <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_INTERCEPTION_3</PromotionType>           <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  1</GridX><PromotionType>PROMOTION_DOGFIGHTING_1</PromotionType>            <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  2</GridX><PromotionType>PROMOTION_DOGFIGHTING_2</PromotionType>            <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  3</GridX><PromotionType>PROMOTION_DOGFIGHTING_3</PromotionType>            <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  5</GridY><GridX>  3</GridX><PromotionType>PROMOTION_SORTIE</PromotionType>                   <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  6</GridY><GridX>  3</GridX><PromotionType>PROMOTION_MARCH_III</PromotionType>                <UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
+		<Row><GridY>  1</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_RANGE</PromotionType>                <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  2</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_AMBUSH_1</PromotionType>             <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  1</GridX><PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>              <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_SIEGE_2</PromotionType>              <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  3</GridX><PromotionType>PROMOTION_AIR_SIEGE_3</PromotionType>              <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  3</GridY><GridX>  4</GridX><PromotionType>PROMOTION_MARCH_III</PromotionType>                <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  1</GridX><PromotionType>PROMOTION_AIR_BOMBARDMENT_1</PromotionType>        <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  2</GridX><PromotionType>PROMOTION_AIR_BOMBARDMENT_2</PromotionType>        <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  4</GridY><GridX>  3</GridX><PromotionType>PROMOTION_AIR_BOMBARDMENT_3</PromotionType>        <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  5</GridY><GridX>  3</GridX><PromotionType>PROMOTION_AIR_LOGISTICS</PromotionType>            <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
+		<Row><GridY>  6</GridY><GridX>  3</GridX><PromotionType>PROMOTION_EVASION</PromotionType>                  <UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType></Row>
 
 	</UnitPromotions_Grid>
 </GameData>

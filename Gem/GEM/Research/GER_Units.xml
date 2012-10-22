@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<!--
-			Obsoletes
-	-->
 	<Units>
-		<Update>
-			<Where Class="UNITCLASS_SCOUT" />
-			<Set ObsoleteTech="TECH_THE_WHEEL" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_ARCHER" />
-			<Set ObsoleteTech="TECH_MATHEMATICS" />
-		</Update>
 		<Update>
 			<Where Class="UNITCLASS_COMPOSITE_BOWMAN" />
 			<Set PrereqTech="TECH_MATHEMATICS" />
@@ -21,20 +10,8 @@
 			<Set PrereqTech="TECH_RADAR" />
 		</Update>
 		<Update>
-			<Where Class="UNITCLASS_LONGSWORDSMAN" />
-			<Set ObsoleteTech="TECH_RIFLING" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_RIFLEMAN" />
-			<Set ObsoleteTech="TECH_STEAM_POWER" />
-		</Update>
-		<Update>
 			<Where Class="UNITCLASS_GREAT_WAR_INFANTRY" />
 			<Set PrereqTech="TECH_STEAM_POWER" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_GREAT_WAR_INFANTRY" />
-			<Set ObsoleteTech="TECH_BALLISTICS" />
 		</Update>
 		<Update>
 			<Where Class="UNITCLASS_INFANTRY" />
@@ -45,16 +22,8 @@
 			<Set PrereqTech="TECH_INDUSTRIALIZATION" />
 		</Update>
 		<Update>
-			<Where Class="UNITCLASS_GATLINGGUN" />
-			<Set ObsoleteTech="TECH_PLASTIC" />
-		</Update>
-		<Update>
 			<Where Class="UNITCLASS_MACHINE_GUN" />
 			<Set PrereqTech="TECH_PLASTIC" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_CAVALRY" />
-			<Set ObsoleteTech="TECH_RAILROAD" />
 		</Update>
 		<Update>
 			<Where Class="UNITCLASS_WWI_TANK" />
@@ -66,8 +35,16 @@
 		</Update>
 
 		<Update>
-			<Where Class="UNITCLASS_DESTROYER" />
+			<Where Class="UNITCLASS_CARAVEL" />
+			<Set PrereqTech="TECH_CARVEL_HULLS" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_SUBMARINE" />
 			<Set PrereqTech="TECH_REPLACEABLE_PARTS" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_DESTROYER" />
+			<Set PrereqTech="TECH_REFRIGERATION" />
 		</Update>
 		<Update>
 			<Where Class="UNITCLASS_BATTLESHIP" />
@@ -76,6 +53,47 @@
 		<Update>
 			<Where Class="UNITCLASS_CARRIER" />
 			<Set PrereqTech="TECH_BALLISTICS" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_NUCLEAR_SUBMARINE" />
+			<Set PrereqTech="TECH_COMPUTERS" />
+		</Update>
+		
+		<Update>
+			<Where Class="UNITCLASS_PIKEMAN" />
+			<Set PrereqTech="TECH_METAL_CASTING" />
+		</Update>
+	</Units>
+	<!--
+			Obsoletes
+	<Units>
+		<Update>
+			<Where Class="UNITCLASS_SCOUT" />
+			<Set ObsoleteTech="TECH_THE_WHEEL" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_ARCHER" />
+			<Set ObsoleteTech="TECH_MATHEMATICS" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_LONGSWORDSMAN" />
+			<Set ObsoleteTech="TECH_RIFLING" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_RIFLEMAN" />
+			<Set ObsoleteTech="TECH_STEAM_POWER" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_GREAT_WAR_INFANTRY" />
+			<Set ObsoleteTech="TECH_BALLISTICS" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_GATLINGGUN" />
+			<Set ObsoleteTech="TECH_PLASTIC" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_CAVALRY" />
+			<Set ObsoleteTech="TECH_RAILROAD" />
 		</Update>
 		
 		<Update>
@@ -93,10 +111,6 @@
 		<Update>
 			<Where Type="UNIT_SPEARMAN" />
 			<Set ObsoleteTech="TECH_METAL_CASTING" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_PIKEMAN" />
-			<Set PrereqTech="TECH_METAL_CASTING" />
 		</Update>
 		<Update>
 			<Where Class="UNITCLASS_SWORDSMAN" />
@@ -138,36 +152,16 @@
 			<Where Type="UNIT_TANK" />
 			<Set ObsoleteTech="TECH_LASERS" />
 		</Update>
-		<!--
-		<Update>
-			<Where Class="UNITCLASS_TRIREME" />
-			<Set ObsoleteTech="TECH_COMPASS" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_GALLEY" />
-			<Set ObsoleteTech="TECH_COMPASS" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_CARAVEL" />
-			<Set ObsoleteTech="TECH_NAVIGATION" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_FRIGATE" />
-			<Set ObsoleteTech="TECH_TELEGRAPH" />
-		</Update>
-		<Update>
-			<Where Class="UNITCLASS_IRONCLAD" />
-			<Set ObsoleteTech="TECH_COMBUSTION" />
-		</Update>
-		<Update>
-			<Where Type="UNIT_BATTLESHIP" />
-			<Set ObsoleteTech="TECH_ROBOTICS" />
-		</Update>
+		<Update><Where Class="UNITCLASS_TRIREME" />	<Set ObsoleteTech="TECH_COMPASS" /></Update>
+		<Update><Where Class="UNITCLASS_GALLEY" />	<Set ObsoleteTech="TECH_COMPASS" /></Update>
+		<Update><Where Class="UNITCLASS_CARAVEL" />	<Set ObsoleteTech="TECH_NAVIGATION" /></Update>
+		<Update><Where Class="UNITCLASS_FRIGATE" />	<Set ObsoleteTech="TECH_REFRIGERATION" /></Update>
+		<Update><Where Class="UNITCLASS_IRONCLAD" /><Set ObsoleteTech="TECH_COMBUSTION" /></Update>
+		<Update><Where Class="UNITCLASS_BATTLESHIP"/><Set ObsoleteTech="TECH_ROBOTICS" /></Update>
 		<Update>
 			<Where Type="UNIT_ARTILLERY" />
 			<Set ObsoleteTech="TECH_ROCKETRY" />
 		</Update>
-		-->
 		<Update>
 			<Where Type="UNIT_FIGHTER" />
 			<Set ObsoleteTech="TECH_LASERS" />
@@ -177,24 +171,5 @@
 			<Set ObsoleteTech="TECH_STEALTH" />
 		</Update>
 	</Units>
-
-	<!--
-			Upgrades
 	-->
-	<Unit_ClassUpgrades>
-		<!--
-		<Update>
-			<Where UnitType="UNIT_TRIREME" />
-			<Set UnitClassType="UNITCLASS_CARAVEL" />
-		</Update>
-		<Update>
-			<Where UnitType="UNIT_CARAVEL" />
-			<Set UnitClassType="UNITCLASS_FRIGATE" />
-		</Update>
-		<Row>
-			<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
-			<UnitClassType>UNITCLASS_IRONCLAD</UnitClassType>
-		</Row>
-		-->
-	</Unit_ClassUpgrades>
 </GameData>

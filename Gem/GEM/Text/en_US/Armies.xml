@@ -6,6 +6,14 @@
 			<Set Text="Used by Factories." />
 		</Update>
 		<Update>
+			<Where Tag="TXT_KEY_UNITCOMBAT_NAVALMELEE" />
+			<Set Text="Hunter Ships" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNITCOMBAT_NAVALRANGED" />
+			<Set Text="Common Ships" />
+		</Update>
+		<Update>
 			<Where Tag="TXT_KEY_UNITCOMBAT_RECON" />
 			<Set Text="Vanguard Units" />
 		</Update>
@@ -110,14 +118,6 @@
 				Ranged
 		-->
 		<Update>
-			<Where Tag="TXT_KEY_PROMOTION_CITY_ASSUALT" />
-			<Set Text="Demolish" />
-		</Update>
-		<Update>
-			<Where Tag="TXT_KEY_PROMOTION_CITY_ASSUALT_HELP" />
-			<Set Text="+50% vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].[NEWLINE]+30% vs [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR].[NEWLINE]-50% vs [COLOR_NEGATIVE_TEXT]Land Units[ENDCOLOR]." />
-		</Update>
-		<Update>
 			<Where Tag="TXT_KEY_PROMOTION_CITY_SIEGE" />
 			<Set Text="Bonus vs Cities (10)" />
 		</Update>
@@ -146,8 +146,40 @@
 		<!-- 
 				Ships
 		-->
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_SUBMARINE_I" />
+			<Set Text="Bonus vs Submarines (25)" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_ANTI_SUBMARINE_I_HELP" />
+			<Set Text="Bonus vs Submarines (25)" />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SUBMARINE_I_HELP">
+			<Text>+25% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Submarines[ENDCOLOR]</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_1" />
+			<Set Text="Merchant Raider" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_1_HELP" />
+			<Set Text="+50% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Port Cities[ENDCOLOR].[NEWLINE]Steal gold equal to 100% of damage dealt to ports." />
+		</Update>
 		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_SUBMARINE_HELP">
-			<Text>Ignores cultural borders.[NEWLINE]Can only be seen by Destroyers or units 1 tile away.</Text>
+			<Text>Ignores cultural borders.[NEWLINE]Can only be seen by units with Sonar or 1 tile away.</Text>
+		</Row>
+		<Update>
+			<Where Tag="TXT_KEY_PROMOTION_SEE_INVISIBLE_SUBMARINE" />
+			<Set Text="Sonar" />
+		</Update>
+		<Row Tag="TXT_KEY_PROMOTION_SEE_INVISIBLE_SUBMARINE_HELP">
+			<Text>Can see [COLOR_POSITIVE_TEXT]Submarines[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_INTERCEPTION">
+			<Text>Interception</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_INTERCEPTION_HELP">
+			<Text>100% chance to intercept [COLOR_POSITIVE_TEXT]Air Units[ENDCOLOR]</Text>
 		</Row>
 		<Update>
 			<Where Tag="TXT_KEY_PROMOTION_TARGETING_1_HELP" />
@@ -183,13 +215,7 @@
 			<Text>Naval Recon II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RECON_2_HELP">
-			<Text>+1 [ICON_MOVES]Movement.[NEWLINE]+10 [COLOR_POSITIVE_TEXT]heal rate[ENDCOLOR] outside friendly territory.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEMOLISH">
-			<Text>Naval Demolish</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_DEMOLISH_HELP">
-			<Text>+30% vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].[NEWLINE]+30% vs [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR]</Text>
+			<Text>+1 [ICON_MOVES]Movement.[NEWLINE]Attempts to [COLOR_POSITIVE_TEXT]withdraw[ENDCOLOR] from melee combat.</Text>
 		</Row>
 
 
@@ -250,7 +276,7 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_PROMOTION_SCOUTING_2_HELP" />
-			<Set Text="+1 [ICON_MOVES] Movement.[NEWLINE]Attempts to [COLOR_POSITIVE_TEXT]withdraw[ENDCOLOR] from melee or embarked combat." />
+			<Set Text="+1 [ICON_MOVES] Movement.[NEWLINE]Attempts to [COLOR_POSITIVE_TEXT]withdraw[ENDCOLOR] from melee combat." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_PROMOTION_SURVIVALISM_1" />
@@ -306,18 +332,6 @@
 			<Where Tag="TXT_KEY_PROMOTION_PARTIAL_HEAL_IF_DESTROY_ENEMY" />
 			<Set Text="Heals 25 Damage If Kills a Unit." />
 		</Update>
-		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING">
-			<Text>Defense vs Ranged (50)</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING_HELP">
-			<Text>+50% Defense vs [COLOR_POSITIVE_TEXT]Ranged Damage[ENDCOLOR].</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING">
-			<Text>Tactical Bombing</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_TACTICAL_BOMBING_HELP">
-			<Text>+50% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Sea[ENDCOLOR] units.</Text>
-		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1">
 			<Text>Bombardment I</Text>
 		</Row>
@@ -355,6 +369,36 @@
 		<!-- 
 				Attributes
 		-->
+		<Row Tag="TXT_KEY_PROMOTION_RANGED_DEFENSE_II">
+			<Text>Defense vs Ranged (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_RANGED_DEFENSE_II_HELP">
+			<Text>+50% Defense vs [COLOR_POSITIVE_TEXT]Ranged Damage[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_LAND_PENALTY_II">
+			<Text>Penalty vs Land (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_LAND_PENALTY_II_HELP">
+			<Text>-50% [ICON_STRENGTH] vs [COLOR_NEGATIVE_TEXT]Land[ENDCOLOR] units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_LAND_BONUS_II">
+			<Text>Bonus vs Land (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_LAND_BONUS_II_HELP">
+			<Text>+50% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Land[ENDCOLOR] units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SEA_BONUS_II">
+			<Text>Bonus vs Sea (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SEA_BONUS_II_HELP">
+			<Text>+50% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Sea[ENDCOLOR] units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CITY_BONUS_II">
+			<Text>Bonus vs Cities (50)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CITY_BONUS_II_HELP">
+			<Text>+50% [ICON_STRENGTH] vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_CAVALRY">
 			<Text>Bonus vs Dragoons (50)</Text>
 		</Row>
@@ -365,7 +409,7 @@
 			<Text>Camaraderie</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CAMARADERIE_HELP">
-			<Text>+20% [ICON_STRENGTH] Combat Strength when adjacent to a friendly Unit</Text>
+			<Text>+15% [ICON_STRENGTH] Combat Strength when adjacent to a friendly Unit</Text>
 		</Row>
 		<Update>
 			<Where Tag="TXT_KEY_PROMOTION_GAIN_EXPERIENCE_HELP" />
@@ -632,7 +676,7 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_ANTI_TANK_GUN" />
-			<Set Text="Anti-Tank Guns are specialized at defeating Tanks." />
+			<Set Text="Anti-Tank Guns are specialized in defeating Tanks." />
 		</Update>
 
 
@@ -642,29 +686,65 @@
 		-->
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_TRIREME" />
-			<Set Text="Light Ship useful for early exploration and naval warfare." />
+			<Set Text="Common Ship useful for early exploration and naval warfare." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_GALLEASS" />
+			<Set Text="Common Ship with average power for all naval warfare tactics." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_CARAVEL" />
+			<Set Text="Carrack" />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_CARAVEL" />
-			<Set Text="Light Ship with the Recon 1 promotion.[NEWLINE]Can enter oceans after Astronomy." />
+			<Set Text="Hunter Ship specialized in defeating enemy sea units. Hunters can move after attacking.[NEWLINE]Can enter oceans after [COLOR_POSITIVE_TEXT]Astronomy[ENDCOLOR]." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CIVILOPEDIA_UNITS_RENAISSANCE_CARAVEL_TEXT" />
+			<Set Text="Carracks were the main European warship from the 1400s-1500s. They were developed for use in the Atlantic Ocean, large enough to be stable in heavy seas, and roomy enough to carry provisions for long voyages. The tall &quot;castles&quot; on each end gave a height advantage to archers firing down on enemy ships. These replace caravels because carracks were used in warfare and exploration, while caravels were only used for exploration." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_FRIGATE" />
-			<Set Text="Light Ship with the Recon 1 promotion." />
+			<Set Text="Common Ship with average power for all naval warfare tactics." />
 		</Update>
-		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE_HELP">
-			<Text>The first Capital Ship in the game, with a bonus against Cities.</Text>
+		<Row Tag="TXT_KEY_UNIT_LIBURNA">
+			<Text>Liburna</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE_STRATEGY">
-			<Text>Ships of the Line are more powerful than Frigates, but slower and more expensive.</Text>
+		<Row Tag="TXT_KEY_UNIT_LIBURNA_HELP">
+			<Text>Hunter Ship specialized in defeating enemy sea units. Hunters can move after attacking.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_LIBURNA_PEDIA">
+			<Text>This light and fast hunter was a dominant ship of the Classical era. It originally had one bench with 25 oars on each side, while in later years it was equipped with two banks of oars (a bireme), faster, lighter, and more agile than triremes.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE">
+			<Text>Ship of the Line</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE_HELP">
+			<Text>Capital Ship stronger than Common Ships, but slower and more expensive. Capital Ships deal extra damage to cities.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE_PEDIA">
+			<Text>The first major shift in naval warfare occurred in the 1600s as broadsides became the primary naval tactic. Ships formed long single-file lines and battered the enemy fleet from afar. This was called a "line of battle." The height advantage given by castles on ships were nearly eliminated, now that hand-to-hand combat was less essential. The castles shrank, making the ship of the line lighter and more maneuverable, and the hull grew larger and stronger. The phrase "line of battle ship" eventually shortened to "battleship."</Text>
 		</Row>
 		<Update>
+			<Where Tag="TXT_KEY_UNIT_PRIVATEER" />
+			<Set Text="Galleon" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_PRIVATEER" />
+			<Set Text="Hunter Ship specialized in defeating enemy sea units. Hunters can move after attacking." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CIV5_PRIVATEER_TEXT" />
+			<Set Text="Galleons were large, multi-decked sailing ships used from the 1500s-1700s, which replaced carracks. The carrack's high forecastle gradually lost importance as cannon replaced archers for naval attacks. Galleons relied on forward-facing cannon to blast the enemy as the ship rammed a foe, followed by boarding with marines." />
+		</Update>
+		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_IRONCLAD" />
-			<Set Text="Powerful Capital Ship armored by iron plating, with a bonus against Cities." />
+			<Set Text="Capital Ship stronger than Common Ships, but slower and more expensive. Capital Ships deal extra damage to cities." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_IRONCLAD_STRATEGY" />
-			<Set Text="Ironclads are the first steam-powered warships available. They are harder to kill than any sailing vessel, and their Ranged Combat strength is higher." />
+			<Set Text="" />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_CIVILOPEDIA_UNITS_RENAISSANCE_IRONCLAD_TEXT" />
@@ -672,28 +752,37 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_DESTROYER" />
-			<Set Text="Industrial-era Light Ship with extra sight range, and capable of spotting Submarines." />
+			<Set Text="Common Ship with average power for all naval warfare tactics. Destroyers have +1 sight range." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_BATTLESHIP" />
-			<Set Text="Industrial-era Capital Ship with a bonus against Cities." />
-		</Update>
-		<Update>
-			<Where Tag="TXT_KEY_UNIT_HELP_SUBMARINE" />
-			<Set Text="Submarines are specialized in defeating Capital Ships, and invisible to everything but Destroyers, Submarines, and units within 1 tile range. " />
-		</Update>
-		<Update>
-			<Where Tag="TXT_KEY_UNIT_HELP_NUCLEAR_SUBMARINE" />
-			<Set Text="Specialized in defeating Capital Ships and regular Submarines. Can carry 2 Missiles. Missile Subs are only visible to Destroyers, Submarines, and units within 1 tile range." />
-		</Update>
-		<Update>
-			<Where Tag="TXT_KEY_UNIT_HELP_MISSILE_CRUISER" />
-			<Set Text="Modern Capital Ship with bonuses against Air Units and Cities. Can also hold 3 missiles." />
+			<Set Text="Capital Ship stronger than Common Ships, but slower and more expensive. Capital Ships deal extra damage to cities." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_UNIT_HELP_CARRIER" />
 			<Set Text="Capital Ship capable of carrying 3 aircraft, but unable to attack on its own." />
 		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_SUBMARINE" />
+			<Set Text="Submarines can ignore borders, move after attacking, and are stronger on attack than defense. Subs are invisible to units 2+ tiles away without the Sonar promotion." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_NUCLEAR_SUBMARINE" />
+			<Set Text="Missile Subs can carry 2 missiles, ignore borders, move after attacking, and are stronger on attack than defense. Subs are invisible to units 2+ tiles away without the Sonar promotion." />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_UNIT_HELP_MISSILE_CRUISER" />
+			<Set Text="Capital Ship stronger than Common Ships, but slower and more expensive. Missile Cruisers can hold 3 missiles, and deal extra damage to cities." />
+		</Update>
+		<Row Tag="TXT_KEY_UNIT_MISSILE_DESTROYER">
+			<Text>Missile Destroyer</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_MISSILE_DESTROYER_HELP">
+			<Text>Common Ship with average power for all naval warfare tactics. Missile Destroyers have +1 sight range, and can carry 2 missiles.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_MISSILE_DESTROYER_PEDIA">
+			<Text>A guided missile destroyer is a destroyer designed to launch missiles. Many are also equipped to carry out anti-submarine, anti-air, and anti-surface operations.[NEWLINE][NEWLINE]In addition to the guns that destroyers have, a guided missile destroyer is usually equipped with two large missile magazines which store the missiles for the ship. Some guided missile destroyers contain powerful weapon system radars, like the United States’ Aegis combat system, and may be adopted for use in an anti-missile role or a ballistic missile defense role. This is especially true of navies that no longer operate cruisers, as other vessels must be adopted to fill in the gap.</Text>
+		</Row>
 
 
 

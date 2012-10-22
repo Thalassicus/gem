@@ -2,7 +2,6 @@
 <GameData>
 	<!--
 			Jelling Stones
-	-->
 
 	<Buildings>
 		<Row>
@@ -20,7 +19,6 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
-			<Culture>1</Culture>
 			<CityCaptureCulture>100</CityCaptureCulture>
 			<CityCaptureCulturePerPop>10</CityCaptureCulturePerPop>
 			<CityCaptureCulturePerEra>50</CityCaptureCulturePerEra>
@@ -29,14 +27,6 @@
 			<PortraitIndex>5</PortraitIndex>
 		</Row>
 	</Buildings>
-	<!--
-	<Building_ClassesNeededInCity>
-		<Row>
-			<BuildingType>BUILDING_JELLING_STONES</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-		</Row>
-	</Building_ClassesNeededInCity>
-	-->
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_JELLING_STONES</BuildingType>
@@ -80,6 +70,7 @@
 			<BuildingType>BUILDING_JELLING_STONES</BuildingType>
 		</Row>
 	</Civilization_BuildingClassOverrides>
+	-->
 	
 	
 
@@ -643,7 +634,6 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
-			<Culture>1</Culture>
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>VEM_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>4</PortraitIndex>
@@ -654,6 +644,11 @@
 			<BuildingType>BUILDING_JADE_HALL</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>8</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
 		</Row>
 	</Building_YieldChanges>
 	<Building_YieldModifiers>

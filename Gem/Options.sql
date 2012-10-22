@@ -37,22 +37,23 @@ VALUES ('USING_CSD', 0);
 Barbarians Upgrade
 1 = barbarians upgrade in camps
 0 = barbarians do not upgrade 
+*/
 INSERT INTO Civup (Type, Value)
 VALUES ('BARBARIANS_UPGRADE', 1);
-*/
 
 
 /*
 Barbarians Heal
 1 = barbarians heal when fortified
 0 = barbarians do not heal
+*/
 INSERT INTO Civup (Type, Value)
 VALUES ('BARBARIANS_HEAL', 1);
-*/
 
 
 /*
 Human-vs-barbarian combat bonus.
+*/
 UPDATE HandicapInfos SET BarbarianBonus = 150 WHERE Type = 'HANDICAP_SETTLER';
 UPDATE HandicapInfos SET BarbarianBonus =  50 WHERE Type = 'HANDICAP_CHIEFTAIN';
 UPDATE HandicapInfos SET BarbarianBonus =  20 WHERE Type = 'HANDICAP_WARLORD';
@@ -61,7 +62,6 @@ UPDATE HandicapInfos SET BarbarianBonus =  15 WHERE Type = 'HANDICAP_KING';
 UPDATE HandicapInfos SET BarbarianBonus =  15 WHERE Type = 'HANDICAP_EMPEROR';
 UPDATE HandicapInfos SET BarbarianBonus =  15 WHERE Type = 'HANDICAP_IMMORTAL';
 UPDATE HandicapInfos SET BarbarianBonus =  15 WHERE Type = 'HANDICAP_DEITY';
-*/
 
 
 /*

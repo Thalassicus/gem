@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
+	<Civup>
+		<Row Type="AI_PURCHASE_BUDGET_MULTIPLIER">
+			<Value>1.5</Value>
+		</Row>
+		<Row Type="AI_PURCHASE_BUDGET_MINIMUM">
+			<Value>200</Value>
+		</Row>
+		<Row Type="AI_PURCHASE_FLAVOR_MAX_ATTEMPTS">
+			<Value>5</Value>
+		</Row>
+	</Civup>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_AI_GOLD</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AI_PRODUCTION</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AI_SCIENCE</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AI_CULTURE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_YieldChanges>
 	<Defines>
 		<Update>
 			<Where name="SETTLER_EVALUATION_DISTANCE" />

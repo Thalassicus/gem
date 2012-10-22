@@ -38,6 +38,7 @@ function CheckForMinorAIBonuses(unit)
 			return
 		end
 	end
+	--log:Info("CheckForMinorAIBonuses %s", unit:GetName())
 
 	local player = Players[unit:GetOwner()]
 	local plot = unit:GetPlot()
@@ -91,6 +92,7 @@ function CheckForMinorAIBonuses(unit)
 end
 
 function CheckForMinorAIBonusesLoop()
+	--log:Info("CheckForMinorAIBonusesLoop")
 	for playerID,player in pairs(Players) do
 		if player:IsAlive() and (player:IsBarbarian() or player:IsMinorCiv()) then
 			for unit in player:Units() do

@@ -21,6 +21,14 @@ UPDATE Technologies SET Cost =  23000 WHERE GridX = 15;
 UPDATE Technologies SET Cost =  26000 WHERE GridX = 16;
 UPDATE Technologies SET Cost =  28000 WHERE GridX = 17;
 
+UPDATE Technologies SET Cost = ROUND(Cost * 0.75/10, 0)*10 WHERE Type IN (
+	'TECH_SAILING',
+	'TECH_OPTICS',
+	'TECH_COMPASS',
+	'TECH_CARVEL_HULLS',
+	'TECH_ASTRONOMY'
+);
+
 UPDATE Technologies SET GridY = 0
 WHERE Type IN (
 	'none'
@@ -31,6 +39,7 @@ WHERE Type IN (
 	'TECH_SAILING',
 	'TECH_OPTICS',
 	'TECH_COMPASS',
+	'TECH_CARVEL_HULLS',
 	'TECH_ASTRONOMY',
 	'TECH_NAVIGATION',
 	'TECH_ARCHAEOLOGY',

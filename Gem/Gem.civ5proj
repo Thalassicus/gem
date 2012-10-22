@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{4746fd17-873e-40e4-b531-63afb3f7f235}</ProjectGuid>
-    <Name>G&amp;K Enhanced Mod (v1.6.12 Beta)</Name>
+    <Name>G&amp;K Enhanced Mod (v1.7.10 Beta)</Name>
     <Guid>edc58ea2-bac0-4109-9144-ee67c8b216d7</Guid>
     <ModVersion>1</ModVersion>
-    <Stability>Alpha</Stability>
+    <Stability>Beta</Stability>
     <Teaser>[COLOR_CYAN]   by Thalassicus[NEWLINE][ENDCOLOR]   Equip for +10 fun, strategy, and balance!</Teaser>
     <Description>The most influential community project for Civ V returns for Gods and Kings!
 [NEWLINE]Requires the Civ V Unofficial Patch (G&amp;K): http://steamcommunity.com/id/thalassicus/myworkshopfiles
@@ -61,12 +61,27 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>GEM/Leaders/GEL_Replacements.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Armies/GEA_Start.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>GEM/Armies/GEA_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>GEM/Diplomacy/GED_Start.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Leaders/GEL_General.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -151,7 +166,7 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_Middle.xml</FileName>
+        <FileName>GEM/AI/GEAI_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -177,6 +192,11 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>GEM/Armies/Icons/GEA_Icons.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Armies/Promotions/GEA_Air.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -231,6 +251,26 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>GEM/Armies/GEA_Sea.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Barbarians/GEB_Civilization.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Barbarians/GEB_Data.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Barbarians/GEB_Units.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>GEM/Cities/Buildings/GEC_Culture.xml</FileName>
       </Action>
       <Action>
@@ -271,6 +311,11 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>GEM/Cities/Buildings/GEC_Sea.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>GEM/Cities/Icons/GEC_Icons.xml</FileName>
       </Action>
       <Action>
@@ -302,6 +347,21 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>GEM/GreatWorks/GreatWorks.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Leaders/GEL_General.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Leaders/GEL_LandmarkArtTypes.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Leaders/GEL_LandmarkArt.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -1006,6 +1066,16 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>GEM/Barbarians/GEB_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Research/GER_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>GEM/Armies/Promotions/GEA_PromotionLimit.sql</FileName>
       </Action>
     </ModActions>
@@ -1018,6 +1088,18 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
+        <Name>GEA_Events.lua</Name>
+        <Description />
+        <FileName>GEM/Armies/GEA_Events.lua</FileName>
+      </Content>
+      <Content>
+        <Type>InGameUIAddin</Type>
+        <Name>GEB_Events.lua</Name>
+        <Description />
+        <FileName>GEM/Barbarians/GEB_Events.lua</FileName>
+      </Content>
+      <Content>
+        <Type>InGameUIAddin</Type>
         <Name>VEC_Events.lua</Name>
         <Description />
         <FileName>GEM/Cities/GEC_Events.lua</FileName>
@@ -1027,6 +1109,12 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
         <Name>GED_Events.lua</Name>
         <Description />
         <FileName>GEM/Diplomacy/GED_Events.lua</FileName>
+      </Content>
+      <Content>
+        <Type>InGameUIAddin</Type>
+        <Name>VEL_Events.lua</Name>
+        <Description />
+        <FileName>GEM/Leaders/GEL_Events.lua</FileName>
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
@@ -1165,7 +1253,7 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\AI\GEAI_Middle.xml">
+    <Content Include="GEM\AI\GEAI_Data.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1197,6 +1285,10 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="GEM\Armies\GEA_Start.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="GEM\Armies\GEA_Sea.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -1226,6 +1318,10 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM\Armies\GEA_Land.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Armies\Promotions\GEA_Air.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1266,6 +1362,26 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM\Armies\Promotions\GEA_PromotionLimit.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Barbarians\GEB_End.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Barbarians\GEB_Civilization.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Barbarians\GEB_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Barbarians\GEB_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Barbarians\GEB_Units.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1324,6 +1440,10 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
     <Content Include="GEM/Cities/Icons/GEM_Buildings80.DDS">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Cities\Buildings\GEC_Sea.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM\Cities\GEC_Civilians.xml">
       <SubType>Lua</SubType>
@@ -1493,6 +1613,10 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="GEM/Text/en_US/Barbarians.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="GEM/Text/en_US/CSD_Compatibility.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -1506,6 +1630,10 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM/Text/en_US/GreatWorks.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/en_US/Leaders.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1530,6 +1658,26 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM\Diplomacy\GED_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Leaders\GEL_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Leaders\GEL_General.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Leaders\GEL_General.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Leaders\GEL_Replacements.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Research\GER_End.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1648,11 +1796,13 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
     <Folder Include="GEM\Armies\" />
     <Folder Include="GEM\Armies\Icons\" />
     <Folder Include="GEM\Armies\Promotions" />
+    <Folder Include="GEM\Barbarians\" />
     <Folder Include="GEM\Cities\" />
     <Folder Include="GEM\Cities\Buildings\" />
     <Folder Include="GEM\Cities\Icons\" />
     <Folder Include="GEM\Diplomacy\" />
     <Folder Include="GEM\GreatWorks\" />
+    <Folder Include="GEM\Leaders\" />
     <Folder Include="GEM\Faith" />
     <Folder Include="GEM\Policies\" />
     <Folder Include="GEM\Policies\Icons" />

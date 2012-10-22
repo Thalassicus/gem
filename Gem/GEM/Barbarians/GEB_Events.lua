@@ -16,7 +16,7 @@ function UpgradeBarbarians(playerID, techID)
 	end
 
 	local campID	= GameInfo.Improvements.IMPROVEMENT_BARBARIAN_CAMP.ID
-	local query = string.format("ObsoleteTech = '%s' AND BarbUpgradeType IS NOT NULL", techInfo.Type)
+	local query		= string.format("ObsoleteTech = '%s' AND BarbUpgradeType IS NOT NULL", techInfo.Type)
 	for unitInfo in GameInfo.Units(query) do
 		--log:Info("UpgradeBarbarians %s to %s", unitInfo.Type, unitInfo.BarbUpgradeType)
 		local upgradeID = GameInfo.Units[unitInfo.BarbUpgradeType].ID
@@ -47,13 +47,13 @@ function HealBarbarians()
 					if unit:GetFortifyTurns() > 0 then
 						local plot = unit:GetPlot()
 						if plot:GetImprovementType() == campID then
-							unit:SetDamage(damage - 2)
+							unit:SetDamage(damage - Civup.BARBARIAN_HEAL_CAMP)
 						elseif unit:GetPlot():GetOwner() == -1 then
-							unit:SetDamage(damage - 1)
+							unit:SetDamage(damage - Civup.BARBARIAN_HEAL_LAND)
 						end
 					elseif unit:GetDomainType() == DomainTypes.DOMAIN_SEA then
 						if unit:GetPlot():GetOwner() == -1 then
-							unit:SetDamage(damage - 1)
+							unit:SetDamage(damage - Civup.BARBARIAN_HEAL_SEA)
 						end
 					end
 				end

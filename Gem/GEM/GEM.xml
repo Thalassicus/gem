@@ -3,7 +3,7 @@
 	<Language_en_US>
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_PALACE" />
-			<Set Text="Palace - GEM v1.6.12b" />
+			<Set Text="Palace - GEM v1.7.10b" />
 		</Update>
 	</Language_en_US>
 	<Defines>
@@ -11,4 +11,202 @@
 			<Value>1</Value>
 		</Row>
 	</Defines>
+	<Defines>
+		<Update>
+			<Where Name="SCORE_POPULATION_FACTOR" />
+			<Set Value="5000" />
+			<!-- 5000 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_LAND_FACTOR" />
+			<Set Value="2000" />
+			<!-- 2000 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_WONDER_FACTOR" />
+			<Set Value="1000" />
+			<!-- 1000 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_TECH_FACTOR" />
+			<Set Value="2000" />
+			<!-- 2000 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_CITY_MULTIPLIER" />
+			<Set Value="5" />
+			<!-- 8 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_POPULATION_MULTIPLIER" />
+			<Set Value="5" />
+			<!-- 4 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_LAND_MULTIPLIER" />
+			<Set Value="0.5" />
+			<!-- 1 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_WONDER_MULTIPLIER" />
+			<Set Value="25" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where Name="SCORE_TECH_MULTIPLIER" />
+			<Set Value="5" />
+			<!-- 4 -->
+		</Update>
+	</Defines>
+	<HistoricRankings>
+		<Delete />
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_1</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_1_QUOTE</LeaderQuote>
+			<LeaderScore>8000</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_2</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_2_QUOTE</LeaderQuote>
+			<LeaderScore>7000</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_3</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_3_QUOTE</LeaderQuote>
+			<LeaderScore>6100</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_4</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_4_QUOTE</LeaderQuote>
+			<LeaderScore>5300</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_5</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_5_QUOTE</LeaderQuote>
+			<LeaderScore>4600</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_6</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_6_QUOTE</LeaderQuote>
+			<LeaderScore>4000</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_7</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_7_QUOTE</LeaderQuote>
+			<LeaderScore>3500</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_8</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_8_QUOTE</LeaderQuote>
+			<LeaderScore>3000</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_9</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_9_QUOTE</LeaderQuote>
+			<LeaderScore>2600</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_10</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_10_QUOTE</LeaderQuote>
+			<LeaderScore>2300</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_11</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_11_QUOTE</LeaderQuote>
+			<LeaderScore>2000</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_12</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_12_QUOTE</LeaderQuote>
+			<LeaderScore>1800</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_13</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_13_QUOTE</LeaderQuote>
+			<LeaderScore>1600</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_14</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_14_QUOTE</LeaderQuote>
+			<LeaderScore>1400</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_15</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_15_QUOTE</LeaderQuote>
+			<LeaderScore>1200</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_16</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_16_QUOTE</LeaderQuote>
+			<LeaderScore>1000</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_17</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_17_QUOTE</LeaderQuote>
+			<LeaderScore>750</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_18</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_18_QUOTE</LeaderQuote>
+			<LeaderScore>500</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_19</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_19_QUOTE</LeaderQuote>
+			<LeaderScore>250</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_20</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_20_QUOTE</LeaderQuote>
+			<LeaderScore>100</LeaderScore>
+		</Row>
+		<Row>
+			<HistoricLeader>TXT_KEY_DQ_LEADER_NAME_21</HistoricLeader>
+			<LeaderQuote>TXT_KEY_DQ_LEADER_NAME_21_QUOTE</LeaderQuote>
+			<LeaderScore>0</LeaderScore>
+		</Row>
+	</HistoricRankings>
+	<GameSpeed_Turns>
+		<!--
+		<Delete GameSpeedType="GAMESPEED_MARATHON" />
+		<Delete GameSpeedType="GAMESPEED_EPIC" />
+		<Delete GameSpeedType="GAMESPEED_STANDARD" />
+		<Delete GameSpeedType="GAMESPEED_QUICK" />
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement>  54</TurnsPerIncrement><MonthIncrement> 900</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement>  26</TurnsPerIncrement><MonthIncrement> 420</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement>  15</TurnsPerIncrement><MonthIncrement> 360</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement>  20</TurnsPerIncrement><MonthIncrement> 180</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement>  15</TurnsPerIncrement><MonthIncrement>  84</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement>  30</TurnsPerIncrement><MonthIncrement>  36</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement>  65</TurnsPerIncrement><MonthIncrement>  12</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_QUICK</GameSpeedType>     <TurnsPerIncrement> 110</TurnsPerIncrement><MonthIncrement>  12</MonthIncrement></Row>
+
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement>  80</TurnsPerIncrement><MonthIncrement> 600</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement>  40</TurnsPerIncrement><MonthIncrement> 300</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement>  20</TurnsPerIncrement><MonthIncrement> 240</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement>  30</TurnsPerIncrement><MonthIncrement> 120</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement>  20</TurnsPerIncrement><MonthIncrement>  60</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement>  50</TurnsPerIncrement><MonthIncrement>  24</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement> 100</TurnsPerIncrement><MonthIncrement>  12</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>  <TurnsPerIncrement> 160</TurnsPerIncrement><MonthIncrement>   6</MonthIncrement></Row>
+
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement> 120</TurnsPerIncrement><MonthIncrement> 420</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement>  60</TurnsPerIncrement><MonthIncrement> 180</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement>  30</TurnsPerIncrement><MonthIncrement> 120</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement>  45</TurnsPerIncrement><MonthIncrement>  72</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement>  30</TurnsPerIncrement><MonthIncrement>  48</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement>  78</TurnsPerIncrement><MonthIncrement>  24</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement> 147</TurnsPerIncrement><MonthIncrement>   6</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_EPIC</GameSpeedType>      <TurnsPerIncrement> 240</TurnsPerIncrement><MonthIncrement>   3</MonthIncrement></Row>
+
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement> 250</TurnsPerIncrement><MonthIncrement> 180</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement> 125</TurnsPerIncrement><MonthIncrement> 120</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement>  50</TurnsPerIncrement><MonthIncrement>  96</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement> 100</TurnsPerIncrement><MonthIncrement>  36</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement>  50</TurnsPerIncrement><MonthIncrement>  24</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement> 100</TurnsPerIncrement><MonthIncrement>  12</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement> 200</TurnsPerIncrement><MonthIncrement>   6</MonthIncrement></Row>
+		<Row><GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>  <TurnsPerIncrement> 625</TurnsPerIncrement><MonthIncrement>   1</MonthIncrement></Row>
+		-->
+	</GameSpeed_Turns>
 </GameData>

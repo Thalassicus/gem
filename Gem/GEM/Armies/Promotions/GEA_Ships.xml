@@ -2,6 +2,18 @@
 <GameData>
 	<UnitPromotions>
 		<Update>
+			<Where Type="PROMOTION_SEE_INVISIBLE_SUBMARINE" />
+			<Set PromotionPrereqOr1="PROMOTION_INTERCEPTION_1"
+				 PromotionPrereqOr2="PROMOTION_DOGFIGHTING_1"
+				 PromotionPrereqOr3="PROMOTION_NAVAL_RECON_1"
+				 Help="TXT_KEY_PROMOTION_SEE_INVISIBLE_SUBMARINE_HELP"
+				 PediaType="PEDIA_NAVAL"
+				 PortraitIndex="43"
+				 IconAtlas="PROMOTION_ATLAS"
+				 TechPrereq="TECH_REPLACEABLE_PARTS"
+				 />
+		</Update>
+		<Update>
 			<Where Type="PROMOTION_RANGE" />
 			<Set PromotionPrereqOr3="PROMOTION_TARGETING_3"
 				 PromotionPrereqOr4="PROMOTION_BOMBARDMENT_3"
@@ -11,6 +23,12 @@
 			<Where Type="PROMOTION_INVISIBLE_SUBMARINE" />
 			<Set RivalTerritory="true"
 				 Help="TXT_KEY_PROMOTION_INVISIBLE_SUBMARINE_HELP"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_ANTI_SUBMARINE_I" />
+			<Set Description="TXT_KEY_PROMOTION_ANTI_SUBMARINE_I"
+				 Help="TXT_KEY_PROMOTION_ANTI_SUBMARINE_I_HELP"
 				 />
 		</Update>
 		<Update>
@@ -56,6 +74,31 @@
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SIEGE</PediaEntry>
 		</Row>
+		<Update>
+			<Where Type="PROMOTION_COASTAL_RAIDER_1" />
+			<Set CityAttack="50"
+				 CityDefense="50"
+				 CityAttackPlunderModifier="100"
+				 PromotionPrereqOr1="PROMOTION_TARGETING_1"
+				 IconAtlas="PROMOTION_ATLAS"
+				 PortraitIndex="40"
+				 />
+		</Update>
+		<Row>
+			<Type>PROMOTION_INTERCEPTION</Type>
+			<Description>TXT_KEY_PROMOTION_INTERCEPTION</Description>
+			<Help>TXT_KEY_PROMOTION_INTERCEPTION_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<TechPrereq>TECH_FLIGHT</TechPrereq>
+			<PromotionPrereqOr1>PROMOTION_TARGETING_1</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_BOMBARDMENT_1</PromotionPrereqOr2>
+			<InterceptChanceChange>100</InterceptChanceChange>
+			<OrderPriority>1</OrderPriority>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SIEGE</PediaEntry>
+		</Row>
 		<Row>
 			<Type>PROMOTION_NAVAL_RECON_1</Type>
 			<Description>TXT_KEY_PROMOTION_NAVAL_RECON_1</Description>
@@ -64,6 +107,8 @@
 			<OrderPriority>0</OrderPriority>
 			<VisibilityChange>1</VisibilityChange>
 			<HealOutsideFriendly>true</HealOutsideFriendly>
+			<EnemyHealChange>10</EnemyHealChange>
+			<NeutralHealChange>15</NeutralHealChange>
 			<PortraitIndex>37</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
@@ -77,8 +122,7 @@
 			<PromotionPrereqOr1>PROMOTION_NAVAL_RECON_1</PromotionPrereqOr1>
 			<OrderPriority>0</OrderPriority>
 			<MovesChange>1</MovesChange>
-			<EnemyHealChange>10</EnemyHealChange>
-			<NeutralHealChange>10</NeutralHealChange>
+			<ExtraWithdrawal>80</ExtraWithdrawal>
 			<!--<CanMoveImpassable>true</CanMoveImpassable>-->
 			<PortraitIndex>38</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
@@ -172,66 +216,46 @@
 			<Set Modifier="15" />
 		</Update>
 	</UnitPromotions_Domains>
+	<UnitPromotions_UnitClasses>
+		<Update>
+			<Where PromotionType="PROMOTION_ANTI_SUBMARINE_I" />
+			<Set Attack="0"
+				 Modifier="25"
+				 />
+		</Update>		
+	</UnitPromotions_UnitClasses>
 	<UnitPromotions_UnitCombats>
-		<Delete PromotionType="PROMOTION_SUPPLY" UnitCombatType="UNITCOMBAT_NAVALRANGED" />
-		<!--
-		<Delete PromotionType="PROMOTION_LOGISTICS" UnitCombatType="UNITCOMBAT_ARCHER" />
-		<Delete PromotionType="PROMOTION_LOGISTICS" UnitCombatType="UNITCOMBAT_MOUNTED_ARCHER" />
-		<Delete PromotionType="PROMOTION_LOGISTICS" UnitCombatType="UNITCOMBAT_SIEGE" />
-		<Row>
-			<PromotionType>PROMOTION_HUNTER</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_HUNTER</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-		</Row>
-		-->
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_SIEGE</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-		</Row>
-		<!--
-		<Delete PromotionType="PROMOTION_LOGISTICS" UnitCombatType="UNITCOMBAT_NAVALRANGED" />
-		<Delete PromotionType="PROMOTION_LOGISTICS" UnitCombatType="UNITCOMBAT_SUBMARINE" />
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_LOGISTICS</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_LOGISTICS</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-		</Row>
-		-->
+		<Row><PromotionType>PROMOTION_NAVAL_SIEGE</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_INTERCEPTION</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_NAVAL_RECON_1</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_NAVAL_RECON_2</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_TARGETING_1</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_TARGETING_2</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_TARGETING_3</PromotionType>	<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType><UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType><UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType><UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType></Row>
+		<Row><PromotionType>PROMOTION_SEE_INVISIBLE_SUBMARINE</PromotionType><UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType></Row>
 	</UnitPromotions_UnitCombats>
 	<Unit_FreePromotions>
-		<Delete UnitType="UNIT_CARAVEL" PromotionType="PROMOTION_EXTRA_SIGHT_II" />
+		<Delete UnitType="UNIT_CARAVEL" PromotionType="PROMOTION_EXTRA_SIGHT_I" />
+		<Delete UnitType="UNIT_CARAVEL" PromotionType="PROMOTION_WITHDRAW_BEFORE_MELEE" />
+		<Delete UnitType="UNIT_PRIVATEER" PromotionType="PROMOTION_COASTAL_RAIDER_1" />
 		<Delete UnitType="UNIT_IRONCLAD" PromotionType="PROMOTION_OCEAN_IMPASSABLE" />
+		<Delete UnitType="UNIT_IRONCLAD" PromotionType="PROMOTION_STEAM_POWERED" />
+		<Delete UnitType="UNIT_DESTROYER" PromotionType="PROMOTION_INTERCEPTION_II" />
+		<Delete UnitType="UNIT_DESTROYER" PromotionType="PROMOTION_WITHDRAW_BEFORE_MELEE" />
+		<Delete UnitType="UNIT_MISSILE_CRUISER" PromotionType="PROMOTION_INTERCEPTION_IV" />
+		<Delete PromotionType="PROMOTION_SEE_INVISIBLE_SUBMARINE" />
 		<Row>
 			<UnitType>UNIT_CARAVEL</UnitType>
 			<PromotionType>PROMOTION_OCEAN_IMPASSABLE_UNTIL_ASTRONOMY</PromotionType>
 		</Row>
-		<!--
 		<Row>
 			<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
-			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+			<PromotionType>PROMOTION_CITY_BONUS_II</PromotionType>
 		</Row>
-		-->
 	</Unit_FreePromotions>
 </GameData>

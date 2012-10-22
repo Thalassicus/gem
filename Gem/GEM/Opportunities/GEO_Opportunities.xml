@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Eras>
-		<Update><Where Type="ERA_ANCIENT"/>		<Set><TriggerRatePercent>3</TriggerRatePercent></Set></Update>
-		<Update><Where Type="ERA_CLASSICAL"/>	<Set><TriggerRatePercent>4</TriggerRatePercent></Set></Update>
-		<Update><Where Type="ERA_MEDIEVAL"/>	<Set><TriggerRatePercent>5</TriggerRatePercent></Set></Update>
-		<Update><Where Type="ERA_RENAISSANCE"/>	<Set><TriggerRatePercent>6</TriggerRatePercent></Set></Update>
-		<Update><Where Type="ERA_INDUSTRIAL"/>	<Set><TriggerRatePercent>7</TriggerRatePercent></Set></Update>
-		<Update><Where Type="ERA_MODERN"/>		<Set><TriggerRatePercent>8</TriggerRatePercent></Set></Update>
-		<Update><Where Type="ERA_POSTMODERN"/>	<Set><TriggerRatePercent>9</TriggerRatePercent></Set></Update>
+		<Update><Where Type="ERA_ANCIENT"/>		<Set><TriggerRatePercent>5</TriggerRatePercent></Set></Update>
+		<Update><Where Type="ERA_CLASSICAL"/>	<Set><TriggerRatePercent>6</TriggerRatePercent></Set></Update>
+		<Update><Where Type="ERA_MEDIEVAL"/>	<Set><TriggerRatePercent>7</TriggerRatePercent></Set></Update>
+		<Update><Where Type="ERA_RENAISSANCE"/>	<Set><TriggerRatePercent>8</TriggerRatePercent></Set></Update>
+		<Update><Where Type="ERA_INDUSTRIAL"/>	<Set><TriggerRatePercent>9</TriggerRatePercent></Set></Update>
+		<Update><Where Type="ERA_MODERN"/>		<Set><TriggerRatePercent>9</TriggerRatePercent></Set></Update>
+		<Update><Where Type="ERA_POSTMODERN"/>	<Set><TriggerRatePercent>10</TriggerRatePercent></Set></Update>
 		<Update><Where Type="ERA_FUTURE"/>		<Set><TriggerRatePercent>10</TriggerRatePercent></Set></Update>
 	</Eras>
 	<Triggers>
-		<Row><Type>RIVER_FLOODING</Type>			<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>2</Weight></Row>
-		<Row><Type>DESERT_ADOBE</Type>				<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>5</Weight></Row>
-		<Row><Type>SNOW_SLEDS</Type>				<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>10</Weight></Row>
-		<Row><Type>MOUNTAIN_REFUGE</Type>			<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>10</Weight></Row>
 		<Row><Type>COMMERCIAL_FARMING</Type>		<ImprovementType>IMPROVEMENT_FARM</ImprovementType>				</Row>
 		<Row><Type>MINE_EXPANSION</Type>			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>				<EraType>ERA_CLASSICAL</EraType></Row>
 		<Row><Type>VILLAGE_PROTESTS</Type>			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>		</Row>
@@ -40,12 +36,16 @@
 		<Row><Type>SCOUT_STORIES</Type>				<UnitClass>UNITCLASS_SCOUT</UnitClass>							<EraType>ERA_ANCIENT</EraType><Weight>5</Weight></Row>
 		<Row><Type>RENOWNED_WARRIOR</Type>			<UnitClass>UNITCLASS_WARRIOR</UnitClass>						<EraType>ERA_ANCIENT</EraType><Weight>5</Weight></Row>
 		<Row><Type>RENOWNED_ARCHER</Type>			<UnitClass>UNITCLASS_ARCHER</UnitClass>							<EraType>ERA_ANCIENT</EraType><Weight>5</Weight></Row>
+		<Row><Type>RIVER_FLOODING</Type>			<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>3</Weight></Row>
+		<Row><Type>DESERT_ADOBE</Type>				<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>10</Weight></Row>
+		<Row><Type>SNOW_SLEDS</Type>				<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>10</Weight></Row>
+		<Row><Type>MOUNTAIN_REFUGE</Type>			<Target>TARGET_OWNED_PLOT</Target>								<EraType>ERA_ANCIENT</EraType><Weight>10</Weight></Row>
+		<Row><Type>LAND_GRAB</Type>					<Target>TARGET_CITY</Target>									<EraType>ERA_ANCIENT</EraType><Weight>7</Weight></Row>
+		<Row><Type>BARBARIAN_MERCENARIES</Type>		<Target>TARGET_CUSTOM</Target>									<EraType>ERA_ANCIENT</EraType><Weight>7</Weight></Row>
 		<Row><Type>CITYSTATE_IMMIGRATION</Type>	    <Target>TARGET_CITYSTATE</Target>								</Row>
 		<Row><Type>CURRENCY_EXCHANGE</Type>	        <Target>TARGET_CITYSTATE</Target>								</Row>
 		<Row><Type>DIPLOMATIC_INCIDENT</Type>	    <Target>TARGET_CITYSTATE</Target>								</Row>
 		<Row><Type>SCHOLASTIC_FAME</Type>	        <Target>TARGET_CITYSTATE</Target>								</Row>
-		<Row><Type>LAND_GRAB</Type>					<Target>TARGET_CITY</Target>									<EraType>ERA_ANCIENT</EraType><Weight>5</Weight></Row>
-		<Row><Type>BARBARIAN_MERCENARIES</Type>		<Target>TARGET_CUSTOM</Target>									<EraType>ERA_ANCIENT</EraType><Weight>5</Weight></Row>
 	</Triggers>
 	<Outcomes>
 		<!-- Terrain -->

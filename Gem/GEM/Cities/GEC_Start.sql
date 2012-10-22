@@ -61,7 +61,7 @@ UPDATE Buildings SET UnmoddedHappiness = 0;
 
 UPDATE Building_YieldChanges
 SET Yield = Yield * 2
-WHERE YieldType = 'YIELD_CULTURE';
+WHERE YieldType = 'YIELD_CULTURE' OR YieldType = 'YIELD_SCIENCE';
 
 UPDATE Belief_ResourceYieldChanges
 SET Yield = Yield * 2
@@ -224,92 +224,3 @@ INSERT INTO Building_FreeUnits
 	(BuildingType, UnitType, NumUnits)
 SELECT 'BUILDING_MAUSOLEUM_HALICARNASSUS', 'UNIT_MERCHANT', '1'
 WHERE EXISTS (SELECT * FROM Buildings WHERE Type='BUILDING_MAUSOLEUM_HALICARNASSUS' );
-
-
---
--- Resources
---
-
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield) 
-SELECT					building.Type, res.Type, 'YIELD_FAITH', 1
-FROM					Buildings building, Resources res
-WHERE					building.BuildingClass = 'BUILDINGCLASS_TEMPLE'
-						AND res.Type IN (
-							'RESOURCE_WINE',
-							'RESOURCE_INCENSE'
-						);
-
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield) 
-SELECT					building.Type, res.Type, 'YIELD_FOOD', 1
-FROM					Buildings building, Resources res
-WHERE					building.BuildingClass = 'BUILDINGCLASS_GRANARY'
-						AND res.Type IN (
-							'RESOURCE_SPICES',
-							'RESOURCE_SUGAR',
-							'RESOURCE_SALT'
-						);
-
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield) 
-SELECT					building.Type, res.Type, 'YIELD_FOOD', 1
-FROM					Buildings building, Resources res
-WHERE					building.BuildingClass = 'BUILDINGCLASS_AQUEDUCT'
-						AND res.Type IN (
-							'RESOURCE_CITRUS',
-							'RESOURCE_TRUFFLES',
-							'RESOURCE_BANANA'
-						);
-
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield) 
-SELECT					building.Type, res.Type, 'YIELD_CULTURE', 1
-FROM					Buildings building, Resources res
-WHERE					building.BuildingClass = 'BUILDINGCLASS_AMPHITHEATER'
-						AND res.Type IN (
-							'RESOURCE_SILK',
-							'RESOURCE_COTTON',
-							'RESOURCE_FUR',
-							'RESOURCE_DYE'
-						);
-
-/*
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield)
-SELECT					'BUILDING_MARKET', Type, 'YIELD_GOLD', 1
-FROM					Resources
-WHERE					Happiness > 0;
-
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield)
-SELECT					'BUILDING_BAZAAR', Type, 'YIELD_GOLD', 1
-FROM					Resources
-WHERE					Happiness > 0;
-
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield)
-SELECT					'BUILDING_SATRAPS_COURT', Type, 'YIELD_GOLD', 1
-FROM					Resources
-WHERE					Happiness > 0;
-*/
-
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges(BuildingType, ResourceType, YieldType, Yield) 
-SELECT					building.Type, res.Type, 'YIELD_GOLD', 1
-FROM					Buildings building, Resources res
-WHERE					building.BuildingClass = 'BUILDINGCLASS_MARKET'
-AND						res.Happiness > 0;
-
-/*
-INSERT OR REPLACE INTO	Building_ResourceYieldChanges
-						(BuildingType, ResourceType, YieldType, Yield) 
-SELECT					building.Type, res.Type, 'YIELD_GOLD', 1
-FROM					Buildings building, Resources res
-WHERE					building.BuildingClass = 'BUILDINGCLASS_MARKET'
-						AND res.Type IN (
-							'RESOURCE_SALT',
-							'RESOURCE_CITRUS',
-							'RESOURCE_TRUFFLES',
-							'RESOURCE_BANANA'
-						);
-*/

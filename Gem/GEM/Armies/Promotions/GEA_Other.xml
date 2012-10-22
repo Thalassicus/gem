@@ -91,8 +91,7 @@
 				 PromotionPrereqOr2="PROMOTION_BARRAGE_3"
 				 PromotionPrereqOr3="PROMOTION_TARGETING_3"
 				 PromotionPrereqOr4="PROMOTION_BOMBARDMENT_3"
-				 PromotionPrereqOr5="PROMOTION_COASTAL_RAIDER_3"
-				 PromotionPrereqOr6="PROMOTION_BOARDING_PARTY_3"
+				 PromotionPrereqOr5="PROMOTION_BOARDING_PARTY_1"
 				 PortraitIndex="9"
 				 Description="TXT_KEY_PROMOTION_BLITZ"
 				 PediaEntry="TXT_KEY_PROMOTION_BLITZ"
@@ -114,91 +113,6 @@
 				 PediaType="PEDIA_NAVAL"
 				 />
 		</Update>
-		<Row>
-			<Type>PROMOTION_TACTICAL_BOMBING</Type>
-			<Description>TXT_KEY_PROMOTION_TACTICAL_BOMBING</Description>
-			<Help>TXT_KEY_PROMOTION_TACTICAL_BOMBING_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<OrderPriority>2</OrderPriority>
-			<PortraitIndex>10</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_TACTICAL_BOMBING</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_RANGED_DEFENSE_II</Type>
-			<Description>TXT_KEY_PROMOTION_RANGED_DEFENSE_II</Description>
-			<Help>TXT_KEY_PROMOTION_RANGED_DEFENSE_II_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<OrderPriority>2</OrderPriority>
-			<PortraitIndex>10</PortraitIndex>
-			<RangedDefenseMod>50</RangedDefenseMod>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_RANGED_DEFENSE_II</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_AIR_BOMBARDMENT_1</Type>
-			<Description>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1</Description>
-			<Help>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>2</OrderPriority>
-			<PortraitIndex>10</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_AIR_BOMBARDMENT_2</Type>
-			<Description>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_2</Description>
-			<Help>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_AIR_BOMBARDMENT_1</PromotionPrereqOr1>
-			<OrderPriority>2</OrderPriority>
-			<PortraitIndex>11</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_2</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_AIR_BOMBARDMENT_3</Type>
-			<Description>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_3</Description>
-			<Help>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_AIR_BOMBARDMENT_2</PromotionPrereqOr1>
-			<OrderPriority>2</OrderPriority>
-			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_3</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MOBILITY_1</Type>
-			<Description>TXT_KEY_PROMOTION_MOBILITY_1</Description>
-			<Help>TXT_KEY_PROMOTION_MOBILITY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>2</OrderPriority>
-			<MovesChange>1</MovesChange>
-			<PortraitIndex>33</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOBILITY_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MOBILITY_2</Type>
-			<Description>TXT_KEY_PROMOTION_MOBILITY_2</Description>
-			<Help>TXT_KEY_PROMOTION_MOBILITY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_MOBILITY_1</PromotionPrereqOr1>
-			<OrderPriority>2</OrderPriority>
-			<MovesChange>1</MovesChange>
-			<PortraitIndex>33</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOBILITY_2</PediaEntry>
-		</Row>
 		<Update>
 			<Where Type="PROMOTION_INSTA_HEAL" />
 			<Set PediaType="NONE"
@@ -280,14 +194,6 @@
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_MARCH_II</PromotionType>
-			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_MOBILITY_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_MOBILITY_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
 		</Row>
 		<Row>
@@ -379,64 +285,7 @@
 			<PromotionType>PROMOTION_WOODSMAN</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
 		</Row>
-		<Delete PromotionType="PROMOTION_BOMBARDMENT_1" UnitCombatType="UNITCOMBAT_BOMBER" />
-		<Delete PromotionType="PROMOTION_BOMBARDMENT_2" UnitCombatType="UNITCOMBAT_BOMBER" />
-		<Delete PromotionType="PROMOTION_BOMBARDMENT_3" UnitCombatType="UNITCOMBAT_BOMBER" />
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
 	</UnitPromotions_UnitCombats>
-	<UnitPromotions_Domains>
-		<Row>
-			<PromotionType>PROMOTION_TACTICAL_BOMBING</PromotionType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Modifier>50</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_TACTICAL_BOMBING</PromotionType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>50</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_1</PromotionType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Modifier>15</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_2</PromotionType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Modifier>15</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_3</PromotionType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Modifier>15</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_1</PromotionType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>15</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_2</PromotionType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>15</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_3</PromotionType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>15</Modifier>
-		</Row>
-	</UnitPromotions_Domains>
 	<Unit_FreePromotions>
 		<Update>
 			<Where UnitType="UNIT_GUIDED_MISSILE" PromotionType="PROMOTION_EVASION_II" />

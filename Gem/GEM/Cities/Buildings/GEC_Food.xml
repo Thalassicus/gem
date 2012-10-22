@@ -12,14 +12,6 @@
 			<!-- 1 -->
 		</Update>
 		<Update>
-			<Where Type="BUILDING_LIGHTHOUSE" />
-			<Set GoldMaintenance="2"
-				 Cost="140"
-				 PrereqTech="TECH_COMPASS"
-				 />
-			<!-- 1 -->
-		</Update>
-		<Update>
 			<Where Type="BUILDING_FLOATING_GARDENS" />
 			<Set Cost="160" GoldMaintenance="0" />
 		</Update>

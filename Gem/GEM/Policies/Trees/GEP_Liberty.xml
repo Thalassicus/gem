@@ -140,25 +140,10 @@
 		<Row>
 			<PolicyType>POLICY_LIBERTY_FINISHER</PolicyType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Policy_SpecialistExtraYields>
 	<Policy_FreeUnitClasses>
-		<Row>
-			<PolicyType>POLICY_INSPIRATION</PolicyType>
-			<UnitClassType>UNITCLASS_WORKER</UnitClassType>
-			<Count>1</Count>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_PIETY_FINISHER</PolicyType>
-			<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-			<Count>1</Count>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_PIETY_FINISHER</PolicyType>
-			<UnitClassType>UNITCLASS_INQUISITOR</UnitClassType>
-			<Count>1</Count>
-		</Row>
 		<Delete PolicyType="POLICY_CITIZENSHIP" />
 		<Row>
 			<PolicyType>POLICY_CITIZENSHIP</PolicyType>

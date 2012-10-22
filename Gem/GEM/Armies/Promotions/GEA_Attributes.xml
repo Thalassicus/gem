@@ -2,6 +2,56 @@
 <GameData>
 	<UnitPromotions>
 		<Row>
+			<Type>PROMOTION_LAND_PENALTY_II</Type>
+			<Description>TXT_KEY_PROMOTION_LAND_PENALTY_II</Description>
+			<Help>TXT_KEY_PROMOTION_LAND_PENALTY_II_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>57</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_LAND_PENALTY_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_LAND_BONUS_II</Type>
+			<Description>TXT_KEY_PROMOTION_LAND_BONUS_II</Description>
+			<Help>TXT_KEY_PROMOTION_LAND_BONUS_II_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_LAND_BONUS_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_SEA_BONUS_II</Type>
+			<Description>TXT_KEY_PROMOTION_SEA_BONUS_II</Description>
+			<Help>TXT_KEY_PROMOTION_SEA_BONUS_II_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SEA_BONUS_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_CITY_BONUS_II</Type>
+			<Description>TXT_KEY_PROMOTION_CITY_BONUS_II</Description>
+			<Help>TXT_KEY_PROMOTION_CITY_BONUS_II_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<CityAttack>50</CityAttack>
+			<CityDefense>50</CityDefense>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CITY_BONUS_II</PediaEntry>
+		</Row>
+		<Row>
 			<Type>PROMOTION_DOUBLE_WORK_SPEED</Type>
 			<Description>TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED</Description>
 			<PediaEntry>TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED</PediaEntry>
@@ -9,7 +59,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
+			<PortraitIndex>58</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 		</Row>
@@ -144,20 +194,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_ATTACK_BONUS_II</PediaEntry>
 		</Row>
 		<Row>
-			<Type>PROMOTION_NAVAL_DEMOLISH</Type>
-			<Description>TXT_KEY_PROMOTION_NAVAL_DEMOLISH</Description>
-			<Help>TXT_KEY_PROMOTION_NAVAL_DEMOLISH_HELP</Help>
-			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_DEMOLISH</PediaEntry>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CityAttack>30</CityAttack>
-			<AttackFortifiedMod>30</AttackFortifiedMod>
-			<PortraitIndex>58</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-		</Row>
-		<Row>
 			<Type>PROMOTION_CAPITAL_SHIP_BONUS</Type>
 			<Description>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS_HELP</Description>
 			<PediaEntry>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS</PediaEntry>
@@ -208,9 +244,9 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_DEFENSE_2</Type>
+			<PediaEntry>TXT_KEY_PROMOTION_DEFENSE_2</PediaEntry>
 			<Description>TXT_KEY_PROMOTION_DEFENSE_2_HELP</Description>
 			<Help>TXT_KEY_PROMOTION_DEFENSE_2_HELP</Help>
-			<PediaEntry>TXT_KEY_PROMOTION_DEFENSE_2</PediaEntry>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<OrderPriority>2</OrderPriority>
@@ -221,16 +257,16 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_CAMARADERIE</Type>
+			<PediaEntry>TXT_KEY_PROMOTION_CAMARADERIE</PediaEntry>
 			<Description>TXT_KEY_PROMOTION_CAMARADERIE</Description>
 			<Help>TXT_KEY_PROMOTION_CAMARADERIE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
-			<AdjacentMod>20</AdjacentMod>
+			<AdjacentMod>15</AdjacentMod>
 			<PortraitIndex>58</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CAMARADERIE</PediaEntry>
 		</Row>
 	</UnitPromotions>
 	<UnitPromotions_UnitClasses>
@@ -256,6 +292,21 @@
 		</Row>
 	</UnitPromotions_UnitClasses>
 	<UnitPromotions_Domains>
+		<Row>
+			<PromotionType>PROMOTION_LAND_BONUS_II</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SEA_BONUS_II</PromotionType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_LAND_PENALTY_II</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Modifier>-50</Modifier>
+		</Row>
 		<Row>
 			<PromotionType>PROMOTION_CITY_ASSAULT</PromotionType>
 			<DomainType>DOMAIN_LAND</DomainType>

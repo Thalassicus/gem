@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by ModBuddy on 3/9/2012 4:04:53 PM -->
 <GameData>
 	<Policies>
 		<Update>
 			<Where Type="POLICY_RATIONALISM" />
-			<Set HappinessToScience="20"	
-				 OneShot="0"
-				 IncludesOneShotFreeUnits="0"
-				 />
-		</Update>
-		<Update>
-			<Where Type="POLICY_SCIENTIFIC_REVOLUTION" />
-			<Set GridX="2" GridY="1"
-				 MedianTechPercentChange="0"
-				 HappinessToScience="0"
-				 />
-		</Update>
-		<Update>
-			<Where Type="POLICY_SOVEREIGNTY" />
-			<Set GridX="4" GridY="1"
-				 HappinessToScience="0"
+			<Set HappinessToScience="0"	
 				 OneShot="1"
 				 IncludesOneShotFreeUnits="1"
 				 />
 		</Update>
 		<Update>
-			<Where Type="POLICY_FREE_THOUGHT" />
-			<Set GridX="1" GridY="2" />
+			<Where Type="POLICY_SCIENTIFIC_REVOLUTION" />
+			<Set GridX="1" GridY="1"
+				 MedianTechPercentChange="0"
+				 HappinessToScience="0"
+				 />
 		</Update>
 		<Update>
 			<Where Type="POLICY_HUMANISM" />
-			<Set GridX="3" GridY="2"  />
+			<Set GridX="3" GridY="1"  />
+		</Update>
+		<Update>
+			<Where Type="POLICY_SOVEREIGNTY" />
+			<Set GridX="5" GridY="1"
+				 HappinessToScience="20"
+				 OneShot="0"
+				 IncludesOneShotFreeUnits="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_FREE_THOUGHT" />
+			<Set GridX="2" GridY="2" />
 		</Update>
 		<Update>
 			<Where Type="POLICY_SECULARISM" />
-			<Set GridX="5" GridY="2"  />
+			<Set GridX="4" GridY="2"  />
 		</Update>
 		<Update>
 			<Where Type="POLICY_RATIONALISM_FINISHER" />
@@ -44,14 +43,7 @@
 		</Update>
 	</Policies>
 	<Policy_PrereqPolicies>
-		<Row>
-			<PolicyType>POLICY_HUMANISM</PolicyType>
-			<PrereqPolicy>POLICY_SCIENTIFIC_REVOLUTION</PrereqPolicy>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_HUMANISM</PolicyType>
-			<PrereqPolicy>POLICY_SOVEREIGNTY</PrereqPolicy>
-		</Row>
+		
 	</Policy_PrereqPolicies>
 	<Policy_SpecialistYieldChanges>
 		<!--
@@ -80,7 +72,7 @@
 	</Policy_ImprovementYieldChanges>
 	<Policy_FreeUnitClasses>
 		<Row>
-			<PolicyType>POLICY_SOVEREIGNTY</PolicyType>
+			<PolicyType>POLICY_RATIONALISM</PolicyType>
 			<UnitClassType>UNITCLASS_SCIENTIST</UnitClassType>
 			<Count>1</Count>
 		</Row>

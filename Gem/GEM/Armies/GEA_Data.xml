@@ -267,7 +267,7 @@
 		</Update>
 		<Update>
 			<Where Name="UNIT_UPGRADE_COST_PER_PRODUCTION" />
-			<Set Value="3" />
+			<Set Value="2.25" />
 			<!-- 2 -->
 		</Update>
 		<Update>

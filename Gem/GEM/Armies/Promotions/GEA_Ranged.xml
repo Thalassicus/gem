@@ -53,6 +53,19 @@
 			<PediaEntry>TXT_KEY_PROMOTION_MARCH</PediaEntry>
 		</Row>
 		-->
+		<Row>
+			<Type>PROMOTION_RANGED_DEFENSE_II</Type>
+			<Description>TXT_KEY_PROMOTION_RANGED_DEFENSE_II</Description>
+			<Help>TXT_KEY_PROMOTION_RANGED_DEFENSE_II_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<RangedDefenseMod>50</RangedDefenseMod>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_RANGED_DEFENSE_II</PediaEntry>
+		</Row>
 	</UnitPromotions>
 	<UnitPromotions_UnitCombats>
 		<Delete PromotionType="PROMOTION_SIEGE" UnitCombatType="UNITCOMBAT_ARCHER" />
@@ -101,7 +114,7 @@
 		</Update>
 		<Row>
 			<UnitType>UNIT_GUIDED_MISSILE</UnitType>
-			<PromotionType>PROMOTION_NAVAL_DEMOLISH</PromotionType>
+			<PromotionType>PROMOTION_CITY_BONUS_II</PromotionType>
 		</Row>
 		<!--
 		<Row>

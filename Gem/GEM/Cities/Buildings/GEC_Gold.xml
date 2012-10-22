@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<BuildingClasses>
-		<Row>
-			<Type>BUILDINGCLASS_WAREHOUSE</Type>
-			<DefaultBuilding>BUILDING_WAREHOUSE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_WAREHOUSE</Description>
-		</Row>
-	</BuildingClasses>
 	<Buildings>
-		<Row>
-			<Type>BUILDING_WAREHOUSE</Type>
-			<BuildingClass>BUILDINGCLASS_WAREHOUSE</BuildingClass>
-			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
-			<PrereqTech>TECH_COMPASS</PrereqTech>
-			<Cost>220</Cost>
-			<GoldMaintenance>2</GoldMaintenance>
-			<Description>TXT_KEY_BUILDING_WAREHOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
-			<MinAreaSize>-1</MinAreaSize>
-			<ConquestProb>0</ConquestProb>
-			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
-			<PortraitIndex>6</PortraitIndex>
-		</Row>
-	</Buildings>
-	<Buildings>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_HARBOR" />
-			<Set Cost="120"
-				 GoldMaintenance="1"
-				 PrereqTech="TECH_OPTICS"
-				 />
-			<!-- 180 -->
-		</Update>
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_MARKET" />
 			<Set Cost="120" />
@@ -69,11 +37,6 @@
 		<Delete BuildingType="BUILDING_MARKET" />
 		<Delete BuildingType="BUILDING_BAZAAR" />
 		<Delete BuildingType="BUILDING_SATRAPS_COURT" />
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
 	</Building_YieldChanges>
 	<Building_YieldChangesPerPop>
 		<Row>
@@ -100,7 +63,7 @@
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_SATRAPS_COURT" />
-			<Set Yield="20" />
+			<Set Yield="30" />
 			<!-- 25 -->
 		</Update>
 		<Update>
@@ -109,13 +72,6 @@
 		</Update>
 		<Delete BuildingType="BUILDING_STOCK_EXCHANGE" />
 	</Building_YieldModifiers>
-	<Building_SeaPlotYieldChanges>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Building_SeaPlotYieldChanges>
 	<Building_ResourceYieldChanges>
 		<Update>
 			<Where BuildingType="BUILDING_MINT" />
@@ -143,26 +99,6 @@
 			<BuildingType>BUILDING_MINT</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>40</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_NAVAL_TILE_IMPROVEMENT</FlavorType>
-			<Flavor>8</Flavor>
 		</Row>
 	</Building_Flavors>
 	<Building_ClassesNeededInCity>

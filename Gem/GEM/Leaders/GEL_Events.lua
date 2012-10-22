@@ -6,7 +6,7 @@
 include("CiVUP_Core.lua")
 
 local log = Events.LuaLogger:New()
-log:SetLevel("DEBUG")
+log:SetLevel("WARN")
 
 --
 function DoEndCombatLeaderBonuses(

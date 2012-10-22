@@ -29,6 +29,7 @@
 		<Update>
 			<Where Type="PROMOTION_SCOUTING_2" />
 			<Set ExtraWithdrawal="80"
+				 MovesChange="1"
 				 />
 		</Update>
 		<Update>
@@ -45,6 +46,7 @@
 				 FreePillageMoves="true"
 				 EnemyHealChange="10"
 				 NeutralHealChange="10"
+				 DefenseMod="0"
 				 PediaType="PEDIA_SCOUTING"
 				 />
 		</Update>

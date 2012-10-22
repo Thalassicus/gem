@@ -22,7 +22,7 @@ FROM Improvements improve, Resources res
 WHERE (
 	(improve.CreatedByGreatPerson = 1 OR improve.SpecificCivRequired = 1)
 	AND NOT res.TechCityTrade = 'TECH_SAILING'
-	AND NOT res.Type = 'IMPROVEMENT_POLDER'
+	AND NOT improve.Type = 'IMPROVEMENT_POLDER'
 );
 
 INSERT OR REPLACE INTO Improvement_ResourceType_Yields(ImprovementType, ResourceType, YieldType, Yield) 

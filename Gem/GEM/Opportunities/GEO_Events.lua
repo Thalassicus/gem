@@ -337,23 +337,32 @@ function Game.TrigAction.BarbarianMercenaries1(playerID, trigID, targetID, outID
 end
 
 function Game.TrigAction.BarbarianMercenaries2(playerID, trigID, targetID, outID)
-	local player = Players[playerID]
-	local city = player:GetCapitalCity()
-	local bestUnitID = GameInfo.Units.UNIT_BARBARIAN_WARRIOR.ID
-	local bestStrength = GameInfo.Units.UNIT_BARBARIAN_WARRIOR.Combat
+	local player		= Players[playerID]
+	local city			= player:GetCapitalCity()
+	local barbWarriorID	= GameInfo.Units.UNIT_BARBARIAN_WARRIOR.ID
+	local unitList		= {}
+
 	for overrideInfo in GameInfo.Civilization_UnitClassOverrides{CivilizationType = "CIVILIZATION_BARBARIAN"} do
 		if overrideInfo.UnitType then
 			for unitInfo in GameInfo.Units{Type = overrideInfo.UnitType} do
-				if (unitInfo.Combat > bestStrength or unitInfo.RangedCombat > bestStrength) and (not unitInfo.PrereqTech or player:HasTech(unitInfo.PrereqTech)) then
-					bestUnitID = unitInfo.ID
-					bestStrength = (unitInfo.Combat > unitInfo.RangedCombat) and unitInfo.Combat or unitInfo.RangedCombat
+				if (unitInfo.Domain == "DOMAIN_LAND" or city:IsCoastal()) and (not unitInfo.PrereqTech or player:HasTech(unitInfo.PrereqTech)) then
+					local unitStrength = math.max(unitInfo.Combat, unitInfo.RangedCombat)
+					if unitInfo.Domain == "DOMAIN_SEA" then
+						unitStrength = unitStrength * 0.75
+					end
+					unitList[unitInfo.ID] = unitStrength
 				end
 			end
 		end
 	end
-	player:InitUnitType(bestUnitID, city:Plot())
-	player:InitUnitType(bestUnitID, city:Plot())
-	player:InitUnitType(bestUnitID, city:Plot())
+	for i=1, 3 do
+		local unitID = Game.GetRandomWeighted(unitList)
+		if unitID and unitID ~= -1 then
+			player:InitUnitType(unitID, city:Plot())
+		else
+			log:Error("Game.TrigAction.BarbarianMercenaries2 invalid unitID %s", unitID)
+		end
+	end
 end
 
 function Game.TrigAction.BarbarianMercenaries3(playerID, trigID, targetID, outID)

@@ -56,5 +56,25 @@
 			<FlavorType>FLAVOR_EXPANSION</FlavorType>
 			<Flavor>6</Flavor>
 		</Row>
+		<Row>
+			<TechType>TECH_CARVEL_HULLS</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CARVEL_HULLS</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>3</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CARVEL_HULLS</TechType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CARVEL_HULLS</TechType>
+			<FlavorType>FLAVOR_WATER_CONNECTION</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
 	</Technology_Flavors>
 </GameData>

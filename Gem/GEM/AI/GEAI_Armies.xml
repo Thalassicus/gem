@@ -22,9 +22,9 @@
 		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_LEVY</UnitType>					 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_LEVY</UnitType>					 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_RECON</FlavorType>		<UnitType>UNIT_LEVY</UnitType>					 <Flavor>1</Flavor></Row>
-		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_CONSCRIPT</UnitType>		 <Flavor>1</Flavor></Row>
-		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_CONSCRIPT</UnitType>		 <Flavor>1</Flavor></Row>
-		<Row><FlavorType>FLAVOR_RECON</FlavorType>		<UnitType>UNIT_CONSCRIPT</UnitType>		 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_CONSCRIPT</UnitType>		         <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_CONSCRIPT</UnitType>		         <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_RECON</FlavorType>		<UnitType>UNIT_CONSCRIPT</UnitType>		         <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_SKIRMISHER</UnitType>			 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_SKIRMISHER</UnitType>			 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_RECON</FlavorType>		<UnitType>UNIT_SKIRMISHER</UnitType>			 <Flavor>1</Flavor></Row>
@@ -37,11 +37,19 @@
 		<Row><FlavorType>FLAVOR_MOBILE</FlavorType>		<UnitType>UNIT_STEALTH_BOMBER</UnitType>		 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_RANGED</FlavorType>		<UnitType>UNIT_STEALTH_BOMBER</UnitType>		 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_RANGED</FlavorType>		<UnitType>UNIT_GUIDED_MISSILE</UnitType>		 <Flavor>1</Flavor></Row>
-		<!--
+		<Row><FlavorType>FLAVOR_NAVAL</FlavorType>		<UnitType>UNIT_LIBURNA</UnitType>				 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_NAVAL_RECON</FlavorType><UnitType>UNIT_LIBURNA</UnitType>				 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_NAVAL</FlavorType>		<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>		 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>		 <Flavor>1</Flavor></Row>
 		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>		 <Flavor>1</Flavor></Row>
-		<Row><FlavorType>FLAVOR_NAVAL</FlavorType>		<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>		 <Flavor>1</Flavor></Row>
-		-->
+		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_IRONCLAD</UnitType>				 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_IRONCLAD</UnitType>				 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_BATTLESHIP</UnitType>			 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_BATTLESHIP</UnitType>			 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_OFFENSE</FlavorType>	<UnitType>UNIT_MISSILE_CRUISER</UnitType>		 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_DEFENSE</FlavorType>	<UnitType>UNIT_MISSILE_CRUISER</UnitType>		 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_NAVAL</FlavorType>		<UnitType>UNIT_MISSILE_DESTROYER</UnitType>		 <Flavor>1</Flavor></Row>
+		<Row><FlavorType>FLAVOR_NAVAL_RECON</FlavorType><UnitType>UNIT_MISSILE_DESTROYER</UnitType>		 <Flavor>1</Flavor></Row>
 	</Unit_Flavors>
 	<AIMilitaryStrategy_Player_Flavors>
 		<Update>

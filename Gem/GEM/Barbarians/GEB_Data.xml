@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
+	<Civup>
+		<Row Type="BARBARIAN_HEAL_LAND">
+			<Value>5</Value>
+		</Row>
+		<Row Type="BARBARIAN_HEAL_SEA">
+			<Value>5</Value>
+		</Row>
+		<Row Type="BARBARIAN_HEAL_CAMP">
+			<Value>10</Value>
+		</Row>
+	</Civup>
 	<Defines>
 		<Update>
 			<Where Name="BARBARIAN_MAX_XP_VALUE" />
@@ -13,7 +24,7 @@
 		</Update>
 		<Update>
 			<Where Name="BARBARIAN_CAMP_ODDS_OF_NEW_CAMP_SPAWNING" />
-			<Set Value="1" />
+			<Set Value="100" />
 			<!-- 2 -->
 		</Update>
 		<Update>
@@ -23,7 +34,7 @@
 		</Update>
 		<Update>
 			<Where Name="BARBARIAN_CAMP_MINIMUM_DISTANCE_CAPITAL" />
-			<Set Value="6" />
+			<Set Value="5" />
 			<!-- 4 -->
 		</Update>
 		<Update>
@@ -34,20 +45,34 @@
 		<Update>
 			<Where Name="BARBARIAN_CITY_ATTACK_MODIFIER" />
 			<Set Value="-10" />
+			<!-- 25 -->
 		</Update>
 		<Update>
 			<Where Name="BARBARIAN_TECH_PERCENT" />
 			<Set Value="75" />
+			<!-- 75 -->
 		</Update>
 		<Update>
 			<Where Name="GOLD_FROM_BARBARIAN_CONVERSION" />
 			<Set Value="100" />
-		</Update>		
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where Name="BARBARIAN_CAMP_COASTAL_SPAWN_ROLL" />
+			<Set Value="25" />
+			<!-- 6 -->
+		</Update>
+		<Update>
+			<Where Name="BARBARIAN_NAVAL_UNIT_START_TURN_SPAWN" />
+			<Set Value="10" />
+			<!-- 30 -->
+		</Update>
 	</Defines>
 	<Improvements>
 		<Update>
 			<Where Type="IMPROVEMENT_BARBARIAN_CAMP" />
 			<Set DefenseModifier="25" />
+			<!-- 0 -->
 		</Update>
 	</Improvements>
 	<GameSpeeds>
@@ -66,10 +91,10 @@
 		<Update>
 			<Where Type="HANDICAP_SETTLER" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>150</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>100</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -78,10 +103,10 @@
 		<Update>
 			<Where Type="HANDICAP_CHIEFTAIN" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>50</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>90</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -90,10 +115,10 @@
 		<Update>
 			<Where Type="HANDICAP_WARLORD" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>20</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>80</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -102,10 +127,10 @@
 		<Update>
 			<Where Type="HANDICAP_PRINCE" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>70</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>12</BarbarianSeaTargetRange>
@@ -114,10 +139,10 @@
 		<Update>
 			<Where Type="HANDICAP_KING" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>60</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>6</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>15</BarbarianSeaTargetRange>
@@ -126,10 +151,10 @@
 		<Update>
 			<Where Type="HANDICAP_EMPEROR" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>50</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>7</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>18</BarbarianSeaTargetRange>
@@ -138,10 +163,10 @@
 		<Update>
 			<Where Type="HANDICAP_IMMORTAL" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>40</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>8</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>20</BarbarianSeaTargetRange>
@@ -150,10 +175,10 @@
 		<Update>
 			<Where Type="HANDICAP_DEITY" />
 			<Set>
-				<BarbCampGold>50</BarbCampGold>
+				<BarbCampGold>100</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
 				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>50</AIBarbarianBonus>
+				<AIBarbarianBonus>20</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>30</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>9</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>22</BarbarianSeaTargetRange>

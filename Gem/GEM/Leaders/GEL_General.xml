@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Traits>
+		<!--
 		<Update>
 			<Where Type="TRAIT_AMPHIB_WARLORD" />
 			<Set EmbarkedNotCivilian="0" />
 		</Update>
+		-->
 		<Update>
 			<Where Type="TRAIT_ART_OF_WAR" />
 			<Set GreatGeneralExtraBonus="10" 
@@ -24,14 +26,15 @@
 			<!-- 20 -->
 		</Update>
 		<!--
+				 LandBarbarianCapturePercent="100"
+		-->
 		<Update>
 			<Where Type="TRAIT_CONVERTS_LAND_BARBARIANS" />
-			<Set LandBarbarianConversionPercent="0"
+			<Set LandBarbarianConversionPercent="100"
 				 LandUnitMaintenanceModifier="0"
-				 LandBarbarianCapturePercent="100"
+				 FreeUnit="UNITCLASS_WARRIOR"
 				 />
 		</Update>
-		-->
 		<Update>
 			<Where Type="TRAIT_ENHANCED_GOLDEN_AGES" />
 			<Set GoldenAgeDurationModifier="0"
@@ -59,7 +62,7 @@
 		</Row>
 		<Update>
 			<Where Type="TRAIT_CONVERTS_SEA_BARBARIANS" />
-			<Set FreeShip="UNITCLASS_TRIREME"
+			<Set FreeShip="UNITCLASS_LIBURNA"
 			/>
 		</Update>
 		<!--
@@ -71,7 +74,6 @@
 			<Where Type="TRAIT_LAND_TRADE_GOLD" />
 			<Set TradeRouteChange="0"
 				 CityGoldPerLuxuryPercent="0"
-				 OpenBordersModifier="0"
 				 />
 		</Update>
 		<Update>
@@ -295,12 +297,12 @@
 	</Civilization_Start_Region_Avoid>
 
 
-	<Improvements>
+	<Improvement_Yields>
 		<Update>
-			<Where Type="IMPROVEMENT_MOAI"/>
-			<Set Culture="3"/>
+			<Where ImprovementType="IMPROVEMENT_MOAI" YieldType="YIELD_CULTURE" />
+			<Set Yield="3"/>
 		</Update>
-	</Improvements>
+	</Improvement_Yields>
 		
 	
 	<Units>
@@ -312,7 +314,7 @@
 				 Combat="20"
 				 Cost="120"
 				 CombatClass="UNITCOMBAT_RECON"
-				 GoodyHutUpgradeUnitClass="UNITCLASS_LIGHT_INFANTRY"
+				 GoodyHutUpgradeUnitClass="UNITCLASS_CONSCRIPT"
 				 />
 		</Update>
 		<Update>
@@ -509,6 +511,10 @@
 			<UnitType>UNIT_FRENCH_MUSKETEER</UnitType>
 			<PromotionType>PROMOTION_FOREIGN_LANDS</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_HUN_BATTERING_RAM</UnitType>
+			<PromotionType>PROMOTION_COVER_1</PromotionType>
+		</Row>
 	</Unit_FreePromotions>
 	<Trait_FreePromotionUnitCombats>
 		<Row>
@@ -625,10 +631,6 @@
 
 	<Buildings>
 		<Update>
-			<Where Type="BUILDING_MUD_PYRAMID_MOSQUE" />
-			<Set Culture="10" />
-		</Update>
-		<Update>
 			<Where Type="BUILDING_SATRAPS_COURT" />
 			<Set BuildingClass="BUILDINGCLASS_MARKET"
 				 PrereqTech="TECH_TRAPPING"
@@ -641,14 +643,20 @@
 				 />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_WAT" />
-			<Set Culture="3" />
-		</Update>
-		<Update>
 			<Where Type="BUILDING_BAZAAR" />
 			<Set PrereqTech="TECH_TRAPPING" />
-		</Update>		
+		</Update>
 	</Buildings>
+	<Building_YieldChanges>
+		<Update>
+			<Where BuildingType="BUILDING_MUD_PYRAMID_MOSQUE" YieldType="YIELD_CULTURE" />
+			<Set Yield="10"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_WAT" YieldType="YIELD_CULTURE" />
+			<Set Yield="3"/>
+		</Update>
+	</Building_YieldChanges>
 	<Building_YieldModifiers>
 		<Row>
 			<BuildingType>BUILDING_WAT</BuildingType>

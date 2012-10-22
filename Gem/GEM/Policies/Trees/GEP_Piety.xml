@@ -3,7 +3,7 @@
 	<Policies>
 		<Update>
 			<Where Type="POLICY_PIETY" />
-			<Set ExtraHappiness="5" />
+			<Set ExtraHappiness="0" />
 		</Update>
 		<Update>
 			<Where Type="POLICY_PIETY_FINISHER" />

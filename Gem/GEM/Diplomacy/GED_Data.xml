@@ -363,11 +363,6 @@
 		</Update>
 		-->
 
-		<Update>
-			<Where Name="MINOR_QUEST_FRIENDSHIP_KILL_CITY_STATE"/>
-			<Set Value="120"/> <!-- 80 -->
-		</Update>
-
 
 		<!-- Weights -->
 

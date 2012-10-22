@@ -73,7 +73,7 @@
 		<Update>
 			<Where Type="UNIT_ENGINEER" />
 			<Set GoldenAgeTurns="8"
-				 BaseHurry="300"
+				 BaseHurry="200"
 				 HurryMultiplier="30"
 				 />
 		</Update>
@@ -91,7 +91,9 @@
 		</Update>
 		<Update>
 			<Where Type="UNIT_PROPHET" />
-			<Set GoldenAgeTurns="8" />
+			<Set GoldenAgeTurns="8"
+				 Capture="NULL"
+				 />
 		</Update>
 		<Update>
 			<Where Type="UNIT_GREAT_GENERAL" />
@@ -115,16 +117,9 @@
 			<Where SpecialistType="SPECIALIST_SCIENTIST" YieldType="YIELD_SCIENCE" />
 			<Set Yield="3" />
 		</Update>
-		<Row>
-			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>3</Yield>
-		</Row>
-	</SpecialistYields>
-	<Specialists>
 		<Update>
-			<Where Type="SPECIALIST_ARTIST" />
-			<Set CulturePerTurn="0" />
+			<Where SpecialistType="SPECIALIST_ARTIST" YieldType="YIELD_CULTURE" />
+			<Set Yield="3" />
 		</Update>
-	</Specialists>
+	</SpecialistYields>
 </GameData>

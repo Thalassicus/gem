@@ -1,27 +1,78 @@
 --
 
 --
--- Free Promotions
+-- Gold Costs
+--
+
+UPDATE Units
+SET HurryCostModifier = ROUND((HurryCostModifier + 100) * 1.2 - 100, 0)
+WHERE (Combat > 0 OR RangedCombat > 0) AND HurryCostModifier >= 0;
+
+UPDATE Units
+SET HurryCostModifier = -1
+WHERE Special = 'SPECIALUNIT_PEOPLE'
+AND NOT CombatClass = 'UNITCOMBAT_DIPLOMACY';
+
+UPDATE Units
+SET ExtraMaintenanceCost = 2
+WHERE Cost > 0 AND (Combat = 0 AND RangedCombat = 0);
+
+UPDATE Units
+SET ExtraMaintenanceCost = 0.018*Cost + 0.18 * MAX(Combat, RangedCombat) - 1
+WHERE Cost > 0 AND (Combat > 0 OR RangedCombat > 0);
+
+/*
+UPDATE Units
+SET ExtraMaintenanceCost = 1.5 * ExtraMaintenanceCost
+WHERE Type IN (
+	SELECT UnitType FROM Civilization_UnitClassOverrides
+	WHERE CivilizationType = 'CIVILIZATION_BARBARIAN'
+);
+*/
+
+UPDATE Units
+SET ExtraMaintenanceCost = 0.75 * ExtraMaintenanceCost
+WHERE ExtraMaintenanceCost > 0 AND (
+	Domain = 'DOMAIN_AIR'
+	OR CombatClass = 'UNITCOMBAT_NAVALRANGED'
+	OR CombatClass = 'UNITCOMBAT_RECON'
+);
+
+UPDATE Units
+SET ExtraMaintenanceCost = 0.5 * ExtraMaintenanceCost
+WHERE ExtraMaintenanceCost > 0 AND (
+	CombatClass = 'UNITCOMBAT_NAVALMELEE'
+	OR Class = 'UNITCLASS_GATLINGGUN'
+	OR Class = 'UNITCLASS_MACHINE_GUN'
+);
+
+UPDATE Units
+SET ExtraMaintenanceCost = MAX(ExtraMaintenanceCost, 1)
+WHERE ExtraMaintenanceCost <> 0;
+
+UPDATE Units
+SET ExtraMaintenanceCost = ROUND(ExtraMaintenanceCost, 0)
+WHERE ExtraMaintenanceCost > 0;
+
+UPDATE Units SET ExtraMaintenanceCost = 0 WHERE NoMaintenance = 1;
+
+UPDATE Units SET ExtraMaintenanceCost = 30 WHERE Class = 'UNITCLASS_ATOMIC_BOMB';
+UPDATE Units SET ExtraMaintenanceCost = 60 WHERE Class = 'UNITCLASS_NUCLEAR_MISSILE';
+UPDATE Units SET ExtraMaintenanceCost = 10 WHERE Class = 'UNITCLASS_GUIDED_MISSILE';
+
+UPDATE Units SET Cost =  50, HurryCostModifier =  10 WHERE Class = 'UNITCLASS_MESSENGER';
+UPDATE Units SET Cost =  75, HurryCostModifier =   0 WHERE Class = 'UNITCLASS_ENVOY';
+UPDATE Units SET Cost = 100, HurryCostModifier = -10 WHERE Class = 'UNITCLASS_EMISSARY';
+UPDATE Units SET Cost = 150, HurryCostModifier = -20 WHERE Class = 'UNITCLASS_DIPLOMAT';
+UPDATE Units SET Cost = 200, HurryCostModifier = -30 WHERE Class = 'UNITCLASS_AMBASSADOR';
+
+--
+-- Free Land Promotions
 --
 
 UPDATE Unit_FreePromotions
 SET PromotionType = 'PROMOTION_CITY_ASSAULT'
 WHERE PromotionType = 'PROMOTION_CITY_SIEGE';
-
-DELETE FROM Unit_FreePromotions
-WHERE PromotionType = 'PROMOTION_PRIZE_SHIPS';
-
-INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
-SELECT DISTINCT Type, 'PROMOTION_EXTRA_SIGHT_NOUPGRADE_II'
-FROM Units WHERE Class IN (
-	'UNITCLASS_TRIPLANE'
-);
-
-INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
-SELECT DISTINCT Type, 'PROMOTION_TACTICAL_BOMBING'
-FROM Units WHERE CombatClass IN (
-	'UNITCOMBAT_BOMBER'
-);
 
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
 SELECT DISTINCT Type, 'PROMOTION_CITY_SIEGE'
@@ -48,55 +99,32 @@ FROM Units WHERE Class IN (
 	'UNITCOMBAT_RECON'
 );
 
+
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
 SELECT DISTINCT Type, 'PROMOTION_RANGED_DEFENSE_II'
 FROM Units WHERE Class IN (
 	'UNITCLASS_GATLINGGUN',
 	'UNITCLASS_MACHINE_GUN'
-);
+) OR CombatClass = 'UNITCOMBAT_NAVALRANGED';
 
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
 SELECT DISTINCT Type, 'PROMOTION_CAN_MOVE_AFTER_ATTACKING'
 FROM Units WHERE Class IN (
 	'UNITCLASS_CHARIOT_ARCHER'
-);
+) OR CombatClass = 'UNITCOMBAT_NAVALMELEE';
 
 DELETE FROM Unit_FreePromotions
-WHERE PromotionType = 'PROMOTION_FORMATION_1'
-AND UnitType IN (
-	'UNIT_LANCER',
-	'UNIT_OTTOMAN_SIPAHI'
-);
+WHERE PromotionType = 'PROMOTION_FORMATION_1' AND UnitType IN
+(SELECT DISTINCT Type
+FROM Units WHERE Class IN (
+	'UNITCLASS_LANCER'
+));
 
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
 SELECT DISTINCT Type, 'PROMOTION_ANTI_CAVALRY'
 FROM Units WHERE Class IN (
 	'UNITCLASS_LANCER'
 );
-
-INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
-SELECT DISTINCT Type, 'PROMOTION_ATTACK_BONUS_NOUPGRADE_I'
-FROM Units WHERE Class IN (
-	'UNITCLASS_LANCER'
-);
-
-INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
-SELECT DISTINCT Type, 'PROMOTION_DEFENSE_PENALTY'
-FROM Units WHERE Class IN (
-	'UNITCLASS_LANCER'
-);
-
-INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
-SELECT DISTINCT Type, 'PROMOTION_SMALL_CITY_PENALTY'
-FROM Units WHERE CombatClass IN (
-	'UNITCOMBAT_ARCHER',
-	'UNITCOMBAT_MOUNTED_ARCHER',
-	'UNITCOMBAT_ARMOR'
-) OR Class IN (
-	'UNITCLASS_GATLINGGUN',
-	'UNITCLASS_MACHINE_GUN'
-);
-
 UPDATE Unit_FreePromotions
 SET PromotionType = 'PROMOTION_SMALL_CITY_PENALTY'
 WHERE PromotionType = 'PROMOTION_CITY_PENALTY'
@@ -111,6 +139,14 @@ AND UnitType IN (
 );
 
 UPDATE Unit_FreePromotions
+SET PromotionType = 'PROMOTION_CITY_BONUS_II'
+WHERE PromotionType = 'PROMOTION_CITY_ASSAULT';
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_LAND_PENALTY_II'
+FROM Units WHERE CombatClass = 'UNITCOMBAT_SIEGE';
+
+UPDATE Unit_FreePromotions
 SET PromotionType = 'PROMOTION_ANTI_MOUNTED_NOUPGRADE_I'
 WHERE PromotionType = 'PROMOTION_ANTI_MOUNTED_I'
 AND UnitType IN (
@@ -120,87 +156,123 @@ AND UnitType IN (
 		'UNITCLASS_PIKEMAN'
 	)
 );
-
-/*
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
 SELECT DISTINCT Type, 'PROMOTION_SMALL_CITY_PENALTY'
-FROM Units WHERE Class IN (
+FROM Units WHERE CombatClass IN (
+	'UNITCOMBAT_ARCHER',
+	'UNITCOMBAT_MOUNTED_ARCHER',
+	'UNITCOMBAT_ARMOR'
+) OR Class IN (
 	'UNITCLASS_TRIREME',
-	'UNITCLASS_CARAVEL',
+	'UNITCLASS_GALLEASS',
 	'UNITCLASS_FRIGATE',
-	'UNITCLASS_DESTROYER'
+	'UNITCLASS_DESTROYER',
+	'UNITCLASS_MISSILE_DESTROYER'
+);
+
+
+--
+-- Free Sea Promotions
+--
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_ATTACK_BONUS_NOUPGRADE_I'
+FROM Units WHERE Class IN (
+	'UNITCLASS_LANCER',
+	'UNITCLASS_SUBMARINE',
+	'UNITCLASS_NUCLEAR_SUBMARINE'
 );
 
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
-SELECT DISTINCT Type, 'PROMOTION_NAVAL_DEMOLISH'
+SELECT DISTINCT Type, 'PROMOTION_DEFENSE_PENALTY'
 FROM Units WHERE Class IN (
-	'UNITCLASS_SHIP_OF_THE_LINE',
-	'UNITCLASS_IRONCLAD',
-	'UNITCLASS_BATTLESHIP',
-	'UNITCLASS_MISSILE_CRUISER'
+	'UNITCLASS_LANCER',
+	'UNITCLASS_SUBMARINE',
+	'UNITCLASS_NUCLEAR_SUBMARINE'
+);
+
+DELETE FROM Unit_FreePromotions
+WHERE PromotionType = 'PROMOTION_PRIZE_SHIPS'
+AND UnitType = 'UNIT_PRIVATEER';
+
+DELETE FROM Unit_FreePromotions
+WHERE PromotionType = 'PROMOTION_SILENT_HUNTER';
+
+DELETE FROM Unit_FreePromotions
+WHERE PromotionType = 'PROMOTION_ONLY_DEFENSIVE'
+AND UnitType IN (SELECT Type FROM Units WHERE Domain = 'DOMAIN_SEA');
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_ONLY_DEFENSIVE'
+FROM Units WHERE CombatClass = 'UNITCOMBAT_NAVALRANGED';
+
+DELETE FROM Unit_FreePromotions
+WHERE PromotionType = 'PROMOTION_ANTI_SUBMARINE_I' AND UnitType IN
+(SELECT DISTINCT Type
+FROM Units WHERE Class IN (
+	'UNITCLASS_NUCLEAR_SUBMARINE'
+));
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_CARGO_II'
+FROM Units WHERE Class IN (
+	'UNITCLASS_MISSILE_DESTROYER'
+);
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_OCEAN_IMPASSABLE'
+FROM Units WHERE Class IN (
+	'UNITCLASS_LIBURNA'
+);
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_EXTRA_SIGHT_NOUPGRADE_I'
+FROM Units WHERE Class IN (
+	'UNITCLASS_DESTROYER',
+	'UNITCLASS_MISSILE_DESTROYER'
+);
+
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_SIGHT_PENALTY'
+FROM Units WHERE Class IN (
+	'UNITCLASS_SUBMARINE',
+	'UNITCLASS_NUCLEAR_SUBMARINE'
+);
+
+/*
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_DEFENSE_PENALTY'
+FROM Units WHERE Class IN (
+	'PROMOTION_OCEAN_IMPASSABLE'
 );
 */
 
 --
--- Gold Costs
+-- Free Air Promotions
 --
 
-UPDATE Units
-SET HurryCostModifier = ROUND((HurryCostModifier + 100) * 1.2 - 100, 0)
-WHERE (Combat > 0 OR RangedCombat > 0) AND HurryCostModifier >= 0;
-
-UPDATE Units
-SET HurryCostModifier = -1
-WHERE Special = 'SPECIALUNIT_PEOPLE'
-AND NOT CombatClass = 'UNITCOMBAT_DIPLOMACY';
-
-UPDATE Units
-SET ExtraMaintenanceCost = 3
-WHERE Cost > 0 AND (Combat = 0 AND RangedCombat = 0);
-
-UPDATE Units
-SET ExtraMaintenanceCost = Cost / 50.0 + MAX(Combat, RangedCombat) / 5.0 - 1
-WHERE Cost > 0 AND (Combat > 0 OR RangedCombat > 0);
-
-UPDATE Units
-SET ExtraMaintenanceCost = 1.5 * ExtraMaintenanceCost
-WHERE Type IN (
-	SELECT UnitType FROM Civilization_UnitClassOverrides
-	WHERE CivilizationType = 'CIVILIZATION_BARBARIAN'
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_EXTRA_SIGHT_NOUPGRADE_II'
+FROM Units WHERE Class IN (
+	'UNITCLASS_TRIPLANE'
 );
 
-UPDATE Units
-SET ExtraMaintenanceCost = 0.75 * ExtraMaintenanceCost
-WHERE ExtraMaintenanceCost > 0 AND (
-	CombatClass = 'UNITCOMBAT_RECON'
-	OR Domain = 'DOMAIN_SEA'
-	OR Domain = 'DOMAIN_AIR'
-	OR Class = 'UNITCLASS_GATLINGGUN'
-	OR Class = 'UNITCLASS_MACHINE_GUN'
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_LAND_BONUS_II'
+FROM Units WHERE CombatClass IN (
+	'UNITCOMBAT_BOMBER'
 );
 
-UPDATE Units
-SET ExtraMaintenanceCost = MAX(ExtraMaintenanceCost, 1)
-WHERE ExtraMaintenanceCost <> 0;
+INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
+SELECT DISTINCT Type, 'PROMOTION_SEA_BONUS_II'
+FROM Units WHERE CombatClass IN (
+	'UNITCOMBAT_BOMBER'
+);
 
-UPDATE Units
-SET ExtraMaintenanceCost = ROUND(ExtraMaintenanceCost, 0)
-WHERE ExtraMaintenanceCost > 0;
-
-UPDATE Units SET ExtraMaintenanceCost = 0 WHERE NoMaintenance = 1;
-
-UPDATE Units SET ExtraMaintenanceCost = 30 WHERE Class = 'UNITCLASS_ATOMIC_BOMB';
-UPDATE Units SET ExtraMaintenanceCost = 60 WHERE Class = 'UNITCLASS_NUCLEAR_MISSILE';
-UPDATE Units SET ExtraMaintenanceCost = 10 WHERE Class = 'UNITCLASS_GUIDED_MISSILE';
-
-UPDATE Units SET Cost =  50, HurryCostModifier =  10 WHERE Class = 'UNITCLASS_MESSENGER';
-UPDATE Units SET Cost =  75, HurryCostModifier =   0 WHERE Class = 'UNITCLASS_ENVOY';
-UPDATE Units SET Cost = 100, HurryCostModifier = -10 WHERE Class = 'UNITCLASS_EMISSARY';
-UPDATE Units SET Cost = 150, HurryCostModifier = -20 WHERE Class = 'UNITCLASS_DIPLOMAT';
-UPDATE Units SET Cost = 200, HurryCostModifier = -30 WHERE Class = 'UNITCLASS_AMBASSADOR';
 
 --
 -- It appears this only changes the order these show on the user interface.
+-- Promotions sort from left (high priority) to right (low priority)
 --
 
 UPDATE UnitPromotions

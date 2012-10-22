@@ -3,7 +3,6 @@
 	<Language_en_US>
 		<!--
 				Traits
-		-->
 		<Update>
 			<Where Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD_SHORT" />
 			<Set Text="Warlord" />
@@ -12,6 +11,7 @@
 			<Where Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD" />
 			<Set Text="Triple [ICON_GOLD] Gold from capturing cities and barbarian camps." />
 		</Update>
+		-->
 		<Update>
 			<Where Tag="TXT_KEY_TRAIT_ART_OF_WAR" />
 			<Set Text="Great Generals see +2 tiles farther and provide extra strength.[NEWLINE]Starts with a Warrior and Great General." />
@@ -28,6 +28,10 @@
 			<Where Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP" />
 			<Set Text="City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate. Militaristic City-State friends give units with +20% [ICON_STRENGTH] Strength." />
 		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS" />
+			<Set Text="Barbarians in camps surrender when defeated. Starts with an extra Warrior." />
+		</Update>
 		<!--
 		<Update>
 			<Where Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS" />
@@ -38,6 +42,10 @@
 			<Set Text="Sea barbarians surrender when defeated.[NEWLINE]Starts with a Warrior and Trireme." />
 		</Update>
 		-->
+		<Update>
+			<Where Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS" />
+			<Set Text="Melee ships capture defeated enemy ships.[NEWLINE]Starts with a Warrior and Liburna." />
+		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS" />
 			<Set Text="Gains [ICON_CULTURE] Culture from killing enemy units." />
@@ -207,7 +215,6 @@
 
 		<!-- 
 				Desert Caravans
-		-->
 		<Row
 			Tag="TXT_KEY_BUILDING_DESERT_CARAVANS"
 			Text="Desert Caravans"
@@ -224,6 +231,7 @@
 			Tag="TXT_KEY_BUILDING_DESERT_CARAVANS_PEDIA"
 			Text="The trade routes through Arabia were important paths for cultural, commercial, and technological exchange between traders, merchants, pilgrims, missionaries, soldiers, nomads and urban dwellers from Ancient China, Ancient India, Ancient Tibet, Persian Empire and Mediterranean countries for almost 3,000 years."
 		/>
+		-->
 
 
 

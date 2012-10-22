@@ -32,14 +32,14 @@
 		</Update>
 		<Update>
 			<Where Type="YIELD_SCIENCE" />
-			<Set MinPlayer="15"
+			<Set MinPlayer="12"
 				 GoldenAgeYieldMod="20"
 				 AIWeightPercent="125"
 				 />
 		</Update>
 		<Update>
 			<Where Type="YIELD_CULTURE" />
-			<Set MinPlayer="13"
+			<Set MinPlayer="10"
 				 GoldenAgeYieldMod="20"
 				 AIWeightPercent="100"
 				 />

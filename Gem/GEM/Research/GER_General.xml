@@ -229,6 +229,21 @@
 				 PortraitIndex="17"
 				 />
 		</Update>
+		<Row>
+			<Type>TECH_CARVEL_HULLS</Type>
+			<Cost>750</Cost>
+			<Description>TXT_KEY_TECH_CARVEL_HULLS</Description>
+			<Civilopedia>TXT_KEY_TECH_CARVEL_HULLS_PEDIA</Civilopedia>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GridX>6</GridX>
+			<GridY>1</GridY>
+			<Quote>TXT_KEY_TECH_CARVEL_HULLS_QUOTE</Quote>
+			<PortraitIndex>13</PortraitIndex>
+			<IconAtlas>TECH_ATLAS_1</IconAtlas>
+			<AudioIntro>AS2D_TECH_COMPASS</AudioIntro>
+			<AudioIntroHeader>TXT_KEY_TECH_CARVEL_HULLS_QUOTE</AudioIntroHeader>
+		</Row>
 		<Update>
 			<Where Type="TECH_STEAM_POWER" />
 			<Set Description="TXT_KEY_TECH_INDUSTRIALIZATION_TITLE"
@@ -317,6 +332,19 @@
 		<Row>
 			<TechType>TECH_COMPASS</TechType>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+		</Row>
+		<Delete TechType="TECH_ASTRONOMY" PrereqTech="TECH_COMPASS" />
+		<Row>
+			<TechType>TECH_ASTRONOMY</TechType>
+			<PrereqTech>TECH_CARVEL_HULLS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CARVEL_HULLS</TechType>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CARVEL_HULLS</TechType>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 		</Row>
 		<Delete TechType="TECH_BANKING" PrereqTech="TECH_EDUCATION" />
 		<Row>
