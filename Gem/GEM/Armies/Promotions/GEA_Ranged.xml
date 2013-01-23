@@ -8,22 +8,13 @@
 				 PediaEntry="TXT_KEY_PROMOTION_BLITZ"
 				 Help="TXT_KEY_PROMOTION_RANGED_BLITZ_HELP"
 				 PortraitIndex="9"
-				 PediaType="PEDIA_RANGED"
+				 PediaType="PEDIA_AIR"
 				 PromotionPrereqOr3="PROMOTION_AMBUSH_2"
 				 />
 		</Update>
 		<Update>
 			<Where Type="PROMOTION_VOLLEY" />
 			<Set AttackFortifiedMod="30"
-				 />
-		</Update>
-		<Update>
-			<Where Type="PROMOTION_CITY_SIEGE" />
-			<Set CityAttack="10"
-				 CityDefense="10"
-				 LostWithUpgrade="true"
-				 Description="TXT_KEY_PROMOTION_CITY_SIEGE_HELP"
-				 PediaEntry="TXT_KEY_PROMOTION_CITY_SIEGE"
 				 />
 		</Update>
 		<Update>
@@ -59,11 +50,12 @@
 			<Help>TXT_KEY_PROMOTION_RANGED_DEFENSE_II_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>58</PortraitIndex>
 			<RangedDefenseMod>50</RangedDefenseMod>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_RANGED_DEFENSE_II</PediaEntry>
 		</Row>
 	</UnitPromotions>
@@ -71,6 +63,22 @@
 		<Delete PromotionType="PROMOTION_SIEGE" UnitCombatType="UNITCOMBAT_ARCHER" />
 		<Delete PromotionType="PROMOTION_SIEGE" UnitCombatType="UNITCOMBAT_MOUNTED_ARCHER" />
 		<Delete PromotionType="PROMOTION_VOLLEY" UnitCombatType="UNITCOMBAT_SIEGE" />
+		<Row>
+			<PromotionType>PROMOTION_VOLLEY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_VOLLEY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED_ARCHER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED_ARCHER</UnitCombatType>
+		</Row>
 		<!--
 		<Delete PromotionType="PROMOTION_MARCH" UnitCombatType="UNITCOMBAT_ARCHER" />
 		<Delete PromotionType="PROMOTION_MARCH" UnitCombatType="UNITCOMBAT_MOUNTED_ARCHER" />
@@ -116,11 +124,5 @@
 			<UnitType>UNIT_GUIDED_MISSILE</UnitType>
 			<PromotionType>PROMOTION_CITY_BONUS_II</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
-			<PromotionType>PROMOTION_CITY_ASSAULT</PromotionType>
-		</Row>
-		-->
 	</Unit_FreePromotions>
 </GameData>

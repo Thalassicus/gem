@@ -25,7 +25,7 @@
 				 GridY="1"
 				 HalfSpecialistFood="1"
 				 HalfSpecialistUnhappiness="0"
-				 GreatPeopleRateModifier="75"
+				 GreatPeopleRateModifier="100"
 				 IncludesOneShotFreeUnits="0"
 				 NumFreeGreatPeople="0"
 				 PortraitIndex="13"
@@ -93,9 +93,6 @@
 				 ESPIONAGE_COUP_OTHER_PLAYERS_INFLUENCE_DROP="40"
 		-->
 	</Policies>
-	<Policy_PrereqPolicies>
-		
-	</Policy_PrereqPolicies>
 	<Policy_InstantYield>
 		<Row>
 			<PolicyType>POLICY_FREEDOM_FINISHER</PolicyType>
@@ -118,7 +115,7 @@
 			<PolicyType>POLICY_FREE_SPEECH</PolicyType>
 			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 	</Policy_ImprovementYieldChanges>
 	<Policy_ImprovementCultureChanges>
@@ -219,34 +216,6 @@
 			<Happiness>3</Happiness>
 		</Row>
 	</Policy_BuildingClassHappiness>
-	<Policy_BuildingClassYieldChanges>
-		<!--
-		<Row>
-			<PolicyType>POLICY_UNIVERSAL_SUFFRAGE</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_UNIVERSAL_SUFFRAGE</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_UNIVERSAL_SUFFRAGE</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_UNIVERSAL_SUFFRAGE</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		-->
-	</Policy_BuildingClassYieldChanges>
 	<UnitPromotions>
 		<Row>
 			<Type>PROMOTION_FREEDOM</Type>

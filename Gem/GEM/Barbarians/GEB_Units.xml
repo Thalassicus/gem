@@ -1,15 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<Unit_ClassUpgrades>
-		<Update>
-			<Where UnitType="UNIT_BARBARIAN_WARRIOR" />
-			<Set UnitClassType="UNITCLASS_PIKEMAN" />
-		</Update>
-	</Unit_ClassUpgrades>
 	<Units>
 		<Update>
 			<Where Type="UNIT_BARBARIAN_WARRIOR"/>
 			<Set BarbUpgradeType="UNIT_BARBARIAN_SWORDSMAN"
+				 ObsoleteTech="TECH_IRON_WORKING"
 				 Cost="80"
 				 />
 		</Update>
@@ -19,7 +14,7 @@
 				 BarbUpgradeType="UNIT_BARBARIAN_CHARIOT_ARCHER"
 				 Cost="80"
 				 Combat="6"
-				 RangedCombat="7"
+				 RangedCombat="6"
 				 Description="TXT_KEY_UNIT_BARBARIAN_ARCHER"
 				 />
 		</Update>
@@ -33,7 +28,7 @@
 		</Update>
 		<Update>
 			<Where Type="UNIT_BARBARIAN_SWORDSMAN"/>
-			<Set PrereqTech="TECH_METAL_CASTING"
+			<Set PrereqTech="TECH_IRON_WORKING"
 				 BarbUpgradeType="UNIT_BARBARIAN_LONGSWORDSMAN"
 				 Cost="150"
 				 Description="TXT_KEY_UNIT_BARBARIAN_SWORDSMAN"
@@ -42,9 +37,9 @@
 		<Row>
 			<Class>UNITCLASS_PIKEMAN</Class>
 			<Type>UNIT_BARBARIAN_PIKEMAN</Type>
-			<BarbUpgradeType>UNIT_BARBARIAN_MUSKETMAN</BarbUpgradeType>
-			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<BarbUpgradeType>UNIT_MUSKETMAN</BarbUpgradeType>
+			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<Combat>15</Combat>
 			<Cost>150</Cost>
 			<Moves>2</Moves>
@@ -71,10 +66,10 @@
 		<Row>
 			<Class>UNITCLASS_CROSSBOWMAN</Class>
 			<Type>UNIT_BARBARIAN_CROSSBOWMAN</Type>
-			<BarbUpgradeType>UNIT_BARBARIAN_RIFLEMAN</BarbUpgradeType>
+			<BarbUpgradeType>UNIT_RIFLEMAN</BarbUpgradeType>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<Combat>15</Combat>
+			<Combat>11</Combat>
 			<RangedCombat>16</RangedCombat>
 			<Cost>180</Cost>
 			<Moves>2</Moves>
@@ -103,7 +98,7 @@
 			<Class>UNITCLASS_LONGSWORDSMAN</Class>
 			<Type>UNIT_BARBARIAN_LONGSWORDSMAN</Type>
 			<BarbUpgradeType>UNIT_BARBARIAN_RIFLEMAN</BarbUpgradeType>
-			<PrereqTech>TECH_MACHINERY</PrereqTech>
+			<PrereqTech>TECH_STEEL</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<Combat>23</Combat>
 			<Cost>230</Cost>
@@ -129,43 +124,13 @@
 			<PortraitIndex>36</PortraitIndex>
 		</Row>
 		<Row>
-			<Class>UNITCLASS_MUSKETMAN</Class>
-			<Type>UNIT_BARBARIAN_MUSKETMAN</Type>
-			<BarbUpgradeType>UNIT_BARBARIAN_</BarbUpgradeType>
-			<PrereqTech>TECH_METALLURGY</PrereqTech>
-			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
-			<Combat>22</Combat>
-			<Cost>220</Cost>
-			<Moves>2</Moves>
-			<CombatClass>UNITCOMBAT_GUN</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BARBARIAN_MUSKETMAN</Description>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MUSKETMAN_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MUSKETMAN_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_MUSKETMAN</Help>
-			<ShowInPedia>false</ShowInPedia>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<AdvancedStartCost>25</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<Conscription>4</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_MUSKETMAN</UnitArtInfo>
-			<UnitFlagIconOffset>37</UnitFlagIconOffset>
-			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
-			<PortraitIndex>38</PortraitIndex>
-		</Row>
-		<Row>
 			<Class>UNITCLASS_CHARIOT_ARCHER</Class>
 			<Type>UNIT_BARBARIAN_CHARIOT_ARCHER</Type>
 			<BarbUpgradeType>UNIT_BARBARIAN_HORSEMAN</BarbUpgradeType>
-			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
-			<ObsoleteTech>TECH_CHIVALRY</ObsoleteTech>
-			<Combat>6</Combat>
-			<RangedCombat>7</RangedCombat>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<ObsoleteTech>TECH_HORSEBACK_RIDING</ObsoleteTech>
+			<Combat>8</Combat>
+			<RangedCombat>9</RangedCombat>
 			<Cost>80</Cost>
 			<Moves>4</Moves>
 			<Range>2</Range>
@@ -196,8 +161,8 @@
 			<Type>UNIT_BARBARIAN_HORSEMAN</Type>
 			<BarbUpgradeType>UNIT_BARBARIAN_KNIGHT</BarbUpgradeType>
 			<PrereqTech>TECH_HORSEBACK_RIDING</PrereqTech>
-			<ObsoleteTech>TECH_BANKING</ObsoleteTech>
-			<Combat>15</Combat>
+			<ObsoleteTech>TECH_CHIVALRY</ObsoleteTech>
+			<Combat>18</Combat>
 			<Cost>150</Cost>
 			<Moves>4</Moves>
 			<CombatClass>UNITCOMBAT_MOUNTED</CombatClass>
@@ -224,11 +189,11 @@
 			<Class>UNITCLASS_KNIGHT</Class>
 			<Type>UNIT_BARBARIAN_KNIGHT</Type>
 			<BarbUpgradeType>UNIT_BARBARIAN_CAVALRY</BarbUpgradeType>
-			<PrereqTech>TECH_BANKING</PrereqTech>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
-			<Combat>23</Combat>
+			<Combat>26</Combat>
 			<Cost>230</Cost>
-			<Moves>3</Moves>
+			<Moves>4</Moves>
 			<CombatClass>UNITCOMBAT_MOUNTED</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
@@ -252,21 +217,16 @@
 		<Update>
 			<Where Type="UNIT_GALLEY"/>
 			<Set BarbUpgradeType="UNIT_BARBARIAN_TRIREME"
-				 Cost="80"
-				 Combat="8"
-				 RangedCombat="9"
-				 Range="2"
-				 Moves="3"
 				 Description="TXT_KEY_UNIT_BARBARIAN_GALLEY"
 				 PrereqTech="TECH_AGRICULTURE"
-				 ObsoleteTech="TECH_OPTICS"/>
+				 ObsoleteTech="TECH_SAILING"/>
 		</Update>
 		<Row>
 			<Class>UNITCLASS_TRIREME</Class>
 			<Type>UNIT_BARBARIAN_TRIREME</Type>
-			<BarbUpgradeType>UNIT_BARBARIAN_GALLEASS</BarbUpgradeType>
-			<PrereqTech>TECH_OPTICS</PrereqTech>
-			<ObsoleteTech>TECH_CARVEL_HULLS</ObsoleteTech>
+			<BarbUpgradeType>UNIT_GALLEASS</BarbUpgradeType>
+			<PrereqTech>TECH_SAILING</PrereqTech>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<Combat>9</Combat>
 			<RangedCombat>13</RangedCombat>
 			<Cost>90</Cost>
@@ -294,12 +254,13 @@
 			<PortraitIndex>24</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 		</Row>
+		<!--
 		<Row>
 			<Class>UNITCLASS_GALLEASS</Class>
 			<Type>UNIT_BARBARIAN_GALLEASS</Type>
 			<BarbUpgradeType>UNIT_BARBARIAN_FRIGATE</BarbUpgradeType>
-			<PrereqTech>TECH_CARVEL_HULLS</PrereqTech>
-			<ObsoleteTech>TECH_ARCHAEOLOGY</ObsoleteTech>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<ObsoleteTech>TECH_NAVIGATION</ObsoleteTech>
 			<Combat>15</Combat>
 			<RangedCombat>20</RangedCombat>
 			<Cost>60</Cost>
@@ -359,7 +320,36 @@
 			<PortraitIndex>8</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 		</Row>
-		<!--
+		<Row>
+			<Class>UNITCLASS_MUSKETMAN</Class>
+			<Type>UNIT_BARBARIAN_MUSKETMAN</Type>
+			<BarbUpgradeType>UNIT_BARBARIAN_</BarbUpgradeType>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
+			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
+			<Combat>23</Combat>
+			<Cost>220</Cost>
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_GUN</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_BARBARIAN_MUSKETMAN</Description>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MUSKETMAN_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MUSKETMAN_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_MUSKETMAN</Help>
+			<ShowInPedia>false</ShowInPedia>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>25</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<Conscription>4</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_MUSKETMAN</UnitArtInfo>
+			<UnitFlagIconOffset>37</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+			<PortraitIndex>38</PortraitIndex>
+		</Row>
 		<Row>
 			<Class>UNITCLASS_RIFLEMAN</Class>
 			<Type>UNIT_BARBARIAN_RIFLEMAN</Type>

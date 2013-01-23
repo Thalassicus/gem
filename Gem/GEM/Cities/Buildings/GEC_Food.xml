@@ -2,30 +2,36 @@
 <GameData>
 	<Buildings>
 		<Update>
+			<Where BuildingClass="BUILDINGCLASS_HOSPITAL" />
+			<Set Happiness="1" />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_MEDICAL_LAB" />
+			<Set Happiness="1" />
+		</Update>
+		<Update>
 			<Where BuildingClass="BUILDINGCLASS_AQUEDUCT" />
-			<Set Cost="120" />
-			<!-- TECH_ENGINEERING -->
+			<Set FoodKept="50" />
 		</Update>
 		<Update>
-			<Where Type="BUILDING_GRANARY" />
-			<Set GoldMaintenance="2" />
-			<!-- 1 -->
-		</Update>
-		<Update>
-			<Where Type="BUILDING_FLOATING_GARDENS" />
-			<Set Cost="160" GoldMaintenance="0" />
-		</Update>
-		<Update>
-			<Where Type="BUILDING_HOSPITAL" />
-			<Set Cost="480" />
-			<!-- 360 -->
-		</Update>
-		<Update>
-			<Where Type="BUILDING_MEDICAL_LAB" />
-			<Set Cost="650" />
-			<!-- 500 -->
+			<Where BuildingClass="BUILDINGCLASS_MEDICAL_LAB" />
+			<Set FoodKept="0" />
 		</Update>
 	</Buildings>
+	<Building_YieldSurplusModifiers>
+		<Row>
+			<BuildingType>BUILDING_MEDICAL_LAB</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>100</Yield>
+		</Row>
+	</Building_YieldSurplusModifiers>
+	<Building_InstantYield>
+		<Row>
+			<BuildingType>BUILDING_MEDICAL_LAB</BuildingType>
+			<YieldType>YIELD_POPULATION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_InstantYield>
 	<Building_YieldChanges>
 		<Row>
 			<BuildingType>BUILDING_GARDEN</BuildingType>
@@ -34,7 +40,7 @@
 		</Row>
 		<Update>
 			<Where BuildingType="BUILDING_HOSPITAL" YieldType="YIELD_FOOD" />
-			<Set Yield="6" />
+			<Set Yield="10" />
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_WATERMILL" YieldType="YIELD_FOOD" />

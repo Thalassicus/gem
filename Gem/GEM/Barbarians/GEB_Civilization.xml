@@ -31,6 +31,12 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+			<UnitType>UNIT_BARBARIAN_CROSSBOWMAN</UnitType>
+		</Row>
+		<!--
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
 			<UnitClassType>UNITCLASS_GALLEASS</UnitClassType>
 			<UnitType>UNIT_BARBARIAN_GALLEASS</UnitType>
 		</Row>
@@ -41,15 +47,9 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
-			<UnitType>UNIT_BARBARIAN_CROSSBOWMAN</UnitType>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
 			<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
 			<UnitType>UNIT_BARBARIAN_MUSKETMAN</UnitType>
 		</Row>
-		<!--
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
 			<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>

@@ -9,155 +9,281 @@ include("FLuaVector");
 local log = Events.LuaLogger:New();
 log:SetLevel("INFO");
 
+if not Civup then
+	print("Civup table does not exist!")
+	return
+end
+
+PlayerClass	= getmetatable(Players[0]).__index
+
 --
 -- Spend AI gold more intelligently
 --
 
-function SpendExcessAIGold(player)
-	local speedMod = GameInfo.GameSpeeds[Game.GetGameSpeedType()].VictoryDelayPercent / 100
+--[[
+
+The AI faces two questions:	
+	1)  Will I spend gold?
+		Yes, if I have more goldStored than the goldHigh, and my profit-per-turn is positive.
+	2)  How much gold will I spend?
+		The budget is (goldStored - goldMin), stopping when under goldLow
+	
+An AI with +20g per turn, 400g stored and a 500g threshold decides:		
+	1)  I will not spend gold.
+	
+An AI with -10g per turn, 800g stored and a 500g threshold decides:		
+	1)  I will not spend gold.
+	
+An AI with +20g per turn, 800g stored and a 500g threshold decides:		
+	1)  I will spend gold.
+	2)  My budget is 700 gold (800-100).
+	3)  I will continue purchasing things until I spend 700 gold,
+		without going below the minimum of 100 gold,
+		and without going below 0g per turn profit.
+
+--]]
+
+local warUnitFlavors = {
+	{FlavorType="FLAVOR_SOLDIER",			mult=1, promo=GameInfo.UnitPromotions.PROMOTION_DRILL_1.ID}			,
+	{FlavorType="FLAVOR_MOUNTED",			mult=1, promo=GameInfo.UnitPromotions.PROMOTION_SHOCK_1.ID}			,
+	{FlavorType="FLAVOR_SIEGE",				mult=1, promo=GameInfo.UnitPromotions.PROMOTION_SIEGE.ID}			,
+	{FlavorType="FLAVOR_RANGED",			mult=2, promo=GameInfo.UnitPromotions.PROMOTION_TRENCHES_1.ID}		,
+	{FlavorType="FLAVOR_NAVAL_BOMBARDMENT",	mult=1, promo=GameInfo.UnitPromotions.PROMOTION_BOMBARDMENT_1.ID}	,
+	{FlavorType="FLAVOR_VANGUARD",			mult=3, promo=GameInfo.UnitPromotions.PROMOTION_TRENCHES_1.ID}		,
+	{FlavorType="FLAVOR_ANTI_MOBILE",		mult=1, promo=GameInfo.UnitPromotions.PROMOTION_SHOCK_1.ID}
+}
+
+function SpendAIGold(player)		
 	if (player:IsHuman()
-		or (Game.GetGameTurn() < 10 * speedMod)
-		or not player:GetCapitalCity() 
-		) then
+			or not player:GetCapitalCity() 
+			or player:IsBudgetGone(0)
+			--or (Game.GetAdjustedTurn() < 10)
+			) then
 		return
 	end
-
+	
 	if player:IsMinorCiv() then
 		return UpgradeSomeUnit(player, player:GetYieldStored(YieldTypes.YIELD_GOLD))
 	end
 
-	local capital = player:GetCapitalCity()
-	if not capital then
+	local capital			= player:GetCapitalCity()	
+	local playerID			= player:GetID()
+	local eraID				= Game.GetAverageHumanEra()
+	local isWarHuman		= player:IsAtWarWithHuman()
+	local isWarAny			= player:IsAtWarWithAny()
+	local activePlayer		= Players[Game.GetActivePlayer()]
+	local costRA			= GameInfo.Eras[eraID].ResearchAgreementCost * GameInfo.GameSpeeds[Game.GetGameSpeedType()].GoldPercent / 100
+	local goldStored		= player:GetYieldStored(YieldTypes.YIELD_GOLD)
+	local goldHigh			= Game.Round(costRA * Civup.AI_PURCHASE_BUDGET_HIGH)
+	local goldLow			= Game.Round(costRA * Civup.AI_PURCHASE_BUDGET_LOW)
+	local goldMin			= Game.Round(costRA * Civup.AI_PURCHASE_BUDGET_MINIMUM)
+	local cities			= {}
+	local citiesReverse		= {}
+	local ports				= {}
+	local portsReverse		= {}
+	local numMilitaryLand	= 0
+	local numMilitaryTotal	= 0
+	local numHealers		= 0
+	local numWorkers		= 0
+	local totalUnitFlavor	= {}
+	local medicID			= GameInfo.UnitPromotions.PROMOTION_MEDIC.ID
+	
+	if goldStored < goldHigh then
 		return
 	end
 	
-	local playerID		= player:GetID()
-	local eraID			= Game.GetAverageHumanEra()
-	local isWarHuman	= player:IsAtWarWithHuman()
-	local isWarAny		= player:IsAtWarWithAny()
-	local activePlayer	= Players[Game.GetActivePlayer()]
-	local goldStored	= player:GetYieldStored(YieldTypes.YIELD_GOLD)
-	local cities		= {}
-	local citiesReverse	= {}
-	local numMilitary	= 0
-	local numWorkers	= 0
-	local numScouts		= 0
-	local targetGold	= 0
-	local MIN_GOLD		= 100
-	local scoutID		= player:GetUniqueUnitID("UNITCLASS_SCOUT")
-
-	if goldStored < MIN_GOLD or player:GetYieldRate(YieldTypes.YIELD_GOLD) < 0 then
-		return
-	end
-	
-	if not isWarHuman then
-		targetGold = 1.5 * GameInfo.Eras[eraID].ResearchAgreementCost * GameInfo.GameSpeeds[Game.GetGameSpeedType()].GoldPercent / 100
-	end
-	
+	--[[
 	if not player:IsMinorCiv() then
-		--log:Info("%-15s %20s %3s/%-4s budgeted", "AIPurchase", player:GetName(), goldStored-targetGold, player:GetYieldStored(YieldTypes.YIELD_GOLD))
+		log:Info("%-15s %20s %3s/%-4s budgeted (%s threshold, %s minimum)",
+		"AIPurchase",
+		player:GetName(),
+		goldStored-goldMin,
+		goldStored,
+		goldHigh,
+		goldMin
+		)
+	end
+	--]]
+	
+	--
+	-- Create lists
+	--
+	
+	for city in player:Cities() do
+		if not city:IsResistance() and not city:IsRazing() and not city:IsCapital() then
+			table.insert(cities, {id=City_GetID(city), pop=city:GetPopulation()})
+			if city:IsCoastal() then
+				table.insert(ports, {id=City_GetID(city), pop=city:GetPopulation()})				
+			end
+		end
+	end
+	table.sort(cities, function(a, b) return a.pop < b.pop end)
+	table.sort(ports, function(a, b) return a.pop < b.pop end)
+	citiesReverse = Game.Reverse(cities)
+	portsReverse = Game.Reverse(ports)
+	
+	-- capital gets first priority
+	table.insert(cities, 			1, {id=City_GetID(capital), pop=capital:GetPopulation()})
+	table.insert(citiesReverse, 	1, {id=City_GetID(capital), pop=capital:GetPopulation()})
+	if capital:IsCoastal() then
+		table.insert(ports, 		1, {id=City_GetID(capital), pop=capital:GetPopulation()})
+		table.insert(portsReverse,	1, {id=City_GetID(capital), pop=capital:GetPopulation()})
+	end
+	
+	for flavorInfo in GameInfo.Flavors() do
+		totalUnitFlavor[flavorInfo.Type] = 0
+	end
+	
+	for unit in player:Units() do
+		if Unit_IsWorker(unit) then
+			numWorkers = numWorkers + 1
+		elseif Unit_IsCombatDomain(unit, "DOMAIN_LAND") then
+			if unit:IsHasPromotion(medicID) then
+				numHealers = numHealers + 1
+			else
+				numMilitaryLand = numMilitaryLand + 1
+			end
+		end
+		if unit:IsCombatUnit() then
+			numMilitaryTotal = numMilitaryTotal + 1
+		end
+		
+		for info in GameInfo.Unit_Flavors{UnitType = GameInfo.Units[unit:GetUnitType()].Type} do
+			totalUnitFlavor[info.FlavorType] = totalUnitFlavor[info.FlavorType] + info.Flavor / 8
+		end
+	end
+	for k, v in pairs(totalUnitFlavor) do
+		totalUnitFlavor[k] = Game.Round(totalUnitFlavor[k])
 	end
 
 	--
-	-- High priorities
+	-- Critical priorities
 	--
 	
-	-- Diplomatic victory
-	if MapModData.VEM.DiploVictoryUnlocked then
-		PurchaseAllInfluence(player, targetGold)
-		goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-		if goldStored < MIN_GOLD then return end
+	-- Negative income
+	if player:GetYieldRate(YieldTypes.YIELD_GOLD) < 0 then
+		local attempt = 0
+		while PurchaseBuildingOfFlavor(player, cities, 0, "FLAVOR_GOLD") and attempt <= Civup.AI_PURCHASE_FLAVOR_MAX_ATTEMPTS do
+			attempt = attempt + 1
+		end
+		if player:IsBudgetGone(0) then return end
+	end
+	
+	-- Severe negative happiness
+	if player:GetYieldRate(YieldTypes.YIELD_HAPPINESS) <= -10 then
+		local attempt = 0
+		while PurchaseBuildingOfFlavor(player, cities, 0, "FLAVOR_HAPPINESS") and attempt <= Civup.AI_PURCHASE_FLAVOR_MAX_ATTEMPTS do
+			attempt = attempt + 1
+		end
+		if player:IsBudgetGone(0) then return end
+	end
+	
+	-- Found religion
+	if player:IsReligiousLeader() and player:CanFoundFaith() then
+		PurchaseBuildingOfFlavor(player, cities, 0, "FLAVOR_RELIGION")
+		if player:IsBudgetGone(0) then return end
+	end
+
+	-- First workers
+	PurchaseUnitsOfFlavor(player, cities, 0, "FLAVOR_TILE_IMPROVEMENT", 2 - numWorkers)
+	if player:IsBudgetGone(0) then return end
+	
+	-- Settle cities
+	if #cities < 3 then
+		PurchaseUnitsOfFlavor(player, cities, 0, "FLAVOR_EXPANSION", 3 - (#cities + totalUnitFlavor.FLAVOR_EXPANSION))
+		if player:IsBudgetGone(0) or Game.GetAdjustedTurn() < 100 then
+			-- save gold for settlers
+			return
+		end
+	end
+	
+	--
+	-- Moderate priorities
+	--
+
+	if player:IsBudgetGone(goldLow) then return end
+	
+	-- City Defense
+	local numBuy = 0
+	if isWarAny or player:IsMilitaristicLeader() then
+		numBuy = math.min(isWarHuman and 5 or 1, #cities - numMilitaryLand)
+		PurchaseUnitsOfFlavor(player, cities, goldMin, "FLAVOR_CITY_DEFENSE", numBuy)
+		if player:IsBudgetGone(goldLow) then return end
+		
+		PurchaseUnitsOfFlavor(player, ports, goldMin,
+			"FLAVOR_NAVAL",
+			1 + #ports - totalUnitFlavor.FLAVOR_NAVAL,
+			{GameInfo.UnitPromotions.PROMOTION_TARGETING_1.ID}
+		)
+		if player:IsBudgetGone(goldLow) then return end
+	end
+	
+	-- Negative happiness
+	if player:GetYieldRate(YieldTypes.YIELD_HAPPINESS) < 0 then
+		local attempt = 0
+		while PurchaseBuildingOfFlavor(player, cities, goldMin, "FLAVOR_HAPPINESS") and attempt <= Civup.AI_PURCHASE_FLAVOR_MAX_ATTEMPTS do
+			attempt = attempt + 1
+		end
+		if player:IsBudgetGone(goldLow) then return end
 	end
 	
 	-- Upgrades
 	local upgradesPerformed = 0
 	if player:IsMilitaristicLeader() or isWarHuman then
-		while UpgradeSomeUnit(player, goldStored-targetGold) and upgradesPerformed < 10 do
+		while UpgradeSomeUnit(player, goldMin) and upgradesPerformed < 10 do
 			upgradesPerformed = upgradesPerformed + 1
-			goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-			if goldStored < MIN_GOLD then return end
+			if player:IsBudgetGone(goldLow) then return end
 		end
 	end
 	
-	-- Create lists
-	for city in player:Cities() do
-		if not city:IsResistance() and not city:IsRazing() and not city:IsCapital() then
-			table.insert(cities, {id=City_GetID(city), pop=city:GetPopulation()})
-		end
-	end
-	table.sort(cities, function(a, b) return a.pop < b.pop end)
-	citiesReverse = Game.Reverse(cities)
-	-- capital gets first priority
-	table.insert(cities, 1, {id=City_GetID(capital), pop=capital:GetPopulation()})
-	table.insert(citiesReverse, 1, {id=City_GetID(capital), pop=capital:GetPopulation()})
-	
-	for unit in player:Units() do
-		if Unit_IsWorker(unit) then
-			numWorkers = numWorkers + 1
-		elseif unit:GetUnitType() == scoutID then
-			numScouts = numScouts + 1
-		elseif Unit_IsCombatDomain(unit, "DOMAIN_LAND") then
-			numMilitary = numMilitary + 1
-		end
-	end
-	
-	-- City garrisons
-	local unitsToBuy = 0
-	if isWarAny or player:IsMilitaristicLeader() then
-		unitsToBuy = player:GetNumCities() - numMilitary
-		if not isWarHuman then
-			unitsToBuy = math.min(1, unitsToBuy)
-		end
-	end
-	while unitsToBuy > 0 do
-		unitsToBuy = unitsToBuy - 1
-		if not PurchaseUnitOfFlavor(player, cities, goldStored, "FLAVOR_DEFENSE") then break end
-		goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-		if goldStored < MIN_GOLD then return end
-	end
-	
-	-- Found pantheon or religion
-	if player:IsReligiousLeader() and player:CanFoundFaith() then
-		PurchaseBuildingOfFlavor(player, cities, goldStored, "FLAVOR_RELIGION")
-		goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-		if goldStored < MIN_GOLD then return end
+	-- Diplomatic victory
+	if MapModData.Civup.DiploVictoryUnlocked then
+		PurchaseAllInfluence(player, goldMin)
+		if player:IsBudgetGone(goldLow) then return end
 	end
 
 	-- Workers
-	unitsToBuy = 1 + player:GetNumCities() - numWorkers
-	while unitsToBuy > 0 do
-		unitsToBuy = unitsToBuy - 1
-		if not PurchaseUnitOfFlavor(player, cities, goldStored, "FLAVOR_TILE_IMPROVEMENT") then break end
-		goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-		if goldStored < MIN_GOLD then return end
-	end
-
-	-- Scouts
-	--if not player:HasTech(GameInfo.Units[player:GetUniqueUnitID("UNITCLASS_LEVY")].PrereqTech) then
-		unitsToBuy = 2 - numScouts
-		while unitsToBuy > 0 do
-			unitsToBuy = unitsToBuy - 1		
-			
-			local cost = City_GetPurchaseCost(capital, YieldTypes.YIELD_GOLD, GameInfo.Units, scoutID)
-			if goldStored < cost then return end
-			
-			player:InitUnitType(scoutID, capital:Plot(), City_GetUnitExperience(capital, scoutID))				
-			log:Info("%-15s %20s %3s/%-4s spent for %s", "AIPurchase", player:GetName(), cost, player:GetYieldStored(YieldTypes.YIELD_GOLD), GameInfo.Units[scoutID].Type)
-			player:ChangeYieldStored(YieldTypes.YIELD_GOLD, -1 * cost)
-
-			goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-			if goldStored < MIN_GOLD then return end
+	PurchaseUnitsOfFlavor(player, cities, goldMin, "FLAVOR_TILE_IMPROVEMENT",	1 + #cities - numWorkers)
+	if player:IsBudgetGone(goldLow) then return end
+	
+	-- Research
+	PurchaseBuildingOfFlavor(player, cities, goldMin, "FLAVOR_SCIENCE")
+	if player:IsBudgetGone(goldLow) then return end
+	
+	-- Healers
+	PurchaseUnitsOfFlavor(player, cities, goldMin,
+		"FLAVOR_HEALING",
+		1 + numMilitaryLand/4 - numHealers,
+		{GameInfo.UnitPromotions.PROMOTION_GUERRILLA_1.ID, medicID}
+	)
+	if player:IsBudgetGone(goldLow) then return end
+	
+	-- War
+	if isWarAny then
+		local numBuy = 1
+		local maxMilitary = 1 + #cities
+		if player:IsMilitaristicLeader() or isWarHuman then
+			numBuy = 2 * numBuy
+			maxMilitary = Game.Round(2 * maxMilitary)
 		end
-	--end
+		for _, info in ipairs(warUnitFlavors) do
+			if numMilitaryTotal >= maxMilitary then break end
+			numMilitaryTotal = numMilitaryTotal + PurchaseUnitsOfFlavor(player, cities, goldMin, info.FlavorType, info.Mult * numBuy - (totalUnitFlavor[flavorType] or 0), {info.Promo})
+			if player:IsBudgetGone(goldLow) then return end
+		end
+	end
 	
-	goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-	--log:Debug("goldStored=%s targetGold=%s minimum=%s", goldStored, targetGold, Civup.AI_PURCHASE_BUDGET_MINIMUM)
-	if (goldStored-targetGold) < Civup.AI_PURCHASE_BUDGET_MINIMUM then return end
+	-- Scouts
+	PurchaseUnitsOfFlavor(player, cities, goldMin, "FLAVOR_RECON", 3 - totalUnitFlavor.FLAVOR_RECON, {GameInfo.UnitPromotions.PROMOTION_SCOUTING_1.ID, GameInfo.UnitPromotions.PROMOTION_SCOUTING_2.ID})
+	if player:IsBudgetGone(goldLow) then return end
+	
+	--log:Debug("goldStored=%s goldHigh=%s goldMin=%s", player:GetYieldStored(YieldTypes.YIELD_GOLD), goldHigh, goldMin)
+	if player:IsBudgetGone(goldLow) then return end
 	
 	
-	--
-	-- Leader priorities
-	--	
+	-- 
+	-- Low priorities
+	-- 
 	
 	local leaderInfo	= GameInfo.Leaders[player:GetLeaderType()]
 	local unitMod		= 0
@@ -168,8 +294,8 @@ function SpendExcessAIGold(player)
 		FLAVOR_DIPLOMACY			= GetCitystateMod(player),
 		FLAVOR_NAVAL				= player:HasTech("TECH_SAILING") and 1 or 0,
 		FLAVOR_AIR					= player:HasTech("TECH_FLIGHT") and 1 or 0,
-		FLAVOR_EXPANSION			= isWarAny and 0 or 5 / player:GetNumCities(),
-		FLAVOR_TILE_IMPROVEMENT		= 0, --numWorkers - player:GetNumCities() and 1 or 0,
+		FLAVOR_EXPANSION			= isWarAny and 0 or 5 / #cities,
+		FLAVOR_TILE_IMPROVEMENT		= 0, --numWorkers - #cities and 1 or 0,
 		FLAVOR_GROWTH				= 1.1 ^ (10 - citiesReverse[1].pop),
 		FLAVOR_HAPPINESS			= 1.1 ^ (10 - player:GetYieldRate(YieldTypes.YIELD_HAPPINESS)),
 		FLAVOR_RELIGION				= player:CanFoundFaith() and 2 or 0.5
@@ -177,7 +303,7 @@ function SpendExcessAIGold(player)
 
 	if isWarHuman then
 		unitMod = 2
-	elseif Game.GetGameTurn() > 25 * speedMod then
+	elseif Game.GetAdjustedTurn() > 25 then
 		unitMod = Game.GetValue("Flavor", {LeaderType=leaderInfo.Type, FlavorType="FLAVOR_MILITARY_TRAINING"}, GameInfo.Leader_Flavors) / 4
 	end
 	
@@ -185,13 +311,15 @@ function SpendExcessAIGold(player)
 		local flavorType = row.FlavorType
 		local flavorValue = row.Flavor
 		local priority = GameInfo.Flavors[flavorType].PurchasePriority * (flavorMod[flavorType] or 1)
-		if DoFlavorFunction[flavorType] == PurchaseUnitOfFlavor then
-			priority = priority * unitMod
-		end
-		if flavorValue > 0 and priority > 0 then
-			if doUnits or DoFlavorFunction[flavorType] ~= PurchaseUnitOfFlavor then
-				--log:Info("%-15s %20s %3s/%-4s %-20s priority=%-3s", "AIPurchase", player:GetName(), " ", string.gsub(flavorType, "FLAVOR_", ""), flavorValue)
-				flavorWeights[flavorType] = flavorValue * priority
+		if DoFlavorFunction[flavorType] then
+			if DoFlavorFunction[flavorType] == PurchaseOneUnitOfFlavor then
+				priority = priority * unitMod
+			end
+			if flavorValue > 0 and priority > 0 then
+				if doUnits or DoFlavorFunction[flavorType] ~= PurchaseOneUnitOfFlavor then
+					--log:Info("%-15s %20s %3s/%-4s %-20s priority=%-3s", "AIPurchase", player:GetName(), " ", string.gsub(flavorType, "FLAVOR_", ""), flavorValue)
+					flavorWeights[flavorType] = flavorValue * priority
+				end
 			end
 		end
 	end
@@ -208,14 +336,14 @@ function SpendExcessAIGold(player)
 		
 		local success = false
 		if flavorType == "FLAVOR_EXPANSION" then
-			success = DoFlavorFunction[flavorType](player, cities, goldStored, flavorType)
+			success = DoFlavorFunction[flavorType](player, cities, goldMin, flavorType)
 		elseif flavorType == "FLAVOR_GROWTH" or flavorType == "FLAVOR_PRODUCTION" then
-			success = DoFlavorFunction[flavorType](player, citiesReverse, goldStored-targetGold, flavorType)
+			success = DoFlavorFunction[flavorType](player, citiesReverse, goldMin, flavorType)
 		else
 			if not flavorType or not DoFlavorFunction[flavorType] then
 				log:Error("DoFlavorFunction[%s] == nil", flavorType)
 			else
-				success = DoFlavorFunction[flavorType](player, cities, goldStored-targetGold, flavorType)
+				success = DoFlavorFunction[flavorType](player, cities, goldMin, flavorType)
 			end
 		end
 		
@@ -225,20 +353,19 @@ function SpendExcessAIGold(player)
 			flavorWeights[flavorType] = 0.5 * flavorWeights[flavorType]
 		end
 		
-		goldStored = player:GetYieldStored(YieldTypes.YIELD_GOLD)
-		if (goldStored-targetGold) < Civup.AI_PURCHASE_BUDGET_MINIMUM then return end
+		if player:IsBudgetGone(goldLow) then return end
 	end
 
 	-- No affordable purchase
-	log:Info("%-15s %20s %3s/%-4s saved", "AIPurchase", player:GetName(), goldStored-targetGold, player:GetYieldStored(YieldTypes.YIELD_GOLD))
+	log:Info("%-15s %20s %3s of %-4s (+%s/turn) saved", "AIPurchase", player:GetName(), goldMin, player:GetYieldStored(YieldTypes.YIELD_GOLD), player:GetYieldRate(YieldTypes.YIELD_GOLD))
 end
-LuaEvents.ActivePlayerTurnEnd_Player.Add(SpendExcessAIGold)
+LuaEvents.ActivePlayerTurnEnd_Player.Add(SpendAIGold)
 
-function UpgradeSomeUnit(player, budget)
+function UpgradeSomeUnit(player, goldMin)
 	local playerID = player:GetID()
 	for unit in player:Units() do
 		local newID = unit:GetUpgradeUnitType()
-		if Unit_CanUpgrade(unit, newID, budget) then
+		if Unit_CanUpgrade(unit, newID, goldMin) then
 			if player:IsMinorCiv() then
 				log:Info("%-15s %20s %3s/%-4s spent upgrading %s (#%s)", "AIPurchase", player:GetName(), unit:UpgradePrice(newID), player:GetYieldStored(YieldTypes.YIELD_GOLD), unit:GetName(), unit:GetID())
 			else
@@ -276,34 +403,54 @@ function GetCitystateMod(player)
 	return (csWeight / csTotal)
 end
 
-function PurchaseUnitOfFlavor(player, cities, budget, flavorType)
+
+function PurchaseUnitsOfFlavor(player, cities, goldMin, flavorType, quantity, promotions)
+	local unitsBought = 0
+	while quantity > 0 do
+		quantity = quantity - 1
+		local unit = PurchaseOneUnitOfFlavor(player, cities, goldMin, flavorType)
+		if unit then
+			unitsBought = unitsBought + 1
+			for _, promoID in pairs(promotions or {}) do
+				unit:SetHasPromotion(promoID, true)
+				unit:ChangeLevel(1)				
+			end
+			if player:IsBudgetGone(goldMin) then break end
+		else
+			break
+		end
+	end
+	return unitsBought
+end
+
+function PurchaseOneUnitOfFlavor(player, cities, goldMin, flavorType)
 	for _,cityInfo in ipairs(cities) do
 		local city = Map_GetCity(cityInfo.id)
-		local itemID = Game.GetRandomWeighted(City_GetUnitsOfFlavor(city, flavorType, budget))
+		local itemID = Game.GetRandomWeighted(City_GetUnitsOfFlavor(city, flavorType, goldMin))
 		if itemID ~= -1 then
 			local cost = City_GetPurchaseCost(city, YieldTypes.YIELD_GOLD, GameInfo.Units, itemID)
-			player:InitUnitType(itemID, city:Plot(), City_GetUnitExperience(city, itemID))				
-			log:Info("%-15s %20s %3s/%-4s spent for %s", "AIPurchase", player:GetName(), cost, player:GetYieldStored(YieldTypes.YIELD_GOLD), GameInfo.Units[itemID].Type)
+			local unit = player:InitUnitType(itemID, city:Plot(), City_GetUnitExperience(city, itemID))				
+			log:Info("%-15s %20s %3s/%-4s spent for %20s %s", "AIPurchase", player:GetName(), cost, player:GetYieldStored(YieldTypes.YIELD_GOLD), flavorType, GameInfo.Units[itemID].Type)
 			player:ChangeYieldStored(YieldTypes.YIELD_GOLD, -1 * cost)
-			return true
+			return unit
 		end
 	end
 	log:Info("%-15s %20s %3s %-4s no affordable unit of %s", "AIPurchase", player:GetName(), " ", " ", flavorType)
 	return false
 end
 
-function PurchaseBuildingOfFlavor(player, cities, budget, flavorType)
+function PurchaseBuildingOfFlavor(player, cities, goldMin, flavorType)
 	if not flavorType then
 		log:Error("PurchaseBuildingOfFlavor: flavorType=nil!")
 		return
 	end
 	for _,cityInfo in ipairs(cities) do
 		local city = Map_GetCity(cityInfo.id)
-		local itemID = Game.GetRandomWeighted(City_GetBuildingsOfFlavor(city, flavorType, budget))
+		local itemID = Game.GetRandomWeighted(City_GetBuildingsOfFlavor(city, flavorType, goldMin))
 		if itemID ~= -1 then
 			local cost = City_GetPurchaseCost(city, YieldTypes.YIELD_GOLD, GameInfo.Buildings, itemID)
 			city:SetNumRealBuilding(itemID, 1)	
-			log:Info("%-15s %20s %3s/%-4s spent for %s", "AIPurchase", player:GetName(), cost, player:GetYieldStored(YieldTypes.YIELD_GOLD), GameInfo.Buildings[itemID].Type)
+			log:Info("%-15s %20s %3s/%-4s spent for %20s %s", "AIPurchase", player:GetName(), cost, player:GetYieldStored(YieldTypes.YIELD_GOLD), flavorType, GameInfo.Buildings[itemID].Type)
 			player:ChangeYieldStored(YieldTypes.YIELD_GOLD, -1 * cost)
 			return true
 		end
@@ -312,14 +459,14 @@ function PurchaseBuildingOfFlavor(player, cities, budget, flavorType)
 	return false
 end
 
-function PurchaseInfluence(player, cities, budget, flavorType)
+function PurchaseInfluence(player, cities, goldMin, flavorType)
 	local playerID		= player:GetID()
 	local playerTeam	= Teams[player:GetTeam()]
 	local leaderInfo	= GameInfo.Leaders[player:GetLeaderType()]
-	local budget		= math.min(Game.Round(budget, -1), 500)
 	local capitalPlot	= player:GetCapitalCity():Plot()
 	local chosenMinor	= nil
 	local chosenWeight	= -1
+	local budget		= math.min(Game.Round(player:GetYieldStored(YieldTypes.YIELD_GOLD) - goldMin, -1), 500)
 
 	for minorCivID, minorCiv in pairs(Players) do
 		if minorCiv:IsAliveCiv() and minorCiv:IsMinorCiv() and player:IsAtPeace(minorCiv) then
@@ -384,11 +531,11 @@ function PurchaseInfluence(player, cities, budget, flavorType)
 	return false
 end
 
-function PurchaseAllInfluence(player, targetGold)
-	targetGold = targetGold or 100
+function PurchaseAllInfluence(player, goldMin)
+	goldMin = goldMin or 100
 	local attempts = 0
 	local playerID = player:GetID()
-	while (player:GetYieldStored(YieldTypes.YIELD_GOLD) - targetGold) > Civup.AI_PURCHASE_BUDGET_MINIMUM and attempts < 10 do
+	while player:GetYieldStored(YieldTypes.YIELD_GOLD) > goldMin and attempts < 10 do
 		local chosenMinor	= nil
 		local chosenWeight	= -1
 		local budget		= math.min(500, player:GetYieldStored(YieldTypes.YIELD_GOLD))
@@ -424,7 +571,7 @@ function PurchaseAllInfluence(player, targetGold)
 end
 
 function CheckDiploVictoryUnlocked()	
-	if MapModData.VEM.DiploVictoryUnlocked or not PreGame.IsVictory(GameInfo.Victories.VICTORY_DIPLOMATIC.ID) then
+	if MapModData.Civup.DiploVictoryUnlocked or not PreGame.IsVictory(GameInfo.Victories.VICTORY_DIPLOMATIC.ID) then
 		return
 	end
 	for buildingInfo in GameInfo.Buildings("VictoryPrereq = 'VICTORY_DIPLOMATIC'") do
@@ -432,7 +579,7 @@ function CheckDiploVictoryUnlocked()
 		for playerID, player in pairs(Players) do
 			if player:IsAliveCiv() and not player:IsMinorCiv() and player:HasTech(tech) then
 				log:Info("DiploVictoryUnlocked")
-				MapModData.VEM.DiploVictoryUnlocked = true
+				MapModData.Civup.DiploVictoryUnlocked = true
 				return
 			end
 		end
@@ -442,15 +589,27 @@ LuaEvents.ActivePlayerTurnStart_Turn.Add(CheckDiploVictoryUnlocked)
 
 DoFlavorFunction = {
 	FLAVOR_DIPLOMACY			= PurchaseInfluence,
-	FLAVOR_OFFENSE				= PurchaseUnitOfFlavor,
-	FLAVOR_DEFENSE				= PurchaseUnitOfFlavor,
-	FLAVOR_RECON				= PurchaseUnitOfFlavor,
-	FLAVOR_RANGED				= PurchaseUnitOfFlavor,
-	FLAVOR_MOBILE				= PurchaseUnitOfFlavor,
-	FLAVOR_NAVAL				= PurchaseUnitOfFlavor,
-	FLAVOR_AIR					= PurchaseUnitOfFlavor,
-	FLAVOR_EXPANSION			= PurchaseUnitOfFlavor,
-	FLAVOR_TILE_IMPROVEMENT		= PurchaseUnitOfFlavor,
+	FLAVOR_OFFENSE				= PurchaseOneUnitOfFlavor,
+	FLAVOR_DEFENSE				= PurchaseOneUnitOfFlavor,
+	FLAVOR_SOLDIER				= PurchaseOneUnitOfFlavor,
+	FLAVOR_MOBILE				= PurchaseOneUnitOfFlavor,
+	FLAVOR_ANTI_MOBILE			= PurchaseOneUnitOfFlavor,
+	FLAVOR_RECON				= PurchaseOneUnitOfFlavor,
+	FLAVOR_HEALING				= PurchaseOneUnitOfFlavor,
+	FLAVOR_VANGUARD				= PurchaseOneUnitOfFlavor,
+	FLAVOR_RANGED				= PurchaseOneUnitOfFlavor,
+	FLAVOR_SIEGE				= PurchaseOneUnitOfFlavor,
+	FLAVOR_NAVAL				= PurchaseOneUnitOfFlavor,
+	FLAVOR_NAVAL_BOMBARDMENT	= PurchaseOneUnitOfFlavor,
+	FLAVOR_NAVAL_RECON			= PurchaseOneUnitOfFlavor,
+	FLAVOR_NAVAL_TILE_IMPROVEMENT	= PurchaseOneUnitOfFlavor,
+	FLAVOR_AIR					= PurchaseOneUnitOfFlavor,
+	FLAVOR_ANTIAIR				= PurchaseOneUnitOfFlavor,
+	FLAVOR_NUKE					= PurchaseOneUnitOfFlavor,
+	FLAVOR_TILE_IMPROVEMENT		= PurchaseOneUnitOfFlavor,
+	FLAVOR_EXPANSION			= PurchaseBuildingOfFlavor,
+	FLAVOR_NAVAL_GROWTH			= PurchaseBuildingOfFlavor,
+	FLAVOR_WATER_CONNECTION		= PurchaseBuildingOfFlavor,
 	FLAVOR_GREAT_PEOPLE			= PurchaseBuildingOfFlavor,
 	FLAVOR_CITY_DEFENSE			= PurchaseBuildingOfFlavor,
 	FLAVOR_MILITARY_TRAINING	= PurchaseBuildingOfFlavor,
@@ -461,14 +620,16 @@ DoFlavorFunction = {
 	FLAVOR_CULTURE				= PurchaseBuildingOfFlavor,
 	FLAVOR_HAPPINESS			= PurchaseBuildingOfFlavor,
 	FLAVOR_GREAT_PEOPLE			= PurchaseBuildingOfFlavor,
+	FLAVOR_INFRASTRUCTURE		= PurchaseBuildingOfFlavor,
+	FLAVOR_WONDER				= PurchaseBuildingOfFlavor,
+	FLAVOR_SPACESHIP			= PurchaseBuildingOfFlavor,
+	FLAVOR_ESPIONAGE			= PurchaseBuildingOfFlavor,
 	FLAVOR_RELIGION				= PurchaseBuildingOfFlavor
 }
 
 if Civup.USING_CSD == 1 then
-	DoFlavorFunction.FLAVOR_DIPLOMACY = PurchaseUnitOfFlavor
+	DoFlavorFunction.FLAVOR_DIPLOMACY = PurchaseOneUnitOfFlavor
 end
-
-
 
 
 
@@ -515,7 +676,7 @@ function PlayerStartBonuses(player)
 		end
 	end	
 	if not startPlot then
-		log:Warn("PlayerStartBonuses: %s has no capital or settler!", player:GetName())
+		log:Error("PlayerStartBonuses: %s has no capital or settler!", player:GetName())
 		return
 	end
 	
@@ -532,6 +693,12 @@ function PlayerStartBonuses(player)
 	if trait.FreeShip and oceanPlot then
 		player:InitUnitClass(trait.FreeShip, oceanPlot)
 	end
+
+	-- FreeUnit does not work for Mayan Atlatlist
+	if trait.Type == "TRAIT_LONG_COUNT" and trait.FreeUnit == "UNITCLASS_ARCHER" and not trait.FreeUnitPrereqTech then
+		player:InitUnitClass(trait.FreeUnit, startPlot)
+	end
+
 	
 	--
 	-- AI Bonuses
@@ -613,7 +780,7 @@ function CitystateStartBonuses(player)
 		end
 	end	
 	if not startPlot then
-		log:Warn("CitystateStartBonuses: %s has no capital or settler!", player:GetName())
+		log:Error("CitystateStartBonuses: %s has no capital or settler!", player:GetName())
 		return
 	end
 	
@@ -632,10 +799,10 @@ function CitystateStartBonuses(player)
 		player:InitUnitClass("UNITCLASS_ARCHER", startPlot)
 		if isCoastal then
 			player:InitUnitClass("UNITCLASS_TRIREME", oceanPlot)
-			player:InitUnitClass("UNITCLASS_WARRIOR", startPlot)
+			player:InitUnitClass("UNITCLASS_SENTINEL", startPlot)
 		else
-			player:InitUnitClass("UNITCLASS_WARRIOR", startPlot)
-			player:InitUnitClass("UNITCLASS_WARRIOR", startPlot)
+			player:InitUnitClass("UNITCLASS_SENTINEL", startPlot)
+			player:InitUnitClass("UNITCLASS_SENTINEL", startPlot)
 		end
 	end
 	
@@ -643,7 +810,7 @@ function CitystateStartBonuses(player)
 		if isCoastal then
 			player:InitUnitClass("UNITCLASS_TRIREME", oceanPlot)
 		else
-			player:InitUnitClass("UNITCLASS_WARRIOR", startPlot)
+			player:InitUnitClass("UNITCLASS_SENTINEL", startPlot)
 		end
 	end
 	if handicapID >= 8 then -- deity
@@ -667,7 +834,7 @@ end
 Events.SequenceGameInitComplete.Add(CheckPlayerStartBonuses)
 
 function CheckCitystateStartBonuses(player)
-	if player:IsMinorCiv() and Game.GetGameTurn() == Game.GetAdjustedTurn(10) then
+	if player:IsMinorCiv() and Game.GetAdjustedTurn() == 10 then
 		log:Info("CheckCitystateStartBonuses %s", player:GetName())
 		CitystateStartBonuses(player)
 	end
@@ -772,7 +939,7 @@ function AIMilitaryHandicap(  playerID,
 	end
 	
 	local capital = player:GetCapitalCity()
-	if capital and Game.GetGameTurn() < 50 then
+	if capital and Game.GetAdjustedTurn() < 50 then
 		local plot = capital:Plot()
 		if plot:IsCoastalLand() and Plot_GetAreaWeights(plot, 1, 8).SEA >= 0.5 then
 			unit:SetHasPromotion(GameInfo.UnitPromotions.PROMOTION_EMBARKATION.ID, true)
@@ -780,9 +947,6 @@ function AIMilitaryHandicap(  playerID,
 	end
 end
 LuaEvents.NewUnit.Add( AIMilitaryHandicap )
-
-
-
 
 
 --
@@ -794,14 +958,14 @@ function WarHandicap(humanPlayerID, aiPlayerID, isAtWar)
 	local aiPlayer = Players[aiPlayerID]
 	if (not humanPlayer:IsHuman() 
 		or aiPlayer:IsHuman()
-		or (MapModData.VEM.EverAtWarWithHuman[aiPlayerID] ~= 1)
+		or (MapModData.Civup.EverAtWarWithHuman[aiPlayerID] ~= 1)
 		or aiPlayer:IsMilitaristicLeader()
 		) then
 		return
 	end
 	log:Warn("War State %s %s %s", humanPlayer:GetName(), aiPlayer:GetName(), isAtWar and "War" or "Peace")
-	MapModData.VEM.EverAtWarWithHuman[aiPlayerID] = 1
-	SaveValue(1, "MapModData.VEM.EverAtWarWithHuman[%s]", aiPlayerID)
+	MapModData.Civup.EverAtWarWithHuman[aiPlayerID] = 1
+	SaveValue(1, "MapModData.Civup.EverAtWarWithHuman[%s]", aiPlayerID)
 	
 	local freeXP = GameInfo.HandicapInfos[Game.GetAverageHumanHandicap()].AIFreeXP
 	local freeXPPerEra = GameInfo.HandicapInfos[Game.GetAverageHumanHandicap()].AIFreeXPPerEra
@@ -815,23 +979,18 @@ function WarHandicap(humanPlayerID, aiPlayerID, isAtWar)
 end
 Events.WarStateChanged.Add(WarHandicap)
 
-
-
-if not MapModData.VEM.EverAtWarWithHuman then
-	MapModData.VEM.EverAtWarWithHuman = {}
+if not MapModData.Civup.EverAtWarWithHuman then
+	MapModData.Civup.EverAtWarWithHuman = {}
 	startClockTime = os.clock()
 	if UI:IsLoadedGame() then
 		for playerID, player in pairs(Players) do
-			MapModData.VEM.EverAtWarWithHuman[playerID] = LoadValue("MapModData.VEM.EverAtWarWithHuman[%s]", playerID)
+			MapModData.Civup.EverAtWarWithHuman[playerID] = LoadValue("MapModData.Civup.EverAtWarWithHuman[%s]", playerID)
 		end
 	end
 	if UI:IsLoadedGame() then
 		log:Warn("%-10s seconds loading EverAtWarWithHuman", Game.Round(os.clock() - startClockTime, 8))
 	end
 end
-
-
-
 
 
 --

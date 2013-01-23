@@ -30,6 +30,12 @@
 			<Set MinLandPercent="30" />
 		</Update>
 	</Victories>
+	<UnitCombatInfosEx>
+		<Update>
+			<Where CombatClass="UNITCOMBAT_NAVALMELEE"/>
+			<Set DefaultUnitType="UNIT_LIBURNA" />
+		</Update>
+	</UnitCombatInfosEx>
 	<Defines>
 		<Update>
 			<Where Name="NAVAL_COMBAT_DEFENDER_STRENGTH_MULTIPLIER" />
@@ -257,7 +263,7 @@
 		</Update>
 		<Update>
 			<Where Name="UNIT_MAINTENANCE_GAME_EXPONENT_DIVISOR" />
-			<Set Value="7" />
+			<Set Value="30000" />
 			<!-- 7 -->
 		</Update>
 		<Update>

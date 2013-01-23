@@ -1,43 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<Building_YieldChanges>
-		<!--
-		<Row>
-			<BuildingType>BUILDING_PALACE</BuildingType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		-->
+	<BuildingClasses>
 		<Update>
-			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_PRODUCTION" />
-			<Set Yield="1" />
+			<Where Type="BUILDINGCLASS_POLICE_STATION" />
+			<Set MaxPlayerInstances="1" />
 		</Update>
-		<Update>
-			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_CULTURE" />
-			<Set Yield="2" />
-		</Update>
-		<Update>
-			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_GOLD" />
-			<Set Yield="0" />
-		</Update>
-		<Update>
-			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_SCIENCE" />
-			<Set Yield="0" />
-		</Update>
-	</Building_YieldChanges>
+	</BuildingClasses>
 	<Buildings>
 		<Update>
-			<Where BuildingClass="BUILDINGCLASS_MILITARY_BASE" />
-			<Set AirModifier="-25"
-				 NukeModifier="-50"
+			<Where BuildingClass="BUILDINGCLASS_CONSTABLE" />
+			<Set EspionageModifier="-50"
 				 />
 		</Update>
 		<Update>
-			<Where BuildingClass="BUILDINGCLASS_BOMB_SHELTER" />
-			<Set Cost="-1"
-				 PrereqTech="NULL"
+			<Where BuildingClass="BUILDINGCLASS_POLICE_STATION" />
+			<Set EspionageModifier="0"
+				 GlobalEspionageModifier="-25"
+				 HurryCostModifier="-1"
 				 />
 		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_INTELLIGENCE_AGENCY" />
+			<Set GlobalEspionageModifier="0"
+				 NumCityCostMod="0"
+				 />
+		</Update>
+		<Update>
+			<Where BuildingClass="BUILDINGCLASS_PALACE" />
+			<Set FreeBuildingThisCity="BUILDINGCLASS_CITY_HALL"
+				 Defense="400"
+				 ExtraCityHitPoints="100"
+				 UnmoddedHappiness="8"
+				 IconAtlas="EXPANSION_SCEN_BUILDING_ATLAS"
+				 PortraitIndex="1"
+				 />
+		</Update>
+		<!--
+		-->
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_WALLS" />
 			<Set ExtraCityHitPoints="100"
@@ -56,29 +55,59 @@
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_MILITARY_BASE" />
 			<Set ExtraCityHitPoints="250"
-				 />
-		</Update>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_PALACE" />
-			<Set Defense="400"
-				 ExtraCityHitPoints="100"
+				 AirModifier="-25"
+				 NukeModifier="-50"
 				 />
 		</Update>
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_GARDEN" />
-			<Set Cost="220"
-				 GoldMaintenance="1"
-				 GreatPeopleRateModifier="50"
+			<Set GreatPeopleRateModifier="50"
 				 FreshWater="false"
 				 />
 		</Update>
 	</Buildings>
-	<Building_Flavors>
-		<Update>
-			<Where BuildingType="BUILDING_ARSENAL" FlavorType="FLAVOR_CITY_DEFENSE" />
-			<Set Flavor="28" />
-		</Update>
-	</Building_Flavors>
+	<Building_YieldChanges>
+		<Delete BuildingType="BUILDING_PALACE"/>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		-->
+	</Building_YieldChanges>
+	<Building_ClassesNeededInCity>
+		<Delete BuildingType="BUILDING_POLICE_STATION" />
+		<Delete BuildingType="BUILDING_INTELLIGENCE_AGENCY" />
+	</Building_ClassesNeededInCity>
+	<Building_PrereqBuildingClasses>
+		<Delete BuildingType="BUILDING_INTELLIGENCE_AGENCY" />
+	</Building_PrereqBuildingClasses>
 	
 	<!--
 			Puppet State

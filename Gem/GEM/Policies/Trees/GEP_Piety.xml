@@ -3,7 +3,7 @@
 	<Policies>
 		<Update>
 			<Where Type="POLICY_PIETY" />
-			<Set ExtraHappiness="0" />
+			<Set ExtraHappiness="5" />
 		</Update>
 		<Update>
 			<Where Type="POLICY_PIETY_FINISHER" />
@@ -41,8 +41,8 @@
 			<PortraitIndex>2</PortraitIndex>
 			<IconAtlas>GEM_POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>GEM_POLICY_ATLAS_ACTIVE</IconAtlasAchieved>
-			<NumFreePolicies>0</NumFreePolicies>
-			<IncludesOneShotFreeUnits>true</IncludesOneShotFreeUnits>
+			<NumFreePolicies>1</NumFreePolicies>
+			<IncludesOneShotFreeUnits>false</IncludesOneShotFreeUnits>
 			<OneShot>true</OneShot>
 		</Row>
 		<Row>
@@ -101,11 +101,13 @@
 		</Row>
 	</Policies>
 	<Policy_FreeUnitClasses>
+		<!--
 		<Row>
 			<PolicyType>POLICY_INSPIRATION</PolicyType>
 			<UnitClassType>UNITCLASS_ARTIST</UnitClassType>
 			<Count>1</Count>
 		</Row>
+		-->
 	</Policy_FreeUnitClasses>
 	<Policy_CityYieldChanges>
 		<Row>

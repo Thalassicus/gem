@@ -33,6 +33,16 @@
 			<Set Value="300" />
 			<!-- 250 -->
 		</Update>
+		<Update>
+			<Where Name="GREAT_PERSON_THRESHOLD_BASE" />
+			<Set Value="150" />
+			<!-- 100 -->
+		</Update>
+		<Update>
+			<Where Name="GREAT_PERSON_THRESHOLD_INCREASE" />
+			<Set Value="150" />
+			<!-- 100 -->
+		</Update>
 	</Defines>
 	<Missions>
 		<Update>
@@ -59,6 +69,7 @@
 				 FreeBeakersExponent="2.2"
 				 FreeBeakersCooldownTurns="1"
 				 FreeBeakersVisibleDivisor="5"
+				 GoldenAgeTurns="4"
 				 />
 			<!--
 				 The formula used is
@@ -68,18 +79,18 @@
 		</Update>
 		<Update>
 			<Where Type="UNIT_ARTIST" />
-			<Set GoldenAgeTurns="8" BaseHurry="1" />
+			<Set GoldenAgeTurns="4" BaseHurry="1" />
 		</Update>
 		<Update>
 			<Where Type="UNIT_ENGINEER" />
-			<Set GoldenAgeTurns="8"
+			<Set GoldenAgeTurns="4"
 				 BaseHurry="200"
 				 HurryMultiplier="30"
 				 />
 		</Update>
 		<Update>
 			<Where Type="UNIT_MERCHANT" />
-			<Set GoldenAgeTurns="8"
+			<Set GoldenAgeTurns="4"
 				 BaseGold="300"
 				 NumGoldPerEra="300"
 				 />
@@ -87,27 +98,27 @@
 		</Update>
 		<Update>
 			<Where Type="UNIT_SCIENTIST" />
-			<Set GoldenAgeTurns="8" />
+			<Set GoldenAgeTurns="4" />
 		</Update>
 		<Update>
 			<Where Type="UNIT_PROPHET" />
-			<Set GoldenAgeTurns="8"
+			<Set GoldenAgeTurns="4"
 				 Capture="NULL"
 				 />
 		</Update>
 		<Update>
 			<Where Type="UNIT_GREAT_GENERAL" />
-			<Set GoldenAgeTurns="3" />
+			<Set GoldenAgeTurns="4" />
 		</Update>
 		<Update>
 			<Where Type="UNIT_GREAT_ADMIRAL" />
-			<Set GoldenAgeTurns="3" />
+			<Set GoldenAgeTurns="4" />
 		</Update>
 	</Units>
 	<SpecialistYields>
 		<Update>
 			<Where SpecialistType="SPECIALIST_ENGINEER" YieldType="YIELD_PRODUCTION" />
-			<Set Yield="3" />
+			<Set Yield="2" />
 		</Update>
 		<Update>
 			<Where SpecialistType="SPECIALIST_MERCHANT" YieldType="YIELD_GOLD" />
@@ -115,11 +126,11 @@
 		</Update>
 		<Update>
 			<Where SpecialistType="SPECIALIST_SCIENTIST" YieldType="YIELD_SCIENCE" />
-			<Set Yield="3" />
+			<Set Yield="2" />
 		</Update>
 		<Update>
 			<Where SpecialistType="SPECIALIST_ARTIST" YieldType="YIELD_CULTURE" />
-			<Set Yield="3" />
+			<Set Yield="2" />
 		</Update>
 	</SpecialistYields>
 </GameData>

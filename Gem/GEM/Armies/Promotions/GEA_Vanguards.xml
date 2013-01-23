@@ -3,21 +3,14 @@
 	<UnitPromotions>
 		<Update>
 			<Where Type="PROMOTION_MEDIC" />
-			<Set AdjacentTileHealChange="5"
-				 SameTileHealChange="5"
+			<Set AdjacentTileHealChange="10"
+				 SameTileHealChange="10"
+				 EnemyHealChange="0"
+				 NeutralHealChange="0"
 				 PromotionPrereqOr1="PROMOTION_SCOUTING_1"
 				 PromotionPrereqOr3="PROMOTION_TRENCHES_1"
 				 PromotionPrereqOr2="PROMOTION_GUERRILLA_1"
 				 PromotionPrereqOr4="NULL"
-				 PediaType="PEDIA_SCOUTING"
-				 />
-		</Update>
-		<Update>
-			<Where Type="PROMOTION_MEDIC" />
-			<Set AdjacentTileHealChange="5"
-				 SameTileHealChange="5"
-				 EnemyHealChange="0"
-				 NeutralHealChange="0"
 				 PediaType="PEDIA_SCOUTING"
 				 />
 		</Update>
@@ -44,8 +37,8 @@
 				 PromotionPrereqOr2="PROMOTION_TRENCHES_1"
 				 PromotionPrereqOr1="PROMOTION_GUERRILLA_1"
 				 FreePillageMoves="true"
-				 EnemyHealChange="10"
-				 NeutralHealChange="10"
+				 EnemyHealChange="20"
+				 NeutralHealChange="20"
 				 DefenseMod="0"
 				 PediaType="PEDIA_SCOUTING"
 				 />

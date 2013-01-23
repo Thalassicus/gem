@@ -13,11 +13,6 @@
 	</Civup>
 	<Defines>
 		<Update>
-			<Where Name="BARBARIAN_MAX_XP_VALUE" />
-			<Set Value="60" />
-			<!-- 30 -->
-		</Update>
-		<Update>
 			<Where Name="BARBARIAN_CAMP_FIRST_TURN_PERCENT_OF_TARGET_TO_ADD" />
 			<Set Value="10" />
 			<!-- 33 -->
@@ -53,11 +48,6 @@
 			<!-- 75 -->
 		</Update>
 		<Update>
-			<Where Name="GOLD_FROM_BARBARIAN_CONVERSION" />
-			<Set Value="100" />
-			<!-- 25 -->
-		</Update>
-		<Update>
 			<Where Name="BARBARIAN_CAMP_COASTAL_SPAWN_ROLL" />
 			<Set Value="25" />
 			<!-- 6 -->
@@ -66,6 +56,94 @@
 			<Where Name="BARBARIAN_NAVAL_UNIT_START_TURN_SPAWN" />
 			<Set Value="10" />
 			<!-- 30 -->
+		</Update>
+
+
+
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_DESTROY_HIGH_UNIT" />
+			<Set Value="17" />
+			<!-- 16 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_DESTROY_MEDIUM_UNIT" />
+			<Set Value="16" />
+			<!-- 15 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_DESTROY_LOW_UNIT" />
+			<Set Value="15" />
+			<!-- 14 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_TO_SAFETY" />
+			<Set Value="14" />
+			<!-- 12 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_CAPTURE_CITY" />
+			<Set Value="13" />
+			<!-- 9 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_PILLAGE" />
+			<Set Value="12" />
+			<!-- 8 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_ATTRIT_HIGH_UNIT" />
+			<Set Value="12" />
+			<!-- 10 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_ATTRIT_MEDIUM_UNIT" />
+			<Set Value="11" />
+			<!-- 7 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_CAMP_DEFENSE" />
+			<Set Value="11" />
+			<!-- 13 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_ATTRIT_LOW_UNIT" />
+			<Set Value="10" />
+			<!-- 6 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_ESCORT_CIVILIAN" />
+			<Set Value="10" />
+			<!-- 30 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_DAMAGE_CITY" />
+			<Set Value="9" />
+			<!-- 5 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_CIVILIAN_ATTACK" />
+			<Set Value="9" />
+			<!-- 13 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_DESPERATE_ATTACK" />
+			<Set Value="0" />
+			<!-- 0 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_BLOCKADE_RESOURCE" />
+			<Set Value="10" />
+			<!-- 10 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_PASSIVE_MOVE" />
+			<Set Value="-1" />
+			<!-- -1 -->
+		</Update>
+		<Update>
+			<Where Name="AI_TACTICAL_BARBARIAN_PRIORITY_AGGRESSIVE_MOVE" />
+			<Set Value="3" />
+			<!-- 3 -->
 		</Update>
 	</Defines>
 	<Improvements>
@@ -87,102 +165,4 @@
 			<!-- 400 -->
 		</Update>
 	</GameSpeeds>
-	<HandicapInfos>		
-		<Update>
-			<Where Type="HANDICAP_SETTLER" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>150</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>100</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-		<Update>
-			<Where Type="HANDICAP_CHIEFTAIN" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>50</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>90</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-		<Update>
-			<Where Type="HANDICAP_WARLORD" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>20</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>80</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-		<Update>
-			<Where Type="HANDICAP_PRINCE" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>70</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>12</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-		<Update>
-			<Where Type="HANDICAP_KING" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>60</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>6</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>15</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-		<Update>
-			<Where Type="HANDICAP_EMPEROR" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>50</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>7</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>18</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-		<Update>
-			<Where Type="HANDICAP_IMMORTAL" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>40</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>8</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>20</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-		<Update>
-			<Where Type="HANDICAP_DEITY" />
-			<Set>
-				<BarbCampGold>100</BarbCampGold>
-				<BarbSpawnMod>0</BarbSpawnMod>
-				<!--<BarbarianBonus>15</BarbarianBonus>-->
-				<AIBarbarianBonus>20</AIBarbarianBonus>
-				<EarliestBarbarianReleaseTurn>30</EarliestBarbarianReleaseTurn>
-				<BarbarianLandTargetRange>9</BarbarianLandTargetRange>
-				<BarbarianSeaTargetRange>22</BarbarianSeaTargetRange>
-			</Set>
-		</Update>
-	</HandicapInfos>
 </GameData>

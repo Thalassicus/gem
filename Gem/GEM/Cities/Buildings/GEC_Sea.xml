@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<BuildingClasses>
-		<Row>
-			<Type>BUILDINGCLASS_WAREHOUSE</Type>
-			<DefaultBuilding>BUILDING_WAREHOUSE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_WAREHOUSE</Description>
-		</Row>
-	</BuildingClasses>
 	<Buildings>
-		<Row>
-			<Type>BUILDING_WAREHOUSE</Type>
-			<BuildingClass>BUILDINGCLASS_WAREHOUSE</BuildingClass>
-			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
-			<PrereqTech>TECH_CARVEL_HULLS</PrereqTech>
-			<Cost>220</Cost>
-			<GoldMaintenance>2</GoldMaintenance>
-			<Description>TXT_KEY_BUILDING_WAREHOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
-			<Water>1</Water>
-			<MinAreaSize>10</MinAreaSize>
-			<ConquestProb>0</ConquestProb>
-			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
-			<PortraitIndex>6</PortraitIndex>
-		</Row>
 		<Update>
 			<Where Type="BUILDING_LIGHTHOUSE" />
 			<Set PrereqTech="TECH_COMPASS"
-				 Cost="120"
-				 GoldMaintenance="1"
 				 AllowsWaterRoutes="1"
 				 />
 			<!-- 1 -->
@@ -36,8 +11,6 @@
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_HARBOR" />
 			<Set PrereqTech="TECH_OPTICS"
-				 Cost="140"
-				 GoldMaintenance="2"
 				 AllowsWaterRoutes="0"
 				 />
 			<!-- 180 -->
@@ -55,6 +28,11 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_SEAPORT</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
 	</Building_SeaPlotYieldChanges>
 	<Building_ResourceYieldChanges>
 		<Update>
@@ -63,10 +41,11 @@
 		</Update>
 	</Building_ResourceYieldChanges>
 	<Building_YieldChanges>
+		<Delete BuildingType="BUILDING_SEAPORT" />
 		<Row>
 			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Building_YieldChanges>
 	<Building_DomainProductionModifiers>
@@ -80,26 +59,4 @@
 	<Building_ClassesNeededInCity>
 		<Delete BuildingType="BUILDING_SEAPORT" />
 	</Building_ClassesNeededInCity>
-	<Building_Flavors>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAREHOUSE</BuildingType>
-			<FlavorType>FLAVOR_NAVAL_TILE_IMPROVEMENT</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-	</Building_Flavors>
 </GameData>

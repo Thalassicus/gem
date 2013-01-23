@@ -17,133 +17,13 @@
 		<Row Type="MAX_RESOURCE_PLACEMENT_ATTEMPTS" >
 			<Value>30</Value>
 		</Row>
+		<Row Type="STRATEGIC_RESOURCE_LOWER_BOUND" >
+			<Value>80</Value>
+		</Row>
+		<Row Type="STRATEGIC_RESOURCE_UPPER_BOUND" >
+			<Value>125</Value>
+		</Row>
 	</Civup>
-	<Resource_TerrainWeights>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<Freshwater>true</Freshwater>
-			<Weight>1.1</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<PlotType>PLOT_MOUNTAIN</PlotType>
-			<Weight>0.8</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<FeatureType>FEATURE_FOREST</FeatureType>
-			<Weight>0.8</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<FeatureType>FEATURE_MARSH</FeatureType>
-			<Weight>0.8</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<FeatureType>FEATURE_JUNGLE</FeatureType>
-			<Weight>0.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<PlotType>PLOT_HILLS</PlotType>
-			<Weight>0.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<TerrainType>TERRAIN_DESERT</TerrainType>
-			<FeatureType>NO_FEATURE</FeatureType>
-			<Weight>0</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			<Weight>0</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<Weight>0</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<PlotType>PLOT_HILLS</PlotType>
-			<Weight>2</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<TerrainType>TERRAIN_DESERT</TerrainType>
-			<Weight>1.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<FeatureType>FEATURE_JUNGLE</FeatureType>
-			<Weight>1.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<FeatureType>FEATURE_FOREST</FeatureType>
-			<Weight>1.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<PlotType>PLOT_MOUNTAIN</PlotType>
-			<Weight>1.25</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<FeatureType>FEATURE_MARSH</FeatureType>
-			<Weight>1.25</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			<Weight>1.25</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<Weight>1</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<Freshwater>true</Freshwater>
-			<Weight>0.9</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<TerrainType>TERRAIN_GRASS</TerrainType>
-			<Weight>0.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<TerrainType>TERRAIN_PLAINS</TerrainType>
-			<Weight>0.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<TerrainType>TERRAIN_DESERT</TerrainType>
-			<Weight>1.5</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			<Weight>1.25</Weight>
-		</Row>
-		<Row>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<Weight>1.1</Weight>
-		</Row>
-		<!--
-		<Row>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<TerrainType>TERRAIN_COAST</TerrainType>
-			<NotLake>true</NotLake>
-			<Weight>2</Weight>
-		</Row>
-		-->
-	</Resource_TerrainWeights>
 	<Terrains>
 		<Update>
 			<Where Type="TERRAIN_DESERT" />
@@ -203,6 +83,10 @@
 			<FeatureType>FEATURE_OASIS</FeatureType>
 			<YieldType>YIELD_GOLD</YieldType>
 		</Delete>
+		<Delete>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+		</Delete>
 	</Feature_YieldChanges>
 	<Yields>
 		<Update>
@@ -228,25 +112,53 @@
 		</Update>
 		<Update>
 			<Where Type="RESOURCE_IRON" />
-			<Set NumPerTerritory="5" />
+			<Set NumPerTerritory="3" />
 		</Update>
 		<Update>
 			<Where Type="RESOURCE_COAL" />
-			<Set NumPerTerritory="-0.75" />
+			<Set NumPerTerritory="-3" />
 		</Update>
 		<Update>
 			<Where Type="RESOURCE_OIL" />
-			<Set NumPerTerritory="4" />
+			<Set NumPerTerritory="3" />
 		</Update>
 		<Update>
 			<Where Type="RESOURCE_ALUMINUM" />
-			<Set NumPerTerritory="5" />
+			<Set NumPerTerritory="4" />
 		</Update>
 		<Update>
 			<Where Type="RESOURCE_URANIUM" />
-			<Set NumPerTerritory="3" />
+			<Set NumPerTerritory="2" />
 		</Update>
+		<Row>
+			<Type>RESOURCE_MOVIES</Type>
+			<Happiness>4</Happiness>
+			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
+			<Description>TXT_KEY_RESOURCE_MOVIES</Description>
+			<Civilopedia>TXT_KEY_CIV5_RESOURCE_MOVIES_TEXT</Civilopedia>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<ArtDefineTag>ART_DEF_RESOURCE_SUGAR</ArtDefineTag>
+			<AltArtDefineTag>ART_DEF_RESOURCE_SUGAR</AltArtDefineTag>
+			<AIObjective>3</AIObjective>
+			<PlacementOrder>4</PlacementOrder>
+			<ConstAppearance>50</ConstAppearance>
+			<MinAreaSize>3</MinAreaSize>
+			<MaxLatitude>0</MaxLatitude>
+			<RandApp1>25</RandApp1>
+			<RandApp2>25</RandApp2>
+			<Player>67</Player>
+			<IconString>[ICON_HAPPINESS_1]</IconString>
+			<IconAtlas>TECH_ATLAS_1</IconAtlas>
+			<PortraitIndex>50</PortraitIndex>
+		</Row>
 	</Resources>
+	<Resource_Flavors>
+		<Row>
+			<ResourceType>RESOURCE_MOVIES</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+	</Resource_Flavors>
 	<Terrain_Yields>
 		<Update>
 			<Where TerrainType="TERRAIN_COAST" YieldType="YIELD_FOOD" />
@@ -391,21 +303,55 @@
 	<Improvement_ValidTerrains>
 		<Delete ImprovementType="IMPROVEMENT_FARM" TerrainType="TERRAIN_DESERT" />
 	</Improvement_ValidTerrains>
+	<Improvement_ValidFeatures>
+		<Row>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<FeatureType>FEATURE_ATOLL</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<FeatureType>FEATURE_REEF</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<FeatureType>FEATURE_ICE</FeatureType>
+		</Row>
+	</Improvement_ValidFeatures>
 	<Builds>
 		<Update>
 			<Where Type="BUILD_TRADING_POST" />
 			<Set HotKey="KB_V" />
 		</Update>
 	</Builds>
-	<BuildFeatures>
-		<Update>
-			<Where BuildType="BUILD_REMOVE_FOREST" />
-			<Set Production="30" />
-		</Update>
-	</BuildFeatures>
 	<Controls>
 		<Delete Type="CONTROL_ADVISOR_COUNSEL" />
 	</Controls>
+	<BuildFeatures>
+		<Update>
+			<Where BuildType="BUILD_FARM" FeatureType="FEATURE_JUNGLE" />
+			<Set Remove="0" PrereqTech="TECH_AGRICULTURE" />
+		</Update>
+		<Update>
+			<Where BuildType="BUILD_PLANTATION" FeatureType="FEATURE_JUNGLE" />
+			<Set Remove="0" />
+		</Update>
+	</BuildFeatures>
 	<Improvements>
 		<!--
 		<Update>
@@ -432,7 +378,7 @@
 		</Update>
 		<Update>
 			<Where ImprovementType="IMPROVEMENT_LUMBERMILL" YieldType="YIELD_PRODUCTION" />
-			<Set Yield="2" />
+			<Set Yield="1" />
 		</Update>
 		<Update>
 			<Where ImprovementType="IMPROVEMENT_TRADING_POST" YieldType="YIELD_GOLD" />
@@ -443,6 +389,8 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<!--
+		-->
 		<Update>
 			<Where ImprovementType="IMPROVEMENT_ACADEMY" YieldType="YIELD_SCIENCE" />
 			<Set Yield="8" />
@@ -477,6 +425,7 @@
 	<Improvement_TechYieldChanges>
 		<Delete ImprovementType="IMPROVEMENT_LUMBERMILL"/>
 		<Delete ImprovementType="IMPROVEMENT_MINE"/>
+		<Delete ImprovementType="IMPROVEMENT_QUARRY"/>
 		<Delete ImprovementType="IMPROVEMENT_TRADING_POST"/>
 		<Delete ImprovementType="IMPROVEMENT_CITADEL"/>
 		<Delete ImprovementType="IMPROVEMENT_LANDMARK"/>
@@ -485,38 +434,36 @@
 		<Delete ImprovementType="IMPROVEMENT_MANUFACTORY"/>
 		<!--
 		<Row>
-			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
-			<TechType>TECH_WRITING</TechType>
-			<YieldType>YIELD_SCIENCE</YieldType>
+			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
+			<TechType>TECH_MACHINERY</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<TechType>TECH_GUNPOWDER</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		-->
 		<Row>
+			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
+			<TechType>TECH_STEAM_POWER</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
-			<TechType>TECH_IRON_WORKING</TechType>
+			<TechType>TECH_INDUSTRIALIZATION</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
-			<TechType>TECH_IRON_WORKING</TechType>
+			<TechType>TECH_GUNPOWDER</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<!--
-		<Row>
-			<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
-			<TechType>TECH_COMBUSTION</TechType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
-			<TechType>TECH_COMBUSTION</TechType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		-->
 		<Row>
 			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
 			<TechType>TECH_THEOLOGY</TechType>
@@ -565,50 +512,6 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>7</Yield>
 		</Row>
-		<!--
-		<Row>
-			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
-			<TechType>TECH_FLIGHT</TechType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
-			<TechType>TECH_RADAR</TechType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
-			<TechType>TECH_RADAR</TechType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
-			<TechType>TECH_RADIO</TechType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
-			<TechType>TECH_PLASTIC</TechType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_CUSTOMS_HOUSE</ImprovementType>
-			<TechType>TECH_FLIGHT</TechType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_MANUFACTORY</ImprovementType>
-			<TechType>TECH_COMBUSTION</TechType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		-->
 	</Improvement_TechYieldChanges>
 	<Improvement_TechFreshWaterYieldChanges>
 		<Row>
@@ -619,16 +522,18 @@
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
-			<TechType>TECH_ENGINEERING</TechType>
+			<TechType>TECH_IRON_WORKING</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
-			<TechType>TECH_ENGINEERING</TechType>
+			<TechType>TECH_METAL_CASTING</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<!--
+		-->
 	</Improvement_TechFreshWaterYieldChanges>
 	<Improvement_TechNoFreshWaterYieldChanges>
 		<Row>
@@ -639,21 +544,182 @@
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
-			<TechType>TECH_DYNAMITE</TechType>
+			<TechType>TECH_GUNPOWDER</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
-			<TechType>TECH_STEAM_POWER</TechType>
+			<TechType>TECH_PRINTING_PRESS</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<!--
+		-->
 	</Improvement_TechNoFreshWaterYieldChanges>
-	<Improvement_ValidFeatures>
+
+	<Worlds>
+		<Update>
+			<Where Type="WORLDSIZE_DUEL" />
+			<Set>
+				<ResourceMod>70</ResourceMod>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_TINY" />
+			<Set>
+				<ResourceMod>80</ResourceMod>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_SMALL" />
+			<Set>
+				<ResourceMod>90</ResourceMod>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_STANDARD" />
+			<Set>
+				<ResourceMod>100</ResourceMod>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_LARGE" />
+			<Set>
+				<ResourceMod>110</ResourceMod>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_HUGE" />
+			<Set>
+				<ResourceMod>120</ResourceMod>
+			</Set>
+		</Update>
+	</Worlds>
+	<Resource_TerrainWeights>
 		<Row>
-			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
-			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<Freshwater>true</Freshwater>
+			<Weight>1.1</Weight>
 		</Row>
-	</Improvement_ValidFeatures>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<PlotType>PLOT_MOUNTAIN</PlotType>
+			<Weight>0.8</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Weight>0.8</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<Weight>0.8</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<Weight>0.5</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<PlotType>PLOT_HILLS</PlotType>
+			<Weight>0.5</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<FeatureType>NO_FEATURE</FeatureType>
+			<Weight>0</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<Weight>0</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<Weight>0</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<PlotType>PLOT_HILLS</PlotType>
+			<Weight>2</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<Weight>1.5</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<Weight>1.5</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Weight>1.5</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<PlotType>PLOT_MOUNTAIN</PlotType>
+			<Weight>1.25</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<Weight>1.25</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<Weight>1.25</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<Weight>1</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Freshwater>true</Freshwater>
+			<Weight>0.9</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+			<Weight>0.5</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+			<Weight>2</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<Weight>3</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<Weight>3</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<Weight>2</Weight>
+		</Row>
+		<!--
+		<Row>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<TerrainType>TERRAIN_COAST</TerrainType>
+			<NotLake>true</NotLake>
+			<Weight>2</Weight>
+		</Row>
+		-->
+	</Resource_TerrainWeights>
 </GameData>

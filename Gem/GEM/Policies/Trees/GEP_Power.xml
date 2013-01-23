@@ -57,6 +57,7 @@
 				 CityCaptureCulture="200"
 				 CityCaptureCulturePerPop="20"
 				 CityCaptureCulturePerEra="200"
+				 CityResistTimeMod="-50"
 				 />
 		</Update>
 		<Update>
@@ -85,9 +86,6 @@
 				 />
 		</Update>
 	</Policies>
-	<Policy_PrereqPolicies>
-		
-	</Policy_PrereqPolicies>
 	<Policy_BuildingClassProductionModifiers>
 		<Delete PolicyType="POLICY_POLICE_STATE" />
 		<Row>
@@ -98,6 +96,11 @@
 		<Row>
 			<PolicyType>POLICY_POLICE_STATE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_POLICE_STATION</BuildingClassType>
+			<ProductionModifier>100</ProductionModifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_INTELLIGENCE_AGENCY</BuildingClassType>
 			<ProductionModifier>100</ProductionModifier>
 		</Row>
 	</Policy_BuildingClassProductionModifiers>
@@ -111,6 +114,11 @@
 		<Row>
 			<PolicyType>POLICY_POLICE_STATE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_POLICE_STATION</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_INTELLIGENCE_AGENCY</BuildingClassType>
 			<Happiness>2</Happiness>
 		</Row>
 	</Policy_BuildingClassHappiness>

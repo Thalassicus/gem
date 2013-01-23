@@ -766,7 +766,6 @@ function OnButton3()
 end
 Controls.Button3:RegisterCallback( Mouse.eLClick, OnButton3 );
 
-
 ----------------------------------------------------------------
 -- BUTTON 4
 ----------------------------------------------------------------

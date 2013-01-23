@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	
+	<Units>
+		<Update>
+			<Where Class="UNITCLASS_SETTLER" />
+			<Set HurryCostModifier="100" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_WORKER" />
+			<Set HurryCostModifier="0" />
+		</Update>
+		<Update>
+			<Where Class="UNITCLASS_WORKBOAT" />
+			<Set Cost="40" HurryCostModifier="0" />
+		</Update>
+	</Units>	
 </GameData>

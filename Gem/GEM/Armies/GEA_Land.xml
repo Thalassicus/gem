@@ -61,6 +61,11 @@
 				 />
 		</Update>
 		<Update>
+			<Where Class="UNITCLASS_ROCKET_ARTILLERY" />
+			<Set Moves="3"
+				 />
+		</Update>
+		<Update>
 			<Where Class="UNITCLASS_MECHANIZED_INFANTRY" />
 			<Set Moves="4"
 				 />

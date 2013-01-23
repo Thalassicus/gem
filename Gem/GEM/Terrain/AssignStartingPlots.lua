@@ -204,6 +204,7 @@ function AssignStartingPlots.Create()
 		GetRegionStrategicPlotList = AssignStartingPlots.GetRegionStrategicPlotList,
 		PlaceStrategicResourceInPlots = AssignStartingPlots.PlaceStrategicResourceInPlots,
 		GetStrategicDistributionForPlots = AssignStartingPlots.GetStrategicDistributionForPlots,
+		GetResourceQuantities = AssignStartingPlots.GetResourceQuantities,
 		
 		-- Civ start position variables
 		startingPlots = {},				-- Stores x and y coordinates (and "score") of starting plots for civs, indexed by region number
@@ -806,11 +807,9 @@ function AssignStartingPlots:MeasureStartPlacementFertilityOfPlot(x, y, checkFor
 	-- Regions are used to assign starting plots and place some resources.
 	-- Usage: x, y are plot coords, with 0,0 in SW. The check is a boolean.
 	--
-	--[[ Mountain, Oasis, FloodPlain tiles = -2, 6, 7 and do not count anything else.
-	     Rest of the tiles add up values of tile traits.
-	     Terrain: Grass 4, Plains 4, Tundra 2, Coast 3, Desert 0, Snow -1
-	     Features: Hill 1, Forest 0, Jungle 0, FreshWater 1, River 2, Marsh -2, Ice -1
-	     We want players who start in Grass to have the least room to expand. ]]--
+	--[[ Mountain, Snow, Ice, Oasis tiles ignore adjacency to rivers or coastlines.
+	     Other tiles add up values of tile traits.
+		 ]]--
 	--[[ If you modify the terrain values or add or remove any terrain elements, you
 		 will need to add or modify processes here to accomodate your changes. Please 
 		 be aware that the default process includes numerous assumptions that your
@@ -823,44 +822,43 @@ function AssignStartingPlots:MeasureStartPlacementFertilityOfPlot(x, y, checkFor
 	local featureType = plot:GetFeatureType();
 	-- Measure Fertility -- Any cases absent from the process have a 0 value.
 	if plotType == PlotTypes.PLOT_MOUNTAIN then -- Note, mountains cannot belong to a landmass AreaID, so they usually go unmeasured.
-		plotFertility = -2;
+		plotFertility = 0;
 	elseif terrainType == TerrainTypes.TERRAIN_SNOW then
-		plotFertility = -1;
+		plotFertility = 0;
 	elseif featureType == FeatureTypes.FEATURE_ICE then
-		plotFertility = -1;
+		plotFertility = 0;
 	elseif featureType == FeatureTypes.FEATURE_OASIS then
-		plotFertility = 5;
-	elseif featureType == FeatureTypes.FEATURE_FLOOD_PLAINS then
-		plotFertility = 5;
+		plotFertility = 4;
 	else
-		if terrainType == TerrainTypes.TERRAIN_GRASS then
-			plotFertility = 5;
-		elseif terrainType == TerrainTypes.TERRAIN_PLAINS then
-			plotFertility = 5;
-		elseif terrainType == TerrainTypes.TERRAIN_COAST then
+		if plotType == PlotTypes.PLOT_HILLS then
+			plotFertility = 8;
+		elseif featureType == FeatureTypes.FEATURE_FLOOD_PLAINS then
+			plotFertility = 8;
+		elseif featureType == FeatureTypes.FEATURE_FOREST then
+			plotFertility = 8;
+		elseif featureType == FeatureTypes.FEATURE_JUNGLE then
+			plotFertility = 0;
+		elseif featureType == FeatureTypes.FEATURE_MARSH then
 			plotFertility = 2;
+		elseif terrainType == TerrainTypes.TERRAIN_GRASS then
+			plotFertility = 8;
+		elseif terrainType == TerrainTypes.TERRAIN_PLAINS then
+			plotFertility = 8;
+		elseif terrainType == TerrainTypes.TERRAIN_COAST then
+			plotFertility = 4;
 		elseif terrainType == TerrainTypes.TERRAIN_TUNDRA then
-			plotFertility = 1;
+			plotFertility = 0;
 		elseif terrainType == TerrainTypes.TERRAIN_DESERT then
 			plotFertility = 0;
 		end
-		if plotType == PlotTypes.PLOT_HILLS then
-			plotFertility = plotFertility + 1;
-		elseif featureType == FeatureTypes.FEATURE_FOREST then
-			plotFertility = plotFertility + 1;
-		elseif featureType == FeatureTypes.FEATURE_JUNGLE then
-			plotFertility = plotFertility + 0;
-		elseif featureType == FeatureTypes.FEATURE_MARSH then
-			plotFertility = plotFertility - 1;
-		end
 		if plot:IsRiverSide() then
-			plotFertility = plotFertility + 3;
+			plotFertility = plotFertility + 4;
 		elseif plot:IsFreshWater() then
-			plotFertility = plotFertility + 1;
+			plotFertility = plotFertility + 2;
 		end
 		if checkForCoastalLand == true then -- When measuring only one AreaID, this shortcut helps account for coastal plots not measured.
 			if plot:IsCoastalLand() then
-				plotFertility = plotFertility + 3;
+				plotFertility = plotFertility + 2;
 			end
 		end
 	end
@@ -3554,6 +3552,7 @@ function AssignStartingPlots:AttemptToPlaceBonusResourceAtPlot(x, y, bAllowOasis
 				return true, false
 			elseif terrainType == TerrainTypes.TERRAIN_TUNDRA then -- Place Deer
 				plot:SetResourceType(self.deer_ID, 1);
+				plot:SetFeatureType(FeatureTypes.FEATURE_FOREST, -1);
 				--print("Placed Deer.");
 				self.amounts_of_resources_placed[self.deer_ID + 1] = self.amounts_of_resources_placed[self.deer_ID + 1] + 1;
 				return true, false
@@ -10102,6 +10101,18 @@ function AssignStartingPlots:PrintFinalResourceTotalsToLog()
 	print("-");
 	print("-----------------------------------------------------");
 	--]]
+	local totalLand = 0
+	local riverLand = 0
+	for plotID, plot in Plots() do
+		if plot:GetPlotType() ~= PlotTypes.PLOT_OCEAN then
+			totalLand = totalLand + 1
+			if plot:IsRiver() then
+				riverLand = riverLand + 1
+			end
+		end
+	end
+	print(" Land: "..totalLand)
+	print("River: "..riverLand)
 end
 ------------------------------------------------------------------------------
 function AssignStartingPlots:GetMajorStrategicResourceQuantityValues()
@@ -10292,29 +10303,69 @@ function AssignStartingPlots:PlaceStrategicResourceInPlots(plotList, resID, resR
 	return resRemaining
 end
 ------------------------------------------------------------------------------
-function AssignStartingPlots:GetStrategicDistributionForPlots(resID, plotList)
-	local resRemaining		= GameInfo.Resources[resID].NumPerTerritory * 0.01 * (67 + Map.Rand(83, "Strategic Resource Placement"))
+function AssignStartingPlots:GetResourceQuantities(resIDs)
+	local resNum			= {}
+	local resLower			= Civup.STRATEGIC_RESOURCE_LOWER_BOUND
+	local resUpper			= Civup.STRATEGIC_RESOURCE_UPPER_BOUND
 	local maxDepositSize	= 1
-	local numPlots			= 0
 	local stratMultiplier	= 1
+	local resGroups			= {}
 	
 	if self.resource_setting == 1 then
 		stratMultiplier = 0.66667
 	elseif self.resource_setting == 3 then
 		stratMultiplier = 1.66667
 	end
-	
-	for _, plotID in ipairs(plotList) do
-		numPlots = numPlots + 1
+
+	for _, resID in pairs(resIDs) do
+		resInfo = GameInfo.Resources[resID]
+		if resInfo.MutuallyExclusiveGroup == -1 then
+			resNum[resID] = resInfo.NumPerTerritory * stratMultiplier * 0.01 * (resLower + Map.Rand(resUpper - resLower, "Strategic Resource Placement"))
+			if resNum[resID] < 0 then
+				resNum[resID] = -1 * resNum[resID] * GameInfo.Worlds[Map.GetWorldSize()].ResourceMod / 100
+			end
+			resNum[resID] = Game.Round(resNum[resID])			
+		else
+			resGroups[resInfo.MutuallyExclusiveGroup] = resGroups[resInfo.MutuallyExclusiveGroup] or {}
+			resGroups[resInfo.MutuallyExclusiveGroup][resID] = resInfo.NumPerTerritory
+		end
 	end
 	
-	resRemaining = resRemaining * stratMultiplier
-	if resRemaining < 0 then
-		resRemaining = -resRemaining * (numPlots / Civup.PLOTS_PER_CITY)
+	for resGroupID, resGroup in pairs(resGroups) do
+		local groupSize			= 0
+		local groupTotal		= 0
+		local groupNormTotal	= 0
+		local resBoostIndex		= 0
+		local resWeight			= {}
+		
+		-- total for the group
+		for resID, resNum in pairs(resGroup) do
+			groupTotal	= groupTotal + resNum
+			groupSize	= groupSize + 1
+		end
+		groupTotal = Game.Round(groupTotal * stratMultiplier * 0.01 * (resLower + Map.Rand(resUpper - resLower, "Strategic Resource Placement")))
+		
+		-- pick a random resource to boost
+		resBoostIndex = Map.Rand(groupSize, "Strategic Resource Placement")
+		local i = 0
+		
+		for resID, resNum in pairs(resGroup) do
+			if i == resBoostIndex then
+				resWeight[resID] = 2 * resNum
+			else
+				resWeight[resID] = resNum
+			end
+			groupNormTotal = groupNormTotal + resWeight[resID]
+			i = i + 1
+		end
+		
+		-- normalize weights to get real quantity
+		for resID, resNum in pairs(resWeight) do
+			resNum[resID] = resWeight[resID] * groupTotal/groupNormTotal
+		end		
 	end
-	maxDepositSize = math.ceil(resRemaining * 80 / numPlots)
 	
-	return Game.Round(resRemaining), maxDepositSize
+	return resNum
 end
 ------------------------------------------------------------------------------
 function AssignStartingPlots:PlaceStrategicAndBonusResources()
@@ -10326,10 +10377,14 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 	
 	self:CalculateStrategicPlotWeights() -- Must do this before strategic resource placement!
 	
+	
+	
 	for regionID, regionInfo in ipairs(self.regionData) do
 		local plotList = self:GetRegionStrategicPlotList(regionInfo)
+		local resNum = self:GetResourceQuantities(resIDs)
 		for _, resID in pairs(resIDs) do
-			local resRemaining, maxDepositSize = self:GetStrategicDistributionForPlots(resID, plotList[resID])
+			local resRemaining = resNum[resID]
+			local maxDepositSize = math.ceil(resRemaining * 80 / #(plotList[resID]))
 			local passes = 0
 			--log:Debug("Placing %2s %9s in Region %2s", resRemaining, Locale.ConvertTextKey(GameInfo.Resources[resID].Description), regionID)
 			while resRemaining > 0 and passes < 30 do
@@ -10428,50 +10483,58 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 	
 	resources_to_place = {
 	{self.deer_ID, 1, 100, 1, 2} };
-	self:ProcessResourceList(8 * bonus_multiplier, 3, self.extra_deer_list, resources_to_place)
-
-	resources_to_place = {
-	{self.wheat_ID, 1, 100, 0, 2} };
-	self:ProcessResourceList(10 * bonus_multiplier, 3, self.desert_wheat_list, resources_to_place)
+	self:ProcessResourceList(6 * bonus_multiplier, 3, self.extra_deer_list, resources_to_place)
+	-- 8
 
 	resources_to_place = {
 	{self.deer_ID, 1, 100, 1, 2} };
-	self:ProcessResourceList(12 * bonus_multiplier, 3, self.tundra_flat_no_feature, resources_to_place)
-
-	resources_to_place = {
-	{self.banana_ID, 1, 100, 0, 3} };
-	self:ProcessResourceList(14 * bonus_multiplier, 3, self.banana_list, resources_to_place)
-
-	resources_to_place = {
-	{self.wheat_ID, 1, 100, 2, 3} };
-	self:ProcessResourceList(27 * bonus_multiplier, 3, self.plains_flat_no_feature, resources_to_place)
-
-	resources_to_place = {
-	{self.cow_ID, 1, 100, 1, 2} };
-	self:ProcessResourceList(18 * bonus_multiplier, 3, self.grass_flat_no_feature, resources_to_place)
-
-	resources_to_place = {
-	{self.stone_ID, 1, 100, 1, 1} };
-	self:ProcessResourceList(20 * bonus_multiplier, 3, self.dry_grass_flat_no_feature, resources_to_place)
-	-- 20
-
-	resources_to_place = {
-	{self.sheep_ID, 1, 100, 1, 1} };
-	self:ProcessResourceList(13 * bonus_multiplier, 3, self.hills_open_list, resources_to_place)
+	self:ProcessResourceList(8 * bonus_multiplier, 3, self.tundra_flat_no_feature, resources_to_place)
+	-- 12
 
 	resources_to_place = {
 	{self.stone_ID, 1, 100, 1, 2} };
-	self:ProcessResourceList(15 * bonus_multiplier, 3, self.tundra_flat_no_feature, resources_to_place)
+	self:ProcessResourceList(8 * bonus_multiplier, 3, self.tundra_flat_no_feature, resources_to_place)
 	-- 15
 
 	resources_to_place = {
 	{self.stone_ID, 1, 100, 1, 2} };
-	self:ProcessResourceList(19 * bonus_multiplier, 3, self.desert_flat_no_feature, resources_to_place)
+	self:ProcessResourceList(8 * bonus_multiplier, 3, self.desert_flat_no_feature, resources_to_place)
 	-- 19
+
+	resources_to_place = {
+	{self.wheat_ID, 1, 100, 0, 2} };
+	self:ProcessResourceList(16 * bonus_multiplier, 3, self.desert_wheat_list, resources_to_place)
+	-- 10
+
+	resources_to_place = {
+	{self.wheat_ID, 1, 100, 2, 3} };
+	self:ProcessResourceList(16 * bonus_multiplier, 3, self.plains_flat_no_feature, resources_to_place)
+	-- 27
+	
+	resources_to_place = {
+	{self.banana_ID, 1, 100, 0, 3} };
+	self:ProcessResourceList(6 * bonus_multiplier, 3, self.banana_list, resources_to_place)
+	-- 14
+	
+	resources_to_place = {
+	{self.cow_ID, 1, 100, 1, 2} };
+	self:ProcessResourceList(24 * bonus_multiplier, 3, self.grass_flat_no_feature, resources_to_place)
+	-- 18
+
+	resources_to_place = {
+	{self.stone_ID, 1, 100, 1, 1} };
+	self:ProcessResourceList(24 * bonus_multiplier, 3, self.dry_grass_flat_no_feature, resources_to_place)
+	-- 20
+
+	resources_to_place = {
+	{self.sheep_ID, 1, 100, 1, 1} };
+	self:ProcessResourceList(16 * bonus_multiplier, 3, self.hills_open_list, resources_to_place)
+	-- 13
 
 	resources_to_place = {
 	{self.deer_ID, 1, 100, 3, 4} };
 	self:ProcessResourceList(25 * bonus_multiplier, 3, self.forest_flat_that_are_not_tundra, resources_to_place)
+	-- 25
 	--]]
 end
 ------------------------------------------------------------------------------

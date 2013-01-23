@@ -23,7 +23,7 @@
 			<CityCaptureCulturePerPop>10</CityCaptureCulturePerPop>
 			<CityCaptureCulturePerEra>50</CityCaptureCulturePerEra>
 			<NeverCapture>true</NeverCapture>
-			<IconAtlas>VEM_BUILDING_ATLAS</IconAtlas>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>5</PortraitIndex>
 		</Row>
 	</Buildings>
@@ -80,47 +80,47 @@
 
 	<Buildings>
 		<Row>
-			<Type>BUILDING_SANITATION_SYSTEM</Type>
+			<Type>BUILDING_INDUS_SANITATION</Type>
 			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
 			<Cost>100</Cost>
 			<GoldMaintenance>1</GoldMaintenance>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-			<Description>TXT_KEY_BUILDING_SANITATION_SYSTEM</Description>
-			<Strategy>TXT_KEY_BUILDING_SANITATION_SYSTEM_STRATEGY</Strategy>
-			<Civilopedia>TXT_KEY_BUILDING_SANITATION_SYSTEM_CIV</Civilopedia>
+			<Description>TXT_KEY_BUILDING_INDUS_SANITATION</Description>
+			<Strategy>TXT_KEY_BUILDING_INDUS_SANITATION_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_INDUS_SANITATION_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_BUILDING_HOSPITAL</ArtDefineTag>
 			<FoodKept>40</FoodKept>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>66</ConquestProb>
-			<IconAtlas>VEM_BUILDING_ATLAS</IconAtlas>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>2</PortraitIndex>
 		</Row>
 	</Buildings>
 	<Building_RiverPlotYieldChanges>
 		<Row>
-			<BuildingType>BUILDING_SANITATION_SYSTEM</BuildingType>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
 	</Building_RiverPlotYieldChanges>
 	<Building_Flavors>
 		<Row>
-			<BuildingType>BUILDING_SANITATION_SYSTEM</BuildingType>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SANITATION_SYSTEM</BuildingType>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>10</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SANITATION_SYSTEM</BuildingType>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>10</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SANITATION_SYSTEM</BuildingType>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>20</Flavor>
 		</Row>
@@ -130,7 +130,7 @@
 		<Row>
 			<CivilizationType>CIVILIZATION_INDIA</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_AQUEDUCT</BuildingClassType>
-			<BuildingType>BUILDING_SANITATION_SYSTEM</BuildingType>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
 		</Row>
 	</Civilization_BuildingClassOverrides>
 	
@@ -155,7 +155,7 @@
 			<Defense>500</Defense>
 			<CityWall>true</CityWall>
 			<NeverCapture>true</NeverCapture>
-			<IconAtlas>VEM_BUILDING_ATLAS</IconAtlas>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>0</PortraitIndex>
 		</Row>
 	</Buildings>
@@ -218,7 +218,7 @@
 			<SpecialistCount>1</SpecialistCount>
 			<MinAreaSize>-1</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
-			<IconAtlas>VEM_BUILDING_ATLAS</IconAtlas>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>3</PortraitIndex>
 		</Row>
 	</Buildings>
@@ -265,13 +265,13 @@
 			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>4</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>4</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Building_ResourceYieldChanges>
 	<Building_ResourceCultureChanges>
@@ -326,8 +326,8 @@
 			<BuildingProductionModifier>15</BuildingProductionModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>66</ConquestProb>
-			<IconAtlas>VEM_BUILDING_ATLAS</IconAtlas>
-			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
 		</Row>
 	</Buildings>
 	<Building_Flavors>
@@ -365,188 +365,6 @@
 			<Yield>2</Yield>
 		</Row>
 	</Building_YieldChanges>
-	<Building_ResourceYieldChanges>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_COTTON</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_DYE</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_FUR</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_GEMS</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_GOLD</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_INCENSE</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_IVORY</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_MARBLE</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_PEARLS</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SILK</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SILVER</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SPICES</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SUGAR</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_WHALE</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_WINE</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_COTTON</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_DYE</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_FUR</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_GEMS</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_GOLD</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_INCENSE</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_IVORY</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_MARBLE</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_PEARLS</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SILK</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SILVER</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SPICES</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_SUGAR</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_WHALE</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
-			<ResourceType>RESOURCE_WINE</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Building_ResourceYieldChanges>
 
 
 
@@ -635,7 +453,7 @@
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
 			<NeverCapture>true</NeverCapture>
-			<IconAtlas>VEM_BUILDING_ATLAS</IconAtlas>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>4</PortraitIndex>
 		</Row>
 	</Buildings>

@@ -3,46 +3,19 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{4746fd17-873e-40e4-b531-63afb3f7f235}</ProjectGuid>
-    <Name>G&amp;K Enhanced Mod (v1.7.10 Beta)</Name>
+    <Name>G&amp;K Enhanced Mod (v1.13.1)</Name>
     <Guid>edc58ea2-bac0-4109-9144-ee67c8b216d7</Guid>
     <ModVersion>1</ModVersion>
-    <Stability>Beta</Stability>
+    <Stability>Stable</Stability>
     <Teaser>[COLOR_CYAN]   by Thalassicus[NEWLINE][ENDCOLOR]   Equip for +10 fun, strategy, and balance!</Teaser>
-    <Description>The most influential community project for Civ V returns for Gods and Kings!
-[NEWLINE]Requires the Civ V Unofficial Patch (G&amp;K): http://steamcommunity.com/id/thalassicus/myworkshopfiles
-[NEWLINE]
-[NEWLINE]
-[NEWLINE]This mod is part of the Civ V: Communitas Expansion Pack. The community goal is to perfect the game we love while remaining as close to the core Civ experience as possible. Civup is a collaboration of work from 26 mod authors and an incredible community of forumgoers on CivFanatics.com. Communitas is available into two main mods for G&amp;K:
-[NEWLINE]
-[NEWLINE]- G&amp;K Enhanced Mod (Gem)
-[NEWLINE]Remains close to the base G&amp;K game while providing more challenging gameplay decisions, where everything has a useful and interesting purpose.
-[NEWLINE]
-[NEWLINE]- Civ V Unofficial Patch (Civup) (G&amp;K version)
-This focuses on fixing bugs in the expansion, improving the interface, and expanding modding tools with minimal gameplay impact. It follows the footsteps of unofficial patches like Civ 4 BTS Unaltered Gameplay and the Skyrim Unofficial Patch.
-[NEWLINE]
-[NEWLINE]If you encounter problems, try the things on the checklist: http://tinyurl.com/civ5checklist
-[NEWLINE]
-[NEWLINE]Features: http://communitas.wikia.com/wiki/Civup
-[NEWLINE]Discuss: http://tinyurl.com/communitas-mod
-[NEWLINE]Bugs: http://tinyurl.com/civupbug
-[NEWLINE]News: http://civmodding.wordpress.com
-[NEWLINE]Credits: http://civmodding.wordpress.com/credits
-[NEWLINE]
-[NEWLINE]NOTE: Do *not* have this installed without Gods and Kings. It is only compatible with the expansion. The non-expansion vanilla version of the Communitas Expansion Pack is here: http://steamcommunity.com/sharedfiles/filedetails/?id=78295051
-[NEWLINE]
-[NEWLINE]Please view the readme in the mod folder, which includes important information about using Civ 5 mods.
-[NEWLINE]
-[NEWLINE]
-[NEWLINE]== KEY FEATURES ==
-[NEWLINE]
-[NEWLINE]I'm rolling out the G&amp;K Enhanced Mod beta test in stages. For details and information about this TEST version please see the website at: http://civmodding.wordpress.com</Description>
+    <Description>I believe Civilization is a fantastic game, and want to perfect it while remaining as close to the core experience as possible. I think games should be intuitive to learn, challenging to master, and rewards should match the difficulty to complete tasks. I also believe in finding balanced middle ground between extremes. If you believe in these goals, try this expansion pack![NEWLINE][NEWLINE][NEWLINE]This is part of the Civ V: Communitas Expansion Pack. If you want to discuss the project, or you encounter a problem while playing, please visit the Discuss or Bugs links below. It's impractical to track of multiple topics of conversation in the Workshop comments. Thank you![NEWLINE][NEWLINE]Features: communitas.wikia.com[NEWLINE]Discuss: forums.civfanatics.com/forumdisplay.php?f=429[NEWLINE]Bugs: bit.ly/bugreporting[NEWLINE]News: civmodding.wordpress.com[NEWLINE]Credits: civmodding.wordpress.com/credits[NEWLINE][NEWLINE][NEWLINE]The Communitas Expansion Pack is a collaboration of work from 38 main authors and an incredible community of forumgoers on CivFanatics.com. You can see the other parts of CEP here:[NEWLINE][NEWLINE]http://steamcommunity.com/id/thalassicus/myworkshopfiles[NEWLINE][NEWLINE][NEWLINE][NEWLINE]Please view the readme in the Gem folder, which includes important information about using Civ 5 mods.[NEWLINE][NEWLINE]NOTE: Exit to the main menu to load or start games. Loading or regenerating the map within an active game breaks all mods which use lua code.[NEWLINE][NEWLINE]REQUIRES: Gods and Kings Expansion. This project is only compatible with the expansion. The non-expansion vanilla version is here: steamcommunity.com/sharedfiles/filedetails/?id=78295051[NEWLINE][NEWLINE]REQUIRES: Civ V Unofficial Patch (G&amp;K): steamcommunity.com/id/thalassicus/myworkshopfiles</Description>
     <Authors>[COLOR_CYAN]Thalassicus</Authors>
     <SpecialThanks>Check out the readme in the mod folder.</SpecialThanks>
     <Categories>$Categories$</Categories>
     <AffectsSavedGames>true</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
-    <SupportsMultiplayer>false</SupportsMultiplayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsMac>true</SupportsMac>
     <AssemblyName>Mod Template</AssemblyName>
     <RootNamespace>Mod Template</RootNamespace>
@@ -51,1032 +24,1097 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/GEM.xml</FileName>
+        <FileName>GEM\Misc\GEM_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Options.sql</FileName>
+        <FileName>GEM_Options.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Leaders/GEL_Replacements.xml</FileName>
+        <FileName>GEM\Text\Language_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/GEA_Start.xml</FileName>
+        <FileName>GEM\Cities\GEC__New.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/GEA_Start.sql</FileName>
+        <FileName>GEM\Research\GER_New.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Diplomacy/GED_Start.sql</FileName>
+        <FileName>GEM\Leaders\GEL_Replacements.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Leaders/GEL_General.sql</FileName>
+        <FileName>GEM/Armies/GEA__New.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Faith/GEF_Start.sql</FileName>
+        <FileName>GEM/Armies/GEA__Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/GEC_Start.sql</FileName>
+        <FileName>GEM\Diplomacy\GED_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/GEP_Start.sql</FileName>
+        <FileName>GEM\Leaders\GEL_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Research/GER_Start.sql</FileName>
+        <FileName>GEM\Faith\GEF_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Terrain/GET_Start.sql</FileName>
+        <FileName>GEM/Armies/GEC__New.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Terrain/VET_NaturalWonders.sql</FileName>
+        <FileName>GEM/Cities/GEC__Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_Armies.xml</FileName>
+        <FileName>GEM\Policies\GEP_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_LeaderFlavors.xml</FileName>
+        <FileName>GEM\Research\GER_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_LeaderPersonalities.xml</FileName>
+        <FileName>GEM\Terrain\GET_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/VEL_Warfare.xml</FileName>
+        <FileName>GEM\AI\GEAI__Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/AIAttackForces.xml</FileName>
+        <FileName>GEM\Armies\GEA_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/MultiUnitFormations.xml</FileName>
+        <FileName>GEM\Armies\Art\GEA_Art.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/CIV5AIMilitaryStrategies.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Air.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GlobalAIDefines.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Attributes.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GrandStrategy.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Mobile.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_Handicaps.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Other.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_Data.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Ranged.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_Policies.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Ships.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_Cities.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Soldiers.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_Techs.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_Vanguards.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/GEA_Data.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_PromotionGrid.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Icons/GEA_Icons.xml</FileName>
+        <FileName>GEM\Armies\Promotions\GEA_PromotionSwap.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Air.xml</FileName>
+        <FileName>GEM\Armies\GEA_Land.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Attributes.xml</FileName>
+        <FileName>GEM\Armies\GEA_Sea.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Mobile.xml</FileName>
+        <FileName>GEM\Barbarians\GEB_Civilization.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Other.xml</FileName>
+        <FileName>GEM\Barbarians\GEB_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Ranged.xml</FileName>
+        <FileName>GEM\Barbarians\GEB_Units.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Ships.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Culture.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Soldiers.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_Vanguards.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Food.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_PromotionGrid.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Gold.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_PromotionSwap.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Happiness.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/GEA_Land.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Other.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/GEA_Sea.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Production.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Barbarians/GEB_Civilization.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Science.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Barbarians/GEB_Data.xml</FileName>
+        <FileName>GEM\Cities\Buildings\GEC_Sea.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Barbarians/GEB_Units.xml</FileName>
+        <FileName>GEM\Cities\Art\GEC_Art.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Culture.xml</FileName>
+        <FileName>GEM\Cities\GEC_Civilians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Faith.xml</FileName>
+        <FileName>GEM\Cities\GEC_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Food.xml</FileName>
+        <FileName>GEM\Cities\GEC_NationalWonders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Gold.xml</FileName>
+        <FileName>GEM\Cities\GEC_SpecialistsandGP.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Happiness.xml</FileName>
+        <FileName>GEM\Cities\GEC_Wonders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Other.xml</FileName>
+        <FileName>GEM\Diplomacy\GED_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Production.xml</FileName>
+        <FileName>GEM\Faith\GEF_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Science.xml</FileName>
+        <FileName>GEM\GreatWorks\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Buildings/GEC_Sea.xml</FileName>
+        <FileName>GEM\Leaders\GEL_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/Icons/GEC_Icons.xml</FileName>
+        <FileName>GEM\Leaders\GEL_LandmarkArtTypes.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/GEC_Data.xml</FileName>
+        <FileName>GEM\Leaders\GEL_LandmarkArt.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/GEC_NationalWonders.xml</FileName>
+        <FileName>GEM\Opportunities\GEO_Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/GEC_SpecialistsandGP.xml</FileName>
+        <FileName>GEM\Policies\GEP_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/GEC_Wonders.xml</FileName>
+        <FileName>GEM\Policies\Art\GEP_Art.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Diplomacy/GED_Data.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Wealth.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/GreatWorks/GreatWorks.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Knowledge.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Leaders/GEL_General.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Freedom.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Leaders/GEL_LandmarkArtTypes.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Honor.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Leaders/GEL_LandmarkArt.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Liberty.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/GEP_Data.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Power.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Icons/GEP_Icons.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Order.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Wealth.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Patronage.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Knowledge.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Piety.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Freedom.xml</FileName>
+        <FileName>GEM\Policies\Trees\GEP_Tradition.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Honor.xml</FileName>
+        <FileName>GEM\Research\GER_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Liberty.xml</FileName>
+        <FileName>GEM\Research\GER_TechPrereqs.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Power.xml</FileName>
+        <FileName>GEM\Research\GER_Unlocks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Order.xml</FileName>
+        <FileName>GEM\Research\GER_Units.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Patronage.xml</FileName>
+        <FileName>GEM\Research\Art\GER_Art.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Piety.xml</FileName>
+        <FileName>GEM\Terrain\GET_GPImprovements.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Policies/Trees/GEP_Tradition.xml</FileName>
+        <FileName>GEM\Terrain\GET_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Research/VER_General.xml</FileName>
+        <FileName>GEM\Terrain\GET_NaturalWonders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Research/GER_General.xml</FileName>
+        <FileName>GEM\AI\GEAI_Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Research/GER_Units.xml</FileName>
+        <FileName>GEM\AI\GEAI_LeaderFlavors.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Research/Icons/GER_Icons.xml</FileName>
+        <FileName>GEM\AI\GEAI_LeaderPersonalities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Terrain/GET_GPImprovements.xml</FileName>
+        <FileName>GEM\AI\AIAttackForces.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Terrain/GET_Data.xml</FileName>
+        <FileName>GEM\AI\MultiUnitFormations.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Terrain/GET_NaturalWonders.xml</FileName>
+        <FileName>GEM\AI\CIV5AIMilitaryStrategies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Opportunities/GEO_Opportunities.xml</FileName>
+        <FileName>GEM\AI\GlobalAIDefines.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Armies.xml</FileName>
+        <FileName>GEM\AI\GrandStrategy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Armies.xml</FileName>
+        <FileName>GEM\AI\GEAI_Data.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Armies.xml</FileName>
+        <FileName>GEM\AI\GEAI_Handicaps.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Armies.xml</FileName>
+        <FileName>GEM\AI\GEAI_Buildings.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Armies.xml</FileName>
+        <FileName>GEM\AI\GEAI_Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Armies.xml</FileName>
+        <FileName>GEM\AI\GEAI_WorkerBuilds.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Armies.xml</FileName>
+        <FileName>GEM\AI\GEAI_Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Armies.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Armies.xml</FileName>
+        <FileName>GEM/Text/en_US/Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Barbarians.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Barbarians.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Barbarians.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Barbarians.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Barbarians.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Barbarians.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Barbarians.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Armies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Barbarians.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Barbarians.xml</FileName>
+        <FileName>GEM/Text/en_US/Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Cities.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Cities.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Cities.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Cities.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Cities.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Cities.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Cities.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Barbarians.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Cities.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Cities.xml</FileName>
+        <FileName>GEM/Text/en_US/Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Cities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Diplomacy.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Diplomacy.xml</FileName>
+        <FileName>GEM/Text/en_US/Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Opportunities.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Opportunities.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Opportunities.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Opportunities.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Opportunities.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Opportunities.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Opportunities.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Diplomacy.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Opportunities.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Opportunities.xml</FileName>
+        <FileName>GEM/Text/en_US/Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Leaders.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Leaders.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Leaders.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Leaders.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Leaders.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Leaders.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Leaders.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Opportunities.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Leaders.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Leaders.xml</FileName>
+        <FileName>GEM/Text/en_US/Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Policies.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Policies.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Policies.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Policies.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Policies.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Policies.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Policies.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Leaders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Policies.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Policies.xml</FileName>
+        <FileName>GEM/Text/en_US/Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\ES_ES\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\FR_FR\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\IT_IT\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\JA_JP\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\PL_PL\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\RU_RU\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\ZH_CN\Policies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/CSD_Compatibility.sql</FileName>
+        <FileName>GEM\Text\DE_DE\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/CSD_Compatibility.sql</FileName>
+        <FileName>GEM/Text/en_US/CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Faith.xml</FileName>
+        <FileName>GEM\Text\ES_ES\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Faith.xml</FileName>
+        <FileName>GEM\Text\FR_FR\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Faith.xml</FileName>
+        <FileName>GEM\Text\IT_IT\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Faith.xml</FileName>
+        <FileName>GEM\Text\JA_JP\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Faith.xml</FileName>
+        <FileName>GEM\Text\PL_PL\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Faith.xml</FileName>
+        <FileName>GEM\Text\RU_RU\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Faith.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\CSD.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Faith.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Faith.xml</FileName>
+        <FileName>GEM/Text/en_US/Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Faith.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/GreatWorks.xml</FileName>
+        <FileName>GEM\Text\DE_DE\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/GreatWorks.xml</FileName>
+        <FileName>GEM/Text/en_US/GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Research.xml</FileName>
+        <FileName>GEM\Text\ES_ES\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Research.xml</FileName>
+        <FileName>GEM\Text\FR_FR\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Research.xml</FileName>
+        <FileName>GEM\Text\IT_IT\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Research.xml</FileName>
+        <FileName>GEM\Text\JA_JP\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Research.xml</FileName>
+        <FileName>GEM\Text\PL_PL\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Research.xml</FileName>
+        <FileName>GEM\Text\RU_RU\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Research.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\GreatWorks.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Research.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Research.xml</FileName>
+        <FileName>GEM/Text/en_US/Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/Terrain.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/Terrain.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/Terrain.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/Terrain.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/Terrain.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/Terrain.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/Terrain.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Research.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/Terrain.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/Terrain.xml</FileName>
+        <FileName>GEM/Text/en_US/Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/DE_DE/AI.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/en_US/AI.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ES_ES/AI.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/FR_FR/AI.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/IT_IT/AI.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/JA_JP/AI.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/PL_PL/AI.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Terrain.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/RU_RU/AI.xml</FileName>
+        <FileName>GEM\Text\DE_DE\AI.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Text/ZH_CN/AI.xml</FileName>
+        <FileName>GEM/Text/en_US/AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/AI/GEAI_End.sql</FileName>
+        <FileName>GEM\Text\ES_ES\AI.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Cities/GEC_End.sql</FileName>
+        <FileName>GEM\Text\FR_FR\AI.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/GEA_End.sql</FileName>
+        <FileName>GEM\Text\IT_IT\AI.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Barbarians/GEB_End.sql</FileName>
+        <FileName>GEM\Text\JA_JP\AI.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Research/GER_End.sql</FileName>
+        <FileName>GEM\Text\PL_PL\AI.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/Promotions/GEA_PromotionLimit.sql</FileName>
+        <FileName>GEM\Text\RU_RU\AI.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Text\ZH_CN\AI.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Cities/GEC__End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Armies/GEA__End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Barbarians\GEB_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Leaders\GEL_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Policies\GEP_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Research\GER_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Armies\Promotions\GEA_PromotionReplace.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/AI/GEAI__End_Flavors.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/AI/GEAI__End_Techs.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Text\Language_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Misc\GEM_End.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Misc\GEM_Data.xml</FileName>
       </Action>
     </ModActions>
     <ModContent>
@@ -1087,7 +1125,7 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
         <FileName>GEM/AI/GEAI_Events.lua</FileName>
       </Content>
       <Content>
-        <Type>InGameUIAddin</Type>
+        <Type>NotificationAddin</Type>
         <Name>GEA_Events.lua</Name>
         <Description />
         <FileName>GEM/Armies/GEA_Events.lua</FileName>
@@ -1156,12 +1194,27 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       </Property>
     </ModProperties>
     <SupportsHotSeat>true</SupportsHotSeat>
-    <ModReferences />
+    <ModReferences>
+      <Association>
+        <Type>Mod</Type>
+        <Name>Citystate Diplomacy Mod</Name>
+        <Id>abaa043a-f851-4c61-bd18-52d480862cd0</Id>
+        <MinVersion>0</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+    </ModReferences>
     <ModDependencies>
       <Association>
         <Type>Mod</Type>
         <Name>Civ V Unofficial Patch for GaK</Name>
         <Id>01127f62-3896-4897-b169-ecab445786cd</Id>
+        <MinVersion>0</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+      <Association>
+        <Type>Dlc</Type>
+        <Name>Expansion - Gods and Kings</Name>
+        <Id>0E3751A1-F840-4e1b-9706-519BF484E59D</Id>
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
@@ -1181,31 +1234,35 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
     <DeployMod>true</DeployMod>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="CivVModding.xls">
+    <Content Include="GEM\Cities\GEC__New.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Cities\GEC_Renames.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Misc\GEM_Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Terrain\NaturalWondersCustomMethods.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Text\Language_Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM_AI_and_Leaders.xls">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM_Details.xls">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="CivVModdingDiagrams.odg">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\AI\GEAI_Cities.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\AI\GlobalDiplomacyAIDefines.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\AI\GEAI_Armies.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\AI\GEAI_LeaderFlavors.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\AI\GEAI_LeaderPersonalities.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1225,7 +1282,63 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="GEM/AI/GEAI__Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_Armies.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_Buildings.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_Cities.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_Handicaps.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_LeaderFlavors.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_LeaderPersonalities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_Policies.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GEAI_WorkerBuilds.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\AI\GEAI__End_Flavors.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\AI\GEAI__End_Techs.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="GEM/AI/GlobalAIDefines.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/AI/GlobalDiplomacyAIDefines.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1237,247 +1350,291 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\AI\GEAI_Policies.xml">
+    <Content Include="GEM/Armies/Art/GEA_Art.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Armies/Art/GEM_NewUnits128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\AI\GEAI_Techs.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM/AI/GEAI_Events.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\AI\GEAI_End.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\AI\GEAI_Data.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM/AI/GEAI_Handicaps.xml">
+    <Content Include="GEM/Armies/Art/GEM_NewUnits256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Armies/Icons/GEM_NewUnits128.dds">
+    <Content Include="GEM/Armies/Art/GEM_NewUnits45.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Armies/Icons/GEM_NewUnits256.dds">
+    <Content Include="GEM/Armies/Art/GEM_NewUnits64.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Armies/Icons/GEM_NewUnits45.dds">
+    <Content Include="GEM/Armies/Art/GEM_NewUnits80.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Armies/Icons/GEM_NewUnits64.dds">
+    <Content Include="GEM/Armies/Art/vanguardflagatlas.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Armies/Icons/GEM_NewUnits80.dds">
+    <Content Include="GEM/Armies/GEA_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Armies\GEA__End.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Armies/GEA_Events.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Armies/Icons/vanguardflagatlas.dds">
+    <Content Include="GEM/Armies/GEA_Events.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_Start.xml">
+    <Content Include="GEM/Armies/GEA_Land.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_Sea.xml">
+    <Content Include="GEM/Armies/GEA_Sea.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Icons\GEA_Icons.xml">
+    <Content Include="GEM\Armies\GEA__Start.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_End.sql">
+    <Content Include="GEM\Armies\GEA__New.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_Start.sql">
+    <Content Include="GEM/Armies/Promotions/GEA_Air.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_Events.lua">
+    <Content Include="GEM/Armies/Promotions/GEA_Attributes.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_Events.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_Mobile.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_Data.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_Other.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\GEA_Land.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_PromotionGrid.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Air.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_PromotionReplace.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Attributes.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_PromotionSwap.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Mobile.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_Ranged.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Other.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_Ships.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_PromotionGrid.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_Soldiers.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_PromotionSwap.xml">
+    <Content Include="GEM/Armies/Promotions/GEA_Vanguards.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Ranged.xml">
+    <Content Include="GEM/Barbarians/GEB_Civilization.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Ships.xml">
+    <Content Include="GEM/Barbarians/GEB_Data.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Soldiers.xml">
+    <Content Include="GEM/Barbarians/GEB_End.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_Vanguards.xml">
+    <Content Include="GEM/Barbarians/GEB_Events.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Armies\Promotions\GEA_PromotionLimit.sql">
+    <Content Include="GEM/Barbarians/GEB_Units.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Barbarians\GEB_End.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Barbarians\GEB_Civilization.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Barbarians\GEB_Events.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Barbarians\GEB_Data.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Barbarians\GEB_Units.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Culture.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Faith.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Food.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Gold.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Happiness.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Other.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Production.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Science.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM/Cities/Icons/GEM_Buildings128.DDS">
+    <Content Include="GEM/Cities/Art/Banaue_splash.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Cities/Icons/GEM_Buildings214.DDS">
+    <Content Include="GEM/Cities/Art/flavian_splash.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Cities/Icons/GEM_Buildings256.DDS">
+    <Content Include="GEM/Cities/Art/GEC_Art.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Cities/Icons/GEM_Buildings45.DDS">
+    <Content Include="GEM/Cities/Art/GEC_WondersAtlas_128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Cities/Icons/GEM_Buildings64.DDS">
+    <Content Include="GEM/Cities/Art/GEC_WondersAtlas_256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Cities/Icons/GEM_Buildings80.DDS">
+    <Content Include="GEM/Cities/Art/GEC_WondersAtlas_45.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\Buildings\GEC_Sea.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\GEC_Civilians.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Cities\Icons\GEC_Icons.xml">
+    <Content Include="GEM/Cities/Art/GEC_WondersAtlas_64.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\GEC_End.sql">
+    <Content Include="GEM/Cities/Art/GEC_WondersAtlas_80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/GEM_Buildings128.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/GEM_Buildings214.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/GEM_Buildings256.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/GEM_Buildings45.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/GEM_Buildings64.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/GEM_Buildings80.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/hadron_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/Hollywood_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/Lalibela_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/parthenon_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Art/WatPhraKaew_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Buildings/GEC_Culture.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\GEC_Start.sql">
+    <Content Include="GEM/Cities/Buildings/GEC_Faith.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\GEC_Events.lua">
+    <Content Include="GEM/Cities/Buildings/GEC_Food.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\GEC_Data.xml">
+    <Content Include="GEM/Cities/Buildings/GEC_Gold.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\GEC_NationalWonders.xml">
+    <Content Include="GEM/Cities/Buildings/GEC_Happiness.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\GEC_SpecialistsandGP.xml">
+    <Content Include="GEM/Cities/Buildings/GEC_Other.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Cities\GEC_Wonders.xml">
+    <Content Include="GEM/Cities/Buildings/GEC_Production.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Buildings/GEC_Science.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/Buildings/GEC_Sea.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/GEC_Civilians.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/GEC_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Cities\GEC__End.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/GEC_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/GEC_NationalWonders.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/GEC_SpecialistsandGP.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Cities\GEC__Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Cities/GEC_Wonders.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Diplomacy/GED_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Diplomacy/GED_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Diplomacy/GED_Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Faith/GEF_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Faith/GEF_Start.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1489,91 +1646,179 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Faith\GEF_Start.sql">
+    <Content Include="GEM/Leaders/GEL_Data.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Faith\GEF_Data.xml">
+    <Content Include="GEM/Leaders/GEL_End.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\Icons\Gem_Policies256.DDS">
+    <Content Include="GEM/Leaders/GEL_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Leaders/GEL_Replacements.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Leaders/GEL_Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Misc/GEM_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Misc/GEM_End.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Opportunities/GEO_Events.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\Icons\Gem_Policies64.DDS">
+    <Content Include="GEM/Opportunities/GEO_Opportunities.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\Icons\Gem_Policies64Active.DDS">
+    <Content Include="GEM/Policies/Art/Gem_Policies256.DDS">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\Icons\GEP_Icons.xml">
+    <Content Include="GEM/Policies/Art/Gem_Policies64.DDS">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\SocialPolicyPopup.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\SocialPolicyPopup.xml">
+    <Content Include="GEM/Policies/Art/Gem_Policies64Active.DDS">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Wealth.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Knowledge.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Freedom.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Honor.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Liberty.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Power.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Order.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Patronage.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Piety.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\Trees\GEP_Tradition.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\GEP_Events.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Policies\GEP_Events.xml">
+    <Content Include="GEM/Policies/Art/GEP_Art.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\GEP_Start.sql">
+    <Content Include="GEM/Policies/GEP_Data.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Policies\GEP_Data.xml">
+    <Content Include="GEM/Policies/GEP_End.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/GEP_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/GEP_Events.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/GEP_Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/SocialPolicyPopup.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/SocialPolicyPopup.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Freedom.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Honor.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Knowledge.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Liberty.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Order.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Patronage.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Piety.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Power.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Tradition.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Policies/Trees/GEP_Wealth.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/Art/GEM_Techs128.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/Art/GEM_Techs214.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/Art/GEM_Techs256.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/Art/GEM_Techs45.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/Art/GEM_Techs64.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/Art/GEM_Techs80.DDS">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/Art/GER_Art.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/GER_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/GER_End.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/GER_New.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/GER_Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/GER_TechPrereqs.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/GER_Units.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Research/GER_Unlocks.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1588,6 +1833,22 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
     <Content Include="GEM/Terrain/FeatureGenerator.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Terrain/GET_Data.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Terrain/GET_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Terrain/GET_NaturalWonders.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Terrain/GET_Start.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM/Terrain/IslandMaker.lua">
       <SubType>Lua</SubType>
@@ -1605,155 +1866,479 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/AI.xml">
+    <Content Include="GEM\Text\en_US\AI.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Armies.xml">
+    <Content Include="GEM\Text\en_US\Armies.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Barbarians.xml">
+    <Content Include="GEM\Text\en_US\Barbarians.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/CSD_Compatibility.sql">
+    <Content Include="GEM\Text\en_US\Cities.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Cities.xml">
+    <Content Include="GEM\Text\en_US\CSD.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Diplomacy.xml">
+    <Content Include="GEM\Text\en_US\Diplomacy.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/GreatWorks.xml">
+    <Content Include="GEM\Text\en_US\Faith.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Leaders.xml">
+    <Content Include="GEM\Text\en_US\GreatWorks.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Policies.xml">
+    <Content Include="GEM\Text\en_US\Leaders.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Research.xml">
+    <Content Include="GEM\Text\en_US\Opportunities.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Terrain.xml">
+    <Content Include="GEM\Text\en_US\Policies.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Diplomacy\GED_Events.lua">
+    <Content Include="GEM\Text\en_US\Research.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Diplomacy\GED_Start.sql">
+    <Content Include="GEM\Text\en_US\Terrain.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Diplomacy\GED_Data.xml">
+    <Content Include="GEM/Text/ES_ES/AI.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Leaders\GEL_Events.lua">
+    <Content Include="GEM/Text/ES_ES/Armies.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Leaders\GEL_General.sql">
+    <Content Include="GEM/Text/ES_ES/Barbarians.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Leaders\GEL_General.xml">
+    <Content Include="GEM/Text/ES_ES/Cities.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Leaders\GEL_Replacements.xml">
+    <Content Include="GEM/Text/ES_ES/CSD.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Research\GER_End.sql">
+    <Content Include="GEM/Text/ES_ES/Diplomacy.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Research\GER_Start.sql">
+    <Content Include="GEM/Text/ES_ES/Faith.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Research\GER_General.xml">
+    <Content Include="GEM/Text/ES_ES/GreatWorks.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Research\GER_Units.xml">
+    <Content Include="GEM/Text/ES_ES/Leaders.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Research\Icons\GEM_Techs128.DDS">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Research\Icons\GEM_Techs214.DDS">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Research\Icons\GEM_Techs256.DDS">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Research\Icons\GEM_Techs45.DDS">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Research\Icons\GEM_Techs64.DDS">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Research\Icons\GEM_Techs80.DDS">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Research\Icons\GER_Icons.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Terrain\GET_Events.lua">
+    <Content Include="GEM/Text/ES_ES/Opportunities.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Terrain\GET_Start.sql">
+    <Content Include="GEM/Text/ES_ES/Policies.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Terrain\GET_Data.xml">
+    <Content Include="GEM/Text/ES_ES/Research.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Terrain\GET_NaturalWonders.xml">
+    <Content Include="GEM/Text/ES_ES/Terrain.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Text/en_US/Opportunities.xml">
+    <Content Include="GEM/Text/DE_DE/AI.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Opportunities\GEO_Events.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM\Opportunities\GEO_Opportunities.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="GEM/GEM.xml">
+    <Content Include="GEM/Text/DE_DE/Armies.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM\Text\en_US\Faith.xml">
+    <Content Include="GEM/Text/DE_DE/Barbarians.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Cities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/CSD.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Diplomacy.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Faith.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/GreatWorks.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Leaders.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Opportunities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Research.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/DE_DE/Terrain.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/AI.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Armies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Barbarians.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Cities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/CSD.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Diplomacy.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Faith.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/GreatWorks.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Leaders.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Opportunities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Research.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/FR_FR/Terrain.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/AI.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Armies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Barbarians.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Cities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/CSD.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Diplomacy.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Faith.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/GreatWorks.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Leaders.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Opportunities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Research.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/IT_IT/Terrain.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/AI.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Armies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Barbarians.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Cities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/CSD.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Diplomacy.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Faith.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/GreatWorks.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Leaders.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Opportunities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Research.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/JA_JP/Terrain.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/AI.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Armies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Barbarians.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Cities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/CSD.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Diplomacy.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Faith.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/GreatWorks.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Leaders.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Opportunities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Research.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/PL_PL/Terrain.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/AI.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Armies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Barbarians.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Cities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/CSD.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Diplomacy.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Faith.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/GreatWorks.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Leaders.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Opportunities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Research.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/RU_RU/Terrain.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/AI.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Armies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Barbarians.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Cities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/CSD.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Diplomacy.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Faith.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/GreatWorks.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Leaders.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Opportunities.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Research.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM/Text/ZH_CN/Terrain.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Text\Language_End.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM_Language.xls">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1781,7 +2366,7 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Options.sql">
+    <Content Include="GEM_Options.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1794,25 +2379,34 @@ This focuses on fixing bugs in the expansion, improving the interface, and expan
     <Folder Include="GEM\" />
     <Folder Include="GEM\AI\" />
     <Folder Include="GEM\Armies\" />
-    <Folder Include="GEM\Armies\Icons\" />
+    <Folder Include="GEM\Armies\Art\" />
     <Folder Include="GEM\Armies\Promotions" />
     <Folder Include="GEM\Barbarians\" />
     <Folder Include="GEM\Cities\" />
     <Folder Include="GEM\Cities\Buildings\" />
-    <Folder Include="GEM\Cities\Icons\" />
+    <Folder Include="GEM\Cities\Art\" />
     <Folder Include="GEM\Diplomacy\" />
     <Folder Include="GEM\GreatWorks\" />
     <Folder Include="GEM\Leaders\" />
     <Folder Include="GEM\Faith" />
+    <Folder Include="GEM\Misc" />
     <Folder Include="GEM\Policies\" />
-    <Folder Include="GEM\Policies\Icons" />
+    <Folder Include="GEM\Policies\Art" />
     <Folder Include="GEM\Policies\Trees\" />
     <Folder Include="GEM\Research\" />
-    <Folder Include="GEM\Research\Icons" />
+    <Folder Include="GEM\Research\Art" />
     <Folder Include="GEM\Terrain\" />
     <Folder Include="GEM\Opportunities\" />
     <Folder Include="GEM\Text\" />
+    <Folder Include="GEM\Text\DE_DE\" />
     <Folder Include="GEM\Text\en_US\" />
+    <Folder Include="GEM\Text\ES_ES\" />
+    <Folder Include="GEM\Text\FR_FR\" />
+    <Folder Include="GEM\Text\IT_IT\" />
+    <Folder Include="GEM\Text\JA_JP\" />
+    <Folder Include="GEM\Text\PL_PL\" />
+    <Folder Include="GEM\Text\RU_RU\" />
+    <Folder Include="GEM\Text\ZH_CN\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Firaxis\ModBuddy\Civ5Mod.targets" />
 </Project>

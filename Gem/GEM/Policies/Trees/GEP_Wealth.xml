@@ -28,7 +28,7 @@
 				 Description="TXT_KEY_POLICY_GUILDS"
 				 Civilopedia="TXT_KEY_POLICY_GUILDS_TEXT"
 				 Help="TXT_KEY_POLICY_GUILDS_HELP"
-				 PortraitIndex="7"
+				 PortraitIndex="19"
 				 RouteGoldMaintenanceMod="0"
 				 OneShot="true"
 				 IncludesOneShotFreeUnits="true"
@@ -69,9 +69,6 @@
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
 		</Row>
 	</Policies>
-	<Policy_PrereqPolicies>
-		
-	</Policy_PrereqPolicies>
 	<Policy_ImprovementYieldChanges>
 		<Delete PolicyType="POLICY_COMMERCE_FINISHER" />
 		<Row>
@@ -80,18 +77,12 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<!--
 		<Row>
 			<PolicyType>POLICY_PATENT_LAW</PolicyType>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
-		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_MERCANTILISM</PolicyType>
-			<ImprovementType>IMPROVEMENT_CUSTOMS_HOUSE</ImprovementType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>5</Yield>
 		</Row>
 		-->
 	</Policy_ImprovementYieldChanges>
@@ -102,7 +93,7 @@
 		<Delete PolicyType="POLICY_MERCHANT_NAVY" />
 		<Row>
 			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
 		</Row>
 	</Policy_CoastalCityYieldChanges>
@@ -111,26 +102,20 @@
 		<Delete PolicyType="POLICY_MERCANTILISM" />
 		<Row>
 			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_LIGHTHOUSE</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_WAREHOUSE</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_SEAPORT</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PATENT_LAW</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
 	</Policy_BuildingClassYieldChanges>
@@ -159,7 +144,7 @@
 		<Row>
 			<PolicyType>POLICY_PROTECTIONISM</PolicyType>
 			<HurryType>HURRY_GOLD</HurryType>
-			<HurryCostModifier>-20</HurryCostModifier>
+			<HurryCostModifier>-25</HurryCostModifier>
 		</Row>
 	</Policy_HurryModifiers>
 	<UnitPromotions>

@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<Buildings>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_MONUMENT" />
-			<Set HurryCostModifier="0" />
-		</Update>
-	</Buildings>
-	<Building_Flavors>
-		<Update>
-			<Where BuildingType="BUILDING_MONASTERY" FlavorType="FLAVOR_CULTURE" />
-			<Set Flavor="9" />
-		</Update>
-		<Update>
-			<Where BuildingType="BUILDING_WAT" FlavorType="FLAVOR_CULTURE" />
-			<Set Flavor="30" />
-		</Update>
-	</Building_Flavors>
 	<Building_YieldChangesPerPop>
 		<!--
 		<Row>
@@ -26,24 +10,22 @@
 		-->
 	</Building_YieldChangesPerPop>
 	<Building_YieldChanges>
-		<!--
-		<Delete YieldType="YIELD_CULTURE" BuildingType="BUILDING_MUSEUM" />
-		<Delete YieldType="YIELD_CULTURE" BuildingType="BUILDING_OPERA_HOUSE" />
-		<Delete YieldType="YIELD_CULTURE" BuildingType="BUILDING_CEILIDH_HALL" />
+		<Row>
+			<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
 		<Update>
-			<Where BuildingType="BUILDING_MONUMENT" YieldType="YIELD_CULTURE" />
-			<Set Yield="5" />
+			<Where BuildingType="BUILDING_OPERA_HOUSE" />
+			<Set Yield="1" />
 		</Update>
-		-->
 	</Building_YieldChanges>
 	<Building_YieldModifiers>
-		<!--
 		<Row>
-			<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
+			<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>50</Yield>
 		</Row>
-		-->
 	</Building_YieldModifiers>
 	<Building_ResourceYieldChanges>
 		<Delete BuildingType="BUILDING_MONASTERY" />

@@ -75,7 +75,7 @@ function GetMissionYield(player, missionType)
 
 	local yield = yieldConstant + yieldLinear*eraID + (yieldPowerBase*eraID)^yieldPowerExp + yieldExponential^eraID
 
-	return Game.Round(yield * yieldMod/100), yieldID
+	return Game.Round(yield * yieldMod/1000)*10, yieldID
 end
 
 

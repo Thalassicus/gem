@@ -6,7 +6,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>100</AdvancedStartPointsMod>
-				<HappinessDefault>12</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -47,7 +47,7 @@
 				<AIResearchPercent>0</AIResearchPercent>
 				<AIResearchPercentPerEra>0</AIResearchPercentPerEra>
 				<AIProductionPercentPerEra>0</AIProductionPercentPerEra>
-				<AIGold>0</AIGold>
+				<AIGold>00</AIGold>
 				<AICapitalYieldPeaceful>0</AICapitalYieldPeaceful>
 				<AICapitalYieldMilitaristic>2</AICapitalYieldMilitaristic>
 			</Set>
@@ -57,7 +57,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>90</AdvancedStartPointsMod>
-				<HappinessDefault>12</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -101,9 +101,9 @@
 				<AIResearchPercent>0</AIResearchPercent>
 				<AIResearchPercentPerEra>4</AIResearchPercentPerEra>
 				<AIProductionPercentPerEra>1</AIProductionPercentPerEra>
-				<AIGold>0</AIGold>
-				<AICapitalYieldPeaceful>1</AICapitalYieldPeaceful>
-				<AICapitalYieldMilitaristic>3</AICapitalYieldMilitaristic>
+				<AIGold>10</AIGold>
+				<AICapitalYieldPeaceful>2</AICapitalYieldPeaceful>
+				<AICapitalYieldMilitaristic>4</AICapitalYieldMilitaristic>
 			</Set>
 		</Update>
 		<Update>
@@ -111,7 +111,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>85</AdvancedStartPointsMod>
-				<HappinessDefault>12</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -156,9 +156,9 @@
 				<AIResearchPercent>0</AIResearchPercent>
 				<AIResearchPercentPerEra>8</AIResearchPercentPerEra>
 				<AIProductionPercentPerEra>2</AIProductionPercentPerEra>
-				<AIGold>0</AIGold>
+				<AIGold>20</AIGold>
 				<AICapitalYieldPeaceful>2</AICapitalYieldPeaceful>
-				<AICapitalYieldMilitaristic>4</AICapitalYieldMilitaristic>
+				<AICapitalYieldMilitaristic>5</AICapitalYieldMilitaristic>
 			</Set>
 		</Update>
 		<Update>
@@ -166,7 +166,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>80</AdvancedStartPointsMod>
-				<HappinessDefault>12</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -212,9 +212,9 @@
 				<AIResearchPercent>0</AIResearchPercent>
 				<AIResearchPercentPerEra>12</AIResearchPercentPerEra>
 				<AIProductionPercentPerEra>3</AIProductionPercentPerEra>
-				<AIGold>0</AIGold>
+				<AIGold>40</AIGold>
 				<AICapitalYieldPeaceful>3</AICapitalYieldPeaceful>
-				<AICapitalYieldMilitaristic>5</AICapitalYieldMilitaristic>
+				<AICapitalYieldMilitaristic>6</AICapitalYieldMilitaristic>
 			</Set>
 		</Update>
 		<Update>
@@ -222,7 +222,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>75</AdvancedStartPointsMod>
-				<HappinessDefault>12</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -269,9 +269,9 @@
 				<AIResearchPercent>0</AIResearchPercent>
 				<AIResearchPercentPerEra>16</AIResearchPercentPerEra>
 				<AIProductionPercentPerEra>4</AIProductionPercentPerEra>
-				<AIGold>0</AIGold>
+				<AIGold>80</AIGold>
 				<AICapitalYieldPeaceful>4</AICapitalYieldPeaceful>
-				<AICapitalYieldMilitaristic>6</AICapitalYieldMilitaristic>
+				<AICapitalYieldMilitaristic>7</AICapitalYieldMilitaristic>
 			</Set>
 		</Update>
 		<Update>
@@ -279,7 +279,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>70</AdvancedStartPointsMod>
-				<HappinessDefault>12</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -326,9 +326,9 @@
 				<AIResearchPercent>0</AIResearchPercent>
 				<AIResearchPercentPerEra>20</AIResearchPercentPerEra>
 				<AIProductionPercentPerEra>5</AIProductionPercentPerEra>
-				<AIGold>0</AIGold>
+				<AIGold>160</AIGold>
 				<AICapitalYieldPeaceful>5</AICapitalYieldPeaceful>
-				<AICapitalYieldMilitaristic>7</AICapitalYieldMilitaristic>
+				<AICapitalYieldMilitaristic>10</AICapitalYieldMilitaristic>
 			</Set>
 		</Update>
 	</HandicapInfos>
@@ -348,7 +348,7 @@
 			<Help>TXT_KEY_AI_HAPPINESS_HELP</Help>
 			<StartingLocPercent>50</StartingLocPercent>
 			<AdvancedStartPointsMod>130</AdvancedStartPointsMod>
-			<HappinessDefault>12</HappinessDefault>
+			<HappinessDefault>0</HappinessDefault>
 			<ExtraHappinessPerLuxury>0</ExtraHappinessPerLuxury>
 			<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 			<PopulationUnhappinessMod>100</PopulationUnhappinessMod>

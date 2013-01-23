@@ -39,6 +39,11 @@
 				 TechPrereq="NULL"
 				 />
 		</Update>
+		<Update>
+			<Where Type="PROMOTION_AMPHIBIOUS" />
+			<Set EmbarkDefenseModifier="100"
+				 />
+		</Update>
 	</UnitPromotions>
 	<UnitPromotions_UnitCombatMods>
 		<Row>

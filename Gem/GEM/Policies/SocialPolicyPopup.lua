@@ -337,7 +337,7 @@ function UpdateDisplay()
 			local strToolTip = Locale.ConvertTextKey(policyBranchInfo.Help) or " ";
 	
 			-- AI Flavor Debug
-			--if Civup.SHOW_AI_PRIORITY_POLICIES == 1 then
+			--if Civup.SHOW_POWER_FOR_POLICIES == 1 then
 				strToolTip = (strToolTip or " ") .. "[NEWLINE][NEWLINE]----------------[NEWLINE]AI Priorites (debug info):"
 				local policyInfo = GameInfo.Policies[policyBranchInfo.FreePolicy]
 				for flavorInfo in GameInfo.Policy_Flavors(string.format("PolicyType = '%s'", policyInfo.Type)) do
@@ -480,7 +480,7 @@ function UpdateDisplay()
 			local strTooltip = Locale.ConvertTextKey( policyInfo.Help ) or " ";
 	
 			-- AI Flavor Debug
-			--if Civup.SHOW_AI_PRIORITY_POLICIES == 1 then
+			--if Civup.SHOW_POWER_FOR_POLICIES == 1 then
 				strToolTip = (strToolTip or " ") .. "[NEWLINE]----------------[NEWLINE]AI Priorites (debug info):"
 				for flavorInfo in GameInfo.Policy_Flavors(string.format("PolicyType = '%s'", policyInfo.Type)) do
 					strToolTip = strToolTip .. string.format("[NEWLINE]%s %s", flavorInfo.Flavor, Locale.ToLower(string.gsub(flavorInfo.FlavorType, "FLAVOR_", "")));

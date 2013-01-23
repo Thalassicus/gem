@@ -13,7 +13,7 @@
 			<Set GridX="1"
 				 GridY="1"
 				 PortraitIndex="40"
-				 MinorFriendshipDecayMod="-25"
+				 MinorFriendshipDecayMod="-33"
 				 MinorGoldFriendshipMod="0"
 				 />
 		</Update>
@@ -23,7 +23,7 @@
 				 GridY="1"
 				 PortraitIndex="38"
 				 MinorResourceBonus="0"
-				 MinorGoldFriendshipMod="25"
+				 MinorGoldFriendshipMod="33"
 				 />
 		</Update>
 		<Update>
@@ -59,9 +59,6 @@
 				 />
 		</Update>
 	</Policies>
-	<Policy_PrereqPolicies>
-		
-	</Policy_PrereqPolicies>
 	<Policy_UnitCombatProductionModifiers>
 		<Row>
 			<PolicyType>POLICY_PATRONAGE</PolicyType>

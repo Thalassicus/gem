@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Buildings>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_MARKET" />
-			<Set Cost="120" />
-			<!-- 100 -->
-		</Update>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_MINT" />
-			<Set Cost="180" />
-			<!-- 100 -->
-		</Update>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_BANK" />
-			<Set Cost="360" />
-			<!-- 200 -->
-		</Update>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_STOCK_EXCHANGE" />
-			<Set Cost="500" />
-			<!-- 360 -->
-		</Update>
+		
 	</Buildings>
 	<Building_ClassesNeededInCity>
 		<Delete BuildingType="BUILDING_BANK" />
@@ -40,14 +21,9 @@
 	</Building_YieldChanges>
 	<Building_YieldChangesPerPop>
 		<Row>
-			<BuildingType>BUILDING_MINT</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>50</Yield>
-		</Row>
-		<Row>
 			<BuildingType>BUILDING_STOCK_EXCHANGE</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>100</Yield>
+			<Yield>50</Yield>
 		</Row>
 	</Building_YieldChangesPerPop>
 	<Building_YieldModifiers>
@@ -66,9 +42,14 @@
 			<Set Yield="30" />
 			<!-- 25 -->
 		</Update>
+		<Row>
+			<BuildingType>BUILDING_MINT</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>30</Yield>
+		</Row>
 		<Update>
 			<Where BuildingType="BUILDING_BANK" />
-			<Set Yield="30" />
+			<Set Yield="50" />
 		</Update>
 		<Delete BuildingType="BUILDING_STOCK_EXCHANGE" />
 	</Building_YieldModifiers>
@@ -93,14 +74,6 @@
 	<Building_LocalResourceOrs>
 		<Delete BuildingType="BUILDING_MINT" />
 	</Building_LocalResourceOrs>
-	<Building_Flavors>
-		<Delete BuildingType="BUILDING_MINT" />
-		<Row>
-			<BuildingType>BUILDING_MINT</BuildingType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>40</Flavor>
-		</Row>
-	</Building_Flavors>
 	<Building_ClassesNeededInCity>
 		<!--
 		<Row>

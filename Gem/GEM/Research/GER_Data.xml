@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Defines>
+		<Update>
+			<Where Type="TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER" />
+			<Set Value="120" />
+			<!-- 30 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_GATHERING_INTEL_COST_PERCENT" />
+			<Set Value="60" />
+			<!-- 125 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_GATHERING_INTEL_RATE_BY_SPY_RANK_PERCENT" />
+			<Set Value="25" />
+			<!-- 25 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_GATHERING_INTEL_RATE_BASE_PERCENT" />
+			<Set Value="100" />
+			<!-- 100 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_TURNS_BETWEEN_CITY_STATE_ELECTIONS" />
+			<Set Value="15" />
+			<!-- 15 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_INFLUENCE_GAINED_FOR_RIGGED_ELECTION" />
+			<Set Value="20" />
+			<!-- 20 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_INFLUENCE_LOST_FOR_RIGGED_ELECTION" />
+			<Set Value="5" />
+			<!-- 5 -->
+		</Update>
+		<Update>
+			<Where Name="ESPIONAGE_SURVEILLANCE_SIGHT_RANGE" />
+			<Set Value="1" />
+			<!-- 1 -->
+		</Update>
+	</Defines>
+	<Civup>
+		<Update>
+			<Where Type="PERCENT_SCIENCE_FOR_1_SURPLUS_HAPPINESS" />
+			<Set Value="0" />
+		</Update>
+	</Civup>
+	<GameSpeeds>
+		<Update>
+			<Where Type="GAMESPEED_MARATHON" />
+			<Set ResearchPercent="500" />
+		</Update>
+		<Update>
+			<Where Type="GAMESPEED_EPIC" />
+			<Set ResearchPercent="200"
+				 />
+		</Update>
+	</GameSpeeds>
+	<Processes>
+		<Update>
+			<Where Type="PROCESS_WEALTH" />
+			<Set TechPrereq="TECH_BANKING" />
+		</Update>
+	</Processes>
+	<Eras>
+		<Update>
+			<Where Type="ERA_ANCIENT"/>
+			<Set ResearchAgreementCost="200" />
+		</Update>
+		<Update>
+			<Where Type="ERA_CLASSICAL"/>
+			<Set ResearchAgreementCost="300" />
+		</Update>
+		<Update>
+			<Where Type="ERA_MEDIEVAL"/>
+			<Set ResearchAgreementCost="400" />
+		</Update>
+		<Update>
+			<Where Type="ERA_RENAISSANCE"/>
+			<Set ResearchAgreementCost="500" />
+		</Update>
+		<Update>
+			<Where Type="ERA_INDUSTRIAL"/>
+			<Set ResearchAgreementCost="700" />
+		</Update>
+		<Update>
+			<Where Type="ERA_MODERN"/>
+			<Set ResearchAgreementCost="1000" />
+		</Update>
+		<Update>
+			<Where Type="ERA_POSTMODERN"/>
+			<Set ResearchAgreementCost="1500" />
+		</Update>		
+		<Update>
+			<Where Type="ERA_FUTURE"/>
+			<Set ResearchAgreementCost="2000" />
+		</Update>
+	</Eras>
+	<Technologies>
+		<!--
+		<Update>
+			<Where Type="TECH_THEOLOGY" />
+			<Set IconAtlas="BW_ATLAS_1"
+				 PortraitIndex="38"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_ARCHAEOLOGY" />
+			<Set Era="ERA_INDUSTRIAL" />
+		</Update>
+		-->
+		<Update>
+			<Where Type="TECH_WRITING" />
+			<Set AllowEmbassyTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_TRAPPING" />
+			<Set AllowEmbassyTradingAllowed="true"
+				 Description="TXT_KEY_TECH_TRADE_TITLE"
+				 Civilopedia="TXT_KEY_TECH_TRADE_DESC"
+				 Quote="TXT_KEY_TECH_TRADE_QUOTE"
+				 IconAtlas="BW_ATLAS_1"
+				 PortraitIndex="17"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_CURRENCY" />
+			<Set OpenBordersTradingAllowed="1"
+				 ResearchAgreementTradingAllowed="1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_CIVIL_SERVICE" />
+			<Set OpenBordersTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_PHILOSOPHY" />
+			<Set ResearchAgreementTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_EDUCATION" />
+			<Set ResearchAgreementTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_ENGINEERING" />
+			<Set BridgeBuilding="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_GUILDS" />
+			<Set DefensivePactTradingAllowed="1"
+				 BridgeBuilding="1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_CHIVALRY" />
+			<Set DefensivePactTradingAllowed="0"/>
+		</Update>
+		<Update>
+			<Where Type="TECH_METAL_CASTING" />
+			<Set IconAtlas="GEM_TECH_ATLAS"
+				 PortraitIndex="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_REPLACEABLE_PARTS" />
+			<Set Description="TXT_KEY_TECH_MASS_MEDIA_TITLE"
+				 Civilopedia="TXT_KEY_TECH_MASS_MEDIA_DESC"
+				 Quote="TXT_KEY_TECH_MASS_MEDIA_QUOTE"
+				 PortraitIndex="59"
+				 />
+		</Update>
+		<Update>
+			<Where Type="TECH_ADVANCED_BALLISTICS" />
+			<Set Description="TXT_KEY_TECH_ION_PROPULSION_TITLE"
+				 Civilopedia="TXT_KEY_TECH_ION_PROPULSION_DESC"
+				 Quote="TXT_KEY_TECH_ION_PROPULSION_QUOTE"
+				 IconAtlas="EXPANSION_BW_ATLAS_2"
+				 PortraitIndex="3"
+				 />
+		</Update>
+	</Technologies>
+	<Route_TechMovementChanges>
+		<Update>
+			<Where RouteType="ROUTE_ROAD" />
+			<Set TechType="TECH_GUILDS" />
+		</Update>
+	</Route_TechMovementChanges>
+</GameData>

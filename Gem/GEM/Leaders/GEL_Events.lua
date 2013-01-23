@@ -170,9 +170,9 @@ function FreeUnitWithTech(player, techID, changeID)
 	log:Info("FreeUnitWithTech A player=%s tech=%s", playerID, techID)
 	
 	local player = Players[playerID]
-	print(tostring(player))
-	print(tostring(player.GetID))
-	print(tostring(player:GetID())) -- crashes with citystates?!
+	--print(tostring(player))
+	--print(tostring(player.GetID))
+	--print(tostring(player:GetID())) -- crashes with citystates?!
 	local techInfo = GameInfo.Technologies[techID]
 	local centerPlot = player:GetCapitalCity()
 	
@@ -195,7 +195,7 @@ function FreeUnitWithTech(player, techID, changeID)
 	
 	local query = string.format("TraitType='%s' AND TechType='%s'", player:GetTraitInfo().Type, techInfo.Type)
 	for row in GameInfo.Trait_FreeUnitAtTech(query) do
-		local unitInfo = GameInfo.Units[row.UnitType]		
+		local unitInfo = GameInfo.Units[player:GetUniqueUnitID(row.UnitClassType)]		
 		local plot = centerPlot
 		if unitInfo.Domain == "DOMAIN_SEA" then		
 			plot = Plot_GetNearestOceanPlot(centerPlot, 10, 0.1 * Map.GetNumPlots())
@@ -222,21 +222,21 @@ LuaEvents.NewTech.Add(FreeUnitWithTech)
 --]]
 
 --[[
-MapModData.VEM.HasFreeShip = {}
+MapModData.Civup.HasFreeShip = {}
 for playerID, player in pairs(Players) do
 	if player:IsAliveCiv() and not player:IsMinorCiv() then
-		MapModData.VEM.HasFreeShip[playerID] = player:HasTech("TECH_COMPASS")
+		MapModData.Civup.HasFreeShip[playerID] = player:HasTech("TECH_COMPASS")
 	end
 end
 
 function DoSpainCaravelHack(player)
-	if player:GetTraitInfo().Type ~= "TRAIT_SEVEN_CITIES" or MapModData.VEM.HasFreeShip[player:GetID()] then
+	if player:GetTraitInfo().Type ~= "TRAIT_SEVEN_CITIES" or MapModData.Civup.HasFreeShip[player:GetID()] then
 		return
 	end
 	
 	local capital = player:GetCapitalCity()
 	if capital and player:HasTech("TECH_COMPASS") then
-		MapModData.VEM.HasFreeShip[playerID] = true
+		MapModData.Civup.HasFreeShip[playerID] = true
 		local centerPlot = capital:Plot()
 
 		local plot = Plot_GetNearestOceanPlot(centerPlot, 10, 0.1 * Map.GetNumPlots())

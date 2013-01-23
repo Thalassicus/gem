@@ -41,7 +41,8 @@ GameEvents.CityCaptureComplete.Add(OnCityCaptureComplete)
 
 function DeclareWarNearestCitystate(player)
 	local turn = Game.GetGameTurn()
-	if ((turn ~= 1 and turn % 7 ~= 0)
+	if (Game.GetAdjustedTurn() <= 50
+		or turn % 7 ~= 0
 		or player:IsHuman()
 		or player:IsMinorCiv()
 		or player:GetPersonalityInfo().Type ~= "PERSONALITY_CONQUEROR"
@@ -51,7 +52,7 @@ function DeclareWarNearestCitystate(player)
 	end
 	local capital = player:GetCapitalCity()
 	if not capital then
-		log:Error("DeclareWarNearestCitystate: %s has no capital", player:GetName())
+		log:Warn("DeclareWarNearestCitystate: %s has no capital", player:GetName())
 		return
 	end
 	log:Info("DeclareWarNearestCitystate %-20s %s", player:GetName(), player:GetPersonalityInfo().Type)
@@ -116,7 +117,7 @@ function DeclareWarNearestCitystate(player)
 	for _, adjPlot in pairs(Plot_GetPlotsInCircle(closestMinor:GetCapitalCity():Plot(), 0, 3)) do
 		adjPlot:SetRevealed(teamID, true)
 	end
-	if Game.GetGameTurn() <= 10 then
+	if Game.GetAdjustedTurn() <= 20 then
 		for unit in closestMinor:Units() do
 			local unitClass = GameInfo.Units[unit:GetUnitType()].Class
 			if unitClass ~= "UNITCLASS_WARRIOR" then

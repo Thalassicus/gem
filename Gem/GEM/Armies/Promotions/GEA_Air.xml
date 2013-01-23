@@ -19,6 +19,22 @@
 				 CityDefense="20"
 				 />
 		</Update>
+		<Update>
+			<Where Type="PROMOTION_AIR_RANGE" />
+			<Set RangeChange="6"
+				 PromotionPrereqOr4="PROMOTION_AIR_BOMBARDMENT_1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_AIR_AMBUSH_1" />
+			<Set PromotionPrereqOr4="PROMOTION_AIR_BOMBARDMENT_1"
+				 />
+		</Update>
+		<Update>
+			<Where Type="PROMOTION_EVASION" />
+			<Set PromotionPrereqOr4="PROMOTION_AIR_BOMBARDMENT_2"
+				 />
+		</Update>
 		<Row>
 			<Type>PROMOTION_AIR_BOMBARDMENT_1</Type>
 			<Description>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1</Description>
@@ -27,7 +43,7 @@
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>10</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1</PediaEntry>
 		</Row>
 		<Row>
@@ -39,7 +55,7 @@
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>11</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_2</PediaEntry>
 		</Row>
 		<Row>
@@ -51,7 +67,7 @@
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>12</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_BOMBARDMENT_3</PediaEntry>
 		</Row>
 	</UnitPromotions>

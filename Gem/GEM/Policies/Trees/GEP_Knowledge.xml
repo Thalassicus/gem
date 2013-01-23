@@ -42,9 +42,6 @@
 				 />
 		</Update>
 	</Policies>
-	<Policy_PrereqPolicies>
-		
-	</Policy_PrereqPolicies>
 	<Policy_SpecialistYieldChanges>
 		<!--
 		<Row>
@@ -105,7 +102,7 @@
 		<Delete BuildingClassType="BUILDINGCLASS_UNIVERSITY" />
 		<Row>
 			<PolicyType>POLICY_SCIENTIFIC_REVOLUTION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_PUBLIC_SCHOOL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>

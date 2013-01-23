@@ -19,9 +19,6 @@
 		<Row Type="AVOID_GROWTH_FULL_EFFECT_CUTOFF">
 			<Value>50</Value>
 		</Row>
-		<Row Type="MINOR_CIV_CAPTURE_BONUS_TURNS">
-			<Value>50</Value>
-		</Row>
 		<Row Type="MINOR_CIV_MILITARISTIC_REWARD_FRIEND">
 			<Value>2</Value>
 		</Row>
@@ -65,15 +62,15 @@
 			<TraitType>MINOR_TRAIT_CULTURED</TraitType>
 			<FriendLevel>1</FriendLevel>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>3</Yield>
-			<YieldPerEra>3</YieldPerEra>
+			<Yield>2</Yield>
+			<YieldPerEra>2</YieldPerEra>
 		</Row>
 		<Row>
 			<TraitType>MINOR_TRAIT_CULTURED</TraitType>
 			<FriendLevel>2</FriendLevel>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>5</Yield>
-			<YieldPerEra>5</YieldPerEra>
+			<Yield>3</Yield>
+			<YieldPerEra>3</YieldPerEra>
 		</Row>
 		<Row>
 			<TraitType>MINOR_TRAIT_MERCANTILE</TraitType>

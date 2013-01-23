@@ -56,7 +56,7 @@ function Game.TrigCondition.CanTrain2Horses(playerID, trigID, targetID, outID)
 	end
 	local buildableUnits = City_GetUnitsOfFlavor(Map_GetCity(targetID), "FLAVOR_MOBILE")
 	for unitID, unitFlavor in pairs(buildableUnits) do
-		log:Error("%s flavor = %s", GameInfo.Units[unitID].Type, unitFlavor)
+		--log:Debug("%s flavor = %s", GameInfo.Units[unitID].Type, unitFlavor)
 		if Game.HasValue({UnitType=GameInfo.Units[unitID].Type, ResourceType="RESOURCE_HORSE"}, GameInfo.Unit_ResourceQuantityRequirements) then
 			return true
 		end
@@ -144,7 +144,7 @@ end
 function Game.TrigAction.ScoutSavior1(playerID, trigID, targetID, outID)
 	local unit = Players[playerID]:GetUnitByID(targetID)
 	local newUnit = Players[playerID]:InitUnitClass("UNITCLASS_SCOUT", unit:GetPlot(), unit:GetExperience())
-	for promoInfo in GameInfo.UnitPromotions("LostWithUpgrade = 0") do
+	for promoInfo in GameInfo.UnitPromotions{Class = "PROMOTION_CLASS_PERSISTANT"} do
 		if unit:IsHasPromotion(promoInfo.ID) then
 			newUnit:SetHasPromotion(promoInfo.ID, true)
 		end
@@ -333,7 +333,7 @@ function Game.TrigAction.BarbarianMercenaries1(playerID, trigID, targetID, outID
 	local player = Players[playerID]
 	local city = player:GetCapitalCity()
 	player:InitUnitClass("UNITCLASS_WORKER", city:Plot())
-	player:InitUnitClass("UNITCLASS_WORKER", city:Plot())
+	--player:InitUnitClass("UNITCLASS_WORKER", city:Plot())
 end
 
 function Game.TrigAction.BarbarianMercenaries2(playerID, trigID, targetID, outID)
@@ -355,7 +355,7 @@ function Game.TrigAction.BarbarianMercenaries2(playerID, trigID, targetID, outID
 			end
 		end
 	end
-	for i=1, 3 do
+	for i=1, 2 do
 		local unitID = Game.GetRandomWeighted(unitList)
 		if unitID and unitID ~= -1 then
 			player:InitUnitType(unitID, city:Plot())
@@ -366,5 +366,5 @@ function Game.TrigAction.BarbarianMercenaries2(playerID, trigID, targetID, outID
 end
 
 function Game.TrigAction.BarbarianMercenaries3(playerID, trigID, targetID, outID)
-	Players[playerID]:ChangeYieldStored(YieldTypes.YIELD_GOLD, 50)
+	Players[playerID]:ChangeYieldStored(YieldTypes.YIELD_GOLD, 25)
 end

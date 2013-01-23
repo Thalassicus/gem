@@ -3,29 +3,11 @@
 	<Buildings>
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_COURTHOUSE" />
-			<Set Cost="140"
-				 GoldMaintenance="0"
-				 HurryCostModifier="75"
-				 PopCostMod="10"
+			<Set GoldMaintenance="0"
+				 HurryCostModifier="100"
+				 PopCostMod="0"
 				 />
 			<!-- 100, 4, 50 -->
-		</Update>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_COLOSSEUM" />
-			<Set Cost="220"
-				 GoldMaintenance="2"
-				 />
-		</Update>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_CIRCUS" />
-			<Set Cost="140"
-				 GoldMaintenance="2"
-				 />
-			<!-- 75, 0 -->
-		</Update>
-		<Update>
-			<Where BuildingClass="BUILDINGCLASS_STONE_WORKS" />
-			<Set ProhibitedCityTerrain="NULL" />
 		</Update>
 	</Buildings>
 	<Building_ResourceYieldChanges>

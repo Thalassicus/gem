@@ -13,6 +13,8 @@ LuaEvents.NotificationAddin( { name = "Refugees", type = "CNOTIFICATION_REFUGEES
 LuaEvents.NotificationAddin( { name = "CapturedMaritime", type = "CNOTIFICATION_CAPTURED_MARITIME" } )
 LuaEvents.NotificationAddin( { name = "CapturedCultural", type = "CNOTIFICATION_CAPTURED_CULTURAL" } )
 LuaEvents.NotificationAddin( { name = "CapturedMilitaristic", type = "CNOTIFICATION_CAPTURED_MILITARISTIC" } )
+LuaEvents.NotificationAddin( { name = "CapturedReligious", type = "CNOTIFICATION_CAPTURED_RELIGIOUS" } )
+LuaEvents.NotificationAddin( { name = "CapturedMercantile", type = "CNOTIFICATION_CAPTURED_MERCANTILE" } )
 LuaEvents.NotificationAddin( { name = "CapturedOther", type = "CNOTIFICATION_CAPTURED_OTHER" } )
 
 
@@ -68,7 +70,7 @@ function CheckForMinorAIBonuses(unit)
 	
 	local iW, iH = Map.GetGridSize()
 
-	log:Info("New %15s %15s on %15s (total=%2.2f hill=%.2f desert=%.2f arctic=%.2f veggie=%.2f)",
+	log:Debug("New %15s %15s on %15s (total=%2.2f hill=%.2f desert=%.2f arctic=%.2f veggie=%.2f)",
 		player:GetName(),
 		unit:GetName(),
 		largest,
@@ -111,28 +113,21 @@ Events.ActivePlayerTurnStart.Add( CheckForMinorAIBonusesLoop )
 
 LuaEvents.CityCaptureBonuses = LuaEvents.CityCaptureBonuses or function(city) end
 
-function CityCaptured (plot, lostPlayerID, cityID, wonPlayerID)
-	local wonPlayer		= Players[wonPlayerID]
-	local capturingUnit = Plot_GetCombatUnit(plot)
-	local lostPlayer	= Players[lostPlayerID]
-    local lostCityPlot	= Map.GetPlot( ToGridFromHex( plot.x, plot.y ) )
-	local lostCity		= lostCityPlot:GetPlotCity()
-	local lostCityName	= lostCity:GetName()
+function City_DoRefugees(lostCityPlot, lostCity, lostCityName, lostPlayer, wonPlayer)
+	log:Info("City_DoRefugees %s", lostCity:GetName())
 	local capitalCity	= lostPlayer:GetCapitalCity()
-	local refugees		= false
+	local refugees		= false	
+	local lostCityPop	= lostCity:GetPopulation()
+	local popLost		= 0
+	local popDead		= 0
+	local popFlee		= 0
+	local resistMod		= 1.0
 	
-	if not (capturingUnit and capturingUnit:GetOwner() == wonPlayerID) then
-		-- The new owner does not have a unit in the city.
-		-- This occurs when cities are gifted.
-		return
+	for policyInfo in GameInfo.Policies("CityResistTimeMod <> 0") do
+		if wonPlayer:HasPolicy(policyInfo.ID) then
+			resistMod = resistMod + policyInfo.CityResistTimeMod / 100
+		end
 	end
-
-	log:Info("%s captured %s from %s: %s capital city", wonPlayer:GetName(), lostCityName, lostPlayer:GetName(), capitalCity and capitalCity:GetName() or "no")
-	
-	local lostCityPop = lostCity:GetPopulation()
-	local popLost = 0
-	local popDead = 0
-	local popFlee = 0
 	
 	if lostCityPop >= 2 then
 		popLost = Game.Round(0.1 * lostCityPop) + 1
@@ -143,163 +138,248 @@ function CityCaptured (plot, lostPlayerID, cityID, wonPlayerID)
 	end
 	lostCityPop = lostCity:GetPopulation()
 
-	local heldTime = (Game.GetGameTurn() - lostPlayer:GetTurnAcquired(lostCity))
-	local heldMinTime = Civup.PARTISANS_MIN_CITY_OWNERSHIP_TURNS * GameInfo.GameSpeeds[Game.GetGameSpeedType()].TrainPercent / 100
-	local resistMaxTime = math.max(1, math.min(heldTime, lostCityPop))
-	local resistTime = Game.Constrain(1, Game.Round(lostCityPop - 0.1*lostCityPop^1.5), resistMaxTime)
+	local heldTime		= (Game.GetGameTurn() - lostPlayer:GetTurnAcquired(lostCity))
+	local heldMinTime	= Civup.PARTISANS_MIN_CITY_OWNERSHIP_TURNS * GameInfo.GameSpeeds[Game.GetGameSpeedType()].TrainPercent / 100
+	local resistMaxTime	= math.max(1, math.min(heldTime, lostCityPop))
+	local resistTime	= (lostCityPop - 0.1*lostCityPop^1.5) * resistMod
+		  resistTime	= Game.Constrain(1, Game.Round(resistTime), resistMaxTime)
 
 	City_SetResistanceTurns(lostCity, resistTime)
+	
+	if not capitalCity then
+		return
+	end
 
-	if capitalCity then
-		if popFlee > 0 then
-			capitalCity:ChangePopulation(popFlee, true)
+	if popFlee > 0 then
+		capitalCity:ChangePopulation(popFlee, true)
+	end
+	--[[
+	log:Info("%s captured: heldMinTime=%s MinTurns=%s TrainPercent=%s turn=%s acquired=%s resistMaxTime=%s resistTime=%s",
+		heldMinTime,
+		Civup.PARTISANS_MIN_CITY_OWNERSHIP_TURNS,
+		GameInfo.GameSpeeds[Game.GetGameSpeedType()].TrainPercent / 100,
+		Game.GetGameTurn(),
+		lostPlayer:GetTurnAcquired(lostCity),
+		resistMaxTime,
+		resistTime
+	)
+	--]]
+	if not wonPlayer:IsHuman() and not lostPlayer:IsHuman() then
+		return
+	end
+	if heldTime < heldMinTime then
+		return
+	end
+	
+	-- Create partisans
+	
+	if lostPlayer:IsHuman() then
+		local itemID = Game.GetRandomWeighted(City_GetUnitsOfFlavor(capitalCity, "FLAVOR_DEFENSE"))
+		if itemID ~= -1 then
+			lostPlayer:InitUnit(itemID, capitalCity:GetX(), capitalCity:GetY())
 		end
-		--[[
-		log:Debug("heldMinTime=%s MinTurns=%s TrainPercent=%s turn=%s acquired=%s ",
-			heldMinTime,
-			Civup.PARTISANS_MIN_CITY_OWNERSHIP_TURNS,
-			GameInfo.GameSpeeds[Game.GetGameSpeedType()].TrainPercent / 100,
-			Game.GetGameTurn(),
-			lostPlayer:GetTurnAcquired(lostCity)
-		)
-		--]]
-		if (wonPlayer:IsHuman() or lostPlayer:IsHuman()) and (heldTime > heldMinTime) then
-			-- Create partisans
-			--log:Debug("Partisans")
-			local buildableUnits = City_GetUnitsOfFlavor(capitalCity, "FLAVOR_DEFENSE")
-			if lostPlayer:IsHuman() then
-				local itemID = Game.GetRandomWeighted(buildableUnits)
-				if itemID ~= -1 then
-					lostPlayer:InitUnit(itemID, capitalCity:GetX(), capitalCity:GetY())
-				end
-			end
-			if wonPlayer:IsHuman() and not lostPlayer:IsHuman() then
-				-- AIs get a bonus unit defending against the human
-				local itemID = Game.GetRandomWeighted(buildableUnits)
-				if itemID ~= -1 then
-					lostPlayer:InitUnit(itemID, capitalCity:GetX(), capitalCity:GetY())
-				end
-			end
-			
-			if lostCityPlot:IsRevealed(Game.GetActiveTeam()) then
-				if refugees then
-					CustomNotification(
-						"Refugees",
-						"War refugees flee "..lostCityName,
-						string.format("Refugees from %s flee to %s and rally as partisan fighters!", lostCityName, capitalCity:GetName()),
-						lostCityPlot,
-						0,
-						"Red",
-						0
-					)
-				else
-					CustomNotification(
-						"Refugees",
-						"Partisans rally at "..capitalCity:GetName(),
-						string.format("Partisans from %s rally at %s!", lostCityName, capitalCity:GetName()),
-						lostCityPlot,
-						0,
-						"Red",
-						0
-					)
-				end
-			end
+	end
+	if wonPlayer:IsHuman() and not lostPlayer:IsHuman() then
+		-- AIs get a bonus unit defending against the human
+		local itemID = Game.GetRandomWeighted(City_GetUnitsOfFlavor(capitalCity, "FLAVOR_OFFENSE"))
+		if itemID ~= -1 then
+			lostPlayer:InitUnit(itemID, capitalCity:GetX(), capitalCity:GetY())
 		end
-	elseif lostPlayer:IsMinorCiv() and lostPlayer:GetNumCities() <= 0 then
-		local minorTrait		= lostPlayer:GetMinorCivTrait()
-		local traitCaptureBonus	= 1 + wonPlayer:GetTraitInfo().MinorCivCaptureBonus / 100
-		local captureBonusTurns	= Civup.MINOR_CIV_CAPTURE_BONUS_TURNS
-		
-		if (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MARITIME) then
-			local yieldType = YieldTypes.YIELD_FOOD
-			local yieldLoot = captureBonusTurns * traitCaptureBonus * wonPlayer:GetCitystateYields(minorTrait, 2)[yieldType]
-			for city in wonPlayer:Cities() do
-				City_ChangeYieldStored(city, yieldType, yieldLoot * City_GetWeight(city, yieldType)/wonPlayer:GetTotalWeight(yieldType) * (1 + City_GetBaseYieldRateModifier(city, yieldType)/100) )
-			end			
-			if Game.GetActivePlayer() == wonPlayerID then
-				CustomNotification(
-					"CapturedMaritime",
-					"Looted Food",
-					yieldLoot.." [ICON_FOOD] Food looted from the maritime [ICON_CITY_STATE] City-State of "..lostCityName.." distributed to your Cities.",
-					lostCityPlot,
-					0,
-					0,
-					0
-				)
-			end
-		elseif (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_CULTURED) then
-			local yieldType = YieldTypes.YIELD_CULTURE
-			local yieldLoot = captureBonusTurns * traitCaptureBonus * wonPlayer:GetCitystateYields(minorTrait, 2)[yieldType]
-			local totalCulture = 0
-			for targetCity in wonPlayer:Cities() do
-				local cityCulture = yieldLoot * City_GetWeight(targetCity, yieldType)/wonPlayer:GetTotalWeight(yieldType) * (1 + City_GetBaseYieldRateModifier(targetCity, yieldType)/100)
-				totalCulture = totalCulture + cityCulture
-				City_ChangeYieldStored(targetCity, yieldType, cityCulture)
-			end
-				
-			if Game.GetActivePlayer() == wonPlayerID then
-				CustomNotification(
-					"CapturedCultural",
-					"Looted Cultural Artifacts",
-					string.format("%i [ICON_CULTURE] Culture of valuable artifacts looted from the cultural [ICON_CITY_STATE] City-State of %s.", Game.Round(totalCulture, -1), lostCityName),
-					lostCityPlot,
-					0,
-					0,
-					0
-				)
-			end
-		elseif (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MILITARISTIC) and capturingUnit then
-			local quantity		= 3
-			local availableIDs	= City_GetBuildableUnitIDs(lostCity)
-			local newUnitID		= availableIDs[1 + Map.Rand(#availableIDs, "Militaristic CS Capture")]
-			local xp			= wonPlayer:GetCitystateYields(minorTrait, 2)[YieldTypes.YIELD_EXPERIENCE]
-			if newUnitID == nil then
-				newUnitID = GameInfo.Units.UNIT_SCOUT.ID
-			end
-			if GameInfo.Units[newUnitID].Domain ~= "DOMAIN_LAND" then
-				xp = xp * Civup.MINOR_CIV_MILITARISTIC_XP_NONLAND_PENALTY
-			end
-			
-			for i=1, quantity do
-				local index = 1 + Map.Rand(#availableIDs, "InitUnitFromList")
-				local newUnitID = availableIDs[index]
-				if #availableIDs >= 2 then
-					table.remove(availableIDs, index)
-				end
-
-				--log:Debug("  Reward=%s  XP=%s", GameInfo.Units[newUnitID].Type, xp)
-				wonPlayer:InitUnitType(newUnitID, lostCityPlot, xp)
-				
-				if Game.GetActivePlayer() == wonPlayer:GetID() then
-					local newUnitIcon = {{"Unit1", newUnitID, 0, 0, 0}}
-					local newUnitName = Locale.ConvertTextKey(GameInfo.Units[newUnitID].Description)
-					CustomNotification(
-						"CapturedMilitaristic",
-						"Conscripts",
-						string.format("Conscripted %s into your army from the militaristic [ICON_CITY_STATE] City-State of %s.", newUnitName, lostCityName),
-						lostCityPlot,
-						0,
-						0,
-						newUnitIcon
-					)
-				end
-			end
+	end
+	
+	if lostCityPlot:IsRevealed(Game.GetActiveTeam()) then
+		if refugees then
+			CustomNotification(
+				"Refugees",
+				"War refugees flee "..lostCityName,
+				string.format("Refugees from %s flee to %s and rally as partisan fighters!", lostCityName, capitalCity:GetName()),
+				lostCityPlot,
+				0,
+				"Red",
+				0
+			)
 		else
-			local goldLoot = captureBonusTurns * traitCaptureBonus * 50
-			wonPlayer:ChangeGold( goldLoot )
-			if Game.GetActivePlayer() == wonPlayerID then
+			CustomNotification(
+				"Refugees",
+				"Partisans rally at "..capitalCity:GetName(),
+				string.format("Partisans from %s rally at %s!", lostCityName, capitalCity:GetName()),
+				lostCityPlot,
+				0,
+				"Red",
+				0
+			)
+		end
+	end
+end
 
+function City_DoCitystateCapture(lostCityPlot, lostCity, lostCityName, lostPlayerID, wonPlayerID, capturingUnit)
+	log:Info("City_DoCitystateCapture %s", lostCityName)
+	local wonPlayer			= Players[wonPlayerID]
+	local lostPlayer		= Players[lostPlayerID]
+	local minorTrait		= lostPlayer:GetMinorCivTrait()
+	local traitCaptureBonus	= 1 + wonPlayer:GetTraitInfo().MinorCivCaptureBonus / 100
+	--local captureBonusTurns	= Civup.MINOR_CIV_CAPTURE_BONUS_TURNS
+	
+	local captureBonusTurns = 0
+	for policyInfo in GameInfo.Policies("CitystateCaptureYieldTurns > 0") do
+		if wonPlayer:HasPolicy(policyInfo.ID) then
+			captureBonusTurns = captureBonusTurns + policyInfo.CitystateCaptureYieldTurns
+		end
+	end
+	
+	if captureBonusTurns == 0 then
+		return
+	end
+	
+	if (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MARITIME) then
+		log:Debug(" Maritime")
+		local yieldID = YieldTypes.YIELD_FOOD
+		local yieldLoot = captureBonusTurns * traitCaptureBonus * wonPlayer:GetCitystateYields(minorTrait, 2)[yieldID]
+		for city in wonPlayer:Cities() do
+			City_ChangeYieldStored(city, yieldID, yieldLoot * City_GetWeight(city, yieldID)/wonPlayer:GetTotalWeight(yieldID) * (1 + City_GetBaseYieldRateModifier(city, yieldID)/100) )
+		end			
+		if Game.GetActivePlayer() == wonPlayerID then
+			CustomNotification(
+				"CapturedMaritime",
+				"Looted Food",
+				yieldLoot.." [ICON_FOOD] Food looted from the maritime [ICON_CITY_STATE] City-State of "..lostCityName.." distributed to your Cities.",
+				lostCityPlot,
+				0,
+				0,
+				0
+			)
+		end
+	elseif (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_CULTURED) then
+		log:Debug(" Cultural")
+		local yieldID = YieldTypes.YIELD_CULTURE
+		local yieldLoot = captureBonusTurns * traitCaptureBonus * wonPlayer:GetCitystateYields(minorTrait, 2)[yieldID]
+		local totalCulture = 0
+		for targetCity in wonPlayer:Cities() do
+			local cityCulture = yieldLoot * City_GetWeight(targetCity, yieldID)/wonPlayer:GetTotalWeight(yieldID) * (1 + City_GetBaseYieldRateModifier(targetCity, yieldID)/100)
+			totalCulture = totalCulture + cityCulture
+			City_ChangeYieldStored(targetCity, yieldID, cityCulture)
+		end
+			
+		if Game.GetActivePlayer() == wonPlayerID then
+			CustomNotification(
+				"CapturedCultural",
+				"Looted Cultural Artifacts",
+				string.format("%i [ICON_CULTURE] Culture of valuable artifacts looted from the cultural [ICON_CITY_STATE] City-State of %s.", Game.Round(totalCulture, -1), lostCityName),
+				lostCityPlot,
+				0,
+				0,
+				0
+			)
+		end
+	elseif (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MILITARISTIC) and capturingUnit then
+		log:Debug(" Militaristic")
+		local quantity		= 3
+		local availableIDs	= City_GetBuildableUnitIDs(lostCity)
+		local newUnitID		= availableIDs[1 + Map.Rand(#availableIDs, "Militaristic CS Capture")]
+		local xp			= wonPlayer:GetCitystateYields(minorTrait, 2)[YieldTypes.YIELD_EXPERIENCE]
+		if newUnitID == nil then
+			newUnitID = GameInfo.Units.UNIT_SCOUT.ID
+		end
+		if GameInfo.Units[newUnitID].Domain ~= "DOMAIN_LAND" then
+			xp = xp * Civup.MINOR_CIV_MILITARISTIC_XP_NONLAND_PENALTY
+		end
+		
+		for i=1, quantity do
+			local index = 1 + Map.Rand(#availableIDs, "InitUnitFromList")
+			local newUnitID = availableIDs[index]
+			if #availableIDs >= 2 then
+				table.remove(availableIDs, index)
+			end
+
+			--log:Debug("  Reward=%s  XP=%s", GameInfo.Units[newUnitID].Type, xp)
+			wonPlayer:InitUnitType(newUnitID, lostCityPlot, xp)
+			
+			if Game.GetActivePlayer() == wonPlayer:GetID() then
+				local newUnitIcon = {{"Unit1", newUnitID, 0, 0, 0}}
+				local newUnitName = Locale.ConvertTextKey(GameInfo.Units[newUnitID].Description)
 				CustomNotification(
-					"CapturedOther",
-					"Looted Gold",
-					goldLoot.." [ICON_GOLD] looted from the [ICON_CITY_STATE] City-State of "..lostCityName..".",
+					"CapturedMilitaristic",
+					"Conscripts",
+					string.format("Conscripted %s into your army from the militaristic [ICON_CITY_STATE] City-State of %s.", newUnitName, lostCityName),
 					lostCityPlot,
 					0,
 					0,
-					0
+					newUnitIcon
 				)
 			end
 		end
+	elseif (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_RELIGIOUS) then
+		log:Debug(" Religious")
+		local yieldID = YieldTypes.YIELD_FAITH
+		local yieldLoot = Game.Round(captureBonusTurns * traitCaptureBonus * wonPlayer:GetCitystateYields(minorTrait, 2)[yieldID])
+		wonPlayer:ChangeYieldStored(yieldID, yieldLoot)
+		if Game.GetActivePlayer() == wonPlayerID then
+			CustomNotification(
+				"CapturedReligious",
+				"Religious Zeal",
+				string.format("%s [ICON_PEACE] religious zeal gained by capturing the religious [ICON_CITY_STATE] City-State of %s.", yieldLoot, lostCityName),
+				lostCityPlot,
+				0,
+				0,
+				0
+			)
+		end
+	elseif (minorTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MERCANTILE) then
+		log:Debug(" Mercantile")
+		local yieldID = YieldTypes.YIELD_GOLD
+		local yieldLoot = 100 + captureBonusTurns * traitCaptureBonus * 2 ^ (wonPlayer:GetCurrentEra() + 1)
+		wonPlayer:ChangeYieldStored(yieldID, yieldLoot)
+		if Game.GetActivePlayer() == wonPlayerID then
+			CustomNotification(
+				"CapturedMercantile",
+				"Looted Gold",
+				yieldLoot.." [ICON_GOLD] Gold looted from the mercantile [ICON_CITY_STATE] City-State of "..lostCityName..".",
+				lostCityPlot,
+				0,
+				0,
+				0
+			)
+		end
+	else
+		log:Debug(" Other")
+		local yieldID = YieldTypes.YIELD_GOLD
+		local yieldLoot = 100 + captureBonusTurns * traitCaptureBonus * 2 ^ (wonPlayer:GetCurrentEra() + 1)
+		wonPlayer:ChangeYieldStored(yieldID, yieldLoot)
+		if Game.GetActivePlayer() == wonPlayerID then
+			CustomNotification(
+				"CapturedOther",
+				"Looted Gold",
+				yieldLoot.." [ICON_GOLD] Gold looted from the [ICON_CITY_STATE] City-State of "..lostCityName..".",
+				lostCityPlot,
+				0,
+				0,
+				0
+			)
+		end
+	end
+end
+
+function CityCaptured (plot, lostPlayerID, cityID, wonPlayerID)
+	local capturingUnit	= Plot_GetCombatUnit(plot)
+	local wonPlayer		= Players[wonPlayerID]
+	local lostPlayer	= Players[lostPlayerID]
+    local lostCityPlot	= Map.GetPlot(ToGridFromHex( plot.x, plot.y ))
+	local lostCity		= lostCityPlot:GetPlotCity()
+	local lostCityName	= lostCity:GetName()
+	local capitalCity	= lostPlayer:GetCapitalCity()
+	
+	if not (capturingUnit and capturingUnit:GetOwner() == wonPlayerID) then
+		-- The new owner does not have a unit in the city.
+		-- This occurs when players gift cities to other players.
+		return
+	end
+
+	log:Info("%s captured %s from %s: %s capital city", wonPlayer:GetName(), lostCityName, lostPlayer:GetName(), capitalCity and capitalCity:GetName() or "no")
+	
+	City_DoRefugees(lostCityPlot, lostCity, lostCityName, lostPlayer, wonPlayer)
+
+	if not capitalCity and lostPlayer:IsMinorCiv() and lostPlayer:GetNumCities() <= 0 then
+		City_DoCitystateCapture(lostCityPlot, lostCity, lostCityName, lostPlayerID, wonPlayerID, capturingUnit)
 	end
 
 	LuaEvents.CityCaptureBonuses(lostCity, wonPlayer)

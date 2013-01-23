@@ -91,7 +91,6 @@
 				 PromotionPrereqOr2="PROMOTION_BARRAGE_3"
 				 PromotionPrereqOr3="PROMOTION_TARGETING_3"
 				 PromotionPrereqOr4="PROMOTION_BOMBARDMENT_3"
-				 PromotionPrereqOr5="PROMOTION_BOARDING_PARTY_1"
 				 PortraitIndex="9"
 				 Description="TXT_KEY_PROMOTION_BLITZ"
 				 PediaEntry="TXT_KEY_PROMOTION_BLITZ"
@@ -284,6 +283,14 @@
 		<Row>
 			<PromotionType>PROMOTION_WOODSMAN</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_MORALE</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_MORALE</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
 		</Row>
 	</UnitPromotions_UnitCombats>
 	<Unit_FreePromotions>

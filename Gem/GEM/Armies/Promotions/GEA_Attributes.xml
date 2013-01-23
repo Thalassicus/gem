@@ -7,11 +7,25 @@
 			<Help>TXT_KEY_PROMOTION_LAND_PENALTY_II_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>57</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_LAND_PENALTY_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_LAND_BONUS_I</Type>
+			<Description>TXT_KEY_PROMOTION_LAND_BONUS_I</Description>
+			<Help>TXT_KEY_PROMOTION_LAND_BONUS_I_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_LAND_BONUS_I</PediaEntry>
 		</Row>
 		<Row>
 			<Type>PROMOTION_LAND_BONUS_II</Type>
@@ -19,11 +33,25 @@
 			<Help>TXT_KEY_PROMOTION_LAND_BONUS_II_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>58</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_LAND_BONUS_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_SEA_BONUS_I</Type>
+			<Description>TXT_KEY_PROMOTION_SEA_BONUS_I</Description>
+			<Help>TXT_KEY_PROMOTION_SEA_BONUS_I_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SEA_BONUS_I</PediaEntry>
 		</Row>
 		<Row>
 			<Type>PROMOTION_SEA_BONUS_II</Type>
@@ -31,11 +59,26 @@
 			<Help>TXT_KEY_PROMOTION_SEA_BONUS_II_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>58</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SEA_BONUS_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_CITY_ATTACK_II</Type>
+			<Description>TXT_KEY_PROMOTION_CITY_ATTACK_II</Description>
+			<Help>TXT_KEY_PROMOTION_CITY_ATTACK_II_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<CityAttack>50</CityAttack>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CITY_ATTACK_II</PediaEntry>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CITY_BONUS_II</Type>
@@ -43,13 +86,29 @@
 			<Help>TXT_KEY_PROMOTION_CITY_BONUS_II_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
 			<OrderPriority>2</OrderPriority>
 			<PortraitIndex>58</PortraitIndex>
 			<CityAttack>50</CityAttack>
 			<CityDefense>50</CityDefense>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CITY_BONUS_II</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_CITY_BONUS_III</Type>
+			<Description>TXT_KEY_PROMOTION_CITY_BONUS_III</Description>
+			<Help>TXT_KEY_PROMOTION_CITY_BONUS_III_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<CityAttack>200</CityAttack>
+			<CityDefense>200</CityDefense>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CITY_BONUS_III</PediaEntry>
 		</Row>
 		<Row>
 			<Type>PROMOTION_DOUBLE_WORK_SPEED</Type>
@@ -57,8 +116,8 @@
 			<PediaEntry>TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED</PediaEntry>
 			<Help>TXT_KEY_PROMOTION_DOUBLE_WORK_SPEED_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
 			<PortraitIndex>58</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
@@ -99,6 +158,14 @@
 				 />
 		</Update>
 		<Update>
+			<Where Type="PROMOTION_CITY_SIEGE" />
+			<Set CityAttack="25"
+				 CityDefense="25"
+				 LostWithUpgrade="true"
+				 PediaEntry="TXT_KEY_PROMOTION_CITY_SIEGE"
+				 />
+		</Update>
+		<Update>
 			<Where Type="PROMOTION_DEFENSE_PENALTY" />
 			<Set DefenseMod="-25" />
 		</Update>
@@ -113,43 +180,23 @@
 		</Update>
 		<Row>
 			<Type>PROMOTION_ANTI_CAVALRY</Type>
-			<Description>TXT_KEY_PROMOTION_ANTI_CAVALRY_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_ANTI_CAVALRY</Description>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_CAVALRY</PediaEntry>
 			<Help>TXT_KEY_PROMOTION_ANTI_CAVALRY_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
 			<PortraitIndex>58</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 		</Row>
-		<Update>
-			<Where Type="PROMOTION_ANTI_MOUNTED_I" />
-			<Set Description="TXT_KEY_PROMOTION_ANTI_MOUNTED_I_HELP" />
-		</Update>
-		<Update>
-			<Where Type="PROMOTION_ANTI_MOUNTED_II" />
-			<Set Description="TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP" />
-		</Update>
-		<Update>
-			<Where Type="PROMOTION_ANTI_AIR" />
-			<Set Description="TXT_KEY_PROMOTION_ANTI_AIR_HELP" />
-		</Update>
-		<Update>
-			<Where Type="PROMOTION_ANTI_HELICOPTER" />
-			<Set Description="TXT_KEY_PROMOTION_ANTI_HELICOPTER_HELP" />
-		</Update>
-		<Update>
-			<Where Type="PROMOTION_ANTI_TANK" />
-			<Set Description="TXT_KEY_PROMOTION_ANTI_TANK_HELP" />
-		</Update>
 		<Update>
 			<Where Type="PROMOTION_ANTI_TANK" />
 			<Set PediaType="PEDIA_SHARED" />
 		</Update>
 		<Row>
 			<Type>PROMOTION_ANTI_MOUNTED_NOUPGRADE_I</Type>
-			<Description>TXT_KEY_PROMOTION_ANTI_MOUNTED_I_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_ANTI_MOUNTED_I</Description>
 			<Help>TXT_KEY_PROMOTION_ANTI_MOUNTED_I_HELP</Help>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_MOUNTED_I</PediaEntry>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -160,7 +207,7 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_ANTI_MOUNTED_NOUPGRADE_II</Type>
-			<Description>TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_ANTI_MOUNTED_II</Description>
 			<Help>TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP</Help>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_MOUNTED_II</PediaEntry>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -171,8 +218,8 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_ATTACK_BONUS_NOUPGRADE_I</Type>
-			<Description>TXT_KEY_PROMOTION_ATTACK_BONUS_I_HELP</Description>
-			<Help>TXT_KEY_PROMOTION_ATTACK_BONUS</Help>
+			<Description>TXT_KEY_PROMOTION_ATTACK_BONUS_I</Description>
+			<Help>TXT_KEY_PROMOTION_ATTACK_BONUS_I_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<AttackMod>25</AttackMod>
 			<LostWithUpgrade>true</LostWithUpgrade>
@@ -183,8 +230,8 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_ATTACK_BONUS_NOUPGRADE_II</Type>
-			<Description>TXT_KEY_PROMOTION_ATTACK_BONUS_II_HELP</Description>
-			<Help>TXT_KEY_PROMOTION_ATTACK_BONUS_II</Help>
+			<Description>TXT_KEY_PROMOTION_ATTACK_BONUS_II</Description>
+			<Help>TXT_KEY_PROMOTION_ATTACK_BONUS_II_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<AttackMod>50</AttackMod>
 			<LostWithUpgrade>true</LostWithUpgrade>
@@ -195,7 +242,7 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_CAPITAL_SHIP_BONUS</Type>
-			<Description>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS</Description>
 			<PediaEntry>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS</PediaEntry>
 			<Help>TXT_KEY_PROMOTION_CAPITAL_SHIP_BONUS_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -207,7 +254,7 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_EXTRA_SIGHT_NOUPGRADE_I</Type>
-			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_I_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_I</Description>
 			<Help>TXT_KEY_PROMOTION_XTRA_SIGHT_I_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
@@ -219,7 +266,7 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_EXTRA_SIGHT_NOUPGRADE_II</Type>
-			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_II_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_II</Description>
 			<Help>TXT_KEY_PROMOTION_XTRA_SIGHT_II_HELP</Help>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_XTRA_SIGHT_II</PediaEntry>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -231,7 +278,7 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_DEFENSE_1</Type>
-			<Description>TXT_KEY_PROMOTION_DEFENSE_1_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_DEFENSE_1</Description>
 			<Help>TXT_KEY_PROMOTION_DEFENSE_1_HELP</Help>
 			<PediaEntry>TXT_KEY_PROMOTION_DEFENSE_1</PediaEntry>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -245,7 +292,7 @@
 		<Row>
 			<Type>PROMOTION_DEFENSE_2</Type>
 			<PediaEntry>TXT_KEY_PROMOTION_DEFENSE_2</PediaEntry>
-			<Description>TXT_KEY_PROMOTION_DEFENSE_2_HELP</Description>
+			<Description>TXT_KEY_PROMOTION_DEFENSE_2</Description>
 			<Help>TXT_KEY_PROMOTION_DEFENSE_2_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
@@ -293,9 +340,19 @@
 	</UnitPromotions_UnitClasses>
 	<UnitPromotions_Domains>
 		<Row>
+			<PromotionType>PROMOTION_LAND_BONUS_I</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Modifier>25</Modifier>
+		</Row>
+		<Row>
 			<PromotionType>PROMOTION_LAND_BONUS_II</PromotionType>
 			<DomainType>DOMAIN_LAND</DomainType>
 			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SEA_BONUS_I</PromotionType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>25</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SEA_BONUS_II</PromotionType>
@@ -317,11 +374,6 @@
 		<Row>
 			<PromotionType>PROMOTION_PHALANX</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-			<Modifier>50</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_PHALANX</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
 			<Modifier>50</Modifier>
 		</Row>
 		<Row>

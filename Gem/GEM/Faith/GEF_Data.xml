@@ -1,95 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<Belief_ResourceYieldChanges>
+	<Defines>
+		<!--Religion-->
 		<Update>
-			<Set Yield="2"/>
-			<Where BeliefType="BELIEF_FORMAL_LITURGY" ResourceType="RESOURCE_GOLD" YieldType="YIELD_CULTURE"/>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_PANTHEON" />
+			<Set Value="20" />
+			<!-- 10 -->
 		</Update>
 		<Update>
-			<Set Yield="2"/>
-			<Where BeliefType="BELIEF_FORMAL_LITURGY" ResourceType="RESOURCE_SILVER" YieldType="YIELD_CULTURE"/>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_PROPHET" />
+			<Set Value="200" />
+			<!-- 200 -->
 		</Update>
 		<Update>
-			<Set Yield="2"/>
-			<Where BeliefType="BELIEF_GOD_FESTIVALS" ResourceType="RESOURCE_WINE" YieldType="YIELD_CULTURE"/>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_GREAT_PERSON" />
+			<Set Value="500" />
+			<!-- 1000 -->
 		</Update>
 		<Update>
-			<Set Yield="2"/>
-			<Where BeliefType="BELIEF_GOD_FESTIVALS" ResourceType="RESOURCE_INCENSE" YieldType="YIELD_CULTURE"/>
+			<Where Name="RELIGION_GAME_FAITH_DELTA_NEXT_PANTHEON" />
+			<Set Value="5" />
+			<!-- 5 -->
 		</Update>
-	</Belief_ResourceYieldChanges>
+		<Update>
+			<Where Name="RELIGION_FAITH_DELTA_NEXT_PROPHET" />
+			<Set Value="50" />
+			<!-- 100 -->
+		</Update>
+		<Update>
+			<Where Name="RELIGION_FAITH_DELTA_NEXT_GREAT_PERSON" />
+			<Set Value="250" />
+			<!-- 500 -->
+		</Update>
+		<Update>
+			<Where Name="RELIGION_BASE_CHANCE_PROPHET_SPAWN"/>
+			<Set Value="5" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_ATHEISM_PRESSURE_PER_POP"/>
+			<Set Value="100" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_INITIAL_FOUNDING_CITY_PRESSURE"/>
+			<Set Value="500" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_PER_TURN_FOUNDING_CITY_PRESSURE"/>
+			<Set Value="5" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_MISSIONARY_PRESSURE_MULTIPLIER"/>
+			<Set Value="1" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_ADJACENT_CITY_DISTANCE"/>
+			<Set Value="10" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_DIPLO_HIT_INITIAL_CONVERT_FRIENDLY_CITY"/>
+			<Set Value="1" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_DIPLO_HIT_RELIGIOUS_FLIP_FRIENDLY_CITY"/>
+			<Set Value="3" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_DIPLO_HIT_CONVERT_HOLY_CITY"/>
+			<Set Value="25" />
+		</Update>
+		<Update>
+			<Where Name="RELIGION_DIPLO_HIT_THRESHOLD"/>
+			<Set Value="10" />
+		</Update>
+	</Defines>
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_GOD_TRANQUILITY</Type>
+			<Description>TXT_KEY_BELIEF_GOD_TRANQUILITY</Description>
+			<ShortDescription>TXT_KEY_BELIEF_GOD_TRANQUILITY_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+		<Update>
+			<Where Type="BELIEF_ASCETISM" />
+			<Set MinFollowers="1"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_LITURGICAL_DRAMA" />
+			<Set MinFollowers="1"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_FERTILITY_RITES" />
+			<Set CityGrowthModifier="25"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_GOD_CRAFTSMEN" />
+			<Set MinPopulation="3"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_GOD_WAR" />
+			<Set FaithFromKills="200"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_RELIGIOUS_SETTLEMENTS" />
+			<Set PlotCultureCostModifier="0"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_CHURCH_PROPERTY" />
+			<Set GoldPerFollowingCity="3"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_TITHE" />
+			<Set GoldPerXFollowers="3"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_INTERFAITH_DIALOGUE" />
+			<Set SciencePerOtherReligionFollower="25"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_SWORD_PLOWSHARES" />
+			<Set CityGrowthModifier="25"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_DEFENDER_FAITH" />
+			<Set CombatModifierFriendlyCities="40"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_JUST_WAR" />
+			<Set CombatModifierEnemyCities="40"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_HOLY_ORDER" />
+			<Set MissionaryCostModifier="-50"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_MESSIAH" />
+			<Set ProphetStrengthModifier="50" ProphetCostModifier="-33" />
+		</Update>
+		<Update>
+			<Where Type="BELIEF_MISSIONARY_ZEAL" />
+			<Set MissionaryStrengthModifier="100"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_RELIGIOUS_UNITY" />
+			<Set FriendlyCityStateSpreadModifier="1000"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_RELIQUARY" />
+			<Set GreatPersonExpendedFaith="500"/>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_PAPAL_PRIMACY" />
+			<Set CityStateMinimumInfluence="30"/>
+		</Update>
+	</Beliefs>
+	<Belief_CityYieldChanges>
+		<Update>
+			<Where BeliefType="BELIEF_GOD_CRAFTSMEN" />
+			<Set Yield="3"/>
+		</Update>
+	</Belief_CityYieldChanges>
+	<Belief_YieldChangeTradeRoute>
+		<Update>
+			<Where BeliefType="BELIEF_MESSENGER_GODS" />
+			<Set Yield="3"/>
+		</Update>
+	</Belief_YieldChangeTradeRoute>
 	<Belief_BuildingClassYieldChanges>
 		<Update>
-			<Set YieldChange="2"/>
-			<Where BeliefType="BELIEF_ANCESTOR_WORSHIP" BuildingClassType="BUILDINGCLASS_SHRINE" YieldType="YIELD_CULTURE"/>
+			<Where BeliefType="BELIEF_ANCESTOR_WORSHIP" />
+			<Set YieldChange="3"/>
 		</Update>
 		<Update>
-			<Set YieldChange="4"/>
-			<Where BeliefType="BELIEF_CHORAL_MUSIC" BuildingClassType="BUILDINGCLASS_TEMPLE" YieldType="YIELD_CULTURE"/>
+			<Where BeliefType="BELIEF_CHORAL_MUSIC" />
+			<Set YieldChange="5"/>
 		</Update>
 		<Update>
+			<Where BeliefType="BELIEF_RELIGIOUS_ART" />
 			<Set YieldChange="16"/>
-			<Where BeliefType="BELIEF_RELIGIOUS_ART" BuildingClassType="BUILDINGCLASS_HERMITAGE" YieldType="YIELD_CULTURE"/>
+		</Update>
+		<Update>
+			<Where BeliefType="BELIEF_FEED_WORLD" />
+			<Set YieldChange="3"/>
+		</Update>
+		<Update>
+			<Where BeliefType="BELIEF_LITURGICAL_DRAMA" />
+			<Set YieldChange="4"/>
+		</Update>
+		<Update>
+			<Where BeliefType="BELIEF_RELIGIOUS_ART" />
+			<Set YieldChange="30"/>
 		</Update>
 	</Belief_BuildingClassYieldChanges>
+	<Belief_TerrainYieldChanges>
+		<Update>
+			<Where BeliefType="BELIEF_DANCE_AURORA" />
+			<Set Yield="1" YieldType="YIELD_PRODUCTION" />
+		</Update>
+	</Belief_TerrainYieldChanges>
 	<Belief_FeatureYieldChanges>
 		<Update>
-			<Set Yield="2"/>
-			<Where BeliefType="BELIEF_SACRED_PATH" FeatureType="FEATURE_JUNGLE" YieldType="YIELD_CULTURE"/>
+			<Where BeliefType="BELIEF_SACRED_PATH" />
+			<Set Yield="1" YieldType="YIELD_FOOD" />
 		</Update>
 	</Belief_FeatureYieldChanges>
-	<Belief_YieldChangePerXForeignFollowers>
+	<Belief_ResourceYieldChanges>
 		<Update>
-			<Set ForeignFollowers="3"/>
-			<Where BeliefType="BELIEF_WORLD_CHURCH" YieldType="YIELD_CULTURE"/>
+			<Where BeliefType="BELIEF_FORMAL_LITURGY" />
+			<Set Yield="3"/>
 		</Update>
-	</Belief_YieldChangePerXForeignFollowers>
+		<Update>
+			<Where BeliefType="BELIEF_FORMAL_LITURGY" />
+			<Set Yield="3"/>
+		</Update>
+		<Update>
+			<Where BeliefType="BELIEF_GOD_FESTIVALS" />
+			<Set Yield="2"/>
+		</Update>
+	</Belief_ResourceYieldChanges>
 	<Belief_ImprovementYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_RELIGIOUS_SETTLEMENTS</BeliefType>
+			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_GOD_TRANQUILITY</BeliefType>
+			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
 		<Update>
-			<Set Yield="2"/>
-			<Where BeliefType="BELIEF_ORAL_TRADITION" ImprovementType="IMPROVEMENT_PLANTATION" YieldType="YIELD_CULTURE"/>
+			<Where BeliefType="BELIEF_GODDESS_HUNT" />
+			<Set Yield="3"/>
 		</Update>
 		<Update>
+			<Where BeliefType="BELIEF_GOD_SEA" />
+			<Set Yield="2" YieldType="YIELD_PRODUCTION" />
+		</Update>
+		<Update>
+			<Where BeliefType="BELIEF_ORAL_TRADITION" />
+			<Set Yield="3"/>
+		</Update>
+		<Update>
+			<Where BeliefType="BELIEF_OPEN_SKY" />
 			<Set Yield="2"/>
-			<Where BeliefType="BELIEF_OPEN_SKY" ImprovementType="IMPROVEMENT_PASTURE" YieldType="YIELD_CULTURE"/>
 		</Update>
 	</Belief_ImprovementYieldChanges>
-	<Language_en_US>
+	<Belief_YieldChangeNaturalWonder>
+		<Delete BeliefType="BELIEF_ONE_WITH_NATURE"/>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_YieldChangeNaturalWonder>
+	<Belief_YieldChangeAnySpecialist>
 		<Update>
-			<Set Text="+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Gold and Silver"/>
-			<Where Tag="TXT_KEY_BELIEF_FORMAL_LITURGY"/>
+			<Where BeliefType="BELIEF_GURUSHIP" />
+			<Set YieldType="YIELD_SCIENCE" Yield="4"/>
 		</Update>
+	</Belief_YieldChangeAnySpecialist>
+	<Belief_YieldChangePerForeignCity>
 		<Update>
-			<Set Text="+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Wine and Incense"/>
-			<Where Tag="TXT_KEY_BELIEF_GOD_FESTIVALS"/>
+			<Where BeliefType="BELIEF_PILGRIMAGE" />
+			<Set Yield="4"/>
 		</Update>
+	</Belief_YieldChangePerForeignCity>
+	<Belief_YieldChangeWorldWonder>
 		<Update>
-			<Set Text="+2 [ICON_CULTURE] Culture from Shrines"/>
-			<Where Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP"/>
+			<Where BeliefType="BELIEF_DIVINE_INSPIRATION" />
+			<Set Yield="4"/>
 		</Update>
+	</Belief_YieldChangeWorldWonder>
+	<Belief_MaxYieldModifierPerFollower>
 		<Update>
-			<Set Text="Temples provide +4 [ICON_CULTURE] Culture in cities with 5 followers"/>
-			<Where Tag="TXT_KEY_BELIEF_CHORAL_MUSIC"/>
+			<Where BeliefType="BELIEF_RELIGIOUS_COMMUNITY" />
+			<Set Max="20"/>
 		</Update>
+	</Belief_MaxYieldModifierPerFollower>
+	<Belief_YieldChangePerXForeignFollowers>
 		<Update>
-			<Set Text="Hermitage provides +16 [ICON_CULTURE] Culture in city"/>
-			<Where Tag="TXT_KEY_BELIEF_RELIGIOUS_ART"/>
+			<Where BeliefType="BELIEF_WORLD_CHURCH" />
+			<Set ForeignFollowers="1"/>
 		</Update>
-		<Update>
-			<Set Text="+2 [ICON_CULTURE] Culture from Jungle tiles"/>
-			<Where Tag="TXT_KEY_BELIEF_SACRED_PATH"/>
-		</Update>
-		<Update>
-			<Set Text="+1 [ICON_CULTURE] Culture for every 3 followers of this religion in other civilizations"/>
-			<Where Tag="TXT_KEY_BELIEF_WORLD_CHURCH"/>
-		</Update>
-		<Update>
-			<Set Text="+2 [ICON_CULTURE] Culture from Plantations"/>
-			<Where Tag="TXT_KEY_BELIEF_ORAL_TRADITION"/>
-		</Update>
-		<Update>
-			<Set Text="+2 [ICON_CULTURE] Culture from Pastures"/>
-			<Where Tag="TXT_KEY_BELIEF_OPEN_SKY"/>
-		</Update>
-	</Language_en_US>
+	</Belief_YieldChangePerXForeignFollowers>
 </GameData>
