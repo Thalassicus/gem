@@ -1,66 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 3/9/2012 4:04:09 PM -->
 <GameData>
-	<Policy_Flavors>
-
-	</Policy_Flavors>
 	<Policies>
 		<Update>
 			<Where Type="POLICY_PATRONAGE" />
-			<Set MinorGoldFriendshipMod="20"
-				 MinorFriendshipDecayMod="0"
+			<Set MinorFriendshipDecayMod="0"
+				 MinorFriendshipMinimum="20"
 				 />
 		</Update>
 		<Update>
 			<Where Type="POLICY_PHILANTHROPY" />
-			<Set MinorFriendshipDecayMod="-25"
-				 MinorGoldFriendshipMod="0"
+			<Set GridX="1"
+				 GridY="1"
+				 PortraitIndex="40"
+				 MinorFriendshipDecayMod="0"
+				 MinorGoldFriendshipMod="33"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_CULTURAL_DIPLOMACY" />
+			<Set GridX="3"
+				 GridY="1"
+				 PortraitIndex="38"
+				 MinorResourceBonus="0"
+				 MinorGoldFriendshipMod="33"
 				 />
 		</Update>
 		<Update>
 			<Where Type="POLICY_AESTHETICS" />
-			<Set MinorFriendshipMinimum="20"
+			<Set GridX="5"
+				 GridY="1"
+				 PortraitIndex="37"
 				 MinorInfluence="20"
+				 MinorFriendshipMinimum="0"
+				 OtherPlayersMinorFriendshipDecayMod="25"
 				 />
 		</Update>
 		<Update>
 			<Where Type="POLICY_EDUCATED_ELITE" />
 			<Set GridX="2"
-				 PortraitIndex="17"
+				 GridY="2"
+				 PortraitIndex="41"
 				 MinorGreatPeopleAllies="false"
-				 Description="TXT_KEY_POLICY_FREE_TRADE"
-				 Civilopedia="TXT_KEY_POLICY_FREE_TRADE_TEXT"
-				 Help="TXT_KEY_POLICY_FREE_TRADE_HELP"
+				 Description="TXT_KEY_POLICY_TRADE_PACT"
+				 Civilopedia="TXT_KEY_POLICY_TRADE_PACT_TEXT"
+				 Help="TXT_KEY_POLICY_TRADE_PACT_HELP"
 				 />
 		</Update>
 		<Update>
-			<Where Type="POLICY_CULTURAL_DIPLOMACY" />
+			<Where Type="POLICY_SCHOLASTICISM" />
 			<Set GridX="4"
-				 MinorResourceBonus="false"
+				 GridY="2"
 				 />
 		</Update>
 		<Update>
 			<Where Type="POLICY_PATRONAGE_FINISHER" />
-			<Set OtherPlayersMinorFriendshipDecayMod="10"
+			<Set OtherPlayersMinorFriendshipDecayMod="0"
 				 />
 		</Update>
 	</Policies>
-	<Policy_PrereqPolicies>
-		<Delete PolicyType="POLICY_EDUCATED_ELITE" />
-		<Delete PolicyType="POLICY_CULTURAL_DIPLOMACY" />
-		<Row>
-			<PolicyType>POLICY_EDUCATED_ELITE</PolicyType>
-			<PrereqPolicy>POLICY_SCHOLASTICISM</PrereqPolicy>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
-			<PrereqPolicy>POLICY_SCHOLASTICISM</PrereqPolicy>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
-			<PrereqPolicy>POLICY_AESTHETICS</PrereqPolicy>
-		</Row>
-	</Policy_PrereqPolicies>
 	<Policy_UnitCombatProductionModifiers>
 		<Row>
 			<PolicyType>POLICY_PATRONAGE</PolicyType>
@@ -70,16 +68,16 @@
 	</Policy_UnitCombatProductionModifiers>
 	<Policy_MinorCivBonuses>
 		<Row>
-			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
+			<PolicyType>POLICY_PATRONAGE_FINISHER</PolicyType>
 			<FriendLevel>1</FriendLevel>
 			<YieldType>YIELD_HAPPINESS</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType>
+			<PolicyType>POLICY_PATRONAGE_FINISHER</PolicyType>
 			<FriendLevel>2</FriendLevel>
 			<YieldType>YIELD_HAPPINESS</YieldType>
-			<Yield>2</Yield>
+			<Yield>3</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_EDUCATED_ELITE</PolicyType>

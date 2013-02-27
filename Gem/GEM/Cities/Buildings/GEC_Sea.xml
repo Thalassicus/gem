@@ -35,10 +35,13 @@
 		</Row>
 	</Building_SeaPlotYieldChanges>
 	<Building_ResourceYieldChanges>
+		<Delete BuildingType="BUILDING_LIGHTHOUSE" />
+		<!--
 		<Update>
 			<Where BuildingType="BUILDING_LIGHTHOUSE" />
 			<Set BuildingType="BUILDING_HARBOR" />
 		</Update>
+		-->
 	</Building_ResourceYieldChanges>
 	<Building_YieldChanges>
 		<Delete BuildingType="BUILDING_SEAPORT" />

@@ -61,7 +61,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LIBURNA</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIBURNA_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_LIBURNA_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -85,7 +84,6 @@
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ENGLISH_SHIPOFTHELINE</Description>
-			<Help>TXT_KEY_UNIT_SHIP_OF_THE_LINE_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SHIP_OF_THE_LINE_PEDIA</Civilopedia>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -109,7 +107,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MISSILE_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MISSILE_DESTROYER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_MISSILE_DESTROYER_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -222,8 +219,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SENTINEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_SENTINEL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SENTINEL_HELP</Help>
-			<Strategy>TXT_KEY_UNIT_SENTINEL_STRATEGY</Strategy>
 			<Pillage>true</Pillage>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -231,11 +226,18 @@
 			<AdvancedStartCost>20</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_GADRAUHTS_SWORDSMAN</UnitArtInfo>
+			<UnitFlagAtlas>EXPANSION_SCEN_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>2</UnitFlagIconOffset>
+			<IconAtlas>EXPANSION_SCEN_UNIT_ATLAS</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
+			<!--
 			<UnitArtInfo>ART_DEF_UNIT_U_PERSIAN_IMMORTAL</UnitArtInfo>
 			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
 			<IconAtlas>GEM_NEW_UNITS_ATLAS</IconAtlas>
 			<PortraitIndex>0</PortraitIndex>
+			-->
 		</Row>
 		<Row>
 			<Class>UNITCLASS_LEVY</Class>
@@ -252,8 +254,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LEVY</Description>
 			<Civilopedia>TXT_KEY_UNIT_LEVY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_LEVY_HELP</Help>
-			<Strategy>TXT_KEY_UNIT_LEVY_STRATEGY</Strategy>
 			<Pillage>true</Pillage>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -261,11 +261,18 @@
 			<AdvancedStartCost>20</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_U_ROMAN_LEGION</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_U_SAXON_HUSCARL</UnitArtInfo>
+			<UnitFlagAtlas>EXPANSION_SCEN_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>1</UnitFlagIconOffset>
+			<IconAtlas>EXPANSION_SCEN_UNIT_ATLAS</IconAtlas>
+			<PortraitIndex>1</PortraitIndex>
+			<!--
+			<UnitArtInfo>ART_DEF_UNIT_GADRAUHTS_SWORDSMAN</UnitArtInfo>
 			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>1</UnitFlagIconOffset>
 			<IconAtlas>EXPANSION_SCEN_UNIT_ATLAS</IconAtlas>
 			<PortraitIndex>2</PortraitIndex>
+			-->
 		</Row>
 		<Row>
 			<Class>UNITCLASS_SKIRMISHER</Class>
@@ -282,8 +289,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SKIRMISHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SKIRMISHER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SKIRMISHER_HELP</Help>
-			<Strategy>TXT_KEY_UNIT_SKIRMISHER_STRATEGY</Strategy>
 			<Pillage>true</Pillage>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -292,10 +297,15 @@
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
 			<UnitArtInfo>ART_DEF_UNIT_U_AMERICAN_MINUTEMAN</UnitArtInfo>
+			<UnitFlagIconOffset>38</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+			<PortraitIndex>39</PortraitIndex>
+			<!--
 			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>2</UnitFlagIconOffset>
 			<IconAtlas>GEM_NEW_UNITS_ATLAS</IconAtlas>
 			<PortraitIndex>1</PortraitIndex>
+			-->
 		</Row>
 		<Row>
 			<Class>UNITCLASS_CONSCRIPT</Class>
@@ -310,8 +320,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSCRIPT</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSCRIPT_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_CONSCRIPT_HELP</Help>
-			<Strategy>TXT_KEY_UNIT_CONSCRIPT_STRATEGY</Strategy>
 			<Pillage>true</Pillage>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -319,11 +327,17 @@
 			<AdvancedStartCost>30</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_U_FRENCH_FOREIGNLEGION</UnitArtInfo>
+			<UnitFlagIconOffset>55</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
+			<PortraitIndex>38</PortraitIndex>
+			<!--
 			<UnitArtInfo>ART_DEF_UNIT_INFANTRY</UnitArtInfo>
 			<UnitFlagAtlas>VANGUARD_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>3</UnitFlagIconOffset>
 			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
 			<PortraitIndex>11</PortraitIndex>
+			-->
 		</Row>
 	</Units>
 	<Unit_AITypes>

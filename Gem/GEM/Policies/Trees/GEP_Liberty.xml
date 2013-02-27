@@ -84,7 +84,7 @@
 	<Policy_FreeBuildingClass>
 		<Row>
 			<PolicyType>POLICY_LIBERTY</PolicyType>
-			<BuildingClass>BUILDINGCLASS_SUMMER_PALACE</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_GEM_PALACE</BuildingClass>
 			<NumCities>3</NumCities>
 		</Row>
 	</Policy_FreeBuildingClass>

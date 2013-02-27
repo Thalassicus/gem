@@ -1,4 +1,4 @@
--- EN_US/Faith.sql
+--· EN_US/Faith.sql
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_ANCESTOR_WORSHIP', '+3 [ICON_CULTURE] Culture from Shrines', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_CATHEDRALS', 'Use [ICON_PEACE] Faith to purchase Cathedrals (1 [ICON_PEACE] Faith per 5 [ICON_CITIZEN] Citizens, +6 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness, 1 Artist Specialist slot)', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_CEREMONIAL_BURIAL', '+1 [ICON_HAPPINESS_1] National Happiness for each city following this religion', '', '');
@@ -9,19 +9,19 @@ INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_DIVINE_INSPIRATION', '+4 [ICON_PEACE] Faith from each World Wonder', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_BELIEF_FERTILITY_RITES', '+25% [ICON_FOOD] Surplus Food', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_BELIEF_FEED_WORLD', '+3 [ICON_FOOD] Food from Shrines and Temples', '', '');
-INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_FORMAL_LITURGY', '+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Gold and Silver', '', '');
+INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-23'), 'TXT_KEY_BELIEF_FORMAL_LITURGY', '+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith for each Gold and Silver', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_GOD_CRAFTSMEN', '+3 [ICON_PRODUCTION] Production in cities with 3+ [ICON_CITIZEN] population', '', '');
-INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_GOD_FESTIVALS', '+2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Wine and Incense', '', '');
+INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-23'), 'TXT_KEY_BELIEF_GOD_FESTIVALS', '+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Wine and Incense', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_BELIEF_GOD_SEA', '+2 [ICON_PRODUCTION] Production from Fishing Boats', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_BELIEF_GOD_TRANQUILITY_SHORT', 'God of Tranquility', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_BELIEF_GOD_TRANQUILITY', '+2 [ICON_PEACE] Faith from Fishing Boats', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_GOD_WAR', 'Gain 2 [ICON_PEACE] Faith per 1 [ICON_STRENGTH] Strength of units defeated within 4 tiles of friendly cities', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_BELIEF_GODDESS_HUNT', '+3 [ICON_FOOD] Food from Camps', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_GURUSHIP', '+4 [ICON_RESEARCH] Science if city has a Specialist', '', '');
-INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_HOLY_ORDER', '50% [ICON_PEACE] Cost for Missionaries and Inquisitors', '', '');
+INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_HOLY_ORDER', '150% strength and 66% [ICON_PEACE] Cost for religious units', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_INTERFAITH_DIALOGUE', 'When this religion spreads to a city, gain +25 [ICON_RESEARCH] Science per follower of other faiths in that city', '', '');
-INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_JUST_WAR', '+40% [ICON_STRENGTH] Combat Strength near enemy cities that follow this religion', '', '');
-INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_LITURGICAL_DRAMA', '+4 [ICON_PEACE] Faith from Amphitheaters', '', '');
+INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_JUST_WAR', '+40% [ICON_STRENGTH] Combat Strength near cities that follow this religion', '', '');
+INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-02-06'), 'TXT_KEY_BELIEF_LITURGICAL_DRAMA', '+4 [ICON_PEACE] Faith from Theaters', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_MESSENGER_GODS', '+3 [ICON_RESEARCH] Science in cities with a [ICON_CONNECTED] Trade Route', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_MESSIAH', '150% strength and 66% [ICON_PEACE] Cost for Great Prophets', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_BELIEF_MISSIONARY_ZEAL', '150% Conversion Strength for missionaries', '', '');

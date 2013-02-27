@@ -56,10 +56,12 @@
 		<Update>
 			<Where Class="UNITCLASS_INFANTRY" />
 			<Set Moves="3"
-				 IconAtlas="GEM_NEW_UNITS_ATLAS"
-				 PortraitIndex="2"
 				 />
 		</Update>
+		<!--
+		IconAtlas="GEM_NEW_UNITS_ATLAS"
+		PortraitIndex="2"
+		-->
 		<Update>
 			<Where Class="UNITCLASS_ROCKET_ARTILLERY" />
 			<Set Moves="3"

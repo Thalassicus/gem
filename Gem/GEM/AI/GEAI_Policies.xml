@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<!-- 
-
-	GEAI_Policies.xml automatically created by:
-	Policy_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
-
-	-->
-
-	<Policy_Flavors>
-		<Delete />
+<!-- 
+GEAI_Policies.xml created by:
+Policy_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
+-->
+<Policy_Flavors>
+    <Delete />
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>        <PolicyType>POLICY_HONOR</PolicyType></Row>
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>        <PolicyType>POLICY_MILITARY_TRADITION</PolicyType></Row>
 		<Row><Flavor>8</Flavor>    <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>        <PolicyType>POLICY_SPOILS_OF_WAR</PolicyType></Row>
@@ -134,6 +131,7 @@
 		<Row><Flavor>8</Flavor>    <FlavorType>FLAVOR_CULTURE</FlavorType>                  <PolicyType>POLICY_UNITY</PolicyType></Row>
 		<Row><Flavor>4</Flavor>    <FlavorType>FLAVOR_CULTURE</FlavorType>                  <PolicyType>POLICY_DEVOTION</PolicyType></Row>
 		<Row><Flavor>4</Flavor>    <FlavorType>FLAVOR_CULTURE</FlavorType>                  <PolicyType>POLICY_PIETY_FINISHER</PolicyType></Row>
+		<Row><Flavor>8</Flavor>    <FlavorType>FLAVOR_CULTURE</FlavorType>                  <PolicyType>POLICY_MERCHANT_NAVY</PolicyType></Row>
 		<Row><Flavor>2</Flavor>    <FlavorType>FLAVOR_CULTURE</FlavorType>                  <PolicyType>POLICY_PATRONAGE</PolicyType></Row>
 		<Row><Flavor>2</Flavor>    <FlavorType>FLAVOR_CULTURE</FlavorType>                  <PolicyType>POLICY_PHILANTHROPY</PolicyType></Row>
 		<Row><Flavor>2</Flavor>    <FlavorType>FLAVOR_CULTURE</FlavorType>                  <PolicyType>POLICY_CULTURAL_DIPLOMACY</PolicyType></Row>
@@ -196,7 +194,6 @@
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_PRODUCTION</FlavorType>               <PolicyType>POLICY_LIBERTY_FINISHER</PolicyType></Row>
 		<Row><Flavor>8</Flavor>    <FlavorType>FLAVOR_PRODUCTION</FlavorType>               <PolicyType>POLICY_MILITARY_TRADITION</PolicyType></Row>
 		<Row><Flavor>4</Flavor>    <FlavorType>FLAVOR_PRODUCTION</FlavorType>               <PolicyType>POLICY_UNITY</PolicyType></Row>
-		<Row><Flavor>8</Flavor>    <FlavorType>FLAVOR_PRODUCTION</FlavorType>               <PolicyType>POLICY_MERCHANT_NAVY</PolicyType></Row>
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_PRODUCTION</FlavorType>               <PolicyType>POLICY_EDUCATED_ELITE</PolicyType></Row>
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_PRODUCTION</FlavorType>               <PolicyType>POLICY_ORDER</PolicyType></Row>
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_PRODUCTION</FlavorType>               <PolicyType>POLICY_PLANNED_ECONOMY</PolicyType></Row>
@@ -293,5 +290,5 @@
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_RELIGION</FlavorType>                 <PolicyType>POLICY_DEVOTION</PolicyType></Row>
 		<Row><Flavor>16</Flavor>   <FlavorType>FLAVOR_RELIGION</FlavorType>                 <PolicyType>POLICY_PIETY_FINISHER</PolicyType></Row>
 		<Row><Flavor>4</Flavor>    <FlavorType>FLAVOR_RELIGION</FlavorType>                 <PolicyType>POLICY_COMMERCE</PolicyType></Row>
-	</Policy_Flavors>
+    </Policy_Flavors>
 </GameData>

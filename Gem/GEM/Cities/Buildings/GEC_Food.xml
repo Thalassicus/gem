@@ -25,13 +25,13 @@
 			<Yield>100</Yield>
 		</Row>
 	</Building_YieldSurplusModifiers>
-	<Building_InstantYield>
+	<Building_YieldInstant>
 		<Row>
 			<BuildingType>BUILDING_MEDICAL_LAB</BuildingType>
 			<YieldType>YIELD_POPULATION</YieldType>
 			<Yield>1</Yield>
 		</Row>
-	</Building_InstantYield>
+	</Building_YieldInstant>
 	<Building_YieldChanges>
 		<Row>
 			<BuildingType>BUILDING_GARDEN</BuildingType>

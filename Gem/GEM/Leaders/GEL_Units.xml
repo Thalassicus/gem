@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Units>
+		<Update>
+			<Where Type="UNIT_DANISH_BERSERKER"/>
+			<Set Moves="2" />
+		</Update>
+		<Update>
+			<Where Type="UNIT_ENGLISH_LONGBOWMAN" />
+			<Set Range="3" />
+		</Update>
+		<Update>
+			<Where Type="UNIT_HUN_BATTERING_RAM" />
+			<Set Moves="3"
+				 Combat="11"
+				 />
+		</Update>
+		<Update>
+			<Where Type="UNIT_INDIAN_WARELEPHANT" />
+			<Set Moves="2"
+				 AdvancedStartCost="20"
+				 />
+		</Update>
+		<Update>
+			<Where Type="UNIT_MONGOLIAN_KHAN" />
+			<Set Moves="4" />
+			<!-- 5 -->
+		</Update>
+		<Update>
+			<Where Type="UNIT_ROMAN_LEGION" />
+			<Set WorkRate="200"
+				 ObsoleteTech="TECH_GUNPOWDER"
+				 />
+		</Update>
+	</Units>
+	<UnitPromotions>
+		<Update>
+			<Where Type="PROMOTION_MEDIC_GENERAL" />
+			<Set SameTileHealChange="4"
+				 EnemyHealChange="0"
+				 NeutralHealChange="0"
+				 FriendlyHealChange="0" />
+		</Update>
+	</UnitPromotions>
+	<Trait_MovesChangeUnitCombats>
+		<Row>
+			<TraitType>TRAIT_HARAPPAN_ENGINEERING</TraitType>
+			<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_RIVER_EXPANSION</TraitType>
+			<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_TERROR</TraitType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_TERROR</TraitType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_FASTER_RANGED</TraitType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_FASTER_RANGED</TraitType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED_ARCHER</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_FASTER_RANGED</TraitType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_FASTER_RANGED</TraitType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_FASTER_RANGED</TraitType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+			<MovesChange>2</MovesChange>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_FASTER_RANGED</TraitType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+			<MovesChange>2</MovesChange>
+		</Row>
+	</Trait_MovesChangeUnitCombats>
+	<Trait_FreeExperience_Domains>
+		<Row>
+			<TraitType>TRAIT_OCEAN_MOVEMENT</TraitType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Experience>30</Experience>
+		</Row>
+	</Trait_FreeExperience_Domains>
+	<Unit_FreePromotions>
+		<Delete UnitType="UNIT_AMERICAN_MINUTEMAN"/>
+		<Row>
+			<UnitType>UNIT_AMERICAN_MINUTEMAN</UnitType>
+			<PromotionType>PROMOTION_SCOUTING_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DANISH_BERSERKER</UnitType>
+			<PromotionType>PROMOTION_CHARGE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EGYPTIAN_WARCHARIOT</UnitType>
+			<PromotionType>PROMOTION_DESERT_POWER</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_ENGLISH_LONGBOWMAN" PromotionType="PROMOTION_RANGE" />
+		<Row>
+			<UnitType>UNIT_FRENCH_MUSKETEER</UnitType>
+			<PromotionType>PROMOTION_FOREIGN_LANDS</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_FRENCH_FOREIGNLEGION" PromotionType="PROMOTION_FOREIGN_LANDS" />
+		<Row>
+			<UnitType>UNIT_GERMAN_LANDSKNECHT</UnitType>
+			<PromotionType>PROMOTION_MERCENARY</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GREEK_HOPLITE</UnitType>
+			<PromotionType>PROMOTION_PHALANX</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_GREEK_HOPLITE" PromotionType="PROMOTION_ANTI_MOUNTED_II"/>
+		<Row>
+			<UnitType>UNIT_HUN_BATTERING_RAM</UnitType>
+			<PromotionType>PROMOTION_CITY_BONUS_III</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_HUN_BATTERING_RAM" PromotionType="PROMOTION_DEFENSE_PENALTY" />
+		<Delete UnitType="UNIT_HUN_BATTERING_RAM" PromotionType="PROMOTION_CITY_ASSAULT" />
+		<Delete UnitType="UNIT_HUN_BATTERING_RAM" PromotionType="PROMOTION_CITY_BONUS_II" />
+		<Delete UnitType="UNIT_JAPANESE_SAMURAI" PromotionType="PROMOTION_SHOCK_1" />
+		<Delete UnitType="UNIT_JAPANESE_SAMURAI" PromotionType="PROMOTION_SPAWN_GENERALS_II" />
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<PromotionType>PROMOTION_BLITZ</PromotionType>
+		</Row>
+		<Update>
+			<Where UnitType="UNIT_KOREAN_HWACHA" PromotionType="PROMOTION_SMALL_CITY_PENALTY" />
+			<Set PromotionType="PROMOTION_CITY_PENALTY" />
+		</Update>
+		<Row>
+			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
+			<PromotionType>PROMOTION_NATIONAL_PROTECTION</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MAYAN_ATLATLIST</UnitType>
+			<PromotionType>PROMOTION_WOODSMAN</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_MONGOLIAN_KESHIK" PromotionType="PROMOTION_SPAWN_GENERALS_I"/>
+		<Row>
+			<UnitType>UNIT_OTTOMAN_JANISSARY</UnitType>
+			<PromotionType>PROMOTION_MARCH</PromotionType>
+		</Row>
+		<Update>
+			<Where UnitType="UNIT_OTTOMAN_JANISSARY" PromotionType="PROMOTION_HEAL_IF_DESTROY_ENEMY" />
+			<Set PromotionType="PROMOTION_CAMARADERIE" />
+		</Update>
+		<Row>
+			<UnitType>UNIT_ROMAN_LEGION</UnitType>
+			<PromotionType>PROMOTION_DOUBLE_WORK_SPEED</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ROMAN_LEGION</UnitType>
+			<PromotionType>PROMOTION_COVER_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
+			<PromotionType>PROMOTION_SIEGE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SWEDISH_CAROLEAN</UnitType>
+			<PromotionType>PROMOTION_HEAL_IF_DESTROY_ENEMY</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_SWEDISH_CAROLEAN" PromotionType="PROMOTION_MARCH"/>
+		<!--
+		-->
+	</Unit_FreePromotions>
+	<Trait_FreePromotionUnitCombats>
+		<Row>
+			<TraitType>TRAIT_RIVER_EXPANSION</TraitType>
+			<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
+			<PromotionType>PROMOTION_SENTRY</PromotionType>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_RIVER_EXPANSION</TraitType>
+			<UnitCombatType>UNITCOMBAT_COMMAND</UnitCombatType>
+			<PromotionType>PROMOTION_SENTRY</PromotionType>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_RIVER_EXPANSION</TraitType>
+			<UnitCombatType>UNITCOMBAT_DIPLOMACY</UnitCombatType>
+			<PromotionType>PROMOTION_SENTRY</PromotionType>
+		</Row>
+
+		<Row>
+			<TraitType>TRAIT_ART_OF_WAR</TraitType>
+			<UnitCombatType>UNITCOMBAT_COMMAND</UnitCombatType>
+			<PromotionType>PROMOTION_EXTRA_SIGHT_NOUPGRADE_II</PromotionType>
+		</Row>
+
+		<Row>
+			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
+			<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
+			<PromotionType>PROMOTION_EMBARKATION</PromotionType>
+		</Row>
+
+		<Delete TraitType="TRAIT_OCEAN_MOVEMENT" />
+
+		<Row>
+			<TraitType>TRAIT_FASTER_RANGED</TraitType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+			<PromotionType>PROMOTION_SENTRY</PromotionType>
+		</Row>
+	</Trait_FreePromotionUnitCombats>
+</GameData>

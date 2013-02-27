@@ -3,7 +3,7 @@
 	<Defines>
 		<Update>
 			<Where Name="BASE_POLICY_COST" />
-			<Set Value="200" />
+			<Set Value="150" />
 			<!-- 50 -->
 		</Update>
 		<Update>
@@ -18,7 +18,7 @@
 		</Update>
 		<Update>
 			<Where Name="POLICY_COST_VISIBLE_DIVISOR" />
-			<Set Value="20" />
+			<Set Value="10" />
 			<!-- 5 -->
 		</Update>
 	</Defines>

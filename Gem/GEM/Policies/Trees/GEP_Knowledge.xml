@@ -22,7 +22,7 @@
 		<Update>
 			<Where Type="POLICY_SOVEREIGNTY" />
 			<Set GridX="5" GridY="1"
-				 HappinessToScience="20"
+				 HappinessToScience="15"
 				 OneShot="0"
 				 IncludesOneShotFreeUnits="0"
 				 />

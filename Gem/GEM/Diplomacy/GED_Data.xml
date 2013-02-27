@@ -16,9 +16,10 @@
 			<Where Type="FRIENDSHIP_TRADE_BONUS_PERCENT" />
 			<Set Value="100" />
 		</Update>
-		<Row Type="AVOID_GROWTH_FULL_EFFECT_CUTOFF">
-			<Value>50</Value>
-		</Row>
+		<Update>
+			<Where Type="AVOID_GROWTH_FULL_EFFECT_CUTOFF" />
+			<Set Value="50" />
+		</Update>
 		<Row Type="MINOR_CIV_MILITARISTIC_REWARD_FRIEND">
 			<Value>2</Value>
 		</Row>
@@ -75,14 +76,14 @@
 		<Row>
 			<TraitType>MINOR_TRAIT_MERCANTILE</TraitType>
 			<FriendLevel>1</FriendLevel>
-			<YieldType>YIELD_HAPPINESS</YieldType>
+			<YieldType>YIELD_HAPPINESS_NATIONAL</YieldType>
 			<Yield>1</Yield>
 			<YieldPerEra>1</YieldPerEra>
 		</Row>
 		<Row>
 			<TraitType>MINOR_TRAIT_MERCANTILE</TraitType>
 			<FriendLevel>2</FriendLevel>
-			<YieldType>YIELD_HAPPINESS</YieldType>
+			<YieldType>YIELD_HAPPINESS_NATIONAL</YieldType>
 			<Yield>2</Yield>
 			<YieldPerEra>1</YieldPerEra>
 		</Row>
@@ -364,72 +365,6 @@
 		<!-- Weights -->
 
 		
-		<!-- 
-				I've been thinking over citystate quests for a long while.
-				It seems a good way to do it might be a series of tiers.
-				
-				This would basically:
-				1) ensure CSs do things that match the personality they supposedly have
-				2) request things logical for the timeperiod of the game and friendship status
-
-				Citystates should pick a quest from the first tier they match criteria for.
-				If everything's already done they make no requests (don't match any criteria,
-				or all options completed for their tier). In addition, status is re-evaluated
-				periodically to see if the civ should go up a tier (but not down a tier).
-				
-				This system isn't entirely possible to do without access to the full C++ SDK
-				like in Civ 4, and I'm not even sure the code will read additional entries
-				in the (row,column)=(personality, quest weight) table but we can try.
-		
-		
-				In the standard game it seems to work like this:
-
-				   1. Unfriendly
-					  Weighted chances between barbarian or kill-neighbor quests.
-				   2. Friendly or Allied
-					  Weighted chances of all quests, with some more likely based on personality.
-
-				While the vanilla method is simple to code, the problems are:
-				
-				   1. Kill-neighbor quests pile up before citystates can be friended
-				   2. It seems odd for CSs to randomly give quests opposed to their personality.
-
-				The perfect example of this are "Peaceful" citystates that request
-				bloodthirsty massacres of their neighbors. Even though this has a
-				low chance to occur in any given dice roll, since the kill quest and
-				barbarian quest are the only options before friendly, and the kill
-				quest is the only one that can theoretically never expire, and tend
-				to accumulate. Just making kill-quests have a limited duration is
-				a decent band-aid solution but will still result in "peaceful" and
-				"mind your own business" citystates requesting strange things. The
-				kill quests also come with a serious downside: for each citystate
-				killed your influence with its neighbors drops faster, even if the
-				neighbor requested the kill. Completing it should give a "me love
-				you long time" influence boost to counteract this.
-
-				We don't have access to the code yet that handles all this and the
-				current system seems incomplete (with only a few modifiers available),
-				but citystate quests are still something that's been bothering me for
-				a very long time. Citystate quests and capture bonuses will probably
-				be the first thing I work on whenever we get the full SDK.
-				
-				~ Thalassicus ~
-		-->
-
-		<!--
-				Peaceful City-State
-				
-			   Tiers
-			   1. Unfriendly and undiscovered civs or natural wonders
-				  Exploration quest (find X).
-			   2. Barbarian camps nearby
-				  Request assistance against a camp.
-			   3. City-states nearby
-				  Check next tier.
-			   4. Friendly or Allied
-				  Development quest (road, wonder, great person, resource).
-				
-		-->
 		<!--
 		<Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_FRIENDLY_FIND_PLAYER">
 			<Value>10000</Value>

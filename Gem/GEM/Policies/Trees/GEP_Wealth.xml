@@ -144,7 +144,7 @@
 		<Row>
 			<PolicyType>POLICY_PROTECTIONISM</PolicyType>
 			<HurryType>HURRY_GOLD</HurryType>
-			<HurryCostModifier>-25</HurryCostModifier>
+			<HurryCostModifier>-10</HurryCostModifier>
 		</Row>
 	</Policy_HurryModifiers>
 	<UnitPromotions>

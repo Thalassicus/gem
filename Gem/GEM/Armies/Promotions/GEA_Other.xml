@@ -61,7 +61,6 @@
 			<PromotionPrereqOr3>PROMOTION_GUERRILLA_3</PromotionPrereqOr3>
 			<PromotionPrereqOr4>PROMOTION_COVER_VANGUARD_1</PromotionPrereqOr4>
 			<PromotionPrereqOr5>PROMOTION_MEDIC</PromotionPrereqOr5>
-			<PromotionPrereqOr6>PROMOTION_SURVIVALISM_1</PromotionPrereqOr6>
 			<OrderPriority>15</OrderPriority>
 			<AlwaysHeal>true</AlwaysHeal>
 			<PortraitIndex>31</PortraitIndex>
@@ -72,7 +71,7 @@
 		<Update>
 			<Where Type="PROMOTION_BLITZ" />
 			<Set Blitz="0"
-				 RangedAttackModifier="-25"
+				 RangedAttackModifier="-10"
 				 ExtraAttacks="1"
 				 CanMoveAfterAttacking="true"
 				 PortraitIndex="9"
@@ -86,7 +85,7 @@
 		</Update>
 		<Update>
 			<Where Type="PROMOTION_LOGISTICS" />
-			<Set RangedAttackModifier="-25"
+			<Set RangedAttackModifier="-10"
 				 PromotionPrereqOr1="PROMOTION_ACCURACY_3"
 				 PromotionPrereqOr2="PROMOTION_BARRAGE_3"
 				 PromotionPrereqOr3="PROMOTION_TARGETING_3"
@@ -100,7 +99,7 @@
 		</Update>
 		<Update>
 			<Where Type="PROMOTION_AIR_LOGISTICS" />
-			<Set RangedAttackModifier="-25"
+			<Set RangedAttackModifier="-10"
 				 PromotionPrereqOr1="PROMOTION_AIR_SIEGE_2"
 				 PromotionPrereqOr2="PROMOTION_AIR_BOMBARDMENT_2"
 				 PromotionPrereqOr3="PROMOTION_AMBUSH_2"
@@ -290,6 +289,14 @@
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_MORALE</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_MARCH_III</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_MARCH_III</PromotionType>
 			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
 		</Row>
 	</UnitPromotions_UnitCombats>

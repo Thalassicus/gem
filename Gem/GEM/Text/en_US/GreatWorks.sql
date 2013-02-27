@@ -1,4 +1,4 @@
--- EN_US/GreatWorks.sql
+--· EN_US/GreatWorks.sql
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_MISSION_CULTURE_BOMB_DISABLED_COOLDOWN', 'You have created a Great Work recently, and may not do so again for another {1_Num} turns.', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_SPECIALISTSANDGP_CULTUREBOMB_ADV_QUEST', 'What does the great work special ability do?', '', '');
 INSERT INTO Civup_Language_EN_US (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-18'), 'TXT_KEY_SPECIALISTSANDGP_CULTUREBOMB_HEADING4_BODY', 'A Great Artist can create a Great Work in any city you own. Great Works give the city a large amount of [ICON_CULTURE] Culture.', '', '');

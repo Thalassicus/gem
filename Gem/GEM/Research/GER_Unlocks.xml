@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-GER_Unlocks.xml automatically created by:
-TechUnlocks tab of GEM_Details.xlsspreadsheet (in mod folder).
+GER_Unlocks.xml from:
+TechUnlocks tab of GEM_Info_PoliciesTechsOther.xls (in mod folder).
 -->
 <GameData>		
 	<Resources>		
-		<Update><Where Type="RESOURCE_IRON"/>      <Set TechReveal="TECH_BRONZE_WORKING"      TechCityTrade="TECH_BRONZE_WORKING"/></Update>
+		<Update><Where Type="RESOURCE_IRON"/>      <Set TechReveal="TECH_MINING"              TechCityTrade="TECH_MINING"/></Update>
 		<Update><Where Type="RESOURCE_COAL"/>      <Set TechReveal="TECH_METAL_CASTING"       TechCityTrade="TECH_STEAM_POWER"/></Update>
 		<Update><Where Type="RESOURCE_OIL"/>       <Set TechReveal="TECH_CHEMISTRY"           TechCityTrade="TECH_DYNAMITE"/></Update>
 		<Update><Where Type="RESOURCE_ALUMINUM"/>  <Set TechReveal="TECH_METALLURGY"          TechCityTrade="TECH_FLIGHT"/></Update>
@@ -17,7 +17,7 @@ TechUnlocks tab of GEM_Details.xlsspreadsheet (in mod folder).
 		<Update><Where Type="BUILD_REMOVE_FOREST"/>       <Set PrereqTech="TECH_ANIMAL_HUSBANDRY"/></Update>
 		<Update><Where Type="BUILD_REMOVE_JUNGLE"/>       <Set PrereqTech="TECH_THE_WHEEL"/></Update>
 		<Update><Where Type="BUILD_REMOVE_MARSH"/>        <Set PrereqTech="TECH_THE_WHEEL"/></Update>
-		<Update><Where Type="BUILD_TRADING_POST"/>        <Set PrereqTech="TECH_POTTERY"/></Update>
+		<Update><Where Type="BUILD_TRADING_POST"/>        <Set PrereqTech="TECH_TRAPPING"/></Update>
 		<Update><Where Type="BUILD_ROAD"/>                <Set PrereqTech="TECH_TRAPPING"/></Update>
 		<Update><Where Type="BUILD_LUMBERMILL"/>          <Set PrereqTech="TECH_ENGINEERING"/></Update>
 		<Update><Where Type="BUILD_WELL"/>                <Set PrereqTech="TECH_DYNAMITE"/></Update>
@@ -31,7 +31,7 @@ TechUnlocks tab of GEM_Details.xlsspreadsheet (in mod folder).
 	<Buildings>		
 		<Update><Where BuildingClass="BUILDINGCLASS_AQUEDUCT"/>                 <Set PrereqTech="TECH_ENGINEERING"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_ARMORY"/>                   <Set PrereqTech="TECH_MACHINERY"/></Update>
-		<Update><Where BuildingClass="BUILDINGCLASS_BARRACKS"/>                 <Set PrereqTech="TECH_RECRUITMENT"/></Update>
+		<Update><Where BuildingClass="BUILDINGCLASS_BARRACKS"/>                 <Set PrereqTech="TECH_TRAINING"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_CIRCUS"/>                   <Set PrereqTech="TECH_HORSEBACK_RIDING"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_COLOSSUS"/>                 <Set PrereqTech="TECH_CURRENCY"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_FACTORY"/>                  <Set PrereqTech="TECH_INDUSTRIALIZATION"/></Update>
@@ -39,6 +39,7 @@ TechUnlocks tab of GEM_Details.xlsspreadsheet (in mod folder).
 		<Update><Where BuildingClass="BUILDINGCLASS_MEDICAL_LAB"/>              <Set PrereqTech="TECH_ECOLOGY"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_MILITARY_BASE"/>            <Set PrereqTech="TECH_RADIO"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_OPERA_HOUSE"/>              <Set PrereqTech="TECH_ARCHITECTURE"/></Update>
+		<Update><Where BuildingClass="BUILDINGCLASS_SHRINE"/>                   <Set PrereqTech="NULL"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_SPACESHIP_FACTORY"/>        <Set PrereqTech="TECH_NUCLEAR_FISSION"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_STONEWORKS"/>               <Set PrereqTech="TECH_MASONRY"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_STABLE"/>                   <Set PrereqTech="TECH_THE_WHEEL"/></Update>
@@ -47,10 +48,11 @@ TechUnlocks tab of GEM_Details.xlsspreadsheet (in mod folder).
 		<Update><Where BuildingClass="BUILDINGCLASS_STONE_WORKS"/>              <Set PrereqTech="TECH_MASONRY"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_WALLS"/>                    <Set PrereqTech="TECH_MASONRY"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_WINDMILL"/>                 <Set PrereqTech="TECH_STEAM_POWER"/></Update>
+		<Update><Where BuildingClass="BUILDINGCLASS_WORKSHOP"/>                 <Set PrereqTech="TECH_BRONZE_WORKING"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_CIRCUS_MAXIMUS"/>           <Set PrereqTech="TECH_HORSEBACK_RIDING"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_GRAND_TEMPLE"/>             <Set PrereqTech="TECH_THEOLOGY"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_HERMITAGE"/>                <Set PrereqTech="TECH_ARCHITECTURE"/></Update>
-		<Update><Where BuildingClass="BUILDINGCLASS_HEROIC_EPIC"/>              <Set PrereqTech="TECH_RECRUITMENT"/></Update>
+		<Update><Where BuildingClass="BUILDINGCLASS_HEROIC_EPIC"/>              <Set PrereqTech="TECH_TRAINING"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_IRONWORKS"/>                <Set PrereqTech="TECH_STEEL"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_ALHAMBRA"/>                 <Set PrereqTech="TECH_PHYSICS"/></Update>
 		<Update><Where BuildingClass="BUILDINGCLASS_ANGKOR_WAT"/>               <Set PrereqTech="TECH_GUILDS"/></Update>
@@ -95,7 +97,7 @@ TechUnlocks tab of GEM_Details.xlsspreadsheet (in mod folder).
 	</Buildings>		
 	<Units>		
 		<Update><Where Class="UNITCLASS_CARAVEL"/>             <Set PrereqTech="TECH_CARVEL_HULLS"/></Update>
-		<Update><Where Class="UNITCLASS_SENTINEL"/>            <Set PrereqTech="TECH_RECRUITMENT"/></Update>
+		<Update><Where Class="UNITCLASS_SENTINEL"/>            <Set PrereqTech="TECH_TRAINING"/></Update>
 		<Update><Where Class="UNITCLASS_COMPOSITE_BOWMAN"/>    <Set PrereqTech="TECH_MATHEMATICS"/></Update>
 		<Update><Where Class="UNITCLASS_PIKEMAN"/>             <Set PrereqTech="TECH_METAL_CASTING"/></Update>
 		<Update><Where Class="UNITCLASS_CONSCRIPT"/>           <Set PrereqTech="TECH_BIOLOGY"/></Update>

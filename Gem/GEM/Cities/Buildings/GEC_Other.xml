@@ -27,10 +27,8 @@
 		</Update>
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_PALACE" />
-			<Set FreeBuildingThisCity="BUILDINGCLASS_CITY_HALL"
-				 Defense="400"
+			<Set Defense="400"
 				 ExtraCityHitPoints="100"
-				 UnmoddedHappiness="8"
 				 IconAtlas="EXPANSION_SCEN_BUILDING_ATLAS"
 				 PortraitIndex="1"
 				 />
@@ -68,34 +66,34 @@
 	</Buildings>
 	<Building_YieldChanges>
 		<Delete BuildingType="BUILDING_PALACE"/>
+		<!--
 		<Row>
-			<BuildingType>BUILDING_CITY_HALL</BuildingType>
+			<BuildingType>BUILDING_GREAT_HALL</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_CITY_HALL</BuildingType>
+			<BuildingType>BUILDING_GREAT_HALL</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_CITY_HALL</BuildingType>
+			<BuildingType>BUILDING_GREAT_HALL</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<!--
 		<Row>
-			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<BuildingType>BUILDING_GEM_PALACE</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<BuildingType>BUILDING_GEM_PALACE</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<BuildingType>BUILDING_GEM_PALACE</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>2</Yield>
 		</Row>

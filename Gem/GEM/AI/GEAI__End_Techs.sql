@@ -6,6 +6,7 @@
 --
 
 DELETE FROM Technology_Flavors;
+DELETE FROM Technology_Flavors_Human;
 
 
 -- Units
@@ -183,6 +184,70 @@ DELETE FROM Technology_Flavors;
 	INSERT INTO Technology_Flavors (TechType, FlavorType, Flavor) SELECT TechType, FlavorType, Flavor FROM GEM_Collisions;
 	DROP TABLE GEM_Collisions;
 	
+	
+
+-- Adjust flavor visibility
+	/**/
+	UPDATE Technology_Flavors SET Flavor = 0.5 * Flavor;
+
+	-- Concentrated in few objects - increase flavor
+	UPDATE Technology_Flavors SET Flavor = 4 * Flavor WHERE FlavorType IN (
+		'FLAVOR_WATER_CONNECTION'	
+	);
+	UPDATE Technology_Flavors SET Flavor = 2 * Flavor WHERE FlavorType IN (
+		'FLAVOR_MILITARY_TRAINING'	,
+		'FLAVOR_RELIGION'			,
+		'FLAVOR_DIPLOMACY'			,
+		'FLAVOR_HAPPINESS'			,
+		'FLAVOR_NAVAL_GROWTH'		,
+		'FLAVOR_NAVAL_BOMBARDMENT'	,
+		'FLAVOR_RANGED'				,
+		'FLAVOR_SOLDIER'			,
+		'FLAVOR_RECON'				,
+		'FLAVOR_HEALING'			,
+		'FLAVOR_PILLAGE'			,
+		'FLAVOR_VANGUARD'			,
+		'FLAVOR_SIEGE'				,
+		'FLAVOR_ANTI_MOBILE'		,
+		'FLAVOR_TILE_IMPROVEMENT'	
+	);
+	UPDATE Technology_Flavors SET Flavor = 1.5 * Flavor WHERE FlavorType IN (
+		'FLAVOR_CITY_DEFENSE'		,
+		'FLAVOR_MOBILE'				
+	);
+
+	-- Average
+	UPDATE Technology_Flavors SET Flavor = 1 * Flavor WHERE FlavorType IN (
+		'FLAVOR_ESPIONAGE'			,
+		'FLAVOR_EXPANSION'			,
+		'FLAVOR_GROWTH'				,
+		'FLAVOR_PRODUCTION'			,
+		'FLAVOR_SCIENCE'			,
+		'FLAVOR_CULTURE'			,
+		'FLAVOR_NAVAL_TILE_IMPROVEMENT',
+		'FLAVOR_NAVAL'				,
+		'FLAVOR_NAVAL_RECON'		,
+		'FLAVOR_AIR'				,
+		'FLAVOR_INFRASTRUCTURE'		,
+		'FLAVOR_NUKE'				,
+		'FLAVOR_SPACESHIP'			
+	);
+	
+	-- Spread among many objects - decrease flavor
+	UPDATE Technology_Flavors SET Flavor = 0.75 * Flavor WHERE FlavorType IN (
+		'FLAVOR_GOLD'				
+	);
+	UPDATE Technology_Flavors SET Flavor = 0.5 * Flavor WHERE FlavorType IN (
+		'FLAVOR_GREAT_PEOPLE'		,
+		'FLAVOR_DEFENSE'			,
+		'FLAVOR_OFFENSE'
+	);
+	UPDATE Technology_Flavors SET Flavor = 0.33 * Flavor WHERE FlavorType IN (
+		'FLAVOR_WONDER'				
+	);
+
+	
+	INSERT INTO Technology_Flavors_Human (TechType, FlavorType, Flavor) SELECT TechType, FlavorType, SUM(Flavor) FROM Technology_Flavors GROUP BY TechType, FlavorType;
 
 
 -- Planning
@@ -197,30 +262,30 @@ DELETE FROM Technology_Flavors;
 	CREATE TABLE GEM_TechFlavorRipples(Descendent text, TechType text, FlavorType text, Flavor integer);
 
 	-- Level 0 (descendent)
-	INSERT OR IGNORE INTO GEM_TechFlavorRipples (TechType, FlavorType, Flavor) SELECT TechType, FlavorType, Flavor FROM Technology_Flavors;
+	INSERT OR IGNORE INTO GEM_TechFlavorRipples (TechType, FlavorType, Flavor) SELECT TechType, FlavorType, Flavor FROM Technology_Flavors_Human;
 
 	-- Level 1 (parents)
 	INSERT OR IGNORE INTO GEM_TechFlavorRipples(Descendent, TechType, FlavorType, Flavor)
 	SELECT tech.TechType, techP1.PrereqTech, tech.FlavorType, tech.Flavor / 2.5
-	FROM Technology_Flavors tech, Technology_PrereqTechs techP1
+	FROM Technology_Flavors_Human tech, Technology_PrereqTechs techP1
 	WHERE (tech.Flavor >= 2.5/2 AND tech.TechType = techP1.TechType);
 
 	-- Level 2 (grandparents)
 	INSERT OR IGNORE INTO GEM_TechFlavorRipples(Descendent, TechType, FlavorType, Flavor)
 	SELECT tech.TechType, techP2.PrereqTech, tech.FlavorType, tech.Flavor / 6.25
-	FROM Technology_Flavors tech, Technology_PrereqTechs techP1, Technology_PrereqTechs techP2
+	FROM Technology_Flavors_Human tech, Technology_PrereqTechs techP1, Technology_PrereqTechs techP2
 	WHERE (tech.Flavor >= 6.25/2 AND tech.TechType = techP1.TechType AND techP1.PrereqTech = techP2.TechType);
 	
 	-- Level 3 (great-grandparents)
 	INSERT OR IGNORE INTO GEM_TechFlavorRipples(Descendent, TechType, FlavorType, Flavor)
 	SELECT tech.TechType, techP3.PrereqTech, tech.FlavorType, tech.Flavor / 15.6
-	FROM Technology_Flavors tech, Technology_PrereqTechs techP1, Technology_PrereqTechs techP2, Technology_PrereqTechs techP3
+	FROM Technology_Flavors_Human tech, Technology_PrereqTechs techP1, Technology_PrereqTechs techP2, Technology_PrereqTechs techP3
 	WHERE (tech.Flavor >= 15.6/2 AND tech.TechType = techP1.TechType AND techP1.PrereqTech = techP2.TechType AND techP2.PrereqTech = techP3.TechType);
 
 	-- Level 4 (great-great-grandparents)
 	INSERT OR IGNORE INTO GEM_TechFlavorRipples(Descendent, TechType, FlavorType, Flavor)
 	SELECT tech.TechType, techP4.PrereqTech, tech.FlavorType, tech.Flavor / 39.1
-	FROM Technology_Flavors tech, Technology_PrereqTechs techP1, Technology_PrereqTechs techP2, Technology_PrereqTechs techP3, Technology_PrereqTechs techP4
+	FROM Technology_Flavors_Human tech, Technology_PrereqTechs techP1, Technology_PrereqTechs techP2, Technology_PrereqTechs techP3, Technology_PrereqTechs techP4
 	WHERE (tech.Flavor >= 39.1/2 AND tech.TechType = techP1.TechType AND techP1.PrereqTech = techP2.TechType AND techP2.PrereqTech = techP3.TechType AND techP3.PrereqTech = techP4.TechType);
 	
 
@@ -231,86 +296,40 @@ DELETE FROM Technology_Flavors;
 	DROP TABLE GEM_TechFlavorRipples;
 
 	-- Sum advance priorites
-	DELETE FROM Technology_Flavors;
-	INSERT INTO Technology_Flavors (TechType, FlavorType, Flavor) SELECT TechType, FlavorType, SUM(Flavor) FROM GEM_Collisions GROUP BY TechType, FlavorType;
+	DELETE FROM Technology_Flavors_Human;
+	INSERT INTO Technology_Flavors_Human (TechType, FlavorType, Flavor) SELECT TechType, FlavorType, SUM(Flavor) FROM GEM_Collisions GROUP BY TechType, FlavorType;
 	DROP TABLE GEM_Collisions;
 	/**/
 
--- Adjust flavor visibility
-	/**/
-	UPDATE Technology_Flavors SET Flavor = 0.5 * Flavor;
-
-	-- Concentrated in few objects - increase flavor
-	UPDATE Technology_Flavors SET Flavor = 4 * Flavor WHERE FlavorType IN (
-		'FLAVOR_WATER_CONNECTION'	
-	);
-	UPDATE Technology_Flavors SET Flavor = 2 * Flavor WHERE FlavorType IN (
-		'FLAVOR_MILITARY_TRAINING'	,
-		'FLAVOR_RELIGION'			,
-		'FLAVOR_DIPLOMACY'			,
-		'FLAVOR_CITY_DEFENSE'		,
-		'FLAVOR_HAPPINESS'			,
-		'FLAVOR_NAVAL_GROWTH'		,
-		'FLAVOR_NAVAL_BOMBARDMENT'	,
-		'FLAVOR_RANGED'				,
-		'FLAVOR_MOBILE'				,
-		'FLAVOR_SOLDIER'			,
-		'FLAVOR_RECON'				,
-		'FLAVOR_HEALING'			,
-		'FLAVOR_VANGUARD'			,
-		'FLAVOR_SIEGE'				,
-		'FLAVOR_ANTI_MOBILE'		,
-		'FLAVOR_TILE_IMPROVEMENT'	
-	);
-
-	-- Average
-	UPDATE Technology_Flavors SET Flavor = 1 * Flavor WHERE FlavorType IN (
-		'FLAVOR_ESPIONAGE'			,
-		'FLAVOR_EXPANSION'			,
-		'FLAVOR_GROWTH'				,
-		'FLAVOR_PRODUCTION'			,
-		'FLAVOR_GOLD'				,
-		'FLAVOR_SCIENCE'			,
-		'FLAVOR_CULTURE'			,
-		'FLAVOR_NAVAL_TILE_IMPROVEMENT',
-		'FLAVOR_NAVAL'				,
-		'FLAVOR_NAVAL_RECON'		,
-		'FLAVOR_AIR'				,
-		'FLAVOR_INFRASTRUCTURE'		,
-		'FLAVOR_NUKE'				,
-		'FLAVOR_SPACESHIP'			
-	);
-	
-	-- Spread among many objects - decrease flavor
-	UPDATE Technology_Flavors SET Flavor = 0.5 * Flavor WHERE FlavorType IN (
-		'FLAVOR_GREAT_PEOPLE'		,
-		'FLAVOR_DEFENSE'			,
-		'FLAVOR_OFFENSE'
-	);
-	UPDATE Technology_Flavors SET Flavor = 0.25 * Flavor WHERE FlavorType IN (
-		'FLAVOR_WONDER'				
-	);
-
 -- Round to nearest power of 2
-	DELETE FROM Technology_Flavors WHERE Flavor < 5.66 AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	/**/
-	--UPDATE Technology_Flavors SET Flavor = POWER( ROUND(LOG(Flavor)/LOG(2)), 2 ) -- Sqlite does not have power or log functions?!
-	
-	--UPDATE Technology_Flavors SET Flavor =   1 WHERE (						Flavor <  1.42	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	--UPDATE Technology_Flavors SET Flavor =   2 WHERE (  1.42 <= Flavor	AND	Flavor <  2.83	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	--UPDATE Technology_Flavors SET Flavor =   4 WHERE (  2.83 <= Flavor	AND	Flavor <  5.66	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	UPDATE Technology_Flavors SET Flavor =   8 WHERE (  5.66 <= Flavor	AND	Flavor < 11.32	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	UPDATE Technology_Flavors SET Flavor =  16 WHERE ( 11.32 <= Flavor	AND	Flavor < 22.63	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	UPDATE Technology_Flavors SET Flavor =  32 WHERE ( 22.63 <= Flavor	AND	Flavor < 45.26	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	UPDATE Technology_Flavors SET Flavor =  64 WHERE ( 45.26 <= Flavor	AND	Flavor < 90.51	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	UPDATE Technology_Flavors SET Flavor = 128 WHERE ( 90.51 <= Flavor	AND	Flavor < 181.02	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	UPDATE Technology_Flavors SET Flavor = 256 WHERE (181.02 <= Flavor	AND	Flavor < 362.04	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	UPDATE Technology_Flavors SET Flavor = 512 WHERE (362.04 <= Flavor						) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 0);
-	/**/
 
-	UPDATE Technology_Flavors SET Flavor = ROUND(Flavor) WHERE EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_POWER_RAW_NUMBERS' AND Value = 1);
+	DELETE FROM Technology_Flavors WHERE Flavor < 3;
+	--UPDATE Technology_Flavors SET Flavor =   1 WHERE (						Flavor <  1.42	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	--UPDATE Technology_Flavors SET Flavor =   2 WHERE (  1.42 <= Flavor	AND	Flavor <  2.83	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	--UPDATE Technology_Flavors SET Flavor =   4 WHERE (  2.83 <= Flavor	AND	Flavor <  5.66	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor =   8 WHERE (  5.66 <= Flavor	AND	Flavor < 11.32	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor =  16 WHERE ( 11.32 <= Flavor	AND	Flavor < 22.63	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor =  32 WHERE ( 22.63 <= Flavor	AND	Flavor < 45.26	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor =  64 WHERE ( 45.26 <= Flavor	AND	Flavor < 90.51	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor = 128 WHERE ( 90.51 <= Flavor	AND	Flavor < 181.02	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor = 256 WHERE (181.02 <= Flavor	AND	Flavor < 362.04	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor = 512 WHERE (362.04 <= Flavor						) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors SET Flavor = ROUND(Flavor) WHERE EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 1);
 
---DELETE FROM Technology_Flavors WHERE TechType = 'TECH_POTTERY'; 
+	DELETE FROM Technology_Flavors_Human WHERE Flavor < 5.66 AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	--UPDATE Technology_Flavors_Human SET Flavor =   1 WHERE (						Flavor <  1.42	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	--UPDATE Technology_Flavors_Human SET Flavor =   2 WHERE (  1.42 <= Flavor	AND	Flavor <  2.83	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	--UPDATE Technology_Flavors_Human SET Flavor =   4 WHERE (  2.83 <= Flavor	AND	Flavor <  5.66	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor =   8 WHERE (  5.66 <= Flavor	AND	Flavor < 11.32	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor =  16 WHERE ( 11.32 <= Flavor	AND	Flavor < 22.63	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor =  32 WHERE ( 22.63 <= Flavor	AND	Flavor < 45.26	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor =  64 WHERE ( 45.26 <= Flavor	AND	Flavor < 90.51	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor = 128 WHERE ( 90.51 <= Flavor	AND	Flavor < 181.02	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor = 256 WHERE (181.02 <= Flavor	AND	Flavor < 362.04	) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor = 512 WHERE (362.04 <= Flavor						) AND EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 0);
+	UPDATE Technology_Flavors_Human SET Flavor = ROUND(Flavor) WHERE EXISTS (SELECT * FROM Civup WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS' AND Value = 1);
+
+	--UPDATE Technology_Flavors_Human SET Flavor = POWER( ROUND(LOG(Flavor)/LOG(2)), 2 ) -- Sqlite does not have power or log functions?!
 
 
 UPDATE LoadedFile SET Value=1 WHERE Type='GEAI_zTechs.sql';

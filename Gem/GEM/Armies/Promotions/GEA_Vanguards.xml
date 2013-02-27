@@ -16,13 +16,15 @@
 		</Update>
 		<Update>
 			<Where Type="PROMOTION_SCOUTING_1" />
-			<Set IgnoreTerrainCost="true"
+			<Set ExtraWithdrawal="80"
+				 IgnoreTerrainCost="true"				 
 				 />
 		</Update>
 		<Update>
 			<Where Type="PROMOTION_SCOUTING_2" />
-			<Set ExtraWithdrawal="80"
-				 MovesChange="1"
+			<Set MovesChange="1"
+				 EnemyRoute="1"
+				 FreePillageMoves="1"
 				 />
 		</Update>
 		<Update>
@@ -31,16 +33,24 @@
 				 PediaType="NONE"
 				 />
 		</Update>
+		<!--
 		<Update>
 			<Where Type="PROMOTION_SURVIVALISM_1" />
 			<Set PromotionPrereqOr3="PROMOTION_SCOUTING_1"
 				 PromotionPrereqOr2="PROMOTION_TRENCHES_1"
 				 PromotionPrereqOr1="PROMOTION_GUERRILLA_1"
 				 FreePillageMoves="true"
-				 EnemyHealChange="20"
-				 NeutralHealChange="20"
+				 EnemyHealChange="10"
+				 NeutralHealChange="10"
 				 DefenseMod="0"
 				 PediaType="PEDIA_SCOUTING"
+				 />
+		</Update>
+		-->
+		<Update>
+			<Where Type="PROMOTION_SURVIVALISM_1" />
+			<Set CannotBeChosen="true"
+				 PediaType="NULL"
 				 />
 		</Update>
 		<Update>
@@ -105,7 +115,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>2</OrderPriority>
 			<VisibilityChange>1</VisibilityChange>
-			<OpenDefense>15</OpenDefense>
+			<OpenDefense>25</OpenDefense>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
@@ -120,7 +130,7 @@
 			<PromotionPrereqOr1>PROMOTION_TRENCHES_1</PromotionPrereqOr1>
 			<MovesChange>1</MovesChange>
 			<OrderPriority>2</OrderPriority>
-			<OpenDefense>15</OpenDefense>
+			<OpenDefense>25</OpenDefense>
 			<PortraitIndex>1</PortraitIndex>
 			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
@@ -134,7 +144,7 @@
 			<PromotionPrereqOr1>PROMOTION_TRENCHES_2</PromotionPrereqOr1>
 			<OrderPriority>2</OrderPriority>
 			<VisibilityChange>1</VisibilityChange>
-			<OpenDefense>20</OpenDefense>
+			<OpenDefense>25</OpenDefense>
 			<PortraitIndex>2</PortraitIndex>
 			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
@@ -147,7 +157,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>1</OrderPriority>
 			<VisibilityChange>1</VisibilityChange>
-			<RoughDefense>15</RoughDefense>
+			<RoughDefense>25</RoughDefense>
 			<PortraitIndex>4</PortraitIndex>
 			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
@@ -161,7 +171,7 @@
 			<PromotionPrereqOr1>PROMOTION_GUERRILLA_1</PromotionPrereqOr1>
 			<MovesChange>1</MovesChange>
 			<OrderPriority>1</OrderPriority>
-			<RoughDefense>15</RoughDefense>
+			<RoughDefense>25</RoughDefense>
 			<PortraitIndex>5</PortraitIndex>
 			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
@@ -175,7 +185,7 @@
 			<PromotionPrereqOr1>PROMOTION_GUERRILLA_2</PromotionPrereqOr1>
 			<OrderPriority>1</OrderPriority>
 			<VisibilityChange>1</VisibilityChange>
-			<RoughDefense>20</RoughDefense>
+			<RoughDefense>25</RoughDefense>
 			<PortraitIndex>6</PortraitIndex>
 			<IconAtlas>VANGUARD_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>

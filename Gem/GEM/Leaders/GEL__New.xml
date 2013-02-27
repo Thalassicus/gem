@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<!--
+			American Pioneer
+	-->
+
+	
+	<Units>
+		<Row>
+			<Class>UNITCLASS_SETTLER</Class>
+			<Type>UNIT_AMERICAN_PIONEER</Type>
+			<CombatClass>UNITCOMBAT_CIVILIAN</CombatClass>
+			<Moves>2</Moves>
+			<Capture>UNITCLASS_WORKER</Capture>
+			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH_EARLY_GAME_ONLY</CivilianAttackPriority>
+			<HurryCostModifier>20</HurryCostModifier>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_AMERICAN_PIONEER</Description>
+			<Civilopedia>TXT_KEY_UNIT_AMERICAN_PIONEER_PEDIA</Civilopedia>
+			<Requirements>TXT_KEY_NO_ACTION_SETTLER_SIZE_LIMIT_HARDCODED</Requirements>
+			<Food>true</Food>
+			<Found>true</Found>
+			<CombatLimit>0</CombatLimit>
+			<UnitArtInfo>ART_DEF_UNIT__SETTLER</UnitArtInfo>
+			<UnitArtInfoCulturalVariation>true</UnitArtInfoCulturalVariation>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+		</Row>
+	</Units>
+	<UnitPromotions>
+		
+	</UnitPromotions>
+	<Unit_AITypes>
+		<Row>
+			<UnitType>UNIT_AMERICAN_PIONEER</UnitType>
+			<UnitAIType>UNITAI_SETTLE</UnitAIType>
+		</Row>
+	</Unit_AITypes>
+	<Unit_Flavors>
+		<Row>
+			<UnitType>UNIT_AMERICAN_PIONEER</UnitType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>32</Flavor>
+		</Row>
+	</Unit_Flavors>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_AMERICAN_B17" />
+		<Row>
+			<CivilizationType>CIVILIZATION_AMERICA</CivilizationType>
+			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+			<UnitType>UNIT_AMERICAN_PIONEER</UnitType>
+		</Row>
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_AMERICAN_B17" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	
+	
+	
+	<!--
+			American Pioneer Fort
+
+	<Buildings>
+		<Row>
+			<Type>BUILDING_AMERICAN_FORT</Type>
+			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
+			<Cost>75</Cost>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Description>TXT_KEY_BUILDING_PIONEER_FORT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PIONEER_FORT_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_WALLS</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<AllowsRangeStrike>true</AllowsRangeStrike>
+			<Defense>500</Defense>
+			<CityWall>true</CityWall>
+			<NeverCapture>true</NeverCapture>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_YieldSurplusModifiers>
+		<Row>
+			<BuildingType>BUILDING_AMERICAN_FORT</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>25</Yield>
+		</Row>
+	</Building_YieldSurplusModifiers>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_AMERICAN_B17" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_AMERICAN_B17" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_AMERICA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<BuildingType>BUILDING_AMERICAN_FORT</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	-->
+
+
+
+	<!--
+			Byzantine Basilica
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_BASILICA</Type>
+			<BuildingClass>BUILDINGCLASS_TEMPLE</BuildingClass>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<Cost>100</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
+			<Description>TXT_KEY_BUILDING_BASILICA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BASILICA_PEDIA</Civilopedia>
+			<ArtDefineTag>TEMPLE</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<NeverCapture>true</NeverCapture>
+			<PortraitIndex>37</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_ClassesNeededInCity>
+		<Row>
+			<BuildingType>BUILDING_TEMPLE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCity>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_BASILICA</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_YieldInstant>
+		<Row>
+			<BuildingType>BUILDING_BASILICA</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>25</Yield>
+		</Row>
+	</Building_YieldInstant>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_BASILICA</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_BYZANTINE_CATAPHRACT" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_BYZANTINE_CATAPHRACT" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_BYZANTIUM</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<BuildingType>BUILDING_BASILICA</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+
+
+
+	<!--
+			Carthaginian Cothon
+	-->
+
+	<Buildings>
+		<Row>
+			<Type>BUILDING_COTHON</Type>
+			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
+			<Cost>120</Cost>
+			<GoldMaintenance>3</GoldMaintenance>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<Description>TXT_KEY_BUILDING_COTHON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_COTHON_PEDIA</Civilopedia>
+			<ArtDefineTag>HARBOR</ArtDefineTag>
+			<Water>true</Water>
+			<AllowsWaterRoutes>true</AllowsWaterRoutes>
+			<MinAreaSize>10</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<HurryCostModifier>25</HurryCostModifier>
+			<ArtInfoEraVariation>true</ArtInfoEraVariation>
+			<DisplayPosition>16</DisplayPosition>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>26</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_SeaPlotYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_COTHON</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_SeaPlotYieldChanges>
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_COTHON</BuildingType>
+			<ResourceType>RESOURCE_TYRIAN_PURPLE</ResourceType>
+			<Quantity>1</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_CARTHAGINIAN_QUINQUEREME" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_CARTHAGINIAN_QUINQUEREME" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_CARTHAGE</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
+			<BuildingType>BUILDING_COTHON</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+
+
+
+	<!--
+			Danish Jelling Stones
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_JELLING_STONES</Type>
+			<BuildingClass>BUILDINGCLASS_HEROIC_EPIC</BuildingClass>
+			<Cost>160</Cost>
+			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+			<Description>TXT_KEY_BUILDING_JELLING_STONES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JELLING_STONES_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_JELLING_STONES</ArtDefineTag>
+			<TrainedFreePromotion>PROMOTION_MORALE</TrainedFreePromotion>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<CityCaptureCulture>100</CityCaptureCulture>
+			<CityCaptureCulturePerPop>10</CityCaptureCulturePerPop>
+			<CityCaptureCulturePerEra>50</CityCaptureCulturePerEra>
+			<NeverCapture>true</NeverCapture>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
+			<PortraitIndex>5</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_DANISH_SKI_INFANTRY" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_DANISH_SKI_INFANTRY" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_HEROIC_EPIC</BuildingClassType>
+			<BuildingType>BUILDING_JELLING_STONES</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	
+	
+
+	<!--
+			English Steam Mill
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_ENGLISH_STEAM_MILL</Type>
+			<BuildingClass>BUILDINGCLASS_WINDMILL</BuildingClass>
+			<Cost>120</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<PrereqTech>TECH_ECONOMICS</PrereqTech>
+			<Description>TXT_KEY_BUILDING_STEAM_MILL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STEAM_MILL_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<BuildingProductionModifier>15</BuildingProductionModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_ENGLISH_SHIPOFTHELINE" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_ENGLISH_SHIPOFTHELINE"/>
+			<Set ShowInPedia="0"/>
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_ENGLAND</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WINDMILL</BuildingClassType>
+			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_ENGLISH_STEAM_MILL</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_YieldChanges>
+
+
+
+	<!--
+			Indian Indus Sanitation
+	-->
+
+	<Buildings>
+		<Row>
+			<Type>BUILDING_INDUS_SANITATION</Type>
+			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
+			<Cost>100</Cost>
+			<GoldMaintenance>1</GoldMaintenance>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<Description>TXT_KEY_BUILDING_INDUS_SANITATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INDUS_SANITATION_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_HOSPITAL</ArtDefineTag>
+			<FoodKept>40</FoodKept>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_RiverPlotYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_RiverPlotYieldChanges>
+	<Civilization_BuildingClassOverrides>
+		<Delete BuildingType="BUILDING_MUGHAL_FORT" />
+		<Row>
+			<CivilizationType>CIVILIZATION_INDIA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_AQUEDUCT</BuildingClassType>
+			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+
+
+
+	<!--
+			Japanese Dōjō
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_JAPANESE_DOJO</Type>
+			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
+			<FreeStartEra>ERA_INDUSTRIAL</FreeStartEra>
+			<Cost>50</Cost>
+			<GoldMaintenance>1</GoldMaintenance>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Description>TXT_KEY_BUILDING_DOJO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DOJO_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_BARRACKS</ArtDefineTag>
+			<Experience>10</Experience>
+			<ExperiencePerTurn>1</ExperiencePerTurn>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<MinAreaSize>-1</MinAreaSize>
+			<NeverCapture>true</NeverCapture>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
+			<PortraitIndex>3</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<!--
+	<Building_DomainFreeExperiences>
+		<Row>
+			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Experience>20</Experience>
+		</Row>
+	</Building_DomainFreeExperiences>
+	-->
+	<Building_ResourceYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_ResourceYieldChanges>
+	<Building_ResourceCultureChanges>
+		<!--
+		<Row>
+			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<CultureChange>1</CultureChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<CultureChange>1</CultureChange>
+		</Row>
+		-->
+	</Building_ResourceCultureChanges>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_JAPANESE_ZERO" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_JAPANESE_ZERO" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_JAPAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+			<BuildingType>BUILDING_JAPANESE_DOJO</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+
+
+
+	<!--
+			Korean Jade Hall
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_JADE_HALL</Type>
+			<BuildingClass>BUILDINGCLASS_NATIONAL_COLLEGE</BuildingClass>
+			<Cost>160</Cost>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+			<Description>TXT_KEY_BUILDING_JADE_HALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JADE_HALL_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_JADE_HALL</ArtDefineTag>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<NeverCapture>true</NeverCapture>
+			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>4</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_YieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>25</Yield>
+		</Row>
+	</Building_YieldModifiers>
+	<Building_SpecialistYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<SpecialistType>SPECIALIST_CITIZEN</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_SpecialistYieldChanges>
+	<!--
+	<Building_ClassesNeededInCity>
+		<Row>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCity>
+	-->
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_KOREAN_TURTLE_SHIP" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_KOREAN_TURTLE_SHIP" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_KOREA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_NATIONAL_COLLEGE</BuildingClassType>
+			<BuildingType>BUILDING_JADE_HALL</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	
+	
+
+	<!--
+			Mumun Granary
+	<Buildings>
+		<Row>
+			<Type>BUILDING_KOREAN_MUMUN_GRANARY</Type>
+			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
+			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
+			<Cost>60</Cost>
+			<GoldMaintenance>1</GoldMaintenance>
+			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<Help>TXT_KEY_BUILDING_KOREAN_MUMUN_GRANARY_HELP</Help>
+			<Description>TXT_KEY_BUILDING_KOREAN_MUMUN_GRANARY</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_KOREAN_MUMUN_GRANARY_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_GRANARY</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_ImprovementYieldChanges>
+		 --><!-- This table does not exist?! --><!--
+		<Row>
+			<BuildingType>BUILDING_KOREAN_MUMUN_GRANARY</BuildingType>
+			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_ImprovementYieldChanges>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_KOREAN_TURTLE_SHIP" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_KOREAN_TURTLE_SHIP" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_KOREA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
+			<BuildingType>BUILDING_KOREAN_MUMUN_GRANARY</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	-->
+
+
+
+	<!--
+			Swedish Folkskola
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_FOLKSKOLA</Type>
+			<BuildingClass>BUILDINGCLASS_PUBLIC_SCHOOL</BuildingClass>
+			<Cost>300</Cost>
+			<GoldMaintenance>3</GoldMaintenance>
+			<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
+			<Description>TXT_KEY_BUILDING_FOLKSKOLA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKSKOLA_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_PUBLIC_SCHOOL</ArtDefineTag>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<HurryCostModifier>0</HurryCostModifier>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_ClassesNeededInCity>
+		<Row>
+			<BuildingType>BUILDING_FOLKSKOLA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCity>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_SWEDISH_HAKKAPELIITTA" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_SWEDISH_HAKKAPELIITTA" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_SWEDEN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PUBLIC_SCHOOL</BuildingClassType>
+			<BuildingType>BUILDING_FOLKSKOLA</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+</GameData>

@@ -7,7 +7,7 @@ include("CiVUP_Core.lua")
 include("CustomNotification.lua")
 
 local log = Events.LuaLogger:New()
-log:SetLevel("WARN")
+log:SetLevel("INFO")
 
 LuaEvents.NotificationAddin( { name = "Refugees", type = "CNOTIFICATION_REFUGEES" } )
 LuaEvents.NotificationAddin( { name = "CapturedMaritime", type = "CNOTIFICATION_CAPTURED_MARITIME" } )
@@ -213,19 +213,21 @@ function City_DoRefugees(lostCityPlot, lostCity, lostCityName, lostPlayer, wonPl
 end
 
 function City_DoCitystateCapture(lostCityPlot, lostCity, lostCityName, lostPlayerID, wonPlayerID, capturingUnit)
-	log:Info("City_DoCitystateCapture %s", lostCityName)
 	local wonPlayer			= Players[wonPlayerID]
 	local lostPlayer		= Players[lostPlayerID]
 	local minorTrait		= lostPlayer:GetMinorCivTrait()
 	local traitCaptureBonus	= 1 + wonPlayer:GetTraitInfo().MinorCivCaptureBonus / 100
-	--local captureBonusTurns	= Civup.MINOR_CIV_CAPTURE_BONUS_TURNS
+	local captureBonusTurns	= Civup.MINOR_CIV_CAPTURE_BONUS_TURNS
 	
 	local captureBonusTurns = 0
 	for policyInfo in GameInfo.Policies("CitystateCaptureYieldTurns > 0") do
+		log:Warn("%s CitystateCaptureYieldTurns=%s", policyInfo.Type, policyInfo.CitystateCaptureYieldTurns)
 		if wonPlayer:HasPolicy(policyInfo.ID) then
 			captureBonusTurns = captureBonusTurns + policyInfo.CitystateCaptureYieldTurns
 		end
 	end
+
+	log:Info("City_DoCitystateCapture %s %s %s turns", lostCityName, wonPlayer:GetName(), captureBonusTurns)
 	
 	if captureBonusTurns == 0 then
 		return

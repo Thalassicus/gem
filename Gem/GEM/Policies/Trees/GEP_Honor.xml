@@ -20,7 +20,7 @@
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
 			<GoldFromKills>200</GoldFromKills>
-			<CitystateCaptureYieldTurns>50</CitystateCaptureYieldTurns>
+			<CitystateCaptureYieldTurns>10</CitystateCaptureYieldTurns>
 		</Row>
 		<Update>
 			<Where Type="POLICY_MILITARY_TRADITION" />
@@ -152,7 +152,7 @@
 			<PolicyType>POLICY_HONOR_FINISHER</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>4</YieldChange>
+			<YieldChange>2</YieldChange>
 		</Row>
 	</Policy_BuildingClassYieldChanges>
 </GameData>

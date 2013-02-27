@@ -38,7 +38,6 @@
 		<Update>
 			<Where BuildingClass="BUILDINGCLASS_STONE_WORKS" />
 			<Set ProhibitedCityTerrain="NULL" 
-				 Happiness="0"
 				 />
 		</Update>
 	</Buildings>
@@ -73,10 +72,13 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
 		</Row>
+		<Delete BuildingType="BUILDING_STONE_WORKS" />
+		<!--
 		<Update>
 			<Where BuildingType="BUILDING_STONE_WORKS" YieldType="YIELD_PRODUCTION" />
 			<Set Yield="2" />
 		</Update>
+		-->
 		<Update>
 			<Where BuildingType="BUILDING_WORKSHOP" YieldType="YIELD_PRODUCTION" />
 			<Set Yield="2" />

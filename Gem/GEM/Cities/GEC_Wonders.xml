@@ -85,6 +85,8 @@
 			<Civilopedia>TXT_KEY_WONDER_ITAIPU_DAM_DESC</Civilopedia>
 			<Quote>TXT_KEY_WONDER_ITAIPU_DAM_QUOTE</Quote>
 			<MaxStartEra>ERA_MODERN</MaxStartEra>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
 			<River>true</River>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -357,13 +359,13 @@
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 	</BuildingClasses>
-	<Building_InstantYield>
+	<Building_YieldInstant>
 		<Row>
 			<BuildingType>BUILDING_STONEHENGE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>20</Yield>
 		</Row>
-	</Building_InstantYield>
+	</Building_YieldInstant>
 	<Building_FreeUnits>
 		<Delete BuildingType="BUILDING_PYRAMID" />
 		<Delete BuildingType="BUILDING_BRANDENBURG_GATE" />
@@ -448,7 +450,7 @@
 			<Yield>5</Yield>
 		</Row>
 	</Building_NearestPlotYieldChanges>
-	<Building_PlotsYieldChanges>
+	<Building_PlotYieldChanges>
 		<Row>
 			<BuildingType>BUILDING_BANAUE_RICE_TERRACES</BuildingType>
 			<PlotType>PLOT_HILLS</PlotType>
@@ -461,7 +463,7 @@
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>1</Yield>
 		</Row>
-	</Building_PlotsYieldChanges>
+	</Building_PlotYieldChanges>
 	
 	<Building_YieldChanges>
 		<Delete BuildingType="BUILDING_GREAT_LIBRARY" />
@@ -576,7 +578,7 @@
 	<Building_HurryModifiers>
 		<Update>
 			<Where BuildingType="BUILDING_BIG_BEN" />
-			<Set HurryCostModifier="-25" />
+			<Set HurryCostModifier="-15" />
 		</Update>
 	</Building_HurryModifiers>
 	<Building_SpecialistYieldChanges>
@@ -605,32 +607,32 @@
 			<Yield>2</Yield>
 		</Row>
 	</Building_SpecialistYieldChanges>
-	<Building_BuildingClassYieldChanges>
+	<Building_BuildingClassYieldModifiers>
 		<Row>
 			<BuildingType>BUILDING_WAT_PHRA_KAEW</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>5</YieldChange>
+			<Yield>10</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_WAT_PHRA_KAEW</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>5</YieldChange>
+			<Yield>10</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_WAT_PHRA_KAEW</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>5</YieldChange>
+			<Yield>10</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_WAT_PHRA_KAEW</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>5</YieldChange>
+			<Yield>10</Yield>
 		</Row>
-	</Building_BuildingClassYieldChanges>
+	</Building_BuildingClassYieldModifiers>
 	<Building_DomainFreeExperiences>
 		<Row>
 			<BuildingType>BUILDING_GREAT_LIGHTHOUSE</BuildingType>

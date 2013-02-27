@@ -66,13 +66,13 @@
 		<Row><Type>COMMERCIAL_FARMING_1</Type>       <Yield>4</Yield><YieldType>YIELD_CULTURE</YieldType>      <GoldCost>150</GoldCost><Order>1</Order><TriggerType>COMMERCIAL_FARMING</TriggerType></Row>
 		<Row><Type>COMMERCIAL_FARMING_2</Type>       <Yield>4</Yield><YieldType>YIELD_FOOD</YieldType>         <GoldCost>150</GoldCost><Order>2</Order><TriggerType>COMMERCIAL_FARMING</TriggerType></Row>
 		<Row><Type>COMMERCIAL_FARMING_3</Type>       <Yield>2</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>COMMERCIAL_FARMING</TriggerType></Row>
-		<Row><Type>MINE_EXPANSION_1</Type>           <Yield>1</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>150</GoldCost><Order>1</Order><TriggerType>MINE_EXPANSION</TriggerType></Row>
+		<Row><Type>MINE_EXPANSION_1</Type>           <Yield>1</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>150</GoldCost><Order>1</Order><TriggerType>MINE_EXPANSION</TriggerType></Row>
 		<Row><Type>MINE_EXPANSION_2</Type>           <Yield>4</Yield><YieldType>YIELD_PRODUCTION</YieldType>   <GoldCost>150</GoldCost><Order>2</Order><TriggerType>MINE_EXPANSION</TriggerType></Row>
 		<Row><Type>MINE_EXPANSION_3</Type>           <Yield>2</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>MINE_EXPANSION</TriggerType></Row>
 		<Row><Type>VILLAGE_PROTESTS_1</Type>         <Yield>4</Yield><YieldType>YIELD_SCIENCE</YieldType>      <GoldCost>150</GoldCost><Order>1</Order><TriggerType>VILLAGE_PROTESTS</TriggerType></Row>
-		<Row><Type>VILLAGE_PROTESTS_2</Type>         <Yield>1</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>150</GoldCost><Order>2</Order><TriggerType>VILLAGE_PROTESTS</TriggerType></Row>
+		<Row><Type>VILLAGE_PROTESTS_2</Type>         <Yield>1</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>150</GoldCost><Order>2</Order><TriggerType>VILLAGE_PROTESTS</TriggerType></Row>
 		<Row><Type>VILLAGE_PROTESTS_3</Type>         <Yield>2</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>VILLAGE_PROTESTS</TriggerType></Row>
-		<Row><Type>PLANTATION_DEMAND_1</Type>        <Yield>1</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>150</GoldCost><Order>1</Order><TriggerType>PLANTATION_DEMAND</TriggerType></Row>
+		<Row><Type>PLANTATION_DEMAND_1</Type>        <Yield>1</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>150</GoldCost><Order>1</Order><TriggerType>PLANTATION_DEMAND</TriggerType></Row>
 		<Row><Type>PLANTATION_DEMAND_2</Type>        <Yield>4</Yield><YieldType>YIELD_FOOD</YieldType>         <GoldCost>150</GoldCost><Order>2</Order><TriggerType>PLANTATION_DEMAND</TriggerType></Row>
 		<Row><Type>PLANTATION_DEMAND_3</Type>        <Yield>2</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>PLANTATION_DEMAND</TriggerType></Row>
 		<Row><Type>EXOTIC_CAMP_ANIMALS_1</Type>      <Yield>4</Yield><YieldType>YIELD_CULTURE</YieldType>      <GoldCost>150</GoldCost><Order>1</Order><TriggerType>EXOTIC_CAMP_ANIMALS</TriggerType></Row>
@@ -107,25 +107,25 @@
 		<Row><Type>SMITHY_DEVELOPMENT_1</Type>       <Yield>8</Yield><YieldType>YIELD_SCIENCE</YieldType>      <GoldCost>200</GoldCost><Order>1</Order><TriggerType>SMITHY_DEVELOPMENT</TriggerType></Row>
 		<Row><Type>SMITHY_DEVELOPMENT_2</Type>       <Yield>8</Yield><YieldType>YIELD_PRODUCTION</YieldType>   <GoldCost>200</GoldCost><Order>2</Order><TriggerType>SMITHY_DEVELOPMENT</TriggerType></Row>
 		<Row><Type>SMITHY_DEVELOPMENT_3</Type>       <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>SMITHY_DEVELOPMENT</TriggerType></Row>
-		<Row><Type>MARKET_MONOPOLY_1</Type>          <Yield>2</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>200</GoldCost><Order>1</Order><TriggerType>MARKET_MONOPOLY</TriggerType></Row>
+		<Row><Type>MARKET_MONOPOLY_1</Type>          <Yield>2</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>200</GoldCost><Order>1</Order><TriggerType>MARKET_MONOPOLY</TriggerType></Row>
 		<Row><Type>MARKET_MONOPOLY_2</Type>          <Yield>8</Yield><YieldType>YIELD_SCIENCE</YieldType>      <GoldCost>200</GoldCost><Order>2</Order><TriggerType>MARKET_MONOPOLY</TriggerType></Row>
 		<Row><Type>MARKET_MONOPOLY_3</Type>          <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>MARKET_MONOPOLY</TriggerType></Row>
 		<Row><Type>LIBRARY_CONTROVERSY_1</Type>      <Yield>8</Yield><YieldType>YIELD_SCIENCE</YieldType>      <GoldCost>200</GoldCost><Order>1</Order><TriggerType>LIBRARY_CONTROVERSY</TriggerType></Row>
-		<Row><Type>LIBRARY_CONTROVERSY_2</Type>      <Yield>2</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>200</GoldCost><Order>2</Order><TriggerType>LIBRARY_CONTROVERSY</TriggerType></Row>
+		<Row><Type>LIBRARY_CONTROVERSY_2</Type>      <Yield>2</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>200</GoldCost><Order>2</Order><TriggerType>LIBRARY_CONTROVERSY</TriggerType></Row>
 		<Row><Type>LIBRARY_CONTROVERSY_3</Type>      <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>LIBRARY_CONTROVERSY</TriggerType></Row>
 		<Row><Type>MONUMENT_CONTROVERSY_1</Type>     <Yield>8</Yield><YieldType>YIELD_CULTURE</YieldType>      <GoldCost>200</GoldCost><Order>1</Order><TriggerType>MONUMENT_CONTROVERSY</TriggerType></Row>
-		<Row><Type>MONUMENT_CONTROVERSY_2</Type>     <Yield>2</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>200</GoldCost><Order>2</Order><TriggerType>MONUMENT_CONTROVERSY</TriggerType></Row>
+		<Row><Type>MONUMENT_CONTROVERSY_2</Type>     <Yield>2</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>200</GoldCost><Order>2</Order><TriggerType>MONUMENT_CONTROVERSY</TriggerType></Row>
 		<Row><Type>MONUMENT_CONTROVERSY_3</Type>     <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>MONUMENT_CONTROVERSY</TriggerType></Row>
 		<Row><Type>WALLED_SLUMS_1</Type>             <Yield>8</Yield><YieldType>YIELD_CULTURE</YieldType>      <GoldCost>200</GoldCost><Order>1</Order><TriggerType>WALLED_SLUMS</TriggerType></Row>
 		<Row><Type>WALLED_SLUMS_2</Type>             <Yield>8</Yield><YieldType>YIELD_PRODUCTION</YieldType>   <GoldCost>200</GoldCost><Order>2</Order><TriggerType>WALLED_SLUMS</TriggerType></Row>
 		<Row><Type>WALLED_SLUMS_3</Type>             <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>WALLED_SLUMS</TriggerType></Row>
-		<Row><Type>BARRACKS_RECRUITMENT_1</Type>     <Yield>2</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>200</GoldCost><Order>1</Order><TriggerType>BARRACKS_RECRUITMENT</TriggerType></Row>
+		<Row><Type>BARRACKS_RECRUITMENT_1</Type>     <Yield>2</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>200</GoldCost><Order>1</Order><TriggerType>BARRACKS_RECRUITMENT</TriggerType></Row>
 		<Row><Type>BARRACKS_RECRUITMENT_2</Type>     <Action>Game.TrigAction.BarracksRecruitment2</Action>     <GoldCost>200</GoldCost><Order>2</Order><TriggerType>BARRACKS_RECRUITMENT</TriggerType></Row>
 		<Row><Type>BARRACKS_RECRUITMENT_3</Type>     <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>BARRACKS_RECRUITMENT</TriggerType></Row>
-		<Row><Type>STABLE_BREED_1</Type>             <Yield>2</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>200</GoldCost><Condition>Game.TrigCondition.CanTrain2Horses</Condition>		<Order>1</Order><TriggerType>STABLE_BREED</TriggerType></Row>
+		<Row><Type>STABLE_BREED_1</Type>             <Yield>2</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>200</GoldCost><Condition>Game.TrigCondition.CanTrain2Horses</Condition>		<Order>1</Order><TriggerType>STABLE_BREED</TriggerType></Row>
 		<Row><Type>STABLE_BREED_2</Type>             <Action>Game.TrigAction.StableBreed2</Action>             <GoldCost>200</GoldCost><Condition>Game.TrigCondition.CanTrain2Horses</Condition>		<Order>2</Order><TriggerType>STABLE_BREED</TriggerType></Row>
 		<Row><Type>STABLE_BREED_3</Type>             <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Condition>Game.TrigCondition.CanTrain2Horses</Condition>		<Order>3</Order><TriggerType>STABLE_BREED</TriggerType></Row>
-		<Row><Type>COLOSSEUM_ATTENDANCE_1</Type>     <Yield>2</Yield><YieldType>YIELD_HAPPINESS</YieldType>    <GoldCost>200</GoldCost><Order>1</Order><TriggerType>COLOSSEUM_ATTENDANCE</TriggerType></Row>
+		<Row><Type>COLOSSEUM_ATTENDANCE_1</Type>     <Yield>2</Yield><YieldType>YIELD_HAPPINESS_CITY</YieldType><GoldCost>200</GoldCost><Order>1</Order><TriggerType>COLOSSEUM_ATTENDANCE</TriggerType></Row>
 		<Row><Type>COLOSSEUM_ATTENDANCE_2</Type>     <Yield>8</Yield><YieldType>YIELD_CULTURE</YieldType>      <GoldCost>200</GoldCost><Order>2</Order><TriggerType>COLOSSEUM_ATTENDANCE</TriggerType></Row>
 		<Row><Type>COLOSSEUM_ATTENDANCE_3</Type>     <Yield>4</Yield><YieldType>YIELD_GOLD</YieldType>         <GoldCost>  0</GoldCost><Order>3</Order><TriggerType>COLOSSEUM_ATTENDANCE</TriggerType></Row>
 		

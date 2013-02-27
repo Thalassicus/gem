@@ -75,7 +75,7 @@ function DoEndCombatLeaderBonuses(
 			yield = math.pow(yield * GameDefines.GOLD_PURCHASE_GOLD_PER_PRODUCTION, GameDefines.HURRY_GOLD_PRODUCTION_EXPONENT)
 			yield = yield * (1 + GameInfo.Units[lostUnit:GetUnitType()].HurryCostModifier / 100)
 			yield = Game.Round(yield / 100)
-			wonPlayer:ChangeYieldStored(YieldTypes.YIELD_HAPPINESS, yield)
+			wonPlayer:ChangeYieldStored(YieldTypes.YIELD_HAPPINESS_CITY, yield)
 		end
 	end
 	if lostUnit and culturePerStr > 0 then

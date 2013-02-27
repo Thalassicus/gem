@@ -13,8 +13,8 @@
 			<Set GridX="1"
 				 GridY="1"
 				 PortraitIndex="40"
-				 MinorFriendshipDecayMod="-33"
-				 MinorGoldFriendshipMod="0"
+				 MinorFriendshipDecayMod="0"
+				 MinorGoldFriendshipMod="33"
 				 />
 		</Update>
 		<Update>
@@ -23,7 +23,8 @@
 				 GridY="1"
 				 PortraitIndex="38"
 				 MinorResourceBonus="0"
-				 MinorGoldFriendshipMod="33"
+				 MinorFriendshipDecayMod="-33"
+				 MinorGoldFriendshipMod="0"
 				 />
 		</Update>
 		<Update>
@@ -51,6 +52,7 @@
 			<Where Type="POLICY_SCHOLASTICISM" />
 			<Set GridX="4"
 				 GridY="2"
+				 MinorScienceAllies="0"
 				 />
 		</Update>
 		<Update>
@@ -70,13 +72,13 @@
 		<Row>
 			<PolicyType>POLICY_PATRONAGE_FINISHER</PolicyType>
 			<FriendLevel>1</FriendLevel>
-			<YieldType>YIELD_HAPPINESS</YieldType>
+			<YieldType>YIELD_HAPPINESS_NATIONAL</YieldType>
 			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PATRONAGE_FINISHER</PolicyType>
 			<FriendLevel>2</FriendLevel>
-			<YieldType>YIELD_HAPPINESS</YieldType>
+			<YieldType>YIELD_HAPPINESS_NATIONAL</YieldType>
 			<Yield>3</Yield>
 		</Row>
 		<Row>
@@ -89,6 +91,18 @@
 			<PolicyType>POLICY_EDUCATED_ELITE</PolicyType>
 			<FriendLevel>2</FriendLevel>
 			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_SCHOLASTICISM</PolicyType>
+			<FriendLevel>1</FriendLevel>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_SCHOLASTICISM</PolicyType>
+			<FriendLevel>2</FriendLevel>
+			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>3</Yield>
 		</Row>
 	</Policy_MinorCivBonuses>

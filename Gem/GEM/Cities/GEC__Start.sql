@@ -23,7 +23,7 @@ UPDATE sqlite_sequence SET seq = (SELECT COUNT(ID) FROM Buildings)-1 WHERE name 
 --
 
 UPDATE Buildings
-SET Cost = ROUND(Cost * 1.8 / 10, 0) * 10
+SET Cost = Cost * 1.8
 WHERE Cost > 0 AND NOT BuildingClass IN (
 	SELECT Type FROM BuildingClasses
 	WHERE (
@@ -34,7 +34,7 @@ WHERE Cost > 0 AND NOT BuildingClass IN (
 );
 
 UPDATE Buildings
-SET Cost = ROUND(Cost * 1.2 / 10, 0) * 10
+SET Cost = Cost * 1.2
 WHERE Cost > 0 AND BuildingClass IN (
 	SELECT Type FROM BuildingClasses
 	WHERE (
@@ -45,7 +45,7 @@ WHERE Cost > 0 AND BuildingClass IN (
 );
 
 UPDATE Projects
-SET Cost = ROUND(Cost * 1.2 / 10, 0) * 10
+SET Cost = Cost * 1.2
 WHERE Cost > 0;
 
 UPDATE Buildings
@@ -103,7 +103,7 @@ WHERE Type IN (
 -- todo: finish this conversion
 INSERT OR REPLACE INTO	Building_YieldChanges
 						(BuildingType, YieldType, Yield)
-SELECT DISTINCT			Type, 'YIELD_HAPPINESS', Happiness + UnmoddedHappiness
+SELECT DISTINCT			Type, 'YIELD_HAPPINESS_CITY', Happiness + UnmoddedHappiness
 FROM Buildings			WHERE (Happiness + UnmoddedHappiness) <> 0;
 */
 
@@ -235,7 +235,7 @@ WHERE NumBuildingNeeded = -1;
 /*
 UPDATE Building_YieldChanges
 SET Yield = Yield + 1
-WHERE YieldType = 'YIELD_HAPPINESS'
+WHERE YieldType = 'YIELD_HAPPINESS_CITY'
 AND BuildingClass IN (
 	'BUILDINGCLASS_COLOSSEUM',
 	'BUILDINGCLASS_THEATRE',

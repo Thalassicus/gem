@@ -48,6 +48,8 @@ SET ExtraMaintenanceCost = 0.5 * ExtraMaintenanceCost
 WHERE ExtraMaintenanceCost > 0 AND (
 	Class = 'UNITCLASS_GATLINGGUN'
 	OR Class = 'UNITCLASS_MACHINE_GUN'
+	OR Type = 'UNIT_AZTEC_JAGUAR'
+	OR Type = 'UNIT_POLYNESIAN_MAORI_WARRIOR'
 );
 
 UPDATE Units SET ExtraMaintenanceCost = MAX(1, ROUND(ExtraMaintenanceCost, 0)) WHERE ExtraMaintenanceCost <> 0;
@@ -65,6 +67,11 @@ UPDATE Units SET Cost = 150, HurryCostModifier =  75 WHERE Class = 'UNITCLASS_DI
 UPDATE Units SET Cost = 200, HurryCostModifier = 100 WHERE Class = 'UNITCLASS_AMBASSADOR';
 
 
+--
+-- Faith Costs
+--
+
+UPDATE Units SET FaithCost = 3 * Cost WHERE FaithCost <> 0;
 
 
 --
@@ -121,7 +128,8 @@ INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
 SELECT DISTINCT Type, 'PROMOTION_CAN_MOVE_AFTER_ATTACKING'
 FROM Units WHERE Class IN (
 	'UNITCLASS_CHARIOT_ARCHER'
-);-- OR CombatClass = 'UNITCOMBAT_NAVALMELEE';
+) AND NOT Type = 'UNIT_BARBARIAN_CHARIOT_ARCHER'
+;-- OR CombatClass = 'UNITCOMBAT_NAVALMELEE';
 
 DELETE FROM Unit_FreePromotions
 WHERE PromotionType = 'PROMOTION_FORMATION_1' AND UnitType IN
@@ -194,12 +202,6 @@ FROM Units WHERE CombatClass IN (
 	'UNITCOMBAT_ARCHER',
 	'UNITCOMBAT_MOUNTED_ARCHER',
 	'UNITCOMBAT_ARMOR'
-) OR Class IN (
-	'UNITCLASS_TRIREME',
-	'UNITCLASS_GALLEASS',
-	'UNITCLASS_FRIGATE',
-	'UNITCLASS_DESTROYER',
-	'UNITCLASS_MISSILE_DESTROYER'
 );
 
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
@@ -286,10 +288,6 @@ AND UnitType IN (SELECT Type FROM Units WHERE Domain = 'DOMAIN_SEA');
 INSERT INTO Unit_FreePromotions (UnitType, PromotionType)
 SELECT DISTINCT Type, 'PROMOTION_ONLY_DEFENSIVE'
 FROM Units WHERE CombatClass = 'UNITCOMBAT_NAVALRANGED';
-
-DELETE FROM Unit_FreePromotions
-WHERE PromotionType = 'PROMOTION_SMALL_CITY_PENALTY'
-AND UnitType IN (SELECT Type FROM Units WHERE CombatClass = 'UNITCOMBAT_NAVALRANGED');
 
 DELETE FROM Unit_FreePromotions
 WHERE PromotionType = 'PROMOTION_ANTI_SUBMARINE_I' AND UnitType IN

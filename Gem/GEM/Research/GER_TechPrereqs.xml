@@ -36,10 +36,6 @@ TechPrereqs tab of GEM_Details.xlsspreadsheet (in mod folder).
 			<TechType>TECH_WRITING</TechType>
 		</Row>
 		<Row>
-			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<TechType>TECH_TRAPPING</TechType>
-		</Row>
-		<Row>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<TechType>TECH_TRAPPING</TechType>
 		</Row>
@@ -49,7 +45,7 @@ TechPrereqs tab of GEM_Details.xlsspreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
-			<TechType>TECH_RECRUITMENT</TechType>
+			<TechType>TECH_TRAINING</TechType>
 		</Row>
 		<Row>
 			<PrereqTech>TECH_MINING</PrereqTech>
@@ -80,7 +76,7 @@ TechPrereqs tab of GEM_Details.xlsspreadsheet (in mod folder).
 			<TechType>TECH_MATHEMATICS</TechType>
 		</Row>
 		<Row>
-			<PrereqTech>TECH_RECRUITMENT</PrereqTech>
+			<PrereqTech>TECH_TRAINING</PrereqTech>
 			<TechType>TECH_MATHEMATICS</TechType>
 		</Row>
 		<Row>
@@ -112,10 +108,6 @@ TechPrereqs tab of GEM_Details.xlsspreadsheet (in mod folder).
 			<TechType>TECH_CURRENCY</TechType>
 		</Row>
 		<Row>
-			<PrereqTech>TECH_HORSEBACK_RIDING</PrereqTech>
-			<TechType>TECH_CURRENCY</TechType>
-		</Row>
-		<Row>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<TechType>TECH_ENGINEERING</TechType>
 		</Row>
@@ -133,14 +125,14 @@ TechPrereqs tab of GEM_Details.xlsspreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
-			<TechType>TECH_THEOLOGY</TechType>
-		</Row>
-		<Row>
-			<PrereqTech>TECH_CURRENCY</PrereqTech>
 			<TechType>TECH_GUILDS</TechType>
 		</Row>
 		<Row>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
+			<TechType>TECH_CIVIL_SERVICE</TechType>
+		</Row>
+		<Row>
+			<PrereqTech>TECH_HORSEBACK_RIDING</PrereqTech>
 			<TechType>TECH_CIVIL_SERVICE</TechType>
 		</Row>
 		<Row>
@@ -165,6 +157,10 @@ TechPrereqs tab of GEM_Details.xlsspreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+			<TechType>TECH_EDUCATION</TechType>
+		</Row>
+		<Row>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechType>TECH_EDUCATION</TechType>
 		</Row>
 		<Row>

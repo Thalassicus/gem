@@ -15,7 +15,6 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 		<Delete BuildingType="BUILDING_BROADCAST_TOWER" />
 		<Delete BuildingType="BUILDING_CASTLE" />
 		<Delete BuildingType="BUILDING_CATHEDRAL" />
-		<Delete BuildingType="BUILDING_CITY_HALL" />
 		<Delete BuildingType="BUILDING_CIRCUS" />
 		<Delete BuildingType="BUILDING_COLOSSEUM" />
 		<Delete BuildingType="BUILDING_CONSTABLE" />
@@ -55,7 +54,7 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 		<Delete BuildingType="BUILDING_STADIUM" />
 		<Delete BuildingType="BUILDING_STOCK_EXCHANGE" />
 		<Delete BuildingType="BUILDING_STONE_WORKS" />
-		<Delete BuildingType="BUILDING_SUMMER_PALACE" />
+		<Delete BuildingType="BUILDING_GEM_PALACE" />
 		<Delete BuildingType="BUILDING_TEMPLE" />
 		<Delete BuildingType="BUILDING_THEATRE" />
 		<Delete BuildingType="BUILDING_UNIVERSITY" />
@@ -197,21 +196,6 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 			<BuildingType>BUILDING_CATHEDRAL</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
 			<Flavor>4</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CITY_HALL</BuildingType>
-			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CITY_HALL</BuildingType>
-			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>8</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CITY_HALL</BuildingType>
-			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>8</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_CIRCUS</BuildingType>
@@ -555,6 +539,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 			<Flavor>16</Flavor>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_SEAPORT</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>16</Flavor>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_SHRINE</BuildingType>
 			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
 			<Flavor>8</Flavor>
@@ -631,21 +620,26 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_STONE_WORKS</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STONE_WORKS</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>8</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<BuildingType>BUILDING_GEM_PALACE</BuildingType>
 			<FlavorType>FLAVOR_EXPANSION</FlavorType>
 			<Flavor>16</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<BuildingType>BUILDING_GEM_PALACE</BuildingType>
 			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
 			<Flavor>16</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<BuildingType>BUILDING_GEM_PALACE</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>16</Flavor>
 		</Row>
@@ -795,6 +789,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_CIRCUS_MAXIMUS</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CIRCUS_MAXIMUS</BuildingType>
 			<FlavorType>FLAVOR_WONDER</FlavorType>
 			<Flavor>16</Flavor>
 		</Row>
@@ -815,6 +814,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_HERMITAGE</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HERMITAGE</BuildingType>
 			<FlavorType>FLAVOR_WONDER</FlavorType>
 			<Flavor>16</Flavor>
 		</Row>
@@ -827,6 +831,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>16</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
@@ -855,6 +864,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
 			<FlavorType>FLAVOR_WONDER</FlavorType>
 			<Flavor>32</Flavor>
 		</Row>
@@ -862,6 +876,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 			<BuildingType>BUILDING_NATIONAL_COLLEGE</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>16</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_COLLEGE</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_COLLEGE</BuildingType>
@@ -890,6 +909,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
 			<FlavorType>FLAVOR_WONDER</FlavorType>
 			<Flavor>16</Flavor>
 		</Row>
@@ -897,6 +921,11 @@ Building_Priorities tab of CivVModding.xls spreadsheet (in mod folder).
 			<BuildingType>BUILDING_OXFORD_UNIVERSITY</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>32</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OXFORD_UNIVERSITY</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_OXFORD_UNIVERSITY</BuildingType>

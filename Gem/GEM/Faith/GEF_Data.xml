@@ -8,24 +8,24 @@
 			<!-- 10 -->
 		</Update>
 		<Update>
-			<Where Name="RELIGION_MIN_FAITH_FIRST_PROPHET" />
-			<Set Value="200" />
-			<!-- 200 -->
-		</Update>
-		<Update>
-			<Where Name="RELIGION_MIN_FAITH_FIRST_GREAT_PERSON" />
-			<Set Value="500" />
-			<!-- 1000 -->
-		</Update>
-		<Update>
 			<Where Name="RELIGION_GAME_FAITH_DELTA_NEXT_PANTHEON" />
 			<Set Value="5" />
 			<!-- 5 -->
 		</Update>
 		<Update>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_PROPHET" />
+			<Set Value="200" />
+			<!-- 200 -->
+		</Update>
+		<Update>
 			<Where Name="RELIGION_FAITH_DELTA_NEXT_PROPHET" />
-			<Set Value="50" />
+			<Set Value="100" />
 			<!-- 100 -->
+		</Update>
+		<Update>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_GREAT_PERSON" />
+			<Set Value="500" />
+			<!-- 1000 -->
 		</Update>
 		<Update>
 			<Where Name="RELIGION_FAITH_DELTA_NEXT_GREAT_PERSON" />
@@ -117,29 +117,46 @@
 			<Set SciencePerOtherReligionFollower="25"/>
 		</Update>
 		<Update>
+			<Where Type="BELIEF_MONUMENT_GODS" />
+			<Set WonderProductionModifier="25"/>
+		</Update>
+		<Update>
 			<Where Type="BELIEF_SWORD_PLOWSHARES" />
 			<Set CityGrowthModifier="25"/>
 		</Update>
+		<!--
 		<Update>
 			<Where Type="BELIEF_DEFENDER_FAITH" />
-			<Set CombatModifierFriendlyCities="40"/>
+			<Set CombatModifierFriendlyCities="40"
+				 CombatModifierEnemyCities="40"
+				 />
 		</Update>
+		-->
+		<Delete Type="BELIEF_DEFENDER_FAITH" />
 		<Update>
 			<Where Type="BELIEF_JUST_WAR" />
-			<Set CombatModifierEnemyCities="40"/>
+			<Set CombatModifierFriendlyCities="40"
+				 CombatModifierEnemyCities="40"
+				 />
 		</Update>
 		<Update>
 			<Where Type="BELIEF_HOLY_ORDER" />
-			<Set MissionaryCostModifier="-50"/>
+			<Set ProphetStrengthModifier="50"
+				 ProphetCostModifier="-33"
+				 MissionaryStrengthModifier="50"
+				 MissionaryCostModifier="-33"
+				 />
 		</Update>
+		<Delete Type="BELIEF_MESSIAH" />
+		<Delete Type="BELIEF_MISSIONARY_ZEAL" />
+		<!--
 		<Update>
 			<Where Type="BELIEF_MESSIAH" />
-			<Set ProphetStrengthModifier="50" ProphetCostModifier="-33" />
+			<Set ProphetStrengthModifier="50"
+				 ProphetCostModifier="-33"
+				 />
 		</Update>
-		<Update>
-			<Where Type="BELIEF_MISSIONARY_ZEAL" />
-			<Set MissionaryStrengthModifier="100"/>
-		</Update>
+		-->
 		<Update>
 			<Where Type="BELIEF_RELIGIOUS_UNITY" />
 			<Set FriendlyCityStateSpreadModifier="1000"/>
@@ -204,18 +221,7 @@
 		</Update>
 	</Belief_FeatureYieldChanges>
 	<Belief_ResourceYieldChanges>
-		<Update>
-			<Where BeliefType="BELIEF_FORMAL_LITURGY" />
-			<Set Yield="3"/>
-		</Update>
-		<Update>
-			<Where BeliefType="BELIEF_FORMAL_LITURGY" />
-			<Set Yield="3"/>
-		</Update>
-		<Update>
-			<Where BeliefType="BELIEF_GOD_FESTIVALS" />
-			<Set Yield="2"/>
-		</Update>
+		
 	</Belief_ResourceYieldChanges>
 	<Belief_ImprovementYieldChanges>
 		<Row>
@@ -240,7 +246,7 @@
 		</Update>
 		<Update>
 			<Where BeliefType="BELIEF_ORAL_TRADITION" />
-			<Set Yield="3"/>
+			<Set Yield="2"/>
 		</Update>
 		<Update>
 			<Where BeliefType="BELIEF_OPEN_SKY" />

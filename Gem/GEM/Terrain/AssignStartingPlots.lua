@@ -831,30 +831,30 @@ function AssignStartingPlots:MeasureStartPlacementFertilityOfPlot(x, y, checkFor
 		plotFertility = 4;
 	else
 		if plotType == PlotTypes.PLOT_HILLS then
-			plotFertility = 8;
+			plotFertility = 6;
 		elseif featureType == FeatureTypes.FEATURE_FLOOD_PLAINS then
-			plotFertility = 8;
+			plotFertility = 6;
 		elseif featureType == FeatureTypes.FEATURE_FOREST then
-			plotFertility = 8;
+			plotFertility = 6;
 		elseif featureType == FeatureTypes.FEATURE_JUNGLE then
-			plotFertility = 0;
+			plotFertility = 2;
 		elseif featureType == FeatureTypes.FEATURE_MARSH then
 			plotFertility = 2;
 		elseif terrainType == TerrainTypes.TERRAIN_GRASS then
-			plotFertility = 8;
+			plotFertility = 6;
 		elseif terrainType == TerrainTypes.TERRAIN_PLAINS then
-			plotFertility = 8;
+			plotFertility = 6;
 		elseif terrainType == TerrainTypes.TERRAIN_COAST then
 			plotFertility = 4;
 		elseif terrainType == TerrainTypes.TERRAIN_TUNDRA then
-			plotFertility = 0;
+			plotFertility = 2;
 		elseif terrainType == TerrainTypes.TERRAIN_DESERT then
 			plotFertility = 0;
 		end
 		if plot:IsRiverSide() then
-			plotFertility = plotFertility + 4;
-		elseif plot:IsFreshWater() then
 			plotFertility = plotFertility + 2;
+		elseif plot:IsFreshWater() then
+			plotFertility = plotFertility + 1;
 		end
 		if checkForCoastalLand == true then -- When measuring only one AreaID, this shortcut helps account for coastal plots not measured.
 			if plot:IsCoastalLand() then
@@ -10157,13 +10157,13 @@ function AssignStartingPlots:CalculateStrategicPlotWeights()
 			local plotID			= y * iW + x + 1
 			local typeTable     	= {}
 			typeTable.PlotType		= plotTypeStrings[plot:GetPlotType()]
+			typeTable.NotLake		= not plot:IsLake()
+			typeTable.Freshwater	= plot:IsFreshWater()
 			typeTable.TerrainType	= plot:GetTerrainType()
 			typeTable.FeatureType	= plot:GetFeatureType()
-			typeTable.Freshwater	= plot:IsFreshWater()
-			typeTable.NotLake		= not plot:IsLake()
-			typeTable.TerrainType	= (typeTable.TerrainType == -1) and "NO_TERRAIN" or GameInfo.Terrains[typeTable.TerrainType].Type
-			typeTable.FeatureType	= (typeTable.FeatureType == -1) and "NO_FEATURE" or GameInfo.Features[typeTable.FeatureType].Type
-
+			typeTable.TerrainType	= (typeTable.TerrainType == TerrainTypes.NO_TERRAIN) and "NO_TERRAIN" or GameInfo.Terrains[typeTable.TerrainType].Type
+			typeTable.FeatureType	= (typeTable.FeatureType == FeatureTypes.NO_FEATURE) and "NO_FEATURE" or GameInfo.Features[typeTable.FeatureType].Type
+			
 			for resInfo in GameInfo.Resource_TerrainWeights() do
 				local resID = GameInfo.Resources[resInfo.ResourceType].ID
 				local useWeight = true				

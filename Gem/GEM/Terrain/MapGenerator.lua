@@ -618,6 +618,10 @@ function CanPlaceGoodyAt(improvement, plot)
 		return false;
 	end
 
+	if (plot:IsMountain()) then
+		return false;
+	end
+	
 	-- Don't allow on tiny islands.
 	local areaID = plot:GetArea();
 	local area = Map.GetArea(areaID);	

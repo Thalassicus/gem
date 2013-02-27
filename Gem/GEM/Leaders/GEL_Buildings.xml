@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Buildings>
+		<Update>
+			<Where Type="BUILDING_SATRAPS_COURT" />
+			<Set BuildingClass="BUILDINGCLASS_MARKET"
+				 PrereqTech="TECH_TRAPPING"
+				 Cost="120"
+				 ArtDefineTag="ART_DEF_BUILDING_MARKET"
+				 Happiness="0"
+				 GoldenAgePoints="2"
+				 OneShot="true"
+				 />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_BAZAAR" />
+			<Set PrereqTech="TECH_TRAPPING" />
+		</Update>
+	</Buildings>
+	<Building_YieldInstant>
+		<Row>
+			<BuildingType>BUILDING_SATRAPS_COURT</BuildingType>
+			<YieldType>YIELD_HAPPINESS_NATIONAL</YieldType>
+			<Yield>200</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>200</Yield>
+		</Row>
+	</Building_YieldInstant>
+	<Building_YieldChanges>
+		<Update>
+			<Where BuildingType="BUILDING_MUD_PYRAMID_MOSQUE" YieldType="YIELD_CULTURE" />
+			<Set Yield="5"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_WAT" YieldType="YIELD_CULTURE" />
+			<Set Yield="2"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_STELE" YieldType="YIELD_FAITH" />
+			<Set Yield="1"/>
+		</Update>
+	</Building_YieldChanges>
+	<Building_YieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_WAT</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+	</Building_YieldModifiers>
+	<!--
+	<Building_YieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>10</Yield>
+		</Row>
+	</Building_YieldModifiers>
+	-->
+	<Building_FeatureYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_FeatureYieldChanges>
+	<Trait_ResourceQuantityModifiers>
+		<Row>
+			<TraitType>TRAIT_STRATEGIC_RICHES</TraitType>
+			<ResourceType>RESOURCE_COAL</ResourceType>
+			<ResourceQuantityModifier>100</ResourceQuantityModifier>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_STRATEGIC_RICHES</TraitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<ResourceQuantityModifier>100</ResourceQuantityModifier>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_STRATEGIC_RICHES</TraitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<ResourceQuantityModifier>100</ResourceQuantityModifier>
+		</Row>
+		<Delete TraitType="TRAIT_LAND_TRADE_GOLD" />
+	</Trait_ResourceQuantityModifiers>
+	<Building_YieldChangesPerPop>
+
+	</Building_YieldChangesPerPop>
+	<Civilization_BuildingClassOverrides>
+		<Update>
+			<Where BuildingType="BUILDING_SATRAPS_COURT" />
+			<Set BuildingClassType="BUILDINGCLASS_MARKET" />
+		</Update>
+	</Civilization_BuildingClassOverrides>
+	<Building_ClassesNeededInCity>
+		<Delete BuildingType="BUILDING_SATRAPS_COURT" />
+	</Building_ClassesNeededInCity>
+</GameData>

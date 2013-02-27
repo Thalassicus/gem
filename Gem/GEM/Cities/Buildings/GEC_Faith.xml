@@ -11,7 +11,7 @@
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_PAGODA" YieldType="YIELD_CULTURE" />
-			<Set Yield="2" />
+			<Set Yield="1" />
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_MOSQUE" YieldType="YIELD_FAITH" />
@@ -19,7 +19,7 @@
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_MOSQUE" YieldType="YIELD_CULTURE" />
-			<Set Yield="2" />
+			<Set Yield="1" />
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_CATHEDRAL" YieldType="YIELD_FAITH" />
@@ -27,11 +27,11 @@
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_CATHEDRAL" YieldType="YIELD_CULTURE" />
-			<Set Yield="6" />
+			<Set Yield="3" />
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_MONASTERY" YieldType="YIELD_CULTURE" />
-			<Set Yield="2" />
+			<Set Yield="1" />
 		</Update>
 		<Update>
 			<Where BuildingType="BUILDING_MONASTERY" YieldType="YIELD_FAITH" />

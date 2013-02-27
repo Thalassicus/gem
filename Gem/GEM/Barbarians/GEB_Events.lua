@@ -6,7 +6,7 @@
 include("CiVUP_Core.lua")
 
 local log = Events.LuaLogger:New()
-log:SetLevel("WARN")
+log:SetLevel("INFO")
 
 function UpgradeBarbarians(playerID, techID)
 	local player = Players[playerID]
@@ -65,5 +65,29 @@ end
 if Civup.BARBARIANS_HEAL == 1 then
 	LuaEvents.ActivePlayerTurnStart_Turn.Add(HealBarbarians)
 end
+
+--
+function ReplaceChariots()
+	local campID	= GameInfo.Improvements.IMPROVEMENT_BARBARIAN_CAMP.ID
+	local chariotID = GameInfo.Units.UNIT_BARBARIAN_CHARIOT_ARCHER.ID
+	for playerID, player in pairs(Players) do
+		if player and player:IsBarbarian() then
+			for unit in player:Units() do
+				if unit:GetUnitType() == chariotID then
+					local plot = unit:GetPlot()
+					if plot:GetImprovementType() == campID and not plot:IsVisibleToWatchingHuman() then
+						log:Info("Replace barb chariot")
+						Unit_Replace(unit, "UNITCLASS_WARRIOR")
+					end
+				end
+			end
+			break
+		end
+	end
+end
+if Civup.BARBARIANS_HEAL == 1 then
+	LuaEvents.ActivePlayerTurnStart_Turn.Add(ReplaceChariots)
+end
+--]]
 
 --print("Loaded VEB_Events.lua")

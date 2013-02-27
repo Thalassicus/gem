@@ -71,7 +71,7 @@
 		<Row><FeatureType>FEATURE_GIBRALTAR</FeatureType>      <YieldType>YIELD_PRODUCTION</YieldType>     <Yield>2</Yield></Row>
 		<Row><FeatureType>FEATURE_GIBRALTAR</FeatureType>      <YieldType>YIELD_GOLD</YieldType>           <Yield>4</Yield></Row>
 		<Row><FeatureType>FEATURE_FOUNTAIN_YOUTH</FeatureType> <YieldType>YIELD_FOOD</YieldType>           <Yield>4</Yield></Row>
-		<Row><FeatureType>FEATURE_FOUNTAIN_YOUTH</FeatureType> <YieldType>YIELD_HAPPINESS</YieldType>      <Yield>1</Yield></Row>
+		<Row><FeatureType>FEATURE_FOUNTAIN_YOUTH</FeatureType> <YieldType>YIELD_HAPPINESS_CITY</YieldType>      <Yield>1</Yield></Row>
 		<Row><FeatureType>FEATURE_MESA</FeatureType>           <YieldType>YIELD_PRODUCTION</YieldType>     <Yield>6</Yield></Row>
 		<Row><FeatureType>FEATURE_MESA</FeatureType>           <YieldType>YIELD_GOLD</YieldType>           <Yield>3</Yield></Row>
 		<Row><FeatureType>FEATURE_POTOSI</FeatureType>         <YieldType>YIELD_PRODUCTION</YieldType>     <Yield>3</Yield></Row>
@@ -89,7 +89,7 @@
 		<Row><FeatureType>FEATURE_MT_SINAI</FeatureType>       <YieldType>YIELD_CULTURE</YieldType>        <Yield>3</Yield></Row>
 		<Row><FeatureType>FEATURE_MT_SINAI</FeatureType>       <YieldType>YIELD_FAITH</YieldType>          <Yield>6</Yield></Row>
 		<Row><FeatureType>FEATURE_MT_KAILASH</FeatureType>     <YieldType>YIELD_FAITH</YieldType>          <Yield>6</Yield></Row>
-		<Row><FeatureType>FEATURE_MT_KAILASH</FeatureType>     <YieldType>YIELD_HAPPINESS</YieldType>      <Yield>1</Yield></Row>
+		<Row><FeatureType>FEATURE_MT_KAILASH</FeatureType>     <YieldType>YIELD_HAPPINESS_CITY</YieldType>      <Yield>1</Yield></Row>
 		<Row><FeatureType>FEATURE_ULURU</FeatureType>          <YieldType>YIELD_FOOD</YieldType>           <Yield>2</Yield></Row>
 		<Row><FeatureType>FEATURE_ULURU</FeatureType>          <YieldType>YIELD_CULTURE</YieldType>        <Yield>3</Yield></Row>
 		<Row><FeatureType>FEATURE_ULURU</FeatureType>          <YieldType>YIELD_FAITH</YieldType>          <Yield>3</Yield></Row>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{4746fd17-873e-40e4-b531-63afb3f7f235}</ProjectGuid>
-    <Name>G&amp;K Enhanced Mod (v1.13.1)</Name>
+    <Name>G&amp;K Enhanced Mod (v1.14 Beta)</Name>
     <Guid>edc58ea2-bac0-4109-9144-ee67c8b216d7</Guid>
     <ModVersion>1</ModVersion>
     <Stability>Stable</Stability>
@@ -39,6 +39,16 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>GEM/Armies/GEA__New.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM/Barbarians/GEB__New.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>GEM\Cities\GEC__New.xml</FileName>
       </Action>
       <Action>
@@ -49,22 +59,12 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Leaders\GEL_Replacements.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>GEM/Armies/GEA__New.xml</FileName>
+        <FileName>GEM/Leaders/GEL__New.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>GEM/Armies/GEA__Start.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>GEM\Diplomacy\GED_Start.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -289,6 +289,16 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>GEM\Leaders\GEL_Buildings.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GEM\Leaders\GEL_Units.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>GEM\Leaders\GEL_LandmarkArtTypes.xml</FileName>
       </Action>
       <Action>
@@ -474,7 +484,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Armies.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -484,42 +494,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Armies.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Armies.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Armies.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Armies.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Armies.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Armies.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Armies.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Armies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Barbarians.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -529,42 +539,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Barbarians.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Barbarians.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Barbarians.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Barbarians.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Barbarians.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Barbarians.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Barbarians.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Barbarians.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Cities.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -574,42 +584,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Cities.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Cities.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Cities.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Cities.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Cities.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Cities.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Cities.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Cities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -619,42 +629,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Diplomacy.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Diplomacy.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Opportunities.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -664,42 +674,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Opportunities.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Opportunities.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Opportunities.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Opportunities.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Opportunities.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Opportunities.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Opportunities.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Opportunities.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Leaders.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -709,42 +719,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Leaders.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Leaders.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Leaders.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Leaders.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Leaders.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Leaders.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Leaders.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Leaders.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Policies.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -754,37 +764,37 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Policies.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Policies.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Policies.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Policies.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Policies.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Policies.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Policies.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Policies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -834,7 +844,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Faith.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -844,42 +854,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Faith.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Faith.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Faith.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Faith.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Faith.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Faith.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Faith.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Faith.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\DE_DE\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -889,42 +899,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\ES_ES\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\FR_FR\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\IT_IT\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\JA_JP\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\PL_PL\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\RU_RU\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\GreatWorks.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\GreatWorks.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Research.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -934,42 +944,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Research.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Research.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Research.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Research.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Research.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Research.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Research.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Research.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\Terrain.xml</FileName>
+        <FileName>GEM\Text\DE_DE\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -979,42 +989,42 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\Terrain.xml</FileName>
+        <FileName>GEM\Text\ES_ES\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\Terrain.xml</FileName>
+        <FileName>GEM\Text\FR_FR\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\Terrain.xml</FileName>
+        <FileName>GEM\Text\IT_IT\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\Terrain.xml</FileName>
+        <FileName>GEM\Text\JA_JP\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\Terrain.xml</FileName>
+        <FileName>GEM\Text\PL_PL\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\Terrain.xml</FileName>
+        <FileName>GEM\Text\RU_RU\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\Terrain.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\Terrain.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\DE_DE\AI.xml</FileName>
+        <FileName>GEM\Text\DE_DE\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -1024,37 +1034,37 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ES_ES\AI.xml</FileName>
+        <FileName>GEM\Text\ES_ES\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\FR_FR\AI.xml</FileName>
+        <FileName>GEM\Text\FR_FR\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\IT_IT\AI.xml</FileName>
+        <FileName>GEM\Text\IT_IT\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\JA_JP\AI.xml</FileName>
+        <FileName>GEM\Text\JA_JP\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\PL_PL\AI.xml</FileName>
+        <FileName>GEM\Text\PL_PL\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\RU_RU\AI.xml</FileName>
+        <FileName>GEM\Text\RU_RU\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GEM\Text\ZH_CN\AI.xml</FileName>
+        <FileName>GEM\Text\ZH_CN\AI.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -1234,11 +1244,23 @@
     <DeployMod>true</DeployMod>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="GEM\Barbarians\GEB__New.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="GEM\Cities\GEC__New.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM\Cities\GEC_Renames.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Leaders\GEL_Buildings.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Leaders\GEL_Units.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1254,15 +1276,15 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM_AI_and_Leaders.xls">
+    <Content Include="GEM_LeadersAI.xls">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM_Details.xls">
+    <Content Include="GEM_ArmiesCities.xls">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="CivVModdingDiagrams.odg">
+    <Content Include="GEM_Diagrams.odg">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1658,7 +1680,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GEM/Leaders/GEL_Replacements.xml">
+    <Content Include="GEM\Leaders\GEL__New.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -2339,6 +2361,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM_Language.xls">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM_PoliciesTechsOther.xls">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

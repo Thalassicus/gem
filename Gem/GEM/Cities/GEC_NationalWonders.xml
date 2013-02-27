@@ -14,6 +14,7 @@
 		<Update>
 			<Where Type="BUILDING_HERMITAGE" />
 			<Set CultureRateModifier="0"
+				 FreePolicies="1"
 				 />
 		</Update>
 	</Buildings>
@@ -34,6 +35,10 @@
 			<Where BuildingType="BUILDING_NATIONAL_EPIC" YieldType="YIELD_CULTURE" />
 			<Set Yield="10" />
 		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_HERMITAGE" YieldType="YIELD_CULTURE" />
+			<Set Yield="1" />
+		</Update>
 		<Delete BuildingType="BUILDING_OXFORD_UNIVERSITY" />
 	</Building_YieldChanges>
 	<Building_YieldModifiers>
@@ -47,11 +52,13 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>25</Yield>
 		</Row>
+		<!--
 		<Row>
 			<BuildingType>BUILDING_HERMITAGE</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>25</Yield>
 		</Row>
+		-->
 		<Row>
 			<BuildingType>BUILDING_GRAND_TEMPLE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>

@@ -96,6 +96,13 @@ WHERE ( buildingDefault.BuildingClass	= building.BuildingClass
 -- Unit Flavors: update flavor types
 --
 
+INSERT INTO Unit_Flavors (UnitType, FlavorType, Flavor)
+SELECT Type, 'FLAVOR_RELIGION', 1
+FROM Units WHERE Class IN (
+	'UNITCLASS_MISSIONARY'			,
+	'UNITCLASS_INQUISITOR'			
+);
+
 DELETE FROM Unit_Flavors WHERE FlavorType = 'FLAVOR_RECON'	AND UnitType = 'UNIT_WARRIOR';
 DELETE FROM Unit_Flavors WHERE FlavorType = 'FLAVOR_GOLD'	AND UnitType = 'UNIT_PRIVATEER';
 DELETE FROM Unit_Flavors WHERE FlavorType = 'FLAVOR_AIR'	AND UnitType = 'UNIT_PARATROOPER';
@@ -154,6 +161,8 @@ INSERT INTO Unit_Flavors (UnitType, FlavorType, Flavor)
 SELECT Type, 'FLAVOR_NAVAL', 1
 FROM Units WHERE CombatClass IN (
 	'UNITCOMBAT_NAVALMELEE'				
+) AND NOT Class IN (
+	'UNITCLASS_CARRIER'				
 );
 
 INSERT INTO Unit_Flavors (UnitType, FlavorType, Flavor)
@@ -209,6 +218,7 @@ WHERE unit.CombatClass IN (
 	'UNITCOMBAT_RECON'			
 ) AND flavor.Type IN (
 	'FLAVOR_HEALING'				,
+	'FLAVOR_PILLAGE'				,
 	'FLAVOR_VANGUARD'				
 );
 
@@ -228,6 +238,7 @@ WHERE unit.Class IN (
 );
 
 
+
 --
 -- Unit Flavors: update flavor values
 --
@@ -235,7 +246,7 @@ WHERE unit.Class IN (
 UPDATE Unit_Flavors SET Flavor = 8;
 
 UPDATE Unit_Flavors SET Flavor = Flavor * 2
-WHERE FlavorType IN ('FLAVOR_NAVAL', 'FLAVOR_NAVAL_RECON');
+WHERE FlavorType IN ('FLAVOR_NAVAL', 'FLAVOR_NAVAL_RECON', 'FLAVOR_RELIGION');
 
 
 -- The "mobile" role involves flanking, which ranged units do not get a bonus for
@@ -253,7 +264,7 @@ WHERE UnitType IN (SELECT unit.Type FROM Units unit, UnitClasses class WHERE (
 
 -- Vanguard
 UPDATE Unit_Flavors SET Flavor = ROUND(Flavor * 2, 0)
-WHERE FlavorType IN ('FLAVOR_HEALING', 'FLAVOR_RECON', 'FLAVOR_DEFENSE')
+WHERE FlavorType IN ('FLAVOR_HEALING', 'FLAVOR_PILLAGE', 'FLAVOR_RECON', 'FLAVOR_DEFENSE')
 AND UnitType IN (SELECT Type FROM Units WHERE CombatClass IN (
 	'UNITCOMBAT_RECON'
 ));
@@ -278,14 +289,26 @@ AND UnitType IN (SELECT Type FROM Units WHERE Class IN (
 UPDATE Unit_Flavors SET Flavor = ROUND(Flavor * 2, 0)
 WHERE FlavorType IN ('FLAVOR_DEFENSE', 'FLAVOR_CITY_DEFENSE')
 AND UnitType IN (SELECT Type FROM Units WHERE CombatClass IN (
-	'UNITCOMBAT_ARCHER',
-	'UNITCOMBAT_MOUNTED_ARCHER',
-	'UNITCOMBAT_BOMBER'
+	'UNITCOMBAT_ARCHER'				,
+	'UNITCOMBAT_MOUNTED_ARCHER'		,
+	'UNITCOMBAT_BOMBER'				
+));
+
+-- Machine Guns
+UPDATE Unit_Flavors SET Flavor = ROUND(Flavor * 2, 0)
+WHERE FlavorType IN ('FLAVOR_DEFENSE')
+AND UnitType IN (SELECT Type FROM Units WHERE Class IN (
+	'UNITCLASS_GATLINGGUN'			,
+	'UNITCLASS_MACHINE_GUN'			
 ));
 
 -- Anti-Mobile
 UPDATE Unit_Flavors SET Flavor = ROUND(Flavor * 2, 0)
 WHERE FlavorType = 'FLAVOR_ANTI_MOBILE';
+
+-- Carrier
+UPDATE Unit_Flavors SET Flavor = ROUND(Flavor * 2, 0)
+WHERE FlavorType = 'FLAVOR_AIR_CARRIER';
 
 -- Siege
 UPDATE Unit_Flavors SET Flavor = ROUND(Flavor * 2, 0)
@@ -364,7 +387,7 @@ AND UnitType IN (SELECT Type FROM Units WHERE Class IN (
 ));
 
 UPDATE Unit_Flavors SET Flavor = ROUND(Flavor / 4, 0)
-WHERE (FlavorType <> 'FLAVOR_HEALING')
+WHERE FlavorType NOT IN ('FLAVOR_HEALING', 'FLAVOR_PILLAGE')
 AND UnitType IN (SELECT Type FROM Units WHERE Class IN (
 	'UNITCLASS_CONSCRIPT',
 	'UNITCLASS_PARATROOPER'

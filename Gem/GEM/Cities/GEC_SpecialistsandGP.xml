@@ -111,6 +111,10 @@
 			<Set GoldenAgeTurns="4" />
 		</Update>
 		<Update>
+			<Where Type="UNIT_MONGOLIAN_KHAN" />
+			<Set GoldenAgeTurns="4" />
+		</Update>
+		<Update>
 			<Where Type="UNIT_GREAT_ADMIRAL" />
 			<Set GoldenAgeTurns="4" />
 		</Update>

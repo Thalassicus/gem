@@ -16,11 +16,14 @@
 			<Where Type="PROMOTION_AMBUSH_1" />
 			<Set PortraitIndex="24"
 				 TechPrereq="NULL"
-				 PromotionPrereqOr1="PROMOTION_SHOCK_1"
-				 PromotionPrereqOr2="PROMOTION_DRILL_1"
-				 PromotionPrereqOr3="PROMOTION_ANTI_TANK"
+				 PromotionPrereqOr1="PROMOTION_ANTI_TANK"
+				 PromotionPrereqOr2="PROMOTION_ANTI_MOUNTED_NOUPGRADE_II"
 				 />
 		</Update>
+		<!--
+				 PromotionPrereqOr2="PROMOTION_SHOCK_1"
+				 PromotionPrereqOr3="PROMOTION_DRILL_1"
+				 -->
 		<Update>
 			<Where Type="PROMOTION_AMBUSH_2" />
 			<Set PortraitIndex="25"

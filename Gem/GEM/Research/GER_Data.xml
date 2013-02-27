@@ -62,7 +62,11 @@
 	<Processes>
 		<Update>
 			<Where Type="PROCESS_WEALTH" />
-			<Set TechPrereq="TECH_BANKING" />
+			<Set TechPrereq="NULL" />
+		</Update>
+		<Update>
+			<Where Type="PROCESS_RESEARCH" />
+			<Set TechPrereq="NULL" />
 		</Update>
 	</Processes>
 	<Eras>

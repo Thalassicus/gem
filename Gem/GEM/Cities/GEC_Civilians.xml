@@ -3,7 +3,7 @@
 	<Units>
 		<Update>
 			<Where Class="UNITCLASS_SETTLER" />
-			<Set HurryCostModifier="100" />
+			<Set HurryCostModifier="50" />
 		</Update>
 		<Update>
 			<Where Class="UNITCLASS_WORKER" />
@@ -13,5 +13,18 @@
 			<Where Class="UNITCLASS_WORKBOAT" />
 			<Set Cost="40" HurryCostModifier="0" />
 		</Update>
-	</Units>	
+	</Units>
+	<Defines>
+		<Update>
+			<Where name="RELIGION_MAX_MISSIONARIES" />
+			<Set Value="2" />
+			<!-- 4 -->
+		</Update>
+	</Defines>
+	<UnitClasses>
+		<Update>
+			<Where Type="UNITCLASS_MISSIONARY" />
+			<Set MaxPlayerInstances="2" />
+		</Update>
+	</UnitClasses>
 </GameData>

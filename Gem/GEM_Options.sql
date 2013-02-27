@@ -29,8 +29,27 @@ Change this ONLY before starting a game, NOT mid-game.
 0 = not using CSD and VEM
 1 = using CSD and VEM
 */
-INSERT INTO Civup (Type, Value)
+INSERT OR REPLACE INTO Civup (Type, Value)
 VALUES ('USING_CSD', 0);
+
+
+/*
+Good For
+
+These show the "good for" value of objects on their tooltips.
+This is helpful for people new to the game or analyzing balance.
+
+1 = show Good For
+0 = hide Good For
+*/
+UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_GOOD_FOR_UNITS';
+UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_GOOD_FOR_BUILDINGS';
+UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_GOOD_FOR_POLICIES';
+UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_GOOD_FOR_TECHS';
+UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_GOOD_FOR_BUILDS';
+
+UPDATE Civup SET Value = 0 WHERE Type = 'SHOW_GOOD_FOR_RAW_NUMBERS';
+UPDATE Civup SET Value = 0 WHERE Type = 'SHOW_GOOD_FOR_AI_NUMBERS';
 
 
 /*
@@ -72,20 +91,6 @@ Minimum distance (in tiles) between cities.
 UPDATE Defines
 SET Value = 2
 WHERE Name = 'MIN_CITY_RANGE';
-
-
-/*
-These show the "good for" value of objects on their tooltips.
-1 = display powers
-0 = hide powers
-*/
-UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_POWER_FOR_UNITS';
-UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_POWER_FOR_BUILDINGS';
-UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_POWER_FOR_POLICIES';
-UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_POWER_FOR_TECHS';
-UPDATE Civup SET Value = 1 WHERE Type = 'SHOW_POWER_FOR_BUILDS';
-
-UPDATE Civup SET Value = 0 WHERE Type = 'SHOW_POWER_RAW_NUMBERS';
 
 
 

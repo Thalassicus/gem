@@ -123,10 +123,12 @@
 			<Ranged>PROMOTION_SCOUTING_2</Ranged>
 			<Vanguard>PROMOTION_SCOUTING_2</Vanguard>
 		</Row>
+		<!--
 		<Row>
 			<Melee>PROMOTION_SURVIVALISM_1</Melee>
 			<Ranged>PROMOTION_SURVIVALISM_1</Ranged>
 			<Vanguard>PROMOTION_SURVIVALISM_1</Vanguard>
 		</Row>
+		-->
 	</UnitPromotions_Equivilancy>
 </GameData>

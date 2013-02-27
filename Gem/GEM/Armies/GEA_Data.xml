@@ -9,7 +9,7 @@
 			<Value>4</Value>
 		</Row>
 		<Row Type="MINOR_CIV_CAPTURE_BONUS_TURNS">
-			<Value>50</Value>
+			<Value>40</Value>
 		</Row>
 		<Row Type="PARTISANS_MIN_CITY_OWNERSHIP_TURNS">
 			<Value>10</Value>
@@ -36,7 +36,12 @@
 			<Set DefaultUnitType="UNIT_LIBURNA" />
 		</Update>
 	</UnitCombatInfosEx>
-	<Defines>
+	<Defines>		
+		<Update>
+			<Where Name="REVOLT_COUNTER_MIN" />
+			<Set Value="999999" />
+			<!-- temporary, until I can locate source of happiness bug -->
+		</Update>
 		<Update>
 			<Where Name="NAVAL_COMBAT_DEFENDER_STRENGTH_MULTIPLIER" />
 			<Set Value="100" />
@@ -45,12 +50,12 @@
 		<Update>
 			<Where Name="MAX_HIT_POINTS" />
 			<Set Value="100" />
-			<!-- 10 -->
+			<!-- 100 -->
 		</Update>
 		<Update>
 			<Where Name="MAX_CITY_HIT_POINTS" />
 			<Set Value="300" />
-			<!-- 10 -->
+			<!-- 200 -->
 		</Update>
 		<Update>
 			<Where Name="ENEMY_HEAL_RATE" />
@@ -190,7 +195,11 @@
 		
 		<Update>
 			<Where Name="STRATEGIC_RESOURCE_EXHAUSTED_PENALTY" />
-			<Set Value="-20" />
+			<Set Value="-10" />
+		</Update>
+		<Update>
+			<Where Name="VERY_UNHAPPY_COMBAT_PENALTY" />
+			<Set Value="-10" />
 		</Update>
 		<Update>
 			<Where Name="CITY_STRENGTH_DEFAULT" />

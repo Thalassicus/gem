@@ -12,17 +12,17 @@
 			<Description>TXT_KEY_BUILDING_WAREHOUSE</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_SUMMER_PALACE</Type>
-			<DefaultBuilding>BUILDING_SUMMER_PALACE</DefaultBuilding>
+			<Type>BUILDINGCLASS_GEM_PALACE</Type>
+			<DefaultBuilding>BUILDING_GEM_PALACE</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_PALACE</Description>
 			<MaxPlayerInstances>3</MaxPlayerInstances>
 		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_CITY_HALL</Type>
-			<DefaultBuilding>BUILDING_CITY_HALL</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_CITY_HALL</Description>
-		</Row>
 		<!--
+		<Row>
+			<Type>BUILDINGCLASS_GREAT_HALL</Type>
+			<DefaultBuilding>BUILDING_GREAT_HALL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GREAT_HALL</Description>
+		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_LUXURY_MERCHANT</Type>
 			<DefaultBuilding>BUILDING_LUXURY_MERCHANT</DefaultBuilding>
@@ -63,8 +63,8 @@
 			<PortraitIndex>21</PortraitIndex>
 		</Row>
 		<Row>
-			<Type>BUILDING_SUMMER_PALACE</Type>
-			<BuildingClass>BUILDINGCLASS_SUMMER_PALACE</BuildingClass>
+			<Type>BUILDING_GEM_PALACE</Type>
+			<BuildingClass>BUILDINGCLASS_GEM_PALACE</BuildingClass>
 			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
 			<Description>TXT_KEY_BUILDING_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALACE_PEDIA</Civilopedia>
@@ -75,19 +75,19 @@
 			<PortraitIndex>19</PortraitIndex>
 			<UnmoddedHappiness>2</UnmoddedHappiness>
 		</Row>
+		<!--
 		<Row>
-			<Type>BUILDING_CITY_HALL</Type>
-			<BuildingClass>BUILDINGCLASS_CITY_HALL</BuildingClass>
+			<Type>BUILDING_GREAT_HALL</Type>
+			<BuildingClass>BUILDINGCLASS_GREAT_HALL</BuildingClass>
 			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
-			<Description>TXT_KEY_BUILDING_CITY_HALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CITY_HALL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GREAT_HALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_HALL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_BUILDING_LIBRARY</ArtDefineTag>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>EXPANSION_SCEN_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>0</PortraitIndex>
 		</Row>
-		<!--
 		<Row>
 			<Type>BUILDING_LUXURY_MERCHANT</Type>
 			<BuildingClass>BUILDINGCLASS_LUXURY_MERCHANT</BuildingClass>

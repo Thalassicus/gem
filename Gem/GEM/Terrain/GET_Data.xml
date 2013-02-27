@@ -135,7 +135,7 @@
 			<Happiness>4</Happiness>
 			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
 			<Description>TXT_KEY_RESOURCE_MOVIES</Description>
-			<Civilopedia>TXT_KEY_CIV5_RESOURCE_MOVIES_TEXT</Civilopedia>
+			<Civilopedia>TXT_KEY_RESOURCE_MOVIES_PEDIA</Civilopedia>
 			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
 			<ArtDefineTag>ART_DEF_RESOURCE_SUGAR</ArtDefineTag>
 			<AltArtDefineTag>ART_DEF_RESOURCE_SUGAR</AltArtDefineTag>
@@ -150,6 +150,27 @@
 			<IconString>[ICON_HAPPINESS_1]</IconString>
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<PortraitIndex>50</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>RESOURCE_TYRIAN_PURPLE</Type>
+			<Happiness>4</Happiness>
+			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
+			<Description>TXT_KEY_RESOURCE_TYRIAN_PURPLE</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_TYRIAN_PURPLE_PEDIA</Civilopedia>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<ArtDefineTag>ART_DEF_RESOURCE_SUGAR</ArtDefineTag>
+			<AltArtDefineTag>ART_DEF_RESOURCE_SUGAR</AltArtDefineTag>
+			<AIObjective>3</AIObjective>
+			<PlacementOrder>4</PlacementOrder>
+			<ConstAppearance>50</ConstAppearance>
+			<MinAreaSize>3</MinAreaSize>
+			<MaxLatitude>0</MaxLatitude>
+			<RandApp1>25</RandApp1>
+			<RandApp2>25</RandApp2>
+			<Player>67</Player>
+			<IconString>[ICON_HAPPINESS_1]</IconString>
+			<IconAtlas>RESOURCE_ATLAS</IconAtlas>
+			<PortraitIndex>16</PortraitIndex>
 		</Row>
 	</Resources>
 	<Resource_Flavors>
@@ -384,12 +405,12 @@
 			<Where ImprovementType="IMPROVEMENT_TRADING_POST" YieldType="YIELD_GOLD" />
 			<Set Yield="1" />
 		</Update>
+		<!--
 		<Row>
 			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<!--
 		-->
 		<Update>
 			<Where ImprovementType="IMPROVEMENT_ACADEMY" YieldType="YIELD_SCIENCE" />
@@ -432,6 +453,12 @@
 		<Delete ImprovementType="IMPROVEMENT_ACADEMY"/>
 		<Delete ImprovementType="IMPROVEMENT_CUSTOMS_HOUSE"/>
 		<Delete ImprovementType="IMPROVEMENT_MANUFACTORY"/>
+		<Row>
+			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
+			<TechType>TECH_WRITING</TechType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
 		<!--
 		<Row>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
@@ -463,12 +490,6 @@
 			<TechType>TECH_GUNPOWDER</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
-			<TechType>TECH_THEOLOGY</TechType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>8</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
@@ -516,7 +537,7 @@
 	<Improvement_TechFreshWaterYieldChanges>
 		<Row>
 			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
-			<TechType>TECH_SAILING</TechType>
+			<TechType>TECH_OPTICS</TechType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -600,7 +621,12 @@
 		<Row>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 			<Freshwater>true</Freshwater>
-			<Weight>1.1</Weight>
+			<Weight>1.25</Weight>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+			<Weight>1.25</Weight>
 		</Row>
 		<Row>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
@@ -631,7 +657,7 @@
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 			<TerrainType>TERRAIN_DESERT</TerrainType>
 			<FeatureType>NO_FEATURE</FeatureType>
-			<Weight>0</Weight>
+			<Weight>-1</Weight>
 		</Row>
 		<Row>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
@@ -686,7 +712,7 @@
 		<Row>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<Freshwater>true</Freshwater>
-			<Weight>0.9</Weight>
+			<Weight>0.8</Weight>
 		</Row>
 		<Row>
 			<ResourceType>RESOURCE_OIL</ResourceType>
