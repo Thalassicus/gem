@@ -6,7 +6,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>100</AdvancedStartPointsMod>
-				<HappinessDefault>8</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -57,7 +57,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>90</AdvancedStartPointsMod>
-				<HappinessDefault>8</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -111,7 +111,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>85</AdvancedStartPointsMod>
-				<HappinessDefault>8</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -166,7 +166,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>80</AdvancedStartPointsMod>
-				<HappinessDefault>8</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -222,7 +222,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>75</AdvancedStartPointsMod>
-				<HappinessDefault>8</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -279,7 +279,7 @@
 			<Set>
 				<StartingLocPercent>50</StartingLocPercent>
 				<AdvancedStartPointsMod>70</AdvancedStartPointsMod>
-				<HappinessDefault>8</HappinessDefault>
+				<HappinessDefault>0</HappinessDefault>
 				<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 				<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 				<Gold>0</Gold>
@@ -348,7 +348,7 @@
 			<Help>TXT_KEY_AI_HAPPINESS_HELP</Help>
 			<StartingLocPercent>50</StartingLocPercent>
 			<AdvancedStartPointsMod>130</AdvancedStartPointsMod>
-			<HappinessDefault>8</HappinessDefault>
+			<HappinessDefault>0</HappinessDefault>
 			<ExtraHappinessPerLuxury>0</ExtraHappinessPerLuxury>
 			<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 			<PopulationUnhappinessMod>100</PopulationUnhappinessMod>

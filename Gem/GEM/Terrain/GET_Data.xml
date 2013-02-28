@@ -435,12 +435,12 @@
 		<Row>
 			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 	</Improvement_Yields>
 	<Improvement_TechYieldChanges>
@@ -492,10 +492,16 @@
 			<Yield>1</Yield>
 		</Row>
 		<Row>
-			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
-			<TechType>TECH_PRINTING_PRESS</TechType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>7</Yield>
+			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
+			<TechType>TECH_TRAINING</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
+			<TechType>TECH_TRAINING</TechType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
@@ -508,6 +514,12 @@
 			<TechType>TECH_MILITARY_SCIENCE</TechType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
+			<TechType>TECH_PRINTING_PRESS</TechType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>7</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>

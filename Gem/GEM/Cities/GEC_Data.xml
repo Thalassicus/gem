@@ -10,7 +10,7 @@
 			<Where Type="YIELD_FOOD" />
 			<Set MinCity="3"
 				 GoldenAgeSurplusYieldMod="20"
-				 AIWeightPercent="10"
+				 AIWeightPercent="100"
 				 />
 		</Update>
 		<Update>

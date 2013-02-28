@@ -52,7 +52,7 @@ UPDATE Units SET	   Combat = ROUND(1.15 * (SELECT Combat FROM Units WHERE Type =
 
 UPDATE Units SET	   Combat = ROUND(1.00 * (SELECT Combat FROM Units WHERE Type = 'UNIT_CHARIOT_ARCHER'), 0)
 					   WHERE Type IN ('UNIT_EGYPTIAN_WARCHARIOT');
-UPDATE Units SET RangedCombat = ROUND(1.40 * (SELECT RangedCombat FROM Units WHERE Type = 'UNIT_CHARIOT_ARCHER'), 0)
+UPDATE Units SET RangedCombat = ROUND(1.25 * (SELECT RangedCombat FROM Units WHERE Type = 'UNIT_CHARIOT_ARCHER'), 0)
 					   WHERE Type IN ('UNIT_EGYPTIAN_WARCHARIOT');
 
 UPDATE Units SET	   Combat = ROUND(0.80 * (SELECT Combat FROM Units WHERE Type = 'UNIT_CROSSBOWMAN'), 0)
@@ -67,7 +67,7 @@ UPDATE Units SET	   Cost   = ROUND(0.75 * (SELECT Cost   FROM Units WHERE Type =
 UPDATE Units SET	   Cost   = ROUND(0.80 * (SELECT Cost   FROM Units WHERE Type = 'UNIT_PIKEMAN'), 0)
 					   WHERE Type IN ('UNIT_GERMAN_LANDSKNECHT');
 
-UPDATE Units SET	   Cost   = ROUND(1.00 * (SELECT Cost   FROM Units WHERE Type = 'UNIT_MODERN_ARMOR'), 0)
+UPDATE Units SET	   Combat = ROUND(1.00 * (SELECT Combat FROM Units WHERE Type = 'UNIT_MODERN_ARMOR'), 0)
 					   WHERE Type IN ('UNIT_GERMAN_PANZER');
 
 UPDATE Units SET	   Combat = ROUND(1.10 * (SELECT Combat FROM Units WHERE Type = 'UNIT_SPEARMAN'), 0)

@@ -2380,10 +2380,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Link_QuickCombat.url">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Link_ReportBug.url">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
