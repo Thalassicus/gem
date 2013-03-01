@@ -1,11 +1,11 @@
 /*
-GEAI_LeaderFlavors.sql created by:
-Leader Priorities tab of CivVModding.xls spreadsheet (in mod folder).
+GEAI_LeaderFlavors.sql from:
+Leader Priorities tab of GEM_LeadersAI.xls spreadsheet (in mod folder).
 */
-DELETE FROM Leader_Flavors WHERE LeaderType IN ('LEADER_ASKIA','LEADER_ATTILLA','LEADER_AUGUSTUS','LEADER_GENGHIS_KHAN','LEADER_HARALD','LEADER_ISABELLA','LEADER_NAPOLEON','LEADER_ODA_NOBUNAGA','LEADER_THEODORA','LEADER_COALITION','LEADER_ALEXANDER','LEADER_BISMARCK','LEADER_CATHERINE','LEADER_ELIZABETH','LEADER_GUSTAVUS','LEADER_HIAWATHA','LEADER_MONTEZUMA','LEADER_WU_ZETIAN','LEADER_DIPLOMAT','LEADER_GANDHI','LEADER_HAILE','LEADER_KAMEHAMEHA','LEADER_MARIA','LEADER_PACHACUTI','LEADER_RAMESSES','LEADER_RAMKHAMHAENG','LEADER_SEJONG','LEADER_EXPANSIONIST','LEADER_BOUDICA','LEADER_DARIUS','LEADER_DIDO','LEADER_HARUN_AL_RASHID','LEADER_NEBUCHADNEZZAR','LEADER_PACAL','LEADER_SULEIMAN','LEADER_WASHINGTON','LEADER_WILLIAM','none');
 
+DELETE FROM Leader_Flavors WHERE LeaderType IN ('LEADER_ASKIA','LEADER_ATTILA','LEADER_AUGUSTUS','LEADER_GENGHIS_KHAN','LEADER_HARALD','LEADER_ISABELLA','LEADER_NAPOLEON','LEADER_ODA_NOBUNAGA','LEADER_THEODORA','LEADER_COALITION','LEADER_ALEXANDER','LEADER_BISMARCK','LEADER_CATHERINE','LEADER_ELIZABETH','LEADER_GUSTAVUS_ADOLPHUS','LEADER_HIAWATHA','LEADER_MONTEZUMA','LEADER_WU_ZETIAN','LEADER_DIPLOMAT','LEADER_GANDHI','LEADER_SELASSIE','LEADER_KAMEHAMEHA','LEADER_MARIA','LEADER_PACHACUTI','LEADER_RAMESSES','LEADER_RAMKHAMHAENG','LEADER_SEJONG','LEADER_EXPANSIONIST','LEADER_BOUDICCA','LEADER_DARIUS','LEADER_DIDO','LEADER_HARUN_AL_RASHID','LEADER_NEBUCHADNEZZAR','LEADER_PACAL','LEADER_SULEIMAN','LEADER_WASHINGTON','LEADER_WILLIAM',
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -17,19 +17,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITA
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 8 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -40,7 +40,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITA
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MILITARY_TRAINING', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -52,19 +52,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -75,7 +75,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_OFFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -87,19 +87,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -110,7 +110,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DEFENSE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -122,19 +122,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIE
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 8 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 8 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -145,7 +145,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIE
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SOLDIER', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -157,19 +157,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -180,7 +180,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -192,19 +192,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_M
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -215,7 +215,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_M
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_ANTI_MOBILE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -227,19 +227,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON'
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -250,7 +250,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON'
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RECON', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -262,19 +262,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALIN
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -285,7 +285,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALIN
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HEALING', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -297,19 +297,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAG
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -320,7 +320,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAG
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PILLAGE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -332,19 +332,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUA
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -355,7 +355,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUA
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_VANGUARD', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -367,19 +367,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 8 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -390,7 +390,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RANGED', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -402,19 +402,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE'
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 8 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -425,7 +425,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE'
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SIEGE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -437,19 +437,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL'
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -460,7 +460,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL'
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -472,19 +472,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -495,7 +495,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_BOMBARDMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -507,19 +507,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -530,7 +530,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_RECON', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -542,19 +542,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -565,7 +565,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_GROWTH', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -577,19 +577,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -600,7 +600,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NAVAL_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -612,19 +612,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -635,7 +635,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_AIR', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -647,19 +647,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE',
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 8 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 0 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -670,7 +670,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE',
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_NUKE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -682,19 +682,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_D
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 0 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 0 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 0 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -705,7 +705,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_D
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CITY_DEFENSE', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 9 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 9 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 9 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 9 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 9 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 9 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -717,19 +717,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 6 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 6 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 8 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -740,7 +740,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_EXPANSION', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -752,19 +752,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENC
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 6 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 8 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -775,7 +775,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENC
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SCIENCE', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -787,19 +787,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTUR
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 8 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -810,7 +810,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTUR
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_CULTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -822,19 +822,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPIN
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -845,7 +845,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPIN
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_HAPPINESS', Type, 6 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -857,19 +857,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 6 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -880,7 +880,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GROWTH', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -892,19 +892,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUC
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -915,7 +915,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUC
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_PRODUCTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -927,19 +927,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD',
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -950,7 +950,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD',
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GOLD', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -962,19 +962,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 2 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 8 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -985,7 +985,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_GREAT_PEOPLE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -997,19 +997,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_I
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 6 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -1020,7 +1020,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_I
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_TILE_IMPROVEMENT', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -1032,19 +1032,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRAS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -1055,7 +1055,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRAS
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_INFRASTRUCTURE', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -1067,19 +1067,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -1090,7 +1090,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WATER_CONNECTION', Type, 4 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 0 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 0 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 0 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 0 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 0 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 0 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -1102,19 +1102,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOM
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 8 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 2 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 2 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 2 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -1125,7 +1125,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOM
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_DIPLOMACY', Type, 2 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -1137,19 +1137,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 2 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 8 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 6 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 6 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 6 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 6 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 6 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -1160,7 +1160,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_WONDER', Type, 6 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -1172,19 +1172,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACES
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 2 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 4 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 4 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 4 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 4 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';
@@ -1195,7 +1195,7 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACES
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_SPACESHIP', Type, 8 FROM Leaders WHERE Type = 'LEADER_WILLIAM';
 
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_ASKIA';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 6 FROM Leaders WHERE Type = 'LEADER_ATTILLA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 6 FROM Leaders WHERE Type = 'LEADER_ATTILA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 6 FROM Leaders WHERE Type = 'LEADER_AUGUSTUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 6 FROM Leaders WHERE Type = 'LEADER_GENGHIS_KHAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 6 FROM Leaders WHERE Type = 'LEADER_HARALD';
@@ -1207,19 +1207,19 @@ INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGI
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_BISMARCK';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_CATHERINE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_ELIZABETH';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_GUSTAVUS_ADOLPHUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_HIAWATHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_MONTEZUMA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_WU_ZETIAN';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_GANDHI';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_HAILE';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_SELASSIE';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_KAMEHAMEHA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_MARIA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_PACHACUTI';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_RAMESSES';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_RAMKHAMHAENG';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 2 FROM Leaders WHERE Type = 'LEADER_SEJONG';
-INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICA';
+INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_BOUDICCA';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 6 FROM Leaders WHERE Type = 'LEADER_DARIUS';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 6 FROM Leaders WHERE Type = 'LEADER_DIDO';
 INSERT INTO Leader_Flavors(FlavorType, LeaderType, Flavor) SELECT 'FLAVOR_RELIGION', Type, 8 FROM Leaders WHERE Type = 'LEADER_HARUN_AL_RASHID';

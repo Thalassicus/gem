@@ -47,4 +47,14 @@ UPDATE Technologies SET ID =	( SELECT IDRemapper.id-1 FROM IDRemapper WHERE Tech
 UPDATE sqlite_sequence SET seq = (SELECT COUNT(ID) FROM Technologies)-1 WHERE name = 'Technologies';
 
 
+-- Speech
+
+UPDATE Technologies SET AudioIntroHeader = "" WHERE EXISTS 
+(SELECT Value FROM Civup WHERE Type='PLAY_SPEECH_TECHS' AND Value=0);
+
+UPDATE Technologies SET AudioIntro = "" WHERE EXISTS 
+(SELECT Value FROM Civup WHERE Type='PLAY_SPEECH_TECHS' AND Value=0);
+
+
+
 UPDATE LoadedFile SET Value=1 WHERE Type='GER_End.sql';
