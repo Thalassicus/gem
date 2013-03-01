@@ -646,4 +646,59 @@
 			<BuildingType>BUILDING_FOLKSKOLA</BuildingType>
 		</Row>
 	</Civilization_BuildingClassOverrides>
+	
+	<!--
+			NASA Space Centre		added 2013-2-28
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_NASA_CENTER</Type>
+			<BuildingClass>BUILDINGCLASS_LABORATORY</BuildingClass>
+			<Cost>500</Cost>
+			<GoldMaintenance>3</GoldMaintenance>
+			<PrereqTech>TECH_PLASTIC</PrereqTech>
+			<Help>TXT_KEY_BUILDING_NASA_CENTER_HELP</Help>
+			<Description>TXT_KEY_BUILDING_NASA_CENTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NASA_CENTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NASA_CENTER_STRATEGY</Strategy>
+			<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<FreeTechs>1</FreeTechs>
+			<FreeBuildingThisCity>BUILDINGCLASS_SPACESHIP_FACTORY</FreeBuildingThisCity>
+			<SpecialistCount>1</SpecialistCount>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<HurryCostModifier>0</HurryCostModifier>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>15</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_YieldSurplusModifiers>
+		<Row>
+			<BuildingType>BUILDING_NASA_CENTER</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>4</Yield>
+		</Row>
+	</Building_YieldSurplusModifiers>
+	<Building_ClassesNeededInCity>
+		<Row>
+			<BuildingType>BUILDING_NASA_CENTER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PUBLIC_SCHOOL</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCity>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_AMERICA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
+			<BuildingType>BUILDING_NASA_CENTER</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+		<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_AMERICAN_MINUTEMAN" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_AMERICAN_MINUTEMAN" />
+			<Set ShowInPedia="0" />
+		</Update>
 </GameData>
