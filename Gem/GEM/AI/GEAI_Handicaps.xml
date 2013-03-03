@@ -348,7 +348,7 @@
 			<Help>TXT_KEY_AI_HAPPINESS_HELP</Help>
 			<StartingLocPercent>50</StartingLocPercent>
 			<AdvancedStartPointsMod>130</AdvancedStartPointsMod>
-			<HappinessDefault>0</HappinessDefault>
+			<HappinessDefault>4</HappinessDefault>
 			<ExtraHappinessPerLuxury>0</ExtraHappinessPerLuxury>
 			<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 			<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
