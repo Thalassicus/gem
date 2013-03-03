@@ -126,6 +126,11 @@
 			<PromotionType>PROMOTION_MERCENARY</PromotionType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_CELT_PICTISH_WARRIOR</UnitType>
+			<PromotionType>TXT_KEY_PROMOTION_HILL_FIGHTER</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_CELT_PICTISH_WARRIOR" PromotionType="PROMOTION_FOREIGN_LANDS"/>
+		<Row>
 			<UnitType>UNIT_GREEK_HOPLITE</UnitType>
 			<PromotionType>PROMOTION_PHALANX</PromotionType>
 		</Row>
