@@ -341,13 +341,14 @@
 			<Description>TXT_KEY_BUILDING_INDUS_SANITATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INDUS_SANITATION_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_BUILDING_HOSPITAL</ArtDefineTag>
-			<FoodKept>40</FoodKept>
+			<FoodKept>80</FoodKept>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>66</ConquestProb>
 			<IconAtlas>GEM_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>2</PortraitIndex>
 		</Row>
 	</Buildings>
+<!--
 	<Building_RiverPlotYieldChanges>
 		<Row>
 			<BuildingType>BUILDING_INDUS_SANITATION</BuildingType>
@@ -355,6 +356,7 @@
 			<Yield>1</Yield>
 		</Row>
 	</Building_RiverPlotYieldChanges>
+-->
 	<Civilization_BuildingClassOverrides>
 		<Delete BuildingType="BUILDING_MUGHAL_FORT" />
 		<Row>
@@ -660,7 +662,6 @@
 			<Help>TXT_KEY_BUILDING_NASA_CENTER_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NASA_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NASA_CENTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NASA_CENTER_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<FreeTechs>1</FreeTechs>
@@ -693,7 +694,7 @@
 			<BuildingType>BUILDING_NASA_CENTER</BuildingType>
 		</Row>
 	</Civilization_BuildingClassOverrides>
-		<Civilization_UnitClassOverrides>
+	<Civilization_UnitClassOverrides>
 		<Delete UnitType="UNIT_AMERICAN_MINUTEMAN" />
 	</Civilization_UnitClassOverrides>
 	<Units>
@@ -701,4 +702,143 @@
 			<Where Type="UNIT_AMERICAN_MINUTEMAN" />
 			<Set ShowInPedia="0" />
 		</Update>
+	</Units>
+	<!--
+		Egyptian Basin Irrigation
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_BASIN_IRRIGATION</Type>
+			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
+			<Cost>100</Cost>
+			<GoldMaintenance>1</GoldMaintenance>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<Description>TXT_KEY_BUILDING_BASIN_IRRIGATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BASIN_IRRIGATION_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BUILDING_HOSPITAL</ArtDefineTag>
+			<FoodKept>40</FoodKept>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<IconAtlas>NEW_BLDG_ATLAS2_DLC</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_RiverPlotYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_BASIN_IRRIGATION</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_RiverPlotYieldChanges>
+	<Civilization_BuildingClassOverrides>
+		<Delete BuildingType="BUILDING_BURIAL_TOMB" />
+		<Row>
+			<CivilizationType>CIVILIZATION_EGYPT</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_AQUEDUCT</BuildingClassType>
+			<BuildingType>BUILDING_BASIN_IRRIGATION</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	<Buildings>
+		<Update>
+			<Where Type="BUILDING_BURIAL_TOMB" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Buildings>
+	
+	<!--
+		Greek Odeon
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_ODEON</Type>
+			<BuildingClass>BUILDINGCLASS_AMPHITHEATER</BuildingClass>
+			<Cost>100</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<PrereqTech>TECH_DRAMA</PrereqTech>
+			<Description>TXT_KEY_BUILDING_ODEON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ODEON_PEDIA</Civilopedia>
+			<ArtDefineTag>COLESSEUM</ArtDefineTag>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>EXPANSION_BW_ATLAS_1</IconAtlas>
+			<NeverCapture>true</NeverCapture>
+			<PortraitIndex>0</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_YieldInstant>
+		<Row>
+			<BuildingType>BUILDING_ODEON</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>200</Yield>
+		</Row>
+	</Building_YieldInstant>
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_GREECE</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
+			<BuildingType>BUILDING_ODEON</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_GREEK_COMPANIONCAVALRY" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_GREEK_COMPANIONCAVALRY" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
+	
+	<!--
+		Barbary Port
+	-->
+	<Buildings>
+		<Row>
+			<Type>BUILDING_BARBARY_PORT</Type>
+			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
+			<Cost>120</Cost>
+			<GoldMaintenance>3</GoldMaintenance>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<Description>TXT_KEY_BUILDING_BARBARY_PORT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BARBARY_PORT_PEDIA</Civilopedia>
+			<ArtDefineTag>HARBOR</ArtDefineTag>
+			<Water>true</Water>
+			<AllowsWaterRoutes>true</AllowsWaterRoutes>
+			<MinAreaSize>10</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<HurryCostModifier>25</HurryCostModifier>
+			<ArtInfoEraVariation>true</ArtInfoEraVariation>
+			<DisplayPosition>16</DisplayPosition>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>26</PortraitIndex>
+		</Row>
+	</Buildings>
+<!--
+	<Building_UnitCombatProductionModifiers>
+		<Row>
+			<BuildingType>BUILDING_BARBARY_PORT</BuildingType>
+			<TraitType>TRAIT_CONVERTS_SEA_BARBARIANS</TraitType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+			<PromotionType>PROMOTION_PRIZE_SHIPS</PromotionType>
+		</Row>
+	</Building_UnitCombatProductionModifiers>
+-->
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_OTTOMAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
+			<BuildingType>BUILDING_BARBARY_PORT</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	<Civilization_UnitClassOverrides>
+		<Delete UnitType="UNIT_OTTOMAN_SIPAHI" />
+	</Civilization_UnitClassOverrides>
+	<Units>
+		<Update>
+			<Where Type="UNIT_OTTOMAN_SIPAHI" />
+			<Set ShowInPedia="0" />
+		</Update>
+	</Units>
 </GameData>
