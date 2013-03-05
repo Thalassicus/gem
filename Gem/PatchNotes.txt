@@ -1,12 +1,15 @@
-{{Navbar_CEP|title=[[File:GemIcon.png|link=Gem]]}}
-
 '''Gem 1.14 (Civup 2.6) Beta 3'''
 
-Last update: March 3rd 2013
+This file is in "MediaWiki format" (google it for details). The most important formatting options are:
+Header:     ===
+List item:  *
+Icon:       [[File:Food.png]
 
-_ [[File:Food.png]] [[File:Production.png]] [[File:Gold.png]] [[File:Science.png]] [[File:Culture.png]] [[File:Faith.png]] [[File:GoldenAge.png]] [[File:Happy.png]] [[File:Unhappy.png]] [[File:Angry.png]] [[File:GreatPerson.png]] [[File:Citizen.png]] [[File:War.png]]
+Available icons:
 
-_ [[File:Moves.png]] [[File:Strength.png]] [[File:RangedStrength.png]] [[File:Capital.png]] [[File:CityState.png]] [[File:Influence.png]] [[File:Trade.png]] [[File:Razing.png]] [[File:Occupied.png]] [[File:Puppet.png]] [[File:Plus.png]] [[File:Minus.png]]
+[[File:Food.png]] [[File:Production.png]] [[File:Gold.png]] [[File:Science.png]] [[File:Culture.png]] [[File:Faith.png]] [[File:GoldenAge.png]] [[File:Happy.png]] [[File:Unhappy.png]] [[File:Angry.png]] [[File:GreatPerson.png]] [[File:Citizen.png]] [[File:War.png]]
+
+[[File:Moves.png]] [[File:Strength.png]] [[File:RangedStrength.png]] [[File:Capital.png]] [[File:CityState.png]] [[File:Influence.png]] [[File:Trade.png]] [[File:Razing.png]] [[File:Occupied.png]] [[File:Puppet.png]] [[File:Plus.png]] [[File:Minus.png]]
 
 
 ===AI===
