@@ -1,8 +1,8 @@
 '''Gem 1.14 (Civup 2.6) Beta 3'''
 
 This file is in "MediaWiki format" (google it for details). The most important formatting options are:
-Header:     ===
-List item:  *
+Header:     === text ===
+List item:  * item
 Icon:       [[File:Food.png]
 
 Available icons:
