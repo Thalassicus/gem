@@ -2,6 +2,6 @@
 /Build
 /Lua
 /doc
-.~lock.
-.bak
-.civ5suo
+*civ5suo*
+*.bak*
+*.~lock.*
