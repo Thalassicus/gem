@@ -390,7 +390,15 @@
 				 DestroyedWhenPillaged="false"
 				 PillageGold="0"
 				 />
-		</Update>		
+		</Update>
+		<Update>
+			<Where Type="IMPROVEMENT_MOAI"/>
+				<Set CreatedByGreatPerson="true" />
+		</Update>
+		<Update>
+			<Where Type="IMPROVEMENT_TERRACE_FARM"/>
+				<Set CreatedByGreatPerson="true" />
+		</Update>
 	</Improvements>
 	<Improvement_Yields>
 		<Update>
