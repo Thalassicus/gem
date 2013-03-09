@@ -16,6 +16,7 @@ Available icons:
 *b3 +4[[File:Happy.png]] free happiness (was 0) (allows AIs to build 1 extra city in the early game).
 *Reduced the quantity of vanguard units AIs aim for in wartime.
 *Minimum AI army composition changes to a new set of units after gunpowder units appear.
+
 ===Armies===
 *-10% combat penalty when resources get pillaged (was 20%) (penalty mostly hurt AIs).
 *+100% [[File:War.png]] experience and -10% strength with Blitz (was 100, -25).
@@ -23,13 +24,17 @@ Available icons:
 *Recon 2 allows use of enemy roads.
 *Moved faster pillaging from Survivalist to Recon 2.
 *Removed Survivalist.
+
 ===Cities===
 *_
+
 ===Barbarians===
 *Camps are defended by Chariot units less often.
+
 ===Faith===
 *Merged the Missionary and Great Prophet (mostly redundant).
 *Merged the offense and defense enhanced beliefs (too specialized individually).
+
 ===Leaders===
 *Half maintenance for unique warriors (Aztec and Polynesian).
 *Carthage starts with a Trireme.
@@ -51,6 +56,7 @@ Available icons:
 
 ===Policies===
 *Spoils of War: Killing units salvages gold, and +25% rewards from capturing Citystates.
+
 ===Research===
 *Increased late tech costs 10%.
 *Theology no longer requires Currency.
@@ -58,20 +64,10 @@ Available icons:
 *Moved Villages back to Trade (original location).
 *Moved the freshwater village bonus to Optics (was Sailing).
 *Shrines, Wealth, and Research have no tech prerequisite (early game options were restrictive).
+
 ===Terrain===
 *b2 Slightly reduced the amount of territory people start with when surrounded by lots of inhospitable land like Snow (too many barbarians).
-===Civup: Interface===
-*The game now autosaves every 15 minutes. You can control this in the Interface tab of Game Options (ctrl+o).
-*City and national happiness now show on city view screens (by [http://steamcommunity.com/id/erfikes/myworkshopfiles/?appid=8930 NoSkill] and [http://forums.civfanatics.com/member.php?u=210828 whoward69]).
-*The top bar now shows faith "stored/needed", instead of "stored (turns remaining)".
-*The "declare war" button for citystates now indicates capturing a CS gives a reward equal to 40 turns of alliance.
-*Added new versions of the Detect icon (eye).
-*The Civup_Options file now contains options to disable speech for specific parts of the game:
-**Starting a game (default off).
-**Getting a wonder (default on).
-**Getting a tech (default on).
-===Civup: Mod Tools===
-*Added a "Pillage" flavor for units.
+
 ===Misc===
 *City-health defense buildings should now correctly increase max city health in loaded games.
 *Lines on building tooltips which change mid-game should show correctly now.
