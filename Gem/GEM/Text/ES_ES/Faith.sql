@@ -44,3 +44,5 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_BELIEF_SWORD_PLOWSHARES', '+25% por excedentes de [ICON_FOOD] alimentos en todas las ciudades cuando no se está en guerra.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_BELIEF_TITHE', '+1 de [ICON_GOLD] oro por cada 3 seguidores de esta religión.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_BELIEF_WORLD_CHURCH', '+1 de [ICON_CULTURE] cultura por cada seguidor de esta religión en civilizaciones extranjeras.', '', '');
+
+UPDATE LoadedFile SET Value=1 WHERE Type='GEM_Faith.sql';
