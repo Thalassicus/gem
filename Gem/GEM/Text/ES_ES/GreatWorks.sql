@@ -4,7 +4,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_SPECIALISTSANDGP_CULTUREBOMB_HEADING4_BODY', 'Un Gran Artista puede crear una Obra de Arte en cualquiera de tus ciudades. Las Obras de Arte conceden a la ciudad una gran cantidad de [ICON_CULTURE] Cultura.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_SPECIALISTSANDGP_CULTUREBOMB_HEADING4_TITLE', 'Habilidad Especial: Crear Obra de Arte', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_MISSION_GREAT_WORK', 'Crear Obra de Arte', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_MISSION_GREAT_WORK_HELP', 'Una Obra de Arte concede a la ciudad una gran cantidad de [ICON_CULTURE] Cultura.[NEWLINE][NEWLINE]Crear una Obra de Arte consume al Gran Personaje.', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_MISSION_GREAT_WORK_HELP', 'Una Obra de Arte concede a la ciudad una gran cantidad de [ICON_CULTURE] Cultura.[NEWLINE][NEWLINE]Crear una Obra de Arte consume al Gran Artista.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_MISSION_GREAT_WORK_ALERT', '{1_greatperson} creada {2_work}. Has ganado {3_culture} [ICON_CULTURE] Cultura en {4_city}!', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_DEFAULT', 'Una obra maestra', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_HOMER', 'La Ilíada', '', '');
@@ -20,29 +20,29 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_DANTE_ALIGHIERI', 'La Divina Comedia', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_YUNUS_EMRE', 'his poems of Sultan Yunu Emre', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_AMIR_KHUSRO', 'La Historia de Cuatro Monjes', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_IBN_MUQLAH', 'the thuluth script', '', '');  /* buscar traduccion  */
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_IBN_MUQLAH', 'La caligrafía thuluth', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MICHAELANGELO', 'La Estatua de David', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_RAPHAEL', 'the Stanza della Segnatura', '', '');  /* buscar traduccion  */
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_RAPHAEL', 'La Stanza della Segnatura', '', ''); 
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_WILLIAM_SHAKESPEARE', 'Hamlet', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MIGUEL_DE_CERVANTES', 'Don Quijote', '', '');  /* buscar traduccion  */
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_REMBRANDT', 'The Night Watch', '', '');  /* buscar traduccion  */
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JOHANNES_VERMEER', 'La Chica de la Perla', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MIGUEL_DE_CERVANTES', 'Don Quijote', '', '');  
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_REMBRANDT', 'La Noche de Ronda', '', ''); 
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JOHANNES_VERMEER', 'La Joven de la Perla', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JS_BACH', 'Los Conciertos de Brandenburg', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_WOLFGANG_MOZART', 'La Flauta Mágica', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JOHANN_GOETHE', 'Fausto', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_LUDWIG_VAN_BEETHOVEN', 'Su Quinta Sinfonía', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_VICTOR_HUGO', 'Los Miserables', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_VINCENT_VAN_GOGH', 'Café Terrace at Night', '', '');   /* buscar traduccion  */
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_VINCENT_VAN_GOGH', 'Terraza de Café por la Noche', '', ''); 
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JOHANNES_BRAHMS', 'Las Danzas Húngaras', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_DVORAK', 'Su Sinfonía del Nuevo Mundo', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MARK_TWAIN', 'Las Aventuras de Tom Sawyer', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_CLAUDE_MONET', 'Impression, Sunrise', '', '');   /* buscar traduccion  */
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_CLAUDE_MONET', 'Impresión, Sol Naciente', '', '');   
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JOSEPH_CONRAD', 'Victoria', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_FRANK_KAFKA', 'El Proceso', '', '');   
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_LOUIS_ARMSTRONG', 'What a Wonderful World', '', '');   /* buscar traduccion  */
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_DUKE_ELLINGTON', 'Take the ''A'' Train', '', '');   /* buscar traduccion  */
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_LOUIS_ARMSTRONG', 'What a Wonderful World', '', ''); 
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_DUKE_ELLINGTON', 'Toma el Tren ''A'' ', '', '');   
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_PABLO_PICASSO', 'El Guernica', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MILES_DAVIS', 'Kind of Blue', '', '');    /* buscar traduccion  */
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MILES_DAVIS', 'Kind of Blue', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_PERSON_TOLSTOY', 'Leo Tolstoy', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_TOLSTOY', 'Guerra y Paz', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_PERSON_DOSTOEVSKY', 'Fyodor Dostoevsky', '', ''); 
