@@ -16,9 +16,9 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_KALIDAS', 'La leyenda de Sakuntala', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_LI_PO', 'El Borracho en Primavera', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_DU_FU', 'Canciones de los Carros de Guerra', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JALAL_ALDIN_RUMI', 'Sus Coplas Espirituales', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JALAL_ALDIN_RUMI', 'Sus coplas espirituales', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_DANTE_ALIGHIERI', 'La Divina Comedia', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_YUNUS_EMRE', 'his poems of Sultan Yunu Emre', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_YUNUS_EMRE', 'El Opúsculo de los Consejos', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_AMIR_KHUSRO', 'La Historia de Cuatro Monjes', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_IBN_MUQLAH', 'La caligrafía thuluth', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MICHAELANGELO', 'La Estatua de David', '', '');
@@ -27,7 +27,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_MIGUEL_DE_CERVANTES', 'Don Quijote', '', '');  
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_REMBRANDT', 'La Noche de Ronda', '', ''); 
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JOHANNES_VERMEER', 'La Joven de la Perla', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JS_BACH', 'Los Conciertos de Brandenburg', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JS_BACH', 'Los Conciertos de Brandenburgo', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_WOLFGANG_MOZART', 'La Flauta Mágica', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_JOHANN_GOETHE', 'Fausto', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-08'), 'TXT_KEY_GREAT_WORK_LUDWIG_VAN_BEETHOVEN', 'Su Quinta Sinfonía', '', '');
