@@ -96,3 +96,5 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 /* Cothon */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_BUILDING_COTHON', 'Cothon', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_BUILDING_COTHON_PEDIA', 'Un cothon (en griego: "vasija para beber") es un puerto artificial, protegido interior como el de Cartago en las Guerras Púnicas del 200 A.C. [NEWLINE] Los Cothons se encuentran generalmente en el mundo fenicio. Los ejemplos incluyen Motya (Sicilia) desde el siglo 6 A.C, que realizaba un proposito aun incierto, (Mide 35 metros x 51 metros), aunque se ha sugerido que este cothon incluso podría haber sido susceptible a cierres y drenajes, hasta formar un dique seco. Mahdia (Túnez) desde el siglo séptimo antes de Cristo, (que mide 72 metros x 56 metros) y uno de Kition en Chipre.', '', '');
+
+UPDATE LoadedFile SET Value=1 WHERE Type='GEM_Leaders.sql';
