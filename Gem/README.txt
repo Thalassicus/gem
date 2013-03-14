@@ -29,7 +29,7 @@ Thalassicus
     Marketing.
     Anything else not credited earlier.
 	
-mystikx21 – Extensive help with documenation wiki and project code updates.
+mystikx21 ï¿½ Extensive help with documenation wiki and project code updates.
 Seek - Assisted in keeping online website documentation up to date for years.
 rf900 - Helped learn how to do core mods.
 
@@ -44,7 +44,7 @@ Wonder Art:
 Adam Watkins - Enhancements to the terrain hover tooltip.
 Albie_123 - Icon artwork for Levy.
 Alpaca
-	DiploCorner Addin” system.
+	DiploCorner Addinï¿½ system.
 	Finite research for great scientist lightbulb mission.
 	Miscellaneous utilities. 
 Aristos - Combat odds panel bugfix.
@@ -60,6 +60,8 @@ Erindir, XIenwolf and Kael - Flag promotions based on their work.
 ExpiredReign - Corrected some text mistakes.
 Gedemon - Map Pins hotseat testing.
 Putmalk - Extra Diplomacy Text.
+JairoAlonso, Liam_Xadow, Maverik - Spanish translations
+
 Seek
 	Icon artwork for Sanitation System.
 	Finite research for great scientist lightbulb mission. 
