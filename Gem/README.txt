@@ -60,7 +60,7 @@ Erindir, XIenwolf and Kael - Flag promotions based on their work.
 ExpiredReign - Corrected some text mistakes.
 Gedemon - Map Pins hotseat testing.
 Putmalk - Extra Diplomacy Text.
-JairoAlonso, Liam_Xadow, Maverik - Spanish translations
+JairoAlonso, Liam_Xadow and Maverik - Spanish translations.
 
 Seek
 	Icon artwork for Sanitation System.
