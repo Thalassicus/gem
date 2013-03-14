@@ -11,3 +11,5 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_CIV5_FEATURES_ATOLL_TEXT', 'Una isla es cualquier territorio sub-continental de tierra que esta rodeado por agua. Las islas muy pequeñas pueden ser llamadas islotes, cayos  o isleta.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_SPECIALISTSANDGP_CITADEL_HEADING4_BODY', '{TXT_KEY_BUILD_CITADEL_HELP}', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_BUILD_CITADEL_HELP', '[ICON_STRENGTH] +100% [COLOR_POSITIVE_TEXT] de defensa [ENCOLOR] en esta casilla. [NEWLINE] [ICON_RANGED_STRENGTH] Quita 30 [COLOR_POSITIVE_TEXT] de vida [ENCOLOR] por turno a los enemigos adyacentes [NEWLINE] [ICON_CULTURE] Expande las fronteras a las casillas de alrededor. [NEWLINE] [ICON_LOCKED] Requiere estar en territorio amigo.', '', '');
+
+UPDATE LoadedFile SET Value=1 WHERE Type='GEM_Terrain.sql';

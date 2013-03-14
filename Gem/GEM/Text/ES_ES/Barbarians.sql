@@ -22,3 +22,6 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_UNIT_BARBARIAN_FRIGATE', 'Corsario.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_UNIT_BARBARIAN_IRONCLAD', 'Asaltante.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-12'), 'TXT_KEY_UNIT_BARBARIAN_SUBMARINE', 'Contrabandista.', '', '');
+
+UPDATE LoadedFile SET Value=1 WHERE Type='GEM_Barbarians.sql';
+
