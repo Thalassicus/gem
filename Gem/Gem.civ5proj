@@ -1069,6 +1069,11 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>GEM/Text/en_US/AdvisorText.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>GEM/Cities/GEC__End.sql</FileName>
       </Action>
       <Action>
@@ -1271,6 +1276,10 @@
     <Content Include="GEM\Terrain\NaturalWondersCustomMethods.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GEM\Text\en_US\AdvisorText.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="GEM\Text\Language_Start.sql">
       <SubType>Lua</SubType>
