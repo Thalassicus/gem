@@ -18,6 +18,7 @@ INSERT INTO LoadedFile(Type, Value) VALUES ('GET_Start.sql'					, 0);
 INSERT INTO LoadedFile(Type, Value) VALUES ('GEM_Options.sql'				, 0);
 
 INSERT INTO LoadedFile(Type, Value) VALUES ('GEM_AI.sql'					, 0);
+INSERT INTO LoadedFile(Type, Value) VALUES ('GEM_AdvisorText.sql'			, 0);
 INSERT INTO LoadedFile(Type, Value) VALUES ('GEM_Armies.sql'				, 0);
 INSERT INTO LoadedFile(Type, Value) VALUES ('GEM_Barbarians.sql'			, 0);
 INSERT INTO LoadedFile(Type, Value) VALUES ('GEM_Cities.sql'				, 0);
