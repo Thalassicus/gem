@@ -92,3 +92,4 @@ Available icons:
 *b3 Fixed several typos with AI leader personality and flavor data.
 *b3 Re-enabled the feature where happiness contributes to golden ages during a golden age (temporarily disabled for testing).
 *b3 Setting the minute-based autosave to 0 should now correctly disable it.
+*Minor tweaks to the advisor text.
