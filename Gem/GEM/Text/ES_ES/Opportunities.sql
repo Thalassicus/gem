@@ -1,4 +1,4 @@
-/* TERRAIN */
+/* TERRENO */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_RIVER_FLOODING', 'Inundación del rio', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_RIVER_FLOODING_DESC', 'Las frecuentes inundaciones estacionales del río proporcionan inusualmente una fértil capa superior del suelo para la agricultura.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_RIVER_FLOODING_OUTCOME_1', 'Paga por los canales de riego nuevos a lo largo del río.', '', '');
@@ -31,7 +31,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_MOUNTAIN_REFUGE_ALERT_1', '[ICON_TEAM_3] El santuario espiritual en la cima de la montaña incremente la cultura [ICON_CULTURE] cerca de {2_city}', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_MOUNTAIN_REFUGE_ALERT_2', '[ICON_TEAM_3] El refugio académico incremente la ciencia [ICON_RESEARCH] cerca de {2_city}.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_MOUNTAIN_REFUGE_ALERT_3', '[ICON_TEAM_3] Los comerciantes están vendiendo sus productos a los visitantes de la montaña cerca de {2_city}.', '', '');
-/* IMPROVEMENTS */
+/* MEJORAS */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_COMMERCIAL_FARMING', 'Agricultura comercial', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_COMMERCIAL_FARMING_DESC', 'Unos individuos ricos planean comprar y comercializar pequeñas granjas cerca de {2_city} a menos que los agricultores consigan aumentar sus ingresos.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_COMMERCIAL_FARMING_OUTCOME_1', 'Invierte en la cultura de la agricultura tradicional.', '', '');
@@ -130,7 +130,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_FORT_EXPANSION_ALERT_1', '[ICON_TEAM_3] Un fuerte en {2_city} a sido ampliado con mas personal y centros de investigación', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_FORT_EXPANSION_ALERT_2', '[ICON_TEAM_3] Un fuerte en {2_city} se convierte en una ciudadela.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_FORT_EXPANSION_ALERT_3', '[ICON_TEAM_3] Un fabricante cerca de {2_city} vende tecnologías de armas nuevas.', '', '');
-/* BUILDINGS */
+/* EDIFICACIONES */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_GRANARY_POPULATION_BOOM', 'Boom de población', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_GRANARY_POPULATION_BOOM_DESC', 'Las mejoras en los graneros de {2_city} están creando mucha población en la ciudad..', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_GRANARY_POPULATION_BOOM_OUTCOME_1', 'Provee de fondos para los ciudadanos para encontrar un nuevo lugar donde vivir.', '', '');
@@ -207,7 +207,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_STABLE_BREED_ALERT_1', '[ICON_TEAM_3] Una nueva raza de caballo mejorado aumenta la felicidad [ICON_HAPPINESS_1] en {2_city}.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_STABLE_BREED_ALERT_2', '[ICON_TEAM_3] El ejercito de {2_city} plantea una nueva raza de caballos de guerra.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_STABLE_BREED_ALERT_3', '[ICON_TEAM_3]Una nueva raza de caballos mejorados genera ingresos [ICON_GOLD] en {2_city}.', '', '');
-/* CITYSTATES */
+/* CUIDADES-ESTADO */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_CITYSTATE_IMMIGRATION', 'Inmigración de las ciudades-estado', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_CITYSTATE_IMMIGRATION_DESC', 'Algunos trabajadores se sienten inmigrantes recién llegados de la ciudad estado de {2_player}, están tomando empleos de los ciudadanos de tu civilización', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_CITYSTATE_IMMIGRATION_OUTCOME_1', 'Paga para crear programas para dar a los inmigrantes un camino a la ciudadanía', '', '');
@@ -252,7 +252,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_SCHOLASTIC_FAME_ALERT_1', '[ICON_TEAM_3] La calidad de la educación ofrecida a los estudiantes de {2_target} genera influencia [ICON_INFLUENCE] en las relaciones con{1_player}.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_SCHOLASTIC_FAME_ALERT_2', '[ICON_TEAM_3] Se promulgan nuevas leyes de educación [ICON_RESEARCH] en favor de los estudiantes nacionales de {1_player} frente a los inmigrantes de {2_target}.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_SCHOLASTIC_FAME_ALERT_3', '[ICON_TEAM_3] Los estudiantes extranjeros de {2_target} están acudiendo las escuelas de {1_player}.', '', '');
-/* UNITS */
+/* UNIDADES */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_SCOUT_SAVIOR', 'Explorador salvador', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_SCOUT_SAVIOR_DESC', 'Tu explorador rescató al hijo de un jefe nómada de una bestia mortal. Los cazadores en agradecimiento te ofrecen hospitalidad en su campamento.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_SCOUT_SAVIOR_OUTCOME_1', 'Pide a algunos nómadas que se unan a tu exploracion.', '', '');
@@ -297,7 +297,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_RENOWNED_ARCHER_ALERT_1', '[ICON_TEAM_3] El arquero de {1_player} regresa a la vida civil', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_RENOWNED_ARCHER_ALERT_2', '[ICON_TEAM_3] El arquero de {1_player} recibe armas nuevas.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_RENOWNED_ARCHER_ALERT_3', '[ICON_TEAM_3] El arquero de {1_player} recibe suministros frescos.', '', '');
-/* CUSTOM */
+/* PERSONALIZADO */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_LAND_GRAB', 'Apropiación de tierras.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_LAND_GRAB_DESC', 'Los ciudadanos de {2_city} exigen mejores tierras para trabajar.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_LAND_GRAB_OUTCOME_1', 'Paga para anexar mas tierras al imperio.', '', '');
