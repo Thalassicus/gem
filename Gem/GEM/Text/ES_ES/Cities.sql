@@ -73,7 +73,7 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-20'), 'TXT_KEY_BUILDING_HOLY_PALACE_STRATEGY', 'El Palacio Sagrado provee un aumento significativo en la [ICON_FAITH] fé de la ciudad.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-20'), 'TXT_KEY_BUILDING_HOLY_PALACE_PEDIA', 'Todo', '', '');
 /* Maravillas */
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-0-18'), 'TXT_KEY_PROMOTION_PANAMA_CANAL', 'Canal de Panamá', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-18'), 'TXT_KEY_PROMOTION_PANAMA_CANAL', 'Canal de Panamá', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-20'), 'TXT_KEY_PROMOTION_PANAMA_CANAL_HELP', '+1 Movimiento [ICON_MOVES] para unidades Navales', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-20'), 'TXT_KEY_PROMOTION_PARTHENON', 'Partenón', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-20'), 'TXT_KEY_PROMOTION_PARTHENON_HELP', '+10% de Fuerza [ICON_STRENGTH] para los Grandes Generales y Almirantes', '', '');
