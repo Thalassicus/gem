@@ -2,7 +2,7 @@
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_ARCHER', 'Cazador furtivo', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_SPEARMAN', 'Saqueador', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_SWORDSMAN', 'Desvalijador', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_PIKEMAN', 'Mercenari.', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-25'), 'TXT_KEY_UNIT_BARBARIAN_PIKEMAN', 'Mercenario', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_CROSSBOWMAN', 'Asesino', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_LONGSWORDSMAN', 'Proscrito', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_MUSKETMAN', 'Delincuente', '', '');
