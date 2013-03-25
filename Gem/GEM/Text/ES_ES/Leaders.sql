@@ -1,5 +1,5 @@
 /* Rasgos */
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_TRAIT_ART_OF_WAR', 'Los grandes generales ven mas lejos y proporcionan una mayor fuerza extra[NEWLINE] Comienza con un guerrero y un gran general. Obtiene un espía extra.', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_TRAIT_ART_OF_WAR', 'Los Grandes Generales ven mas lejos y proporcionan una mayor fuerza extra[NEWLINE]Comienza con un guerrero y un Gran General. Obtiene un espía extra.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_TRAIT_ALLOTMENT_SHORT', 'Asignación', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_TRAIT_ALLOTMENT', '+1 de producción [ICON_PRODUCTION] por granja.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-13'), 'TXT_KEY_TRAIT_BONUS_AGAINST_TECH', '+10% a la creación de grandes personajes [ICON_GREAT_PEOPLE] por cada alianza y +20% de fuerza [ICON_STRENGTH] contra civilizaciones con mas ciudades.', '', '');
