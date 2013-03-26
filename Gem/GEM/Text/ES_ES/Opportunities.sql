@@ -317,8 +317,8 @@ INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VA
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_TIP_1', '[ICON_TEAM_2] Nuevo trabajador: 1', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_TIP_2', '[ICON_TEAM_2] Nuevas unidades militares: 2', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_TIP_3', 'Oro: +25 [ICON_GOLD]', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_ALERT_1', '[ICON_TEAM_3] Los bárbaros se integran en los trabajadores de {1_player}.', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_ALERT_2', '[ICON_TEAM_3] Los bárbaros se integran en el ejercito de {1_player}.', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_ALERT_1', '[ICON_TEAM_3] Los bárbaros se integran como trabajadores de {1_player}.', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_ALERT_2', '[ICON_TEAM_3] Los bárbaros se integran al ejercito de {1_player}.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_BARBARIAN_MERCENARIES_ALERT_3', '[ICON_TEAM_3] Los bárbaros son emboscados por {1_player}.', '', '');
 
 UPDATE LoadedFile SET Value=1 WHERE Type='GEM_Opportunities.sql';
