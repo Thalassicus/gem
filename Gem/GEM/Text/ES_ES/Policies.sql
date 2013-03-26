@@ -2,7 +2,7 @@
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_CONSCRIPTION', 'Conscripción.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_CONSCRIPTION_HELP', '+10 a la [COLOR_POSITIVE_TEXT] tasa de sanación [ENDCOLOR].', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_PROFESSIONAL_ARMY', 'Ejército Profesional.', '', '');
-INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_PROFESSIONAL_ARMY_HELP', 'Desbloquea promociones avanzadas.', '', '');
+INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_PROFESSIONAL_ARMY_HELP', 'Desbloquea ascensos avanzadas.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_MERCANTILISM', 'Mercantilismo.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_MERCANTILISM_HELP', '+2 al movimiento [ICON_MOVES].', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_PROMOTION_FREEDOM', 'Libertad.', '', '');
