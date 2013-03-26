@@ -1,4 +1,3 @@
-﻿
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_ARCHER', 'Cazador furtivo', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_SPEARMAN', 'Saqueador', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-24'), 'TXT_KEY_UNIT_BARBARIAN_SWORDSMAN', 'Desvalijador', '', '');
