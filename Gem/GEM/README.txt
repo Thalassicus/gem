@@ -21,26 +21,26 @@ Thalassicus
 	Forum and website developer.
     Marketing.
 
-mystikx21 – Extensive help with mod updates.
+mystikx21 ï¿½ Extensive help with mod updates.
 Seek - Assisted in keeping online website documentation up to date.
 
-Adam Watkins – Enhancements to the terrain hover tooltip.
-Albie_123 – Icon artwork for Levy.
+Adam Watkins ï¿½ Enhancements to the terrain hover tooltip.
+Albie_123 ï¿½ Icon artwork for Levy.
 Alpaca
-	DiploCorner Addin” system.
+	DiploCorner Addinï¿½ system.
 	Finite research for great scientist lightbulb mission.
 	Miscellaneous utilities.
-Aristos – Combat odds panel bugfix.
-Attila – Top bar enhancements based on his work.
-Bladex – Map Pins ingame testing.
-Dan – Capital railroad bugfix.
-Cope – City banner enhancements based on his work.
-Csebal – Enhancements to terrain hover tooltip.
-Delgar – Created several Opportunities.
-Dmitry – Russian translations for CiVUP.
-Erindir, XIenwolf and Kael – Flag promotions based on their work.
-Gedemon – Map Pins hotseat testing.
-Putmalk – Extra Diplomacy Text.
+Aristos ï¿½ Combat odds panel bugfix.
+Attila ï¿½ Top bar enhancements based on his work.
+Bladex ï¿½ Map Pins ingame testing.
+Dan ï¿½ Capital railroad bugfix.
+Cope ï¿½ City banner enhancements based on his work.
+Csebal ï¿½ Enhancements to terrain hover tooltip.
+Delgar ï¿½ Created several Opportunities.
+Dmitry ï¿½ Russian translations for CiVUP.
+Erindir, XIenwolf and Kael ï¿½ Flag promotions based on their work.
+Gedemon ï¿½ Map Pins hotseat testing.
+Putmalk ï¿½ Extra Diplomacy Text.
 Seek
 	Icon artwork for Sanitation System.
 	Finite research for great scientist lightbulb mission.
@@ -49,13 +49,14 @@ Sneaks
 	What Would Gandhi Do
 	Custom Notifications
 	City View enhancements
-Sukritact – Icon art for several units, buildings, and policies.
-Hipfot, Skodkim, Spatzimaus, and VeyDer – Random events.
+Sukritact ï¿½ Icon art for several units, buildings, and policies.
+Hipfot, Skodkim, Spatzimaus, and VeyDer ï¿½ Random events.
 Whoward69
 	Map Pins.
 	Trade and Citystate tabs on the diplomacy screen.
 	Promotion and Upgrade Tree windows.
-Whys – Utility to store data in savegame files.
-Wolfi (Delta187) – German translations.
-X–Worf – Map Pins German translation.
-yche2990 – Simplified Chinese translations.
+Whys ï¿½ Utility to store data in savegame files.
+Wolfi (Delta187) ï¿½ German translations.
+Xï¿½Worf ï¿½ Map Pins German translation.
+yche2990 ï¿½ Simplified Chinese translations. 
+Johnny Deacon, Liam_Xadow and Maverik - Full Spanish translations.
