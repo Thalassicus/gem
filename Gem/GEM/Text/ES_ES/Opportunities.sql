@@ -1,3 +1,4 @@
+﻿--· ES_ES/Opportunities.sql
 /* TERRENO */
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-21'), 'TXT_KEY_TRIGGER_RIVER_FLOODING', 'Inundación del rio', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-01-24'), 'TXT_KEY_TRIGGER_RIVER_FLOODING_DESC', 'Las frecuentes inundaciones estacionales del río proporcionan una inusualmente fértil capa superior del suelo para la agricultura.', '', '');

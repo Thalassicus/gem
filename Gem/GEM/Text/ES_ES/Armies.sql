@@ -1,3 +1,4 @@
+--· ES_ES/Armies.sql
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-14'), 'TXT_KEY_RESOURCE_COAL_HELP', 'Lo utilizan las fabricas.', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-21'), 'TXT_KEY_UNITCOMBAT_NAVALMELEE', 'Barcos de abordaje', '', '');
 INSERT INTO Civup_Language_ES_ES (DateModified, Tag, Text, Gender, Plurality) VALUES (date('2013-03-21'), 'TXT_KEY_UNITCOMBAT_NAVALRANGED', 'Barcos de escolta', '', '');
