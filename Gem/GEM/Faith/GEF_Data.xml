@@ -8,24 +8,24 @@
 			<!-- 10 -->
 		</Update>
 		<Update>
-			<Where Name="RELIGION_GAME_FAITH_DELTA_NEXT_PANTHEON" />
-			<Set Value="5" />
-			<!-- 5 -->
-		</Update>
-		<Update>
 			<Where Name="RELIGION_MIN_FAITH_FIRST_PROPHET" />
-			<Set Value="200" />
+			<Set Value="150" />
 			<!-- 200 -->
-		</Update>
-		<Update>
-			<Where Name="RELIGION_FAITH_DELTA_NEXT_PROPHET" />
-			<Set Value="100" />
-			<!-- 100 -->
 		</Update>
 		<Update>
 			<Where Name="RELIGION_MIN_FAITH_FIRST_GREAT_PERSON" />
 			<Set Value="500" />
 			<!-- 1000 -->
+		</Update>
+		<Update>
+			<Where Name="RELIGION_GAME_FAITH_DELTA_NEXT_PANTHEON" />
+			<Set Value="5" />
+			<!-- 5 -->
+		</Update>
+		<Update>
+			<Where Name="RELIGION_FAITH_DELTA_NEXT_PROPHET" />
+			<Set Value="50" />
+			<!-- 100 -->
 		</Update>
 		<Update>
 			<Where Name="RELIGION_FAITH_DELTA_NEXT_GREAT_PERSON" />
@@ -74,12 +74,228 @@
 		</Update>
 	</Defines>
 	<Beliefs>
-		<Row>
-			<Type>BELIEF_GOD_TRANQUILITY</Type>
-			<Description>TXT_KEY_BELIEF_GOD_TRANQUILITY</Description>
-			<ShortDescription>TXT_KEY_BELIEF_GOD_TRANQUILITY_SHORT</ShortDescription>
-			<Pantheon>true</Pantheon>
-		</Row>
+		<Beliefs>
+			<Row>
+				<Type>BELIEF_HARVEST_FESTIVAL</Type>
+				<Description>TXT_KEY_BELIEF_HARVEST_FESTIVAL</Description>
+				<ShortDescription>TXT_KEY_BELIEF_HARVEST_FESTIVAL_SHORT</ShortDescription>
+				<Pantheon>true</Pantheon>
+			</Row>
+			<Belief_BuildingClassYieldChanges>
+				<Row>
+					<BeliefType>BELIEF_HARVEST_FESTIVAL</BeliefType>
+					<BuildingClassType>BUILDINGCLASS_WATERMILL</BuildingClassType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<YieldChange>1</YieldChange>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_HARVEST_FESTIVAL</BeliefType>
+					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<YieldChange>1</YieldChange>
+				</Row>
+			</Belief_BuildingClassYieldChanges>
+			<Belief_ResourceYieldChanges>
+				<Row>
+					<BeliefType>BELIEF_HARVEST_FESTIVAL</BeliefType>
+					<ResourceType>RESOURCE_WHEAT</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>1</Yield>
+				</Row>
+			</Belief_ResourceYieldChanges>
+			<Language_en_US>
+				<Row Tag="TXT_KEY_BELIEF_HARVEST_FESTIVAL_SHORT">
+					<Text>Harvest Festival</Text>
+				</Row>
+				<Row Tag="TXT_KEY_BELIEF_HARVEST_FESTIVAL">
+					<Text>1 [ICON_PEACE] Faith from each [ICON_RES_WHEAT] Wheat, Watermill and Granary.</Text>
+				</Row>
+			</Language_en_US>
+
+			<Belief_ImprovementYieldChanges>
+				<Delete BeliefType="BELIEF_RELIGIOUS_IDOLS" />
+			</Belief_ImprovementYieldChanges>
+			<Belief_ResourceYieldChanges>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_MARBLE</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_MARBLE</ResourceType>
+					<YieldType>YIELD_CULTURE</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_GOLD</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_GOLD</ResourceType>
+					<YieldType>YIELD_CULTURE</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_SILVER</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_SILVER</ResourceType>
+					<YieldType>YIELD_CULTURE</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_COPPER</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_COPPER</ResourceType>
+					<YieldType>YIELD_CULTURE</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_GEMS</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_GEMS</ResourceType>
+					<YieldType>YIELD_CULTURE</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_PEALRS</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>1</Yield>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_RELIGIOUS_IDOLS</BeliefType>
+					<ResourceType>RESOURCE_PEARLS</ResourceType>
+					<YieldType>YIELD_CULTURE</YieldType>
+					<Yield>1</Yield>
+				</Row>
+			</Belief_ResourceYieldChanges>
+			<Language_en_US>
+				<Update>
+					<Where Tag="TXT_KEY_BELIEF_RELIGIOUS_IDOLS" />
+					<Set Text="+1 [ICON_PEACE] Faith and +1 [ICON_Culture] Culture from each [ICON_RES_COPPER] Copper, [ICON_RES_SILVER] Silver, [ICON_RES_GOLD] Gold, [ICON_RES_MARBLE] Marble, [ICON_RES_PEARLS] Pearls, and [ICON_RES_GEMS] Gems." />
+				</Update>
+			</Language_en_US>
+			<Row>
+				<Type>BELIEF_CRUSADE</Type>
+				<Description>TXT_KEY_BELIEF_CRUSADE</Description>
+				<ShortDescription>TXT_KEY_BELIEF_CRUSADE_SHORT</ShortDescription>
+				<Founder>true</Founder>
+			</Row>
+			<Language_en_US>
+				<Row Tag="TXT_KEY_BELIEF_CRUSADES_SHORT">
+					<Text>Crusades</Text>
+				</Row>
+				<Row Tag="TXT_KEY_BELIEF_CRUSADES">
+					<Text>When you capture a city with a different religion, gain +250 [ICON_PEACE] Faith and convert 25% of the heathens to your religion</Text>
+				</Row>
+				<Row Tag="TXT_KEY_CRUSADE_NOTIFICATION_HEADING">
+					<Text>Heathens converted!</Text>
+				</Row>
+				<Row Tag="TXT_KEY_CRUSADE_NOTIFICATION_BODY">
+					<Text>Religious fervor generates +{@1_num} [ICON_PEACE] from converting the heathens of {@2_name}.</Text>
+				</Row>
+			</Language_en_US>
+			<Row>
+				<Type>BELIEF_GOD_TRANQUILITY</Type>
+				<Description>TXT_KEY_BELIEF_GOD_TRANQUILITY</Description>
+				<ShortDescription>TXT_KEY_BELIEF_GOD_TRANQUILITY_SHORT</ShortDescription>
+				<Pantheon>true</Pantheon>
+			</Row>
+			<Row>
+				<Type>BELIEF_RELIGIOUS_MIGRATION</Type>
+				<Description>TXT_KEY_BELIEF_RELIGIOUS_MIGRATION</Description>
+				<ShortDescription>TXT_KEY_BELIEF_RELIGIOUS_MIGRATION_SHORT</ShortDescription>
+				<Founder>true</Founder>
+			</Row>
+		</Beliefs>
+		<BuildingClasses>
+			<Row>
+				<Type>BUILDINGCLASS_RELIGIOUS_MIGRATION</Type>
+				<DefaultBuilding>BUILDING_RELIGIOUS_MIGRATION</DefaultBuilding>
+				<Description>TXT_KEY_BELIEF_RELIGIOUS_MIGRATION_SHORT</Description>
+			</Row>
+		</BuildingClasses>
+		<Buildings>
+			<Row>
+				<Type>BUILDING_RELIGIOUS_MIGRATION</Type>
+				<BuildingClass>BUILDINGCLASS_RELIGIOUS_MIGRATION</BuildingClass>
+				<Cost>-1</Cost>
+				<ConquestProb>100</ConquestProb>
+				<NukeImmune>true</NukeImmune>
+				<IconAtlas>BW_ATLAS_1</IconAtlas>
+				<PortraitIndex>19</PortraitIndex>
+				<Description>TXT_KEY_BELIEF_RELIGIOUS_MIGRATION_SHORT</Description>
+				<Help>TXT_KEY_NO_EFFECT</Help>
+			</Row>
+		</Buildings>
+		<Language_en_US>
+			<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_MIGRATION_SHORT">
+				<Text>Religious Migration</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_MIGRATION">
+				<Text>+1 [ICON_CITIZEN] Citizen in your [ICON_CAPITAL] Capital when a foreign city first converts to this religion</Text>
+			</Row>
+			<Beliefs>
+				<Row>
+					<Type>BELIEF_RELIGIOUS_REFORMATION</Type>
+					<Description>TXT_KEY_BELIEF_RELIGIOUS_REFORMATION</Description>
+					<ShortDescription>TXT_KEY_BELIEF_RELIGIOUS_REFORMATION_SHORT</ShortDescription>
+					<Founder>true</Founder>
+				</Row>
+			</Beliefs>
+			<BuildingClasses>
+				<Row>
+					<Type>BUILDINGCLASS_RELIGIOUS_REFORMATION</Type>
+					<DefaultBuilding>BUILDING_RELIGIOUS_REFORMATION</DefaultBuilding>
+					<Description>TXT_KEY_BELIEF_RELIGIOUS_REFORMATION_SHORT</Description>
+				</Row>
+			</BuildingClasses>
+			<Buildings>
+				<Row>
+					<Type>BUILDING_RELIGIOUS_REFORMATION</Type>
+					<BuildingClass>BUILDINGCLASS_RELIGIOUS_REFORMATION</BuildingClass>
+					<Cost>-1</Cost>
+					<ConquestProb>100</ConquestProb>
+					<NukeImmune>true</NukeImmune>
+					<IconAtlas>BW_ATLAS_1</IconAtlas>
+					<PortraitIndex>19</PortraitIndex>
+					<Description>TXT_KEY_BELIEF_RELIGIOUS_REFORMATION_SHORT</Description>
+					<Help>TXT_KEY_NO_EFFECT</Help>
+				</Row>
+			</Buildings>
+			<Language_en_US>
+				<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_REFORMATION_SHORT">
+					<Text>Religious Reformation</Text>
+				</Row>
+				<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_REFORMATION">
+					<Text>Gain 250 [ICON_CULTURE] Culture when each city first converts to this religion</Text>
+				</Row>
+				<Row Tag="TXT_KEY_NO_EFFECT">
+					<Text>This building organizes your religious reformation. Gain 250 [ICON_CULTURE] Culture when each city first converts to your religion.</Text>
+				</Row>
+			</Language_en_US>
+		</Language_en_US>
+
 		<Update>
 			<Where Type="BELIEF_ASCETISM" />
 			<Set MinFollowers="1"/>
@@ -93,8 +309,59 @@
 			<Set CityGrowthModifier="25"/>
 		</Update>
 		<Update>
-			<Where Type="BELIEF_GOD_CRAFTSMEN" />
-			<Set MinPopulation="3"/>
+			<Beliefs>
+				<Update>
+					<Where Type="BELIEF_GOD_CRAFTSMEN" />
+					<Set MinPopulation="0" />
+				</Update>
+			</Beliefs>
+			<Belief_CityYieldChanges>
+				<Delete BeliefType="BELIEF_GOD_CRAFTSMEN" />
+			</Belief_CityYieldChanges>
+			<Belief_BuildingClassYieldChanges>
+				<Row>
+					<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
+					<BuildingClassType>BUILDINGCLASS_BLACKSMITH</BuildingClassType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<YieldChange>1</YieldChange>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
+					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<YieldChange>1</YieldChange>
+				</Row>
+				<Row>
+					<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
+					<BuildingClassType>BUILDINGCLASS_STABLE</BuildingClassType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<YieldChange>1</YieldChange>
+				</Row>
+			</Belief_BuildingClassYieldChanges>
+			<Belief_ResourceYieldChanges>
+				<Row>
+					<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
+					<ResourceType>RESOURCE_IRON</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>3</Yield>
+				</Row>
+			</Belief_ResourceYieldChanges>
+			<Belief_ResourceYieldChanges>
+				<Row>
+					<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
+					<ResourceType>RESOURCE_HORSE</ResourceType>
+					<YieldType>YIELD_FAITH</YieldType>
+					<Yield>3</Yield>
+				</Row>
+			</Belief_ResourceYieldChanges>
+
+			<Language_en_US>
+				<Update>
+					<Where Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN" />
+					<Set Text="+3 [ICON_PEACE] Faith from each [ICON_RES_IRON] Iron and [ICON_RES_HORSE] Horse. +1 Faith from blacksmith, forge, and stables." />
+				</Update>
+			</Language_en_US>
+
 		</Update>
 		<Update>
 			<Where Type="BELIEF_GOD_WAR" />
@@ -117,10 +384,6 @@
 			<Set SciencePerOtherReligionFollower="25"/>
 		</Update>
 		<Update>
-			<Where Type="BELIEF_MONUMENT_GODS" />
-			<Set WonderProductionModifier="25"/>
-		</Update>
-		<Update>
 			<Where Type="BELIEF_SWORD_PLOWSHARES" />
 			<Set CityGrowthModifier="25"/>
 		</Update>
@@ -141,22 +404,16 @@
 		</Update>
 		<Update>
 			<Where Type="BELIEF_HOLY_ORDER" />
-			<Set ProphetStrengthModifier="50"
-				 ProphetCostModifier="-33"
-				 MissionaryStrengthModifier="50"
-				 MissionaryCostModifier="-33"
-				 />
+			<Set MissionaryCostModifier="-50"/>
 		</Update>
-		<Delete Type="BELIEF_MESSIAH" />
-		<Delete Type="BELIEF_MISSIONARY_ZEAL" />
-		<!--
 		<Update>
 			<Where Type="BELIEF_MESSIAH" />
-			<Set ProphetStrengthModifier="50"
-				 ProphetCostModifier="-33"
-				 />
+			<Set ProphetStrengthModifier="50" ProphetCostModifier="-33" />
 		</Update>
-		-->
+		<Update>
+			<Where Type="BELIEF_MISSIONARY_ZEAL" />
+			<Set MissionaryStrengthModifier="100"/>
+		</Update>
 		<Update>
 			<Where Type="BELIEF_RELIGIOUS_UNITY" />
 			<Set FriendlyCityStateSpreadModifier="1000"/>
@@ -173,7 +430,7 @@
 	<Belief_CityYieldChanges>
 		<Update>
 			<Where BeliefType="BELIEF_GOD_CRAFTSMEN" />
-			<Set Yield="3"/>
+			<Set Yield="0"/>
 		</Update>
 	</Belief_CityYieldChanges>
 	<Belief_YieldChangeTradeRoute>
@@ -221,7 +478,7 @@
 		</Update>
 	</Belief_FeatureYieldChanges>
 	<Belief_ResourceYieldChanges>
-		
+
 	</Belief_ResourceYieldChanges>
 	<Belief_ImprovementYieldChanges>
 		<Row>
@@ -246,7 +503,7 @@
 		</Update>
 		<Update>
 			<Where BeliefType="BELIEF_ORAL_TRADITION" />
-			<Set Yield="2"/>
+			<Set Yield="3"/>
 		</Update>
 		<Update>
 			<Where BeliefType="BELIEF_OPEN_SKY" />
@@ -286,6 +543,29 @@
 			<Yield>1</Yield>
 		</Row>
 	</Belief_YieldChangeNaturalWonder>
+	<Belief_YieldChangeMountain>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Belief_YieldChangeMountain>
+	<Belief_YieldChangeForest>
+		<BeliefType>BELIEF_ONE_WITH_NATURE</BeliefType>
+		<YieldType>YIELD_SCIENCE</YieldType>
+		<Yield>1</Yield>
+	</Belief_YieldChangeForest>
+	<Language_en_US>
+		<Update>
+			<Where Tag="TXT_KEY_BELIEF_ONE_WITH_NATURE" />
+			<Set Text="+1 [ICON_FOOD]Food,[ICON_PEACE]Faith,[ICON_GOLD]Gold,[ICON_PRODUCTION]Production,[ICON_CULTURE]Culture, and [ICON_SCIENCE]Science from Natural Wonders. +1 [ICON_PRODUCTION]Production and [ICON_FOOD]Food from mountains. +1 [ICON_SCIENCE]Science from forests." />
+		</Update>
+	</Language_en_US>
 	<Belief_YieldChangeAnySpecialist>
 		<Update>
 			<Where BeliefType="BELIEF_GURUSHIP" />
